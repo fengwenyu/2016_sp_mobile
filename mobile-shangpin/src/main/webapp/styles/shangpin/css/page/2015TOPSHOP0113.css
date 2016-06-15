@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.main_box{width:100%;max-width:640px;margin:0 auto;}
+.main_box a{display:block;width:100%;}
+.main_box img{display:block;width:100%;}
+.top_img{width:100%;display:block;}
+.t_img{width:100%;display:block;padding:8px 0;}
+.t_text{ font-family:"微软雅黑"; font-size:14px; color:#777; padding:10px 10px 0; line-height:22px;}
+.prod_list{padding:0 8px 0 0;}
+.prod_list li{float:left;width:50%;margin-top:8px; position:relative;}
+.prod_list li span.li_text{ display:block; background:rgba(255,255,255,0.7); position:absolute; bottom:0; padding:10px 10px 0;}
+.prod_list li span.li_text em{ display:block; font-size:14px; color:#000; line-height:16px; font-weight:bold; padding-bottom:5px;}
+.prod_list li span.li_text b{display:block; font-weight:normal; font-size:12px; color:#333; line-height:16px; margin-bottom:10px; height:50px; overflow:hidden;}
+.prod_list li:nth-child(2n){float:right;margin-right:-8px;}
+.main_box h2{width:100%;display:block;margin:15px 0 0;position:relative;}
+.main_box h2 em{width:100%;height:1px;display:block;background:#000;position:absolute;top:19px;z-index:-1;}
+.main_box h2.line_h2{border-bottom:1px solid #000;padding-bottom:4px;}
+.main_box h2.line2-h2 span{ background:#fff; padding:10px;font-size:18px; font-weight:normal; color:#333}
+.main_box a.t_title{ width:auto; display:inline-block; padding:8px 15px; background:#000;font-family:"微软雅黑"; font-size:18px; color:#fff;-webkit-box-shadow:0 2px 2px rgba(0,0,0,0.4); box-shadow:0 2px 2px rgba(0,0,0,0.4);}
+.main_box a.t_title1{ background:#fff;color:#333; box-shadow:none;font-weight:normal;font-size:16px;}
+.main_box h3{padding:10px 10px 0;color:#333;font-size:16px;}
+.date_box{ border-left:1px solid #000;  margin:20px 10px 0;}
+.date_title{width:80px; display:inline-block; padding:5px 15px; background:#000;font-family:"微软雅黑"; font-size:14px; color:#fff; margin-left:-10px; }
+.data_event{ padding:0 0 20px 10px; position:relative;}
+.data_event h5{padding:10px 0 6px;color:#000;font-size:16px;font-family:"微软雅黑";}
+.data_event p{ padding-bottom:10px;font-size:14px;font-family:"微软雅黑"; color:#6b6b6b}
+.data_event .cirle_icon{ display:block; width:8px; height:8px; position:absolute; top:16px; left:-4px;}
+
+
+

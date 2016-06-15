@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:compass="http://www.compass-project.org/schema/spring-core-config"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.compass-project.org/schema/spring-core-config http://www.compass-project.org/schema/spring-compass-core-config-2.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- 使Spring关注Annotation -->
+	<context:annotation-config />
+	
+	<!-- 让Spring通过自动扫描来查询和管理Bean -->
+	<context:component-scan base-package="com.shangpin" />
+
+    <!-- 配置aop代理 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	<!-- 
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	 -->
+	 
+	 <!-- 分散配置(指定外部的属性文件) -->
+	<context:property-placeholder
+		location="classpath:resources/dataSource/jdbc.properties,classpath:resources/dataSource/c3p0.properties" />
+		
+	<!-- 配置c3p0数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverclass}" />
+		<property name="jdbcUrl" value="${jdbc.jdbcurl}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxPoolSize" value="${c3p0.pool.maxsize}" />
+		<property name="minPoolSize" value="${c3p0.pool.minsize}" />
+		<property name="acquireIncrement" value="${c3p0.pool.increment}" />
+		<property name="initialPoolSize" value="${c3p0.pool.inisize}" />
+		<property name="maxIdleTime" value="${c3p0.pool.maxIdleTime}" />
+	</bean>
+
+	<!-- 整合Hibernate -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=${hibernate.dialect}
+				hibernate.show_sql=${hibernate.show_sql}
+				hibernate.default_schema=${hibernate.default_schema}
+			</value>
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>com.shangpin.mobileAolai.base.model.Account</value>
+				<value>com.shangpin.mobileAolai.base.model.Lottery</value>
+				<value>com.shangpin.mobileAolai.base.model.Coupon</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="imageCaptchaService"
+		class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService">
+		<constructor-arg type="com.octo.captcha.service.captchastore.CaptchaStore"
+			ref="fastHashMapCaptchaStore" index="0" />
+		<constructor-arg type="com.octo.captcha.engine.CaptchaEngine"
+			ref="captchaEngine" index="1" />
+		<constructor-arg index="2" value="180" />
+		<constructor-arg index="3" value="100000" />
+		<constructor-arg index="4" value="75000" />
+	</bean>
+	<bean id="fastHashMapCaptchaStore"
+		class="com.octo.captcha.service.captchastore.FastHashMapCaptchaStore" />
+	<bean id="captchaEngine"
+		class="com.shangpin.mobileAolai.common.util.DefaultImagCatptchaEngine" />
+
+	<!-- 配置事务管理器
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+ 	-->
+	<!--使用基于注解方式配置事务
+	<tx:annotation-driven transaction-manager="transactionManager" />
+    -->
+</beans>
+

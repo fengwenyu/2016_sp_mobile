@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*公共弹框样式start*/
+#popup_message {
+height: auto;
+margin: 0;
+padding: 20px;
+text-shadow: none;
+}
+#popup_message p {
+font-size: 14px;
+padding: 20px 0 0;
+line-height: 180%;
+text-align: center;
+}
+#popup_content button#popup_cancel, #popup_content button#popup_cancel:hover {
+	background: #f2f2f2;
+	color: #555;
+}
+#popup_content button#popup_cancel {
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #aaa;
+}
+#popup_content button {
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 2px;
+}
+#popup_content button, #popup_content button:hover {
+	background: #de4747;
+	color: #fff;
+	padding: 0;
+	cursor: pointer;
+	font-weight: normal;
+}
+/*公共弹框样式end*/

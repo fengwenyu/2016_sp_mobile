@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+
+.detail_block{width:100%; clear:both;}
+
+#J_m-slider{width:320px;height:300px;margin:0 auto;overflow:hidden;position:relative;}
+#J_m-slider a{display:block;width:320px;height:300px; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+#J_m-slider .slider-outer{width:320px;height:300px;overflow:hidden;position:relative;}
+#J_m-slider ul{width:1600px;height:300px;position:absolute;left:0;top:0;}
+#J_m-slider{display:block;}
+#J_m-slider ul li{width:320px;height:300px;overflow:hidden;float:left; text-align:center;}
+#J_m-slider ul li a{display:block;}
+#J_m-slider ul li img{width:225px;height:300px;}
+#J_m-slider .slider-status{width:100%;height:10px;position:absolute;bottom:10px;left:0;text-align:center;}
+#J_m-slider .slider-status span{display:inline-block;width:6px;height:6px;background-color:#a9a9a9;;border-radius:3px;line-height:3px;cursor:pointer;margin:0 5px 0 0;}
+#J_m-slider .slider-status span.sel{background-color:#36393e;}
+#J_m-slider .pg-btn{width:37px;height:300px;line-height:300px;text-indent:-9999px;background:url(../../images/detail/icon-slide-next.png) no-repeat center center; position:absolute; top:0px; display:none;}
+#J_m-slider .pg-btn a{display:block;width:37px;height:300px;text-align:center;}
+#J_m-slider .prev{-webkit-transform:rotate(180deg); -moz-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg); left:0;}
+#J_m-slider .next{right:0;}
+
+#J_m-slider.imgBox{height:400px;}
+#J_m-slider.imgBox a{height:400px;}
+#J_m-slider.imgBox .slider-outer{height:400px;}
+#J_m-slider.imgBox ul{height:400px;}
+#J_m-slider.imgBox ul li{height:400px;}
+#J_m-slider.imgBox ul li img{width:300px;height:400px;}
+
+.alProdInfo{padding:8px 15px;}
+.alProdInfo h2{color:#333; font-size:16px; line-height:26px; font-weight:normal;}
+.alProdInfo dl{display:block;}
+.alProdInfo dt, .alProdInfo dd{display:block; vertical-align:middle;}
+.alProdInfo dt{color:#666; width:100%; line-height:30px; line-height:30px; padding-top:5px; position:relative;}
+.alProdInfo dt span{position:absolute; right:0; top:5px; line-height:30px;}
+.alProdInfo dt span a{color:#484848;}
+
+.alProdInfo dd{color:#333; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.alProdInfo dd.priceInfo{line-height:34px; height:34px; color:#c89800; font-size:12px; overflow:hidden;}
+.alProdInfo dd.priceInfo strong{font-size:24px; font-weight:normal;}
+.alProdInfo dd.priceInfo del{color:#838383; font-size:14px;}
+
+.alProdInfo .fillColor{padding:5px 0 5px 15px;}
+.alProdInfo .fillColor span{width:36px; height:36px; display:inline-block; border:1px solid #686868; margin:0 10px 5px 0; overflow:hidden; position:relative;}
+.alProdInfo .fillColor span img{border:1px solid #fff; vertical-align:top;}
+.alProdInfo .fillColor span i{display:block; width:12px; height:12px; position:absolute; right:1px; bottom:1px; display:none;}
+.alProdInfo .fillColor span i img{display:block; float:left; border:none;}
+.alProdInfo .fillColor span.cur{border:1px solid #B9966A;}
+.alProdInfo .fillColor span.cur img{border:1px solid #B9966A;}
+.alProdInfo .fillColor span.cur i{display:block;}
+.alProdInfo .fillColor span.cur i img{border:none;}
+.alProdInfo .fillSize{padding:5px 0 5px 15px;}
+.alProdInfo .fillSize span{min-width:36px; height:36px; background:#fff; color:#000; font-weight:normal; line-height:36px; text-align:center; display:inline-block; border:1px solid #adadad; margin:0 10px 5px 0; overflow:hidden;}
+.alProdInfo .fillSize span a{color:#000; display:block; border:1px solid #fff; height:34px; line-height:34px; position:relative;}
+.alProdInfo .fillSize span a i{display:block; width:12px; height:12px; position:absolute; right:0; bottom:0; display:none;}
+.alProdInfo .fillSize span i img{display:block; float:left;}
+.alProdInfo .fillSize span.cur{border:1px solid #B9966A;}
+.alProdInfo .fillSize span.cur a{border:1px solid #B9966A;}
+.alProdInfo .fillSize span.cur a i{display:block;}
+
+.alProdInfo .fillNumber a, .alProdInfo .fillNumber input{float:left;}
+.alProdInfo .fillNumber a{width:33px; height:33px; line-height:33px; border:1px solid #dedede; background-color:#f3f3f3; text-align:center; font-size:18px; color:#838383;}
+.alProdInfo .fillNumber input{width:50px; height:33px; background-color:#fff; text-align:center; border:none 0; border-top:1px solid #dedede; border-bottom:1px solid #dedede;}
+
+#alProdInfo_error{line-height:35px; height:35px; padding:5px 0; color:#f00;}
+
+.alProd_comment{padding:0 15px; border-bottom:1px solid #d5d5d5;}
+.alProd_comment h2{height:40px; line-height:40px; overflow:hidden; border-bottom:1px solid #f2f2f2;}
+.alProd_comment h2 a{display:block; font-size:14px; color:#484848; background:url(../../images/detail/arrow_icon.png) no-repeat 95% center; background-size:7px;}
+.alProd_comment dl{padding:10px 0;}
+.alProd_comment dt, .alProd_comment dd{font-size:12px; line-height:180%;}
+.alProd_comment dt{color:#838383;}
+.alProd_comment dt span{font-size:10px; padding-left:20px;}
+.alProd_comment dd{color:#484848;}
+
+.comment_list{border-bottom:0 none;}
+.comment_list dl{border-bottom:1px solid #f2f2f2;}
+.comment_link{border-bottom:0 none;}
+
+.alProd_intro{padding:0 15px 15px 10px;}
+.alProd_intro h1{color:#484848; font-size:14px; line-height:30px;}
+.alProd_intro p{color:#838383; line-height:160%;}
+.alProd_intro .alprod_none{width:100%; text-align:center; font-size:16px; background:url(../../images/detail/none_img.png) no-repeat center 0; background-size:128px; line-height:30px; color:#888; margin:50px  auto 0; padding:128px 0 30px 0; display:none;}
+
+.prompt{padding:5px 10px 5px 40px; background:url(../../images/detail/warning.png) no-repeat 10px center #f4f4f4; background-size:24px; color:#723c0d; line-height:160%; font-size:12px; border-bottom:1px solid #d5d5d5;}
+.btm_line{height:0; line-height:0; display:block; border-bottom:1px solid #d5d5d5; margin-bottom:5px;}
+
+
+/*弹出层对话框*/
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; width:250px; background-color:#fff;}
+#popup_content{padding:0;}
+#popup_title{position:relative; border:0 none;}
+#popup_title .title_close{width:26px; height:26px; position:absolute; top:-8px; right:-8px; background:url(../../images/close.png) no-repeat 0 0; background-size:26px 26px; cursor:pointer; z-index:99999;}
+#popup_message{height:auto; margin:0;  padding:20px; text-shadow:none;}
+#popup_message p{font-size:14px; padding:20px 0; line-height:180%;}
+#popup_container p i{ color:#e13624;}

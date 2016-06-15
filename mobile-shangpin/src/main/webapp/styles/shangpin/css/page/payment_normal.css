@@ -1,0 +1,408 @@
+@charset "utf-8";
+/* CSS Document */
+body, .alContent{background-color:#f2f2f2;}
+
+.paymet_block{
+	width:100%;
+}
+.paymet_block p.member_notice{
+	text-align:center;
+	margin-top:10px;
+	font-size:12px;
+	height:37px;
+	line-height:37px;
+	background-color:#fff;
+	border-top:1px solid #d8d8d8;
+	border-bottom:1px solid #d8d8d8;
+}
+.paymet_block p.member_notice a{
+	color:#ff3b3b;
+}
+
+.paymet_block fieldset {
+	width:100%;
+	/*padding-bottom:70px;*/ 
+/* 	padding-bottom:20px;   */
+	 /*20140921 fby*/
+}
+.paymet_block fieldset legend {
+	color: #2d2d2d;
+	font-size: 16px;
+	padding:0 15px;
+	height:39px;
+	line-height:39px;
+	border-bottom:1px solid #d8d8d8;
+	display:block;
+	width: 100%;
+	box-sizing: border-box;
+}
+.paymet_block fieldset legend.tips{
+	color:#888;
+	border:none 0;
+	font-size:12px;
+	height:24px;
+	line-height:24px;
+}
+
+.paymet_block fieldset p {
+	border-bottom:1px solid #d8d8d8;
+	background-color:#fff;
+	height: 39px;
+	line-height: 39px;
+	color: #555;
+	padding:0 15px;
+	position: relative;
+}
+
+	
+.paymet_block fieldset p.select a{
+	background:url(../../images/arrow_r.png) no-repeat right center;
+	background-size:7px 12px;
+	color: #555;
+	display:block;
+	padding-right:10px;
+/* 	height: 39px; */
+	overflow:hidden;
+}
+.paymet_block fieldset p.selected {  height:auto;  
+	line-height:22px; 
+ 
+	}/*20140921 fby*/
+.paymet_block fieldset p.selected a{ padding:8px 0; 
+	background:#fff url(../../images/arrow_r.png) no-repeat right center;background-size:7px 12px;}	/*20140921 fby*/
+	
+.paymet_block fieldset p.pord_info{
+	height:auto;
+}
+.paymet_block fieldset p.pord_info a{
+	display:block;
+	padding:10px 0 5px;
+}
+.paymet_block fieldset p.pord_info img{
+	float:left;
+}
+.paymet_block fieldset p.pord_info ins{
+	margin-left:15px;
+	text-decoration:none;
+	line-height:normal;
+	float:left;
+}
+.paymet_block fieldset p.pord_info i{
+	color:#2d2d2d;
+	font-size:12px;
+	line-height:16px;
+	display:block;
+	width:200px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	margin-bottom:5px;
+}
+.paymet_block fieldset p.pord_info em{
+	display:inline-block;
+	line-height:16px;
+	height:16px;
+	color:#888;
+	font-size:12px;
+	width:100px;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.paymet_block fieldset p.invoice{
+	height:auto;
+	line-height:24px;
+	padding:10px 15px;
+}
+.paymet_block fieldset p.invoice a{
+	color:#888;
+	height:auto;
+}
+.paymet_block fieldset p.invoice em{
+	color:#2d2d2d;
+}
+
+.paymet_block fieldset p.coupons i{
+	position:absolute;
+	right:40px;
+	top:0;
+	line-height:39px;
+}
+.paymet_block fieldset p.coupons i em{
+	color:#ff3b3b;
+}
+
+.paymet_block fieldset p.giftCard a{
+	color: #555;
+	display:block;
+	background:url(../../images/select_nBg.png) no-repeat right center;
+	background-size:21px;
+}
+.paymet_block fieldset p.giftCard a.cur{
+	background:url(../../images/select.png) no-repeat right center;
+	background-size:21px;
+}
+.paymet_block fieldset p.giftCard i{
+	color:#ff3b3b;
+	font-size:12px;
+	padding-left:20px;
+}
+
+
+/*支付方式*/
+.paymet_block fieldset p.payment-method span{
+	display:block;
+	line-height:normal;
+	padding:5px 0 5px 55px;
+	background-image:url(../../images/member/bank.png?11);
+	background-repeat:no-repeat;
+	background-size:45px;
+}
+.paymet_block fieldset p span a{
+	display:block;
+	font-size:9px;
+	color:#888;
+	background:url(../../images/radio.png) no-repeat right -5px;
+	background-size:21px;
+}
+.paymet_block fieldset p span a.cur{
+	background:url(../../images/radio.png) no-repeat right -45px;
+	background-size:21px;
+}
+.paymet_block fieldset p span a em{
+	font-size:12px;
+	color:#555;
+}
+.paymet_block fieldset p span.alipay{
+	background-position:0 0;
+}
+.paymet_block fieldset p span.unionPay{
+	background-position:0 -40px;
+}
+.paymet_block fieldset p span.weixinPay{
+	background-position:0 -160px;
+}
+.paymet_block fieldset p span.cashPay{
+	background-position:0 -80px;
+}
+.paymet_block fieldset p span.postPay{
+	background-position:0 -120px;
+}
+
+
+.paymet_block fieldset p.payment-method span.CMPay { background-position: 0 -243px; }
+/* .paymet_block fieldset p span.weixinPay a, .paymet_block fieldset p span.cashPay a, .paymet_block fieldset p span.postPay a{
+	
+	height:29px;
+	line-height:29px;
+	color:#555;
+} */
+
+.paymet_block fieldset p.payment-method span.pufaPay { background-position: 0 -201px; }
+.paymet_block fieldset p.payment-method span.weixinPay a, .paymet_block fieldset p.payment-method span.cashPay a, .paymet_block fieldset p.payment-method span.postPay a, .paymet_block fieldset p.payment-method span.pufaPay a, .paymet_block fieldset p.payment-method span.CMPay a { height: 29px; line-height: 29px; color: #555; }
+
+.paymet_block fieldset p.total{
+	border-top:1px solid #d8d8d8;
+	height:auto;
+	text-align:right;
+	font-size:12px;
+	line-height:20px;
+	margin-top:10px;
+	padding:10px 15px;
+	color:#555;
+}
+.paymet_block fieldset p.total em{
+	display:block;
+	padding-top:10px;
+	color:#ff3b3b;
+}
+.paymet_block fieldset p.total i{
+	display:inline-block;
+	width:70px;
+	text-align:left;
+}
+
+.paymet_block .payment_fixed{
+	/*position:fixed;border-top:1px solid #d8d8d8;*/ position:relative;/*20140921 fby*/
+	bottom:0;
+	left:0;
+	width:100%;
+	background-color:#f2f2f2;
+	
+}
+.paymet_block .payment_submit{	
+	position:relative;
+	margin: 15px;
+	height:40px;
+}
+.paymet_block .payment_submit_bg {
+	background: #fff;
+	margin: 10px 0 0;
+	border-top: #d8d8d8;
+	padding: 15px;
+}
+.btn-icon {
+	width: 100%;
+	height: 38px;
+	overflow: hidden;
+}
+.btn-icon a.total_amount {
+	background-color: transparent;
+	border: 0;
+	color: #555555;
+}
+.btn-icon a {
+	float: left;
+	display: block;
+	width: 48%;
+	box-sizing: border-box;
+	background-color: #c62026;
+	border: 1px solid #c62026;
+	height: 38px;
+	line-height: 38px;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+}
+.paymet_block .payment_submit dl{
+	display:-webkit-box;
+	display:-moz-box;
+	display:-o-box;
+	display:box;
+	width:100%;
+}
+.paymet_block .payment_submit dt{
+	width:8px;
+}
+.paymet_block .payment_submit dd{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	box-flex:1;
+}
+.paymet_block .payment_btn {
+	background-color:#c62026;
+	border:1px solid #c62026;
+	height: 38px;
+	line-height: 38px;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	display: block;
+	box-sizing: border-box;
+}
+.paymet_block .payment_btn:hover{
+	background-color:#aa0006;
+	border:1px solid #aa0006;
+	color:#fff;
+}
+.paymet_block input.payment_btn{
+	opacity:0; outline:none; /*20140921 fby*/
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	width: 100%;
+	margin:0 auto;
+}
+.paymet_block input.payment_btn:hover{
+	background-color:#aa0006;
+	border:1px solid #aa0006;
+	color:#fff;
+}
+.paymet_block .contiu_btn {
+	background-color:#fff;
+	border:1px solid #c62026;
+	color:#c62026;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	box-sizing: border-box;
+}
+.paymet_block .contiu_btn:hover{
+	background-color:#c62026;
+	border:1px solid #c62026;
+	color:#fff;
+}
+.other-payment-box {
+	display: none;
+}
+
+.btn-icon a.total_amount { background-color: transparent; border: 0; color: #555555; }
+.btn-icon a.total_amount em { color: #c62026; }
+.btn-icon a.total_amount em b { font-weight:normal;}
+#giftCard {padding-left: 0;}
+
+#select_street_layer{
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  bottom: 0;
+  border-radius: 0;
+  left: auto;
+  top: auto;
+  margin: 0 auto;
+  z-index: 99999;
+  background-color: #fff;
+}
+#select_street_layer .close_btn {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  background: url(../../images/detail/close.png) 0 0 no-repeat;
+  background-size: 15px;
+  text-indent: -3000px;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+#select_street_layer h3{
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0 15px;
+  height: 39px;
+  line-height: 39px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+#select_street_layer dl {
+  width: 100%;
+  height: 207px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#select_street_layer dd {
+  z-index: 999999;
+  border-bottom: 1px solid #d8d8d8;
+  height: 39px;
+  line-height: 39px;
+  color: #999;
+  padding: 0 15px;
+  position: relative;
+}
+#select-area-overlay{
+  position: absolute;
+  z-index: 99998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  display: none;
+}
+#select_street_layer dd a {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  background: url(../../images/radio.png) no-repeat right 0;
+  background-size: 21px;
+}
+  

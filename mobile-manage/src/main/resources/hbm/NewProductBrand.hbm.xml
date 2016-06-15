@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="NewProductBrand" table="newProductBrand">
+		<id name="categoryId" type="string">
+			<generator class="assigned" />
+		</id>
+		<property name="firstNewProductId" type="string">
+			<column name="firstNewProductId" length="50" />
+		</property>
+
+		<property name="secondNewProductId" type="string">
+			<column name="secondNewProductId" length="50" />
+		</property>
+		<property name="firstBrandId" type="string">
+			<column name="firstBrandId" length="50" />
+		</property>
+
+		<property name="firstBrandName" type="string">
+			<column name="firstBrandName" length="100" />
+		</property>
+		
+		<property name="firstBrandProductId" type="string">
+			<column name="firstBrandProductId" length="50" />
+		</property>
+		
+		<property name="secondBrandProductId" type="string">
+			<column name="secondBrandProductId" length="50" />
+		</property>
+		
+		<property name="threeBrandProductId" type="string">
+			<column name="threeBrandProductId" length="50" />
+		</property>
+		
+		<property name="fourthBrandProductId" type="string">
+			<column name="fourthBrandProductId" length="50" />
+		</property>
+		<property name="fifthBrandProductId" type="string">
+			<column name="fifthBrandProductId" length="50" />
+		</property>
+		<property name="sixthBrandProductId" type="string">
+			<column name="sixthBrandProductId" length="50" />
+		</property>
+		<property name="seventhBrandProductId" type="string">
+			<column name="seventhBrandProductId" length="50" />
+		</property>
+		
+		
+		<property name="secondBrandId" type="string">
+			<column name="secondBrandId" length="50" />
+		</property>
+
+		<property name="secondBrandName" type="string">
+			<column name="secondBrandName" length="100" />
+		</property>
+
+		<property name="threeBrandId" type="string">
+			<column name="threeBrandId" length="50" />
+		</property>
+
+		<property name="threeBrandName" type="string">
+			<column name="threeBrandName" length="100" />
+		</property>
+
+		<property name="fourthBrandId" type="string">
+			<column name="fourthBrandId" length="50" />
+		</property>
+
+		<property name="fourthBrandName" type="string">
+			<column name="fourthBrandName" length="100" />
+		</property>
+
+		<property name="fifthBrandId" type="string">
+			<column name="fifthBrandId" length="50" />
+		</property>
+
+		<property name="fifthBrandName" type="string">
+			<column name="fifthBrandName" length="100" />
+		</property>
+
+		<property name="sixthBrandId" type="string">
+			<column name="sixthBrandId" length="50" />
+		</property>
+
+		<property name="sixthBrandName" type="string">
+			<column name="sixthBrandName" length="100" />
+		</property>
+
+		<property name="seventhBrandId" type="string">
+			<column name="seventhBrandId" length="50" />
+		</property>
+
+		<property name="seventhBrandName" type="string">
+			<column name="seventhBrandName" length="100" />
+		</property>
+
+		<property name="createTime" type="timestamp"/>
+		
+
+	</class>
+</hibernate-mapping>

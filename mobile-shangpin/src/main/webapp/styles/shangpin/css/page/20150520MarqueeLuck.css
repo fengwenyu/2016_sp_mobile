@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#fff}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;background:url(../../../../styles/shangpin/images/20150520MarqueeLuck/top_bg.jpg) center top repeat-y; background-size:100% auto;}
+.title-top{ position:relative;}
+
+#lottery{width:280px; padding:5px;margin:20px auto; z-index:3;border:1px dashed #fff; border-radius:10px;}
+#lottery ul li{ padding:0 0;}
+#lottery ul li span{ display:block; float:left;width:58px;height:58px;text-align:center; border:1px solid rgba(255,255,255,0); margin:5px;border-radius:10px; line-height:58px; border-radius:10px;overflow:hidden;}
+#lottery .lottery-unit{}
+#lottery ul li span.start{width:128px;height:58px; overflow:hidden; background:url(../../../../styles/shangpin/images/20150520MarqueeLuck/start.png) no-repeat; background-size:contain; text-indent:-999px;}
+#lottery ul li span.active{ border:1px dashed #fff; position:relative; z-index:999}
+#lottery ul li span.active em{ display:block;width:58px;height:58px; position:absolute; top:0; left:0;background:rgba(193,10,20,0.5);border-radius:10px;}
+#lottery img{border-radius:10px;overflow:hidden; display:block;}
+
+
+
+.con {position:relative;}
+.con .con-text{margin: 20px 15px; padding:0 20px;}
+.con .con-text li{ list-style:disc; line-height:24px;}
+
+.sroll-text{ border:1px dashed #fff; border-radius:10px; margin:0 20px 20px;height: 126px;overflow: hidden;}
+.sroll-text > div{margin:15px;height: 96px;overflow: hidden;}
+.lottery_list{height:96px; overflow:hidden;}
+.lottery_list li{position:relative; line-height:24px; color:#fff;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;}
+
+
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:198px;background:url(../../../../styles/shangpin/images/20150520MarqueeLuck/pop_bg.png) no-repeat; background-size:100%;-webkit-box-shadow:none;box-shadow:none;}
+#popup_content{padding:0;}
+#popup_container #popup_message{height:auto; margin:0;  padding:0;}
+#popup_container #popup_message h3{ text-align: left; color:#232323; line-height:50px; font-size:15px; font-weight:normal; padding-left:20px; margin-top:5px;}
+#popup_container #popup_message h3 strong{ color:#fc476e; font-size:20px;}
+#popup_container #popup_message p{padding-left:20px;text-align: left; color:#fc476e;font-size:12px; line-height:22px; min-height:0;}
+#popup_container #popup_message p.win-prize{font-size:15px; font-weight:bold; margin:10px 0 15px;}
+#popup_container #popup_message p.win-prize em{font-size:40px;}
+#popup_container #popup_message p.win-info{}
+#popup_container #popup_message p.win-info strong{font-size:14px; font-weight:bold;}
+#popup_container #popup_message p.win-info strong a{ color:#fc476e; text-decoration:underline}
+#popup_container #popup_message p.remainder-times{ color:#000; font-size:12px; font-weight:bold}
+
+#popup_container.second #popup_message p.win-prize{font-size:15px; font-weight:normal; margin:5px 0;}
+#popup_container.second #popup_message p.win-prize a.click-look{ display:inline-block; background:#fff; color:#fc476e; padding-left:5px; text-decoration:underline}
+#popup_container.second #popup_message p.win-prize em{font-size:30px;font-weight:bold;}
+
+#popup_container.success p a{}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{ position:absolute; width:40px;height:40px; right:0; top:0}
+#popup_content button{background:#fb5f65; display:block; margin:7px 0 0 7px; width: 20px; height: 20px; border-radius:50%; color:#fff; padding:0; line-height:20px; font-size:12px; font-weight:normal; }
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00;}
+
+
+
+
+/*屏幕适配*/
+@media screen and (min-width: 360px) {
+#lottery{width:320px;}
+#lottery ul li span{width:68px;height:68px;}
+#lottery ul li span.start{width:148px;height:68px;}
+#lottery ul li span.active em{ width:68px;height:68px;}
+
+}
+
+@media screen and (min-width: 375px) {
+
+}
+@media screen and (min-width: 414px) {
+#lottery{width:360px;}
+#lottery ul li span{width:78px;height:78px;}
+#lottery ul li span.start{width:168px;height:78px;}
+#lottery ul li span.active em{ width:78px;height:78px;}
+}

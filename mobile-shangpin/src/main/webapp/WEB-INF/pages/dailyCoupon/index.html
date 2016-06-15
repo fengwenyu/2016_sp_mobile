@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+<title>天天领券</title>
+<link href="css/base.css" rel="stylesheet" />
+<link href="css/swiper.min.css" rel="stylesheet" />
+<link href="css/index.css?5" rel="stylesheet" />
+</head>
+<body>
+<div class="wapper">
+ 
+  <!--内容区域 start-->
+  	<!-- 焦点图轮播 Start -->
+    <div class="swiper-container" id="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img alt="" src="img/banner01.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="#"><img alt="" src="img/banner01.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="#"><img alt="" src="img/banner01.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="#"><img alt="" src="img/banner01.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="#"><img alt="" src="img/banner01.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="#"><img alt="" src="img/banner01.jpg" width="100%"></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <!--筛选排序-->
+    <div class="menu_nav">
+    	<div class="fixed_box">
+            <ul class="tabSlider clr">
+                <li class="price_btn">金额<span></span></li>
+                <li class="filte_btn">筛选</li>
+            </ul>
+            <ul class="filte_menu" id="filte_list">
+                <li class="cur"><a href="#">优惠券</a></li>
+                <li><a href="#">现金券</a></li>
+                <li><a href="#">礼包券</a></li>
+            </ul>
+        </div>
+        <div class="Mask"></div>
+    </div>
+    
+    <ul class="con">
+        <li>
+            <h3 class="classes_title">女装品类现金券</h3>
+            <div class="list_box red">
+                <a href="" class="type type1">
+                    <img src="img/img1.png">
+                    <div class="info">
+                      <p><strong class="num">100</strong><span class="type-text"><strong>现金券</strong>无金额门槛</span></p> 
+                      <time>有效期<br> 2016.04.14-2016.04.25</time>     
+                    </div>
+                    <i class="icon_type"></i>
+                </a>
+            </div>
+        </li>
+        
+         <li>
+            <h3 class="classes_title">超履狂欢节，乐享四月天</h3>
+            <div class="list_box red">
+                <a href="" class="type type2">
+                    <img src="img/img2.png">
+                    <div class="info">
+                      <p><strong class="num">50</strong><span class="type-text"><strong>现金券</strong>无金额门槛</span></p> 
+                      <time>有效期<br> 2016.04.14-2016.04.25</time>     
+                    </div>
+                    <i class="icon_type"></i>
+                </a>
+            </div>
+        </li>
+        
+         <li>
+            <h3 class="classes_title">春夏亮彩 轻奢手袋</h3>
+            <div class="list_box yellow">
+                <a href="" class="type type3">
+                    <img src="img/img3.png">
+                    <div class="info">
+                      <p><strong class="num">300</strong><span class="type-text"><strong>满减券</strong>满3000元可用</span></p> 
+                      <time>有效期<br> 2016.04.14-2016.04.25</time>     
+                    </div>
+                    <i class="icon_type"></i>
+                </a>
+            </div>
+        </li>
+        
+         <li>
+            <h3 class="classes_title">宠爱会员日</h3>
+            <div class="list_box purple">
+                <a href="" class="type type1">
+                    <img src="img/img4.png">
+                    <div class="info">
+                      <p><strong class="num">1000</strong><span class="type-text"><strong>礼券包</strong>&nbsp;</span></p> 
+                      <time>有效期<br> 2016.04.14-2016.04.25</time>     
+                    </div>
+                    <i class="icon_type"></i>
+                </a>
+            </div>
+        </li>
+        
+    </ul>
+    
+    <p class="load_btn">上拉加载</p>
+    
+  <!--内容区域 start-->	
+  
+  	<!--领券弹出层-成功-->
+	<div class="select-overlay">
+    	<div class="show_window_con">
+        	<h3 class="title">恭喜你，领取成功！</h3>
+            <p class="close_window">
+            	<a href="" class="continue_btn">继续抢券</a>
+                <a href="" class="use_btn">立即使用</a>
+            </p>
+        </div>
+    </div>
+    
+    <!--领券弹出层-失败--> 
+    <div class="tip-overlay"></div>
+    <div class="tip-container" >
+        <p class="tip-message">领取失败，再试试~</p>
+    </div>
+  
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/index.js?3"></script>
+
+</body>
+</html>

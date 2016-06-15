@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+#newHeader {
+	background: #FFF;
+}
+#newHeader h2 {
+	width: 100%;
+	text-align: center;
+}
+#newHeader h2 a.backBtn {
+	border-right: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	height: 43px;
+}
+.account_info {
+	padding: 10px;
+	color: #484848;
+}
+.account_user_photo {
+	float: left;
+}
+.account_info dl {
+	margin-left: 95px;
+	line-height: 24px;
+}
+.account_info dl dt {
+	font-size: 16px;
+	font-weight: bold;
+}
+.account_btn_wp {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.account_btn_wp a {
+	display: inline-block;
+	text-align: center;
+	width: 95px;
+	height: 50px;
+	line-height: 50px;
+	color: #484848;
+	border-radius: 3px;
+	margin: 0 3px;
+	border: 1px solid #ededed;
+}
+.account_btn_wp a.has_message {
+	background: url(../../images/has_message.png) no-repeat 70px 15px;
+	background-size: 6px 6px;
+}
+menu {
+	padding: 0 10px;
+	border-top: 1px solid #E9E9E9;
+}
+menu li a {
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	border-bottom: 1px solid #E9E9E9;
+	padding: 0 10px;
+	color: #484848;
+	background: url(../../images/arrow_right.png) no-repeat content-box right center;
+	background-size: 7px 12px;
+}
+.btn_box {
+	padding: 25px 10px;
+}
+.btn_box a {
+	display: block;
+	height: 45px;
+	line-height: 45px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E3B502), color-stop(0.5, #DEB001), color-stop(1, #D3A400));
+	background: -moz-linear-gradient(top, #e3b502, #deb001 50%, #d3a400 100%);
+	background: -o-repeating-linear-gradient(top, #e3b502, #deb001 50%, #d3a400 100%);
+	text-align: center;
+	color: #fff;
+	border-radius: 3px
+}
+.btn_box a:hover {
+	background: #BF9705;
+	color: #723C0D;
+}

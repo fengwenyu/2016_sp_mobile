@@ -1,0 +1,8 @@
+/*最新到货*/
+.news_box{width:300px; margin:0 auto; padding:20px 0 0;}
+
+.news_box h2{color:#484848; font-size:18px; line-height:24px;}
+.news_box h3{color:#838383; font-size:12px; font-weight:normal; line-height:24px;}
+.news_box h3 a{color:#2d6ccb;}
+.news_box p{color:#484848; line-height:20px; margin:10px 0;}
+.news_box p.img_box{text-align:center;}

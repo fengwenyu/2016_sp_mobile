@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+.account_info{margin:10px;}
+.account_info dt, .account_info dd{display:inline-block; vertical-align:top;}
+.account_info .account_img{width:80px; height:80px; background:#d6d6d6; margin:0 10px 0 0; -webkit-border-radius:3px; border-radius:3px; overflow:hidden;}
+.account_info .account_txt{line-height:26px; color:#333;}
+.account_info .account_txt a{color:#333;}
+.account_info .account_btn{width:100%; text-align:center;}
+.account_info .account_btn a{height:35px; line-height:35px; margin:20px 0 20px 1%; width:48%; display:inline-block;}
+.account_info .account_btn a:first-child{margin-left:0;}
+
+.account_info menu{background:#f7f7f7; border:1px solid #e9e9e9; -webkit-border-radius:5px; border-radius:5px;}
+.account_info menu li{height:44px; line-height:44px; border-bottom:1px solid #e9e9e9; padding:0 10px;}
+.account_info menu li:last-child{border-bottom:none;}
+.account_info menu li a{display:block; background:url(../../images/arrow.png) no-repeat right center; -webkit-background-size:11px; -moz-background-size:11px; background-size:11px; color:#666;}
+.account_info menu li a span{display:inline-block; margin:0 0 0 30px;}
+
+.account_cart{height:44px; line-height:44px; border-top:1px solid #e9e9e9; border-bottom:1px solid #e9e9e9; padding:0 20px 0 10px; margin:0 0 22px 0;}
+.account_cart a{display:block; background:url(../../images/arrow.png) no-repeat right center; -webkit-background-size:11px; -moz-background-size:11px; background-size:11px; color:#333;}
+.account_cart a img{vertical-align:middle; margin:0 10px 0 0;}
+
+.mobile_block{margin:10px; padding:0 0 60px 0;}
+.mobile_block p{line-height:26px; font-size:12px;}
+.mobile_block p span{color:#b51111;}
+.mobile_block p.success_txt{font-size:16px; text-align:center; margin:20px 0 10px;}
+.mobile_block label{line-height:26px;}
+.mobile_block input[type="tel"]{height:38px; border:1px solid #ccc; -webkit-border-radius:5px; border-radius:5px; font-size:18px; width:150px; padding:0 5px; margin:10px 0;}
+.mobile_block input.code_txt{width:80px;}
+.mobile_block input.error{border:1px solid #B51111}
+#secondCode{color:#333; display:none;}
+.mobile_block .mobile_errorMsg{display:block; color:#b51111; text-align:center; line-height:25px;}
+.mobile_block .mobile_btn{width:100%; text-align:center;}
+.mobile_block .mobile_btn a{height:35px; line-height:35px; margin:20px 0; width:40%; display:inline-block;}
+.mobile_block .mobile_btn input[type="submit"]{height:36px; line-height:36px; margin:20px 0; padding:0; width:40%; display:inline-block; vertical-align:top; -webkit-border-radius:6px; border-radius:6px;}
+.mobile_block .mobile_btn a:last-child{margin-left:4%;}
+
+/*  订单管理 start */
+.alOrder_list{margin:5px 0;}
+.alOrder_listMenu{height:38px;line-height:38px;background:#eee;}
+.alOrder_listMenu ul{display:-webkit-box; display:-moz-box; display:box; width:100%;}
+.alOrder_listMenu li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-align:center; border-top:1px solid #cacaca; border-right:1px #cacaca solid; border-bottom:1px #cacaca solid;}
+.alOrder_listMenu li:last-child{border-right:none;}
+.alOrder_listMenu li.cur{font-size:14px;position:relative;background-color:#747273;border-top:1px solid #747273;border-right:1px #747273 solid;border-bottom:1px #747273 solid;}
+.alOrder_listMenu li.cur:after{content:'\00a0';display:block;position:absolute;bottom:-20px;left:50%;height:0;width:0;border-color:#747273 transparent transparent transparent;border-style:solid;border-width:10px; margin:0 0 0 -10px;}
+.alOrder_listMenu li a{display:block;height:36px;line-height:36px;overflow:hidden;color:#747373; font-size:14px;}
+.alOrder_listMenu li.cur a{color:#fff;}
+
+.alOrder_listCell{width:100%; padding:10px 0;}
+.alOrder_none{padding:10px 0; text-align:center;}
+.alOrder_none h2{font-size:14px; color:#747373; line-height:45px; font-weight:normal;}
+.alOrder_none p{width:208px; height:158px; margin:10px auto 0; border:1px solid #d7d7d7; background:#fdfdfd;}
+.alOrder_none p img{display:block; margin:15px auto 0;}
+.alOrder_listBlock{border-bottom:1px solid #ccc; padding:5px 10px; display:-webkit-box; display:-moz-box; display:box;}
+.alOrder_listBlock:last-child{border:none;}
+.alOrder_listBlock dt{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1; font-size:12px;}
+.alOrder_listBlock dt a{display:block; color:#333; font-size:12px; margin:5px 0;}
+.alOrder_listBlock dt h3{font-weight:normal; line-height:180%;}
+.alOrder_listBlock dt span{width:70px; height:70px; display:inline-block; margin:3px 5px 0 0;  vertical-align:top;}
+.alOrder_listBlock dt p{display:inline-block; line-height:160%; width:45%;}
+.alOrder_listBlock dt p i{width:100%;height:18px;white-space:nowrap;display:block;overflow:hidden;}
+.alOrder_listBlock dt p em{color:#d21518;}
+.alOrder_listBlock dd{width:110px;}
+.alOrder_listBlock dd span{display:block; text-align:right; color:#d21518; font-size:12px; line-height:180%;}
+.alOrder_listBlock dd .list_buyBtn{margin:15px 0 15px 60px; height:30px; line-height:30px;}
+
+
+.logistics_listBlock{border-bottom:1px solid #ccc; padding:0 12px;}
+.logistics_listBlock h3{font-weight:normal; line-height:38px; overflow:hidden; width:100%; padding:5px 0; color:#333;}
+.logistics_listBlock h3 a.alOrder_buyBtn,.logistics_listBlock h3 span{ margin:0; display:inline-block; padding:0 10px; float:right; width:auto; color:#fff; font-size:14px;line-height:36px;}
+.logistics_listBlock h3 span{color:#f10000;font-size:12px;line-height:38px;}
+.logistics_listBlock a{ display:block;margin-bottom:20px; width:100%; overflow:hidden; font-size:12px; color:#333; line-height:2;margin: 5px 0;}
+.logistics_listBlock a img{ float:left;}
+.logistics_listBlock dl{ /*display:-webkit-box; display:-moz-box; display:box;*/ margin-left:95px; min-height:108px; background:url(/images/logistics_arrow_icon.png) no-repeat 98% center;}
+.logistics_listBlock dd em{ color:#f10000;}
+.logistics_listBlock p{color:#f10000; padding:10px 0;}
+.logistics_listBlock:last-child{border:none;}
+.logistics a{ margin-bottom:0;}
+.logistics h3 span{ color:#333;}
+
+/*订单详情*/
+.logistics_detail{ margin:20px; color:#333; line-height:2;}
+.logistics_detail li{ padding:8px 12px; border:1px solid #e4e4e4;border-bottom:0;}
+.logistics_detail li:first-child{ margin-bottom:20px; border:1px solid #e4e4e4; border-radius:5px;}
+.logistics_detail li:nth-child(2){border-radius:5px 5px 0 0;}
+.logistics_detail li:last-child{ margin-bottom:20px; border-bottom:1px solid #e4e4e4;border-radius: 0 0 5px 5px;}
+.logistics_detail li span.font_red{ color:#b00000;}
+
+.alOrder_info a{display:block; color:#333; font-size:12px; padding:8px 10px 0;}
+.alOrder_info h3{font-weight:normal; height:35px; line-height:35px; border-bottom:1px solid #ccc; padding:0 10px;}
+.alOrder_info h3 a{float:right; padding:0; color:#1800ff; font-size:14px;}
+.alOrder_info span{width:70px; height:70px; display:inline-block; margin:3px 5px 0 0;  vertical-align:top;}
+.alOrder_info p{display:inline-block; line-height:160%; font-size:12px; width:72%;}
+.alOrder_info p i{width:100%;height:18px;white-space:nowrap;display:block;overflow:hidden;}
+.alOrder_info p em{color:#d21518;}
+.orderInfo_buyBtn{margin:15px 20px;}
+
+.alOrder_prodInfo{width:100%; padding:0 0 15px 0; position:relative;}
+.alOrder_prodInfo h2{height:28px; line-height:28px; padding:0 10px; background:#e1e1e1; font-weight:normal; margin:0 0 15px 0;}
+.alOrder_prodInfo dl{width:100%; display:table; line-height:21px; color:#636363; padding:0 0 0 10px;}
+.alOrder_prodInfo dt, .alOrder_prodInfo dd{display:table-cell;}
+.alOrder_prodInfo dt{width:60px;}
+.alOrder_prodInfo dd{padding:0 10px 0 0;word-break:break-all;word-wrap:break-word;}
+.alOrder_prodInfo dd span, .alOrder_prodInfo dd em{color:#d10000;}
+.alOrder_prodInfo dd .prodInfo_buyBtn{position:absolute; right:0; bottom:15px; width:130px;}
+
+
+/*  订单管理 end */
+
+
+/*  地址管理 start */
+.address_con { overflow:hidden; }
+.add_new { font-size:14px; font-weight:normal; color:#333; border-bottom:1px solid #dbdbdb; padding:10px; }
+.add_cont { padding:10px; }
+.add_cont .alList_submitBtn, .add_cont .alList_moreBtn { display:inline-block; width:40%; margin:10px; }
+.add_cont input.alList_submitBtn{vertical-align:top; -webkit-border-radius:6px; border-radius:6px; height:45px; line-height:45px;}
+.add_cont li { padding-bottom:12px; }
+.add_cont li input[type=checkbox] {position:relative; top:-3px;}
+.add_cont li.addr_errorMsg{padding:0; color:#b51111; text-align:center; line-height:25px; display:none;}
+.add_cont li span { display:inline-block; width:70px; text-align:right; }
+.add_cont li .error{border:1px solid #B51111}
+.ac_txt { width:120px; height:30px; line-height:28px; border:1px solid #dbdbdb; }
+.long_txt { width:200px; }
+select { height:auto; line-height:normal; padding:4px 2px; width:122px;}
+
+
+/* 地址管理 列表 start*/
+.alOrder_addr{margin:10px 12px; padding:9px; border:1px solid #e1e1e1; -webkit-border-radius:5px; border-radius:5px; background:url(/images/arrow.png) no-repeat 98% center; -webkit-background-size:11px; -moz-background-size:11px; background-size:11px;}
+.alOrder_addr a{display:block; color:#636363;}
+.alOrder_addr dl{width:100%; display:table; line-height:21px;}
+.alOrder_addr dt, .alOrder_prodInfo dd{display:table-cell;}
+.alOrder_addr dt{width:60px;}
+.alOrder_addr dd{padding:0 10px 0 0;word-break:break-all;word-wrap:break-word;}
+.alOrder_addr dd span, .alOrder_addr dd em{color:#d10000;}
+
+.alOrder_addr .noneAddr{position: absolute;width: 150px;height: 30px;line-height: 30px;text-align: center;left: 50%;top: 50%;margin: -15px 0 0 -75px;}
+
+/* 发票地址管理 列表 start*/
+.alOrder_invaddr{margin:10px 12px; padding:9px; border:1px solid #e1e1e1; -webkit-border-radius:5px; border-radius:5px; background:url(../../images/arrow.png) no-repeat 98% center; -webkit-background-size:11px; -moz-background-size:11px; background-size:11px; position: relative;}
+.alOrder_invaddr a{display:block; color:#636363;}
+.alOrder_invaddr dl{width:100%; display:table; line-height:21px;}
+.alOrder_invaddr dt, .alOrder_prodInfo dd{display:table-cell;}
+.alOrder_invaddr dt{width:60px;}
+.alOrder_invaddr dd{padding:0 10px 0 0;word-break:break-all;word-wrap:break-word;}
+.alOrder_invaddr dd span, .alOrder_addr dd em{color:#d10000;}
+.alOrder_invaddr .noneAddr{position: absolute;width: 150px;height: 30px;line-height: 30px;text-align: center;left: 50%;top: 50%;margin: -15px 0 0 -75px;}
+.invaddr_list li.curr section { border-color:#B51111;}
+/**/
+.address_listbox { padding:10px 0; }
+.address_infohd { margin:0 12px; padding:0 2px; position:relative; border-bottom:1px solid #dbdbdb; padding-bottom:10px; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+.address_delbtn { float:right; color:#0024ff;}
+.default_address { padding-left:8px;}
+.address_list li.curr section { border-color:#B51111;}

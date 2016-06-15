@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>  
+  	<service xmlns="http://xfire.codehaus.org/config/1.0" xmlns:s="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+		<name>bestpay_notify
+		</name>
+		<namespace>
+			bestpay_notify
+		</namespace>
+		<serviceClass>
+			com.shangpin.wireless.api.pay.bestpay.server.service.INoticefyResult
+		</serviceClass>
+		<implementationClass>
+			com.shangpin.wireless.api.pay.bestpay.server.impl.NoticefyResult
+		</implementationClass>
+	</service>	
+</beans>

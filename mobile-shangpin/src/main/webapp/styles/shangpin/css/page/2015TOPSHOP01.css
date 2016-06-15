@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+.main_box{width:100%;max-width:640px;margin:0 auto;}
+.main_box a{display:block;width:100%;}
+.main_box img{display:block;width:100%;}
+.top_img{width:100%;display:block;}
+.t_img{width:100%;display:block;padding:8px 0;}
+.t_text{ font-family:"微软雅黑"; font-size:14px; color:#777; padding:10px 10px 0; line-height:22px;}
+.main_box h2{width:100%;display:block;margin:15px 0 0;position:relative;}
+.main_box h3{padding:15px 10px 0;color:#333;font-size:16px;}
+
+
+

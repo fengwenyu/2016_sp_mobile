@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+
+	<class name="Privilege" table="privilege">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="url" type="string" length="100"/>
+		<property name="modulename" type="string" length="50"/>
+		<!-- roles属性，本对象与Role的多对多 -->
+		<set name="roles" table="role_privilege">
+			<key column="privilegeId"></key>
+			<many-to-many class="Role" column="roleId"></many-to-many>
+		</set>
+		<!-- parent属性，本对象与Privilege（上级）的多对一 -->
+		<many-to-one name="parent" class="Privilege" column="parentId"></many-to-one>
+		<!-- children属性，本对象与Privilege（下级）的一对多 -->
+		<set name="children" lazy="false" order-by="id ASC">
+			<key column="parentId"></key>
+			<one-to-many class="Privilege"/>
+		</set>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+
+</hibernate-mapping>

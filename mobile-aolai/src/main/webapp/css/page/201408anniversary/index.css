@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clr:after, .clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/**************/
+.ol_top_img{width:320px; height:293px; margin: 0 auto; overflow:hidden;}
+.ol_top_img a, .ol_top_img img{display:block;}
+
+.ol_list, .ol_bottom_list h3{width:100%; background:#d0062f;}
+.ol_list .box{width:320px; margin:0 auto;}
+.ol_list ul.left, .ol_list ul.right{width:159px;}
+.ol_list ul.left{float:left;}
+.ol_list ul.right{float:right;}
+.ol_list ul li{margin-bottom:2px;}
+.ol_list li a, .ol_list li img{display: block;}
+
+.ol_bottom_list{width:100%; background:#fff;} 
+.ol_bottom_list h3{height:50px; text-align:center;}
+.ol_bottom_list h3 img{margin:0 auto;}
+.ol_bottom_list ul{width:290px; padding-top:12px; margin:0 auto;}
+.ol_bottom_list ul li{width:139px; float:left; margin-bottom:12px; margin-right:12px; display:inline-block;}
+.ol_bottom_list ul li:nth-child(2n){margin-right:0;}
+
+.ol_bottom_list ul li img, .ol_bottom_list ul li a{display:block;}

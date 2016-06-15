@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+*{/*-webkit-tap-highlight-color:rgba(0, 0, 0, .1);*/ margin:0;padding:0; -webkit-touch-callout:none;}
+body{font-size:14px; -webkit-user-select:none; -webkit-text-size-adjust:none; font-family:arial; background:#f6f6f6;}
+ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+a img{border:none;}
+input,img{vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+input[type=text],input[type=password],input[type=number],input[type=url],input[type=email],input[type=tel]{height:35px;line-height:35px;border:1px #ccc solid;text-indent:5px;font-size:14px;border-top-color:#9c9c9d;color:#a0a0a0;-webkit-box-shadow:inset 0 1px 3px #aaa;-webkit-border-radius:3px;}
+input[type=checkbox],input[type=radio],select{vertical-align:middle;}
+select{font-size:16px;height:30px;line-height:30px;}
+textarea{font-size:14px;border:1px #ccc solid;-webkit-box-shadow:inset 0 2px 2px #999;}
+header,nav,section,footer{display:block;}
+
+a, a:link, a:visited, a:hover, a:active{text-decoration:none; color:#414042;}
+
+/* ====================   头部通用  ================= */
+
+
+
+/* ====================   退货说明  ================= */
+h2.notice{margin:15px 10px 0; color:#ae8d6d; font-weight:400; font-size:12px; line-height:25px;}
+menu{color:#686868; display:block; margin:5px 10px 0; border:1px solid #ccc;}
+menu li{border-bottom:1px solid #ccc; height:40px; line-height:40px;}
+menu li:last-child{border-bottom:none;}
+menu li a{display:block; padding:0 0 0 15px; background-color:#fff; -webkit-tap-highlight-color:rgba(239, 239, 239, 1);}
+a.last_page{display:block; padding:0 0 0 15px; margin:20px 10px 0; height:40px; line-height:40px; -webkit-tap-highlight-color:rgba(239, 239, 239, 1); border:1px solid #ccc; border-bottom:none; background-color:#fff;}
+
+.header{font-weight:700; font-size:18px; border-bottom:1px solid #ccc; color:#414042; padding:10px 10px 0; line-height:45px;}
+.header em{color:#b60000; font-style:normal;}
+
+.content{margin:10px; padding:0;}
+article{color:#414042; display:block; line-height:24px; padding:0 0 20px 0;}
+article:last-child{padding:0;}
+article dl{width:100%; display:table;}
+article dt, article dd{display:table-cell; text-align:left;}
+article dt{width:70px;}
+article p{margin:10px 0;}
+
+div.notice{padding:10px; border-top:1px solid #ccc; color:#ae8d6d; line-height:180%; text-align:center;}
+.notice dl{width:100%; display:table; padding-bottom:5px;}
+.notice dt, .notice dd{display:table-cell; text-align:left;}
+.notice dt{width:70px;}
+.notice span{width:75px; height:28px; display:inline-block; line-height:28px; color:#fff; text-align:center; background-color:#a50000;}
+.notice em{color:#000; font-style:normal; font-weight:bold;}
+.notice em i{font-style:normal; text-decoration:underline;}
+.notice p{padding-top:10px;}
+.notice p em{color:#a50000; text-decoration:underline;}
+div.page_btm{text-align:left;}

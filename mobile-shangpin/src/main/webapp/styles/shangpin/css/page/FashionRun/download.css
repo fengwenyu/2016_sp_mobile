@@ -1,0 +1,20 @@
+
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+.topFix{position:fixed; top:0; z-index:10;min-width:320px; max-width:640px;height:45px;}
+.topFix section { position:static;}
+body .alContent {line-height:20px; }
+.top_banner{ position:relative;}
+.top_banner img{ width:100%;}
+.down_load_con{ width:100%; max-width:640px; position:fixed; bottom:0; z-index:10;}
+.down_load_nav{ padding:10px 15px 20px;background:rgba(255,255,255,.8);}
+.down_load_nav a{ float:left;  width:48%; border:1px solid #c62026; color:#c62026;height:40px; line-height:40px; display:block;border-radius:5px; font-size:16px; }
+.down_load_nav a:last-child{ float:right;}
+.down_load_nav a i{ margin-left:40%;}
+.android_bg{
+	background:url(../../../images/FashionRun/down_load_img01.png) no-repeat 26% 9px;
+	background-size:25px 50px;
+}
+.apple_bg{
+	background:url(../../../images/FashionRun/down_load_img01.png) no-repeat 24% -22px;
+	background-size:25px 50px;
+}

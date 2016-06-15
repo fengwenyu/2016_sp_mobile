@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="AccountAlipay" table="accountalipay">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="aliUserId" type="string">
+			<column name="aliUserId" length="50"/>
+		</property>
+		<property name="userId" type="string">
+			<column name="userId" length="50"/>
+		</property>
+		<property name="product" type="string">
+			<column name="product" length="8"/>
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" length="4"/>
+		</property>
+		<property name="nickname" type="string">
+			<column name="nickname" length="50"/>
+		</property>
+		<property name="city" type="string">
+			<column name="city" length="50"/>
+		</property>
+		<property name="mobile" type="string">
+			<column name="mobile" length="20"/>
+		</property>
+		<property name="email" type="string">
+			<column name="email" length="40"/>
+		</property>
+		<property name="authcode" type="string">
+			<column name="authcode" length="50"/>
+		</property>
+		<property name="accesstoken" type="string">
+			<column name="accesstoken" length="50"/>
+		</property>
+		<property name="accessExpiresSec" type="int">
+			<column name="accessExpiresSec"/>
+		</property>
+		<property name="refreshtoken" type="string">
+			<column name="refreshtoken" length="50"/>
+		</property>
+		<property name="refreshExpiresSec" type="int">
+			<column name="refreshExpiresSec"/>
+		</property>
+		<property name="regTime" type="timestamp">
+			<column name="regTime" />
+		</property>
+		<property name="updateTime" type="timestamp">
+			<column name="updateTime" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="Product" table="product">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="productName" type="string" length="40"/>
+		<property name="productNum" type="long" />
+		<property name="platform" type="string" length="10"/>
+		<property name="createTime" type="timestamp"/>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

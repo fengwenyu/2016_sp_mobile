@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="WeixinActivities" table="weixinactivities">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="issueId" type="string">
+			<column name="issueId" length="20"/>
+		</property>
+		<property name="issueName" type="string">
+			<column name="issueName" length="50"/>
+		</property>
+		<property name="type" type="int">
+			<column name="type" length="4"/>
+		</property>
+		<property name="isOpen" type="int">
+			<column name="isOpen" length="4"/>
+		</property>
+		<property name="startOrder" type="string">
+			<column name="startOrder" length="30"/>
+		</property>
+		<property name="queryOrder" type="string">
+			<column name="queryOrder" length="30"/>
+		</property>
+		<property name="notStartReply" type="string">
+			<column name="notStartReply" length="5000"/>
+		</property>
+		<property name="endedReply" type="string">
+			<column name="endedReply" length="5000"/>
+		</property>
+		<property name="overflowReply" type="string">
+			<column name="overflowReply" length="5000"/>
+		</property>
+		<property name="startTime" type="timestamp">
+			<column name="startTime" />
+		</property>
+		<property name="endTime" type="timestamp">
+			<column name="endTime" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ background:#ebebeb;}
+.main_box{
+	width:100%;
+	max-width:640px;
+	margin:0 auto 15px;
+}
+
+.main_box a{
+	display:block;
+	width:100%;
+}
+.main_box img{
+	display:block;
+	width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	margin-bottom:0px;
+	
+}
+.prod_list{
+	padding:0 5px 0 0;
+}
+.prod_list li{
+	float:left;
+	width:50%;
+	margin-top:5px;
+}
+.prod_list li:nth-child(2n){
+	float:right;
+	margin-right:-5px;
+}
+/*优惠劵列表*/
+.coupon-list{ margin:5px 0;}
+.coupon-list li{box-sizing:border-box;  margin-right:5px;width: 33.3%; float: left;}
+.coupon-list li:last-child{margin-right:-10px;}
+.coupon-list li img{ width:100%}
+
+.main_box h1{
+	width:100%;
+	display:block;
+	margin:5px 0 0;
+}
+.main_box h2{
+	width:100%;
+	display:block;
+	margin:0;
+}
+.main_box h3{
+	width:100%;
+	padding:5px 0 5px;
+	display:block;
+}
+.main_box h4{
+	width:100%;
+	display:block;
+	padding-top:5px;
+}
+.main_box h5{
+	width:100%;
+	display:block;
+	padding-top:10px;
+}
+

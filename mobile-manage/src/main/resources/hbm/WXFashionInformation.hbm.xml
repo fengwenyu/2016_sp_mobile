@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="WXFashionInformation" table="wxFashionInformation">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="title" type="string">
+			<column name="title" length="100" />
+		</property>
+		<property name="author" type="string">
+			<column name="author" length="50" />
+		</property>
+		<property name="digest" type="string">
+			<column name="digest" length="150" />
+		</property>
+		<property name="releaseDate" type="timestamp">
+			<column name="releaseDate" />
+		</property>
+		<property name="createDate" type="timestamp">
+			<column name="createDate" />
+		</property>
+		<property name="coverImg" type="string">
+			<column name="coverImg" />
+		</property>
+
+		<property name="content" type="text">
+			<column name="content" />
+		</property>
+		<property name="sort" type="integer">
+			<column name="sort" />
+		</property>
+	
+		<property name="coverImgWidth" type="string">
+			<column name="coverImgWidth" length="20" />
+		</property>
+		<property name="coverImgheight" type="string">
+			<column name="coverImgheight" length="20" />
+		</property>
+	
+	</class>
+
+
+</hibernate-mapping>

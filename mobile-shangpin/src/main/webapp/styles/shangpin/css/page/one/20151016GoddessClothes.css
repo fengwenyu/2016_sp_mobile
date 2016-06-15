@@ -1,0 +1,91 @@
+
+.onBody{
+	height:100%;
+	overflow:hidden;	
+}
+.container{ min-width:320px; max-width:640px; margin:0 auto; overflow:hidden; background:#f3f3f3}
+
+.headApp {width: 100%}
+.headApp img { display: block;width: 100%}
+
+.topFix{position:relative; height:44px;}
+.topFix section {position:relative; height:44px; overflow:hidden; min-width:320px; max-width:640px;}
+
+a,img,button,input,textarea,li{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+.conbox{ background:#f3f3f3; padding-bottom:5px; position:relative;}
+.conbox img{ display:block; width:100%;}
+.conbox a{ display:block}
+.conbox h3{ margin-top:8px;}
+.conbox h4{ margin:8px 0;}
+.conbox h5{ margin-bottom:10px;}
+.title-box{ position:relative; margin-top:5px;}
+
+.imgList{ margin-top:5px;}
+.sp_list{padding:0 5px 0 0;}
+.sp_list li{float:left;width:50%; margin-top:5px; }
+.sp_list li a:nth-child(2n){ margin-top:3%;}
+.sp_list li:nth-child(2n){ margin-right:-5px; float:right;}
+.position_l{ position:absolute; bottom:0;}
+.position_r{ position:relative; bottom:0;}
+
+.sp_list_two{ /*margin-top:5px;*/ display:box; display:-webkit-box; display:flex; display:-webkit-flex;}
+.sp_list_two li{ flex:1; -webkit-flex:1; box-flex:1; -webkit-box-flex:1;}
+
+.no-m{ margin-top:0;}
+
+.venue_list,.venue_list2{ width:100%; padding:0; display:-webkit-box;display:box; display:-webkit-flex;display:flex; }
+.venue_list li{width:33.3%; box-flex:1;-webkit-box-flex:1; flex:1;-webkit-flex:1; box-sizing:border-box;}
+
+.venue_list2 li{ width:25%;}
+.venue_list2 li.twoblock{ width:50%;box-flex:2;-webkit-box-flex:2; flex:2;-webkit-flex:2; box-sizing:border-box;}
+
+.nom{ margin-top:0px;}
+.list-nom{ padding:0;}
+.list-nom li{ margin-top:0;}
+.list-nom li:nth-child(2n){ margin-right:0; float:right;}
+
+.coupon-btn{ margin-top:5px; }
+.coupon-btn2{ padding:0 10px 0 5px;}
+.coupon-btn li{float:left;width:50%; }
+.coupon-btn li:nth-child(2n){ margin-right:-5px; float:right;}
+
+/*优惠劵弹层*/
+.modal .modal-hd {
+  padding:0 20px;
+  height:50px;
+  text-align: center;
+  line-height: 50px;
+  color: #c62026;
+}
+
+.modal-bd {
+  position:relative;
+  padding:10px 10%;
+  line-height:24px;
+  color:#2d2d2d;
+  background:url(../../../images/one/images/img10.jpg) repeat;
+  box-sizing:border-box;
+}
+.tip_text{ color:#b6acaa; font-size:12px;}
+.modal-bd strong{ color:#c62026; font-weight:normal}
+.modal-ft {
+  border-top: 1px solid #cccccc;
+  display:block;
+  text-align: center;
+  line-height: 40px;
+}
+
+.step-btn{ text-align:center; width:100%; background:#c53220; margin-top:10px;}
+.step-btn a{  line-height:22px; display:block; padding:7px 0; color:#fff; font-size:16px;}
+
+
+.prompt{ font-size:12px; color:#b6acaa; padding:3px;}
+.warn-text{ line-height:24px; font-size:12px; color:#888; margin:0 0 10px;}
+.warn-text i{ display:inline-block; width:16px; margin-right:5px; }
+input.tip-input{display:block; border:1px solid #cccccc; width:100%; height:36px; line-height:36px; padding:0 12px; box-sizing:border-box; margin-bottom:5px; font-size:12px}
+
+.yzm-box { display: -webkit-box; margin-top:10px; }
+.yzm-box > .login_list { box-flex:1;-webkit-box-flex:1; overflow: hidden;position: relative; }
+.yzm-box > .login_list input,.yzm-box > .login_list em{-webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.yzm-box > .login_list input { background: #fff; width: 100%;  border:1px solid #cccccc;padding:0 10px; box-sizing:border-box; line-height: 36px; outline: none;font-size: 12px; }
+.yzm-box > em {  display: block; width: 100px; height: 35px;  margin-left: 10px; line-height: 36px; padding-top:1px;  text-align: center; color: #b6acaa; border:1px solid #b6acaa; font-size:14px; white-space:nowrap;}

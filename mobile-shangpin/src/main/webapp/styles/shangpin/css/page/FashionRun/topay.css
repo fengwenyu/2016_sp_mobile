@@ -1,0 +1,29 @@
+
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+.topFix{position:fixed; top:0; z-index:10;min-width:320px; max-width:640px; height:45px;}
+.topFix section { position:static;}
+body .alContent {line-height:20px; padding-bottom:10px; }
+.receive_box{width:100%; }
+.receive_box p{ padding:0 30px; font-size:12px;}
+
+h3.zhifu_way{ margin: 30px 30px 0; font-weight:normal; font-size:12px;}
+.user_info{ padding:0 30px;font-size:13px;}
+.user_info dt,dd{ float:left;}
+.user_info p{ padding:0; }
+.user_info dd i{ margin-right:10px;}
+.user_phone{ margin-top:30px;}
+.user_phone a{color:#c62026;}
+.user_phone em{ color:#c62026;}
+.user_name{ margin-top:25px;}
+.user_cost{ margin-top:12px;}
+.payment_method{ padding:0 30px; margin-left:-10px; overflow:hidden;}
+.payment_method li{ width:80px; height:30px; border:1px solid #d8d8d8; float:left; margin-top:10px; margin-left:8px; position:relative;}
+.payment_method li a{ position:absolute; right:10px; color:#555555; font-size:12px; line-height:30px; }
+.payment_method li.alipay{ 
+	background:url(../../../images/FashionRun/zhifu_logo.png) no-repeat 8px 4px; 
+	background-size:25px 50px;
+}
+.payment_method li.wechatpay{ 
+	background:url(../../../images/FashionRun/zhifu_logo.png) no-repeat 16px -23px; 
+	background-size:25px 50px;
+}

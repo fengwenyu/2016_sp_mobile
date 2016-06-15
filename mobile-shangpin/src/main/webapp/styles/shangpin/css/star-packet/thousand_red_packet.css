@@ -1,0 +1,31 @@
+﻿body { width: 100%; background:#fff3ea;  }
+.topFix { max-width: 640px; margin: 0 auto; }
+.wapper { width: 100%; min-width: 320px; max-width: 640px; margin: 0 auto;background: url(../../images/star-packet/bg2.jpg) #fff3ea no-repeat top center; background-size: 100% auto }
+.main { min-height: 420px; position:relative; overflow-x:hidden }
+.main img { max-width: 100% }
+.main h2{ text-align: center; padding: 20px 10% 0; }
+
+.form-box { padding: 15px; line-height: 24px; color: #2d2d2d; margin: 70% 15px 0; background:rgba(255,255,255,0.8); position:relative;}
+.form-box  strong { color: #c62026; font-weight: normal }
+.form-box .prompt { font-size: 12px; color: #c62026; padding: 0 3px;-webkit-transition:all ease 0.5s; transition:all ease 0.5s; height:0; overflow:hidden; line-height:20px; }
+.form-box .tip-input { display: block; border: 1px solid #5c5c5c; border-radius:5px; width: 100%; line-height: 30px; padding: 0 10px; box-sizing: border-box; margin-bottom: 10px; font-size: 12px }
+.form-box .red-icon { width:76px; height:89px; position:absolute; top:-74px; right:10px; z-index:99; }
+
+/*手机验证码*/
+.yzm-box { display: -webkit-box;}
+.yzm-box .login_list { -webkit-box-flex: 2; overflow: hidden; position: relative; }
+.yzm-box .login_list input { background: #fff; border: 1px solid #5c5c5c; border-radius:5px; width: 100%;padding: 0 10px; box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height: 30px; outline: none; font-size: 12px; }
+.yzm-box > em { -webkit-box-flex: 1; display: block; background: #fff; width: 130px; height: 30px; border: 1px solid #c62026; border-radius:5px; margin-left: 10px; line-height: 30px; text-align: center; color: #c62026; font-size: 12px; }
+.yzm-box > em.btn_gradient_gray{background:#f4f4f4;border-color:#e9e9e9;color:#999}
+
+.start-btn { display: block; background: #c62026;line-height: 40px; text-align: center; font-size: 18px; color: #fff; margin-top:10px; }
+.start-btn::visited {color:#c62026}
+.tip-text { display: block; line-height: 12px; text-align: left; font-size: 10px; color: #000; margin-top:10px; line-height:20px; }
+
+/*领光了弹层*/
+.without-box{background:rgba(0, 0, 0, 0.7);position: fixed;  width:100%; top:0; bottom:0;display:none;/* */max-width:640px; z-index:99}
+.without-info{ background:#fff;box-sizing:border-box;  width:90%; position:absolute; left:50%; top:50%; -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%); z-index:10; padding:25px 15px;}
+.without-info h3{ text-align:center; font-size:15px; margin:5px 20px 10px; line-height:24px}
+.without-info p{ line-height:22px; color:#555; font-size:14px; text-align:center;}
+.close-btn{ display:block; width:20px; height:20px; position:absolute; right:10px; top:10px; background:url(../../images/star-packet/close_icon.png) no-repeat;background-size:contain;}
+.without-info .click-look{ display:block; width:110px; margin:35px auto 10px; background:#d80037; line-height:32px; font-size:19px; color:#fff; text-align:center;}

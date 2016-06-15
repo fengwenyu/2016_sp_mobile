@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* CSS Document */
+body, .alContent{background-color:#f2f2f2;}
+
+.paymet_block{
+	width:100%;
+}
+.paymet_block p.member_notice{
+	text-align:center;
+	margin-top:10px;
+	font-size:12px;
+	height:37px;
+	line-height:37px;
+	background-color:#fff;
+	border-top:1px solid #d8d8d8;
+	border-bottom:1px solid #d8d8d8;
+}
+.paymet_block p.member_notice a{
+	color:#ff3b3b;
+}
+
+.paymet_block fieldset {
+	width:100%;
+	padding-bottom:70px;
+}
+.paymet_block fieldset legend {
+	color: #2d2d2d;
+	font-size: 16px;
+	padding:0 15px;
+	height:39px;
+	line-height:39px;
+	border-bottom:1px solid #d8d8d8;
+	display:block;
+	width: 100%;
+	box-sizing: border-box;
+}
+.paymet_block fieldset p {
+	border-bottom:1px solid #d8d8d8;
+	background-color:#fff;
+	height: 39px;
+	line-height: 39px;
+	color: #999;
+	padding:0 15px;
+	position: relative;
+}
+.paymet_block fieldset p.price{
+	color:#555;
+	margin-top:10px;
+	border-top:1px solid #d8d8d8;
+}
+
+.paymet_block fieldset p.select a{
+	background:url(../../images/arrow_r.png) no-repeat right center;
+	background-size:7px 12px;
+	color: #555;
+	display:block;
+	padding-right:10px;
+	height: 39px;
+	overflow:hidden;
+}
+
+.paymet_block fieldset p.giftCard{
+	height:auto;
+	color:#555;
+	line-height:24px;
+	padding:5px 15px;
+}
+.paymet_block fieldset p.giftCard a{
+	color: #555;
+	display:block;
+	background:url(../../images/select_Nbg.png) no-repeat right center;
+	background-size:21px;
+}
+.paymet_block fieldset p.giftCard a.cur{
+	background:url(../../images/select.png) no-repeat right center;
+	background-size:21px;
+}
+.paymet_block fieldset p.giftCard i{
+	color:#ff3b3b;
+}
+.paymet_block fieldset p.giftCard a.r_link{
+	background:none;
+	text-align:right;
+	font-size:12px;
+	text-decoration:underline;
+}
+
+.paymet_block fieldset p label {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width:65px;
+	font-size:12px;
+	color: #555;
+}
+.paymet_block fieldset p input[type=text], .paymet_block fieldset p input[type=password]{
+	border: 1px solid #fff;
+	background: rgba(0,0,0,0);
+	height: 24px;
+	width: 65%;
+	z-index: 0;
+	font-size:12px;
+	padding:0 5px;
+}
+.paymet_block fieldset p input[type=password].giftCard{
+	border:1px solid #eee;
+	height:28px;
+	margin:5px 0;
+	width:95%;
+}
+.paymet_block fieldset p input[type=text].error, .paymet_block fieldset p input[type=password].error{
+	border:1px solid #f00;
+}
+
+
+/*支付方式*/
+.paymet_block fieldset p span{
+	display:block;
+	line-height:normal;
+	padding:5px 0 5px 55px;
+	background-image:url(../../images/member/bank.png);
+	background-repeat:no-repeat;
+	background-size:45px;
+}
+.paymet_block fieldset p span a{
+	display:block;
+	font-size:9px;
+	color:#888;
+	background:url(../../images/radio.png) no-repeat right -5px;
+	background-size:21px;
+}
+.paymet_block fieldset p span a.cur{
+	background:url(../../images/radio.png) no-repeat right -45px;
+	background-size:21px;
+}
+.paymet_block fieldset p span a em{
+	font-size:12px;
+	color:#555;
+}
+.paymet_block fieldset p span.alipay{
+	background-position:0 0;
+}
+.paymet_block fieldset p span.unionPay{
+	background-position:0 -40px;
+}
+.paymet_block fieldset p span.weixinPay{
+	background-position:0 -160px;
+}
+.paymet_block fieldset p span.cashPay{
+	background-position:0 -80px;
+}
+.paymet_block fieldset p span.postPay{
+	background-position:0 -120px;
+}
+.paymet_block fieldset p span.weixinPay a, .paymet_block fieldset p span.cashPay a, .paymet_block fieldset p span.postPay a{
+	font-size:12px;
+	height:29px;
+	line-height:29px;
+	color:#555;
+}
+
+.paymet_block fieldset p.total{
+	border-top:1px solid #d8d8d8;
+	height:auto;
+	text-align:right;
+	font-size:12px;
+	line-height:20px;
+	margin-top:10px;
+	padding:10px 15px;
+	color:#555;
+}
+.paymet_block fieldset p.total em{
+	display:block;
+	padding-top:10px;
+	color:#ff3b3b;
+}
+.paymet_block fieldset p.total i{
+	display:inline-block;
+	width:60px;
+	text-align:left;
+}
+
+.paymet_block .payment_fixed{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	background-color:#f2f2f2;
+	border-top:1px solid #d8d8d8;
+}
+.paymet_block .payment_submit{	
+	position:relative;
+	margin: 15px;
+	height:40px;
+}
+.paymet_block .payment_submit dl{
+	display:-webkit-box;
+	display:-moz-box;
+	display:-o-box;
+	display:box;
+	width:100%;
+}
+.paymet_block .payment_submit dt{
+	width:8px;
+}
+.paymet_block .payment_submit dd{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	box-flex:1;
+}
+.paymet_block .payment_btn {
+	/*background-color:#000;
+	border:1px solid #000;*/
+	background-color:#c62026;
+	border:1px solid #c62026;  /*20140921 fby*/
+	height: 38px;
+	line-height: 38px;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	box-sizing: border-box;
+}
+.paymet_block .payment_btn:hover{
+	/*background-color:#333;
+	border:1px solid #000;*/
+	background-color:#aa0006;
+	border:1px solid #aa0006;  /*20140921 fby*/
+	color:#fff;
+}
+.paymet_block input.payment_btn{
+	opacity:0;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	width: 100%;
+	margin:0 auto;
+}
+.paymet_block input.payment_btn:hover{
+	background-color:#333;
+	border:1px solid #000;
+	color:#fff;
+}
+
+.paymet_block .contiu_btn {
+	background-color:#fff;
+	border:1px solid #c62026;
+	color:#c62026;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	box-sizing: border-box;
+}
+.paymet_block .contiu_btn:hover{
+	background-color:#faeeee;
+	border:1px solid #c62026;
+	color:#c62026;
+}
+
+/* 支付失败 */
+.paymet_block .paymet_fail{
+	margin:77px 0 40px;
+	background:url(../../images/pay_fail.png) no-repeat center 0; background-size:53px;
+	text-align:center;
+	padding:53px 0 0 0;
+}
+.paymet_block .paymet_fail h3{
+	line-height:30px;
+	font-size:16px;
+	font-weight:normal;
+	color:#888;
+}
+.paymet_block .paymet_fail p{
+	font-size:12px;
+	color:#888;
+}
+
+/* 支付成功 */
+.paymet_block .paymet_success{
+	margin:77px 0 40px;
+	background:url(../../images/pay_success.png) no-repeat center 0; background-size:53px;
+	text-align:center;
+	padding:53px 0 0 0;
+}
+.paymet_block .paymet_success h3{
+	line-height:30px;
+	font-size:16px;
+	font-weight:normal;
+	color:#888;
+}
+.paymet_block .paymet_success p{
+	text-align:left;
+	margin:40px 30px 0;
+	font-size:12px;
+	color:#888;
+	line-height:20px;
+}
+.paymet_block .paymet_success p span{
+	color:#2d2d2d;
+}
+.paymet_block .paymet_success p.tips{
+	text-align:center;
+	margin:0;
+	line-height:20px;
+}
+
+/*弹出层*/
+#popup_container{
+	width:300px;
+	background:rgba(0,0,0,.7);
+	color:#fff;
+}
+#popup_container h1 {
+	background: #c61d41;
+	color: #fff;
+	line-height: 0;
+	height: 0px;
+	position: relative;
+	border-radius: 0.3em 0.3em 0 0;
+	font-size:0;
+	display:block;
+}
+#popup_container .title_close {
+	background: url(/images/motherDay/close_btn_bg.png) no-repeat center;
+	display: block;
+	position: absolute;
+	right: -15px;
+	top: -25px;
+	width: 50px;
+	height: 50px;
+	background-size: 25px 25px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index:10000;
+}
+#popup_message {
+	margin: 0;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+	text-align: left;
+	min-height:50px;
+	line-height:50px;
+	text-align:center;
+}

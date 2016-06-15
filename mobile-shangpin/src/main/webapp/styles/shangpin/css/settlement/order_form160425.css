@@ -1,0 +1,167 @@
+body { background: #f2f2f2; position:relative;}
+.paymet_block { width: 100%; }
+.paymet_block p.addr_block { margin-top: 10px; padding: 0 10px; background-color: #fff; color: #555; border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }
+.paymet_block p.addr_block span { display: block; padding: 10px 0; line-height: 20px; border-bottom: 1px solid #d8d8d8; }
+.paymet_block p.addr_block span i { display: block; line-height: 30px; }
+.paymet_block p.addr_block span.addr_edit { border: none; text-align: right; }
+.paymet_block p.addr_block span.addr_edit a { display: inline-block; color: #2d2d2d; height: 20px; padding-left: 20px; background-image: url(../../images/order/edit_icon.png); background-repeat: no-repeat; background-size: 16px; }
+.paymet_block p.addr_block span.addr_edit a.editBtn { background-position: 0 0; }
+.paymet_block p.addr_block span.addr_edit a.deletBtn { background-position: 0 -20px; }
+.paymet_block fieldset { width: 100%; }
+.paymet_block fieldset.notBtm { padding-bottom: 0; }
+.paymet_block fieldset legend { color: #2d2d2d; font-size: 14px; padding: 0 15px; height: 39px; line-height: 39px; border-bottom: 1px solid #d8d8d8; display: block; width: 100%; box-sizing: border-box; }
+.paymet_block fieldset legend em{font-size:12px;}
+.paymet_block fieldset legend.invo,.paymet_block fieldset legend.gift{height:auto; line-height:32px;}
+.paymet_block fieldset legend em{color:#888; display:block;}
+.paymet_block fieldset .first_leg{height:1px; padding:0px; border:0px;}
+.paymet_block fieldset legend.price { border-top: 1px solid #d8d8d8; color: #c62026; background: #fff }
+.paymet_block fieldset legend.price em { display: block; float: left; }
+.paymet_block fieldset legend.price span { float: right; }
+.paymet_block fieldset p { border-bottom: 1px solid #d8d8d8; background-color: #fff; height: 39px; line-height: 39px; color: #999; padding: 0 15px; position: relative; }
+.paymet_block fieldset .payment_submit p {border-bottom:0px; }
+.paymet_block fieldset p.selected { height: auto; line-height: 22px; }
+.paymet_block fieldset p.selected a { display: block; line-height: 22px; padding: 8px 15px 8px 0; color: #555; background: url(../../images/order/arrow_r.png) no-repeat right center; background-size: 7px 12px; background-color:#fff;}
+.paymet_block fieldset p.selected a strong { color: #red; font-weight: normal }
+.paymet_block fieldset p.selected a .phone { float: right;}
+.paymet_block fieldset p.selected time { float: right }
+.paymet_block fieldset p span.delivery_mode { display: inline-block; float: left; background: none; margin-right: 20px; line-height: 22px; padding: 0; }
+.paymet_block fieldset p.select a { background: url(../../images/order/arrow_r.png) no-repeat right center; background-size: 7px 12px; color: #555; display: block; line-height: 22px; padding: 8px 0; }
+.paymet_block fieldset p.freight a{ color: #555; display: block; line-height: 22px; padding: 8px 0; }
+.paymet_block fieldset p label { display: inline-block; margin: 0 10px 0 0; width: 65px; font-size: 12px; color: #555; }
+.paymet_block fieldset p input[type=text], .paymet_block fieldset p input[type=password] { border: 1px solid #fff; background: rgba(0,0,0,0); height: 24px; width: 65%; z-index: 0; font-size: 12px; padding: 0 5px; }
+.paymet_block fieldset p input[type=password].giftCard { border: 1px solid #eee; height: 28px; margin: 5px 0; width: 95%; }
+.paymet_block fieldset p input[type=text].error, .paymet_block fieldset p input[type=password].error { border: 1px solid #f00; }
+.select-invoice a { color: #555 }
+.select-invoice .select-option { display: inline-block; width: 40px; height: 21px; line-height: 21px; font-size: 12px; text-align: right; color: #888; background: url(../../images/order/radio.png) no-repeat 55px -5px; background-size: 21px; padding: 5px 0 5px 55px; }
+.select-invoice .cur { background: url(../../images/order/radio.png) no-repeat 55px -45px; background-size: 21px; }
+/*提交按钮*/
+.payment_fixed { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f2f2f2; border-top: 1px solid #d8d8d8; }
+.payment_submit.right_btn { position: absolute; right: 0; bottom: 0; width: 130px; }
+.payment_submit_all p{ width:50%; float:left;}
+.payment_submit dl { display: -webkit-box; display: -moz-box; display: -o-box; display: box; width: 100%; }
+.payment_submit dt { width: 8px; }
+.payment_submit dd { -webkit-box-flex: 1; -moz-box-flex: 1; -o-box-flex: 1; box-flex: 1; }
+.paymet_block fieldset p.pord_info { height: auto; }
+.paymet_block fieldset p.pord_info a { display: block; padding: 10px 0 5px; }
+.paymet_block fieldset p.pord_info img { float: left; margin: 0 10px; }
+.paymet_block fieldset p.pord_info ins { margin-left: 15px; text-decoration: none; line-height: normal; float: left; }
+.paymet_block fieldset p.pord_info i { color: #2d2d2d; font-size: 12px; line-height: 16px; display: block; width: 190px !important; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-bottom: 5px; }
+.paymet_block fieldset p.pord_info  mark{background:#fff; font-weight:500; color:#2d2d2d; }
+.paymet_block fieldset p.pord_info em { display: inline-block; line-height: 16px; height: 16px; color: #888; font-size: 12px; overflow: hidden; white-space: nowrap; width: auto !important; }
+.paymet_block fieldset p.abroad_info { height: auto; }
+.paymet_block fieldset p.abroad_info a { display: block; padding: 10px 0 5px; }
+.paymet_block fieldset p.abroad_info img { float: left; margin: 0 10px; }
+.paymet_block fieldset p.abroad_info ins { margin-left: 15px; text-decoration: none; line-height: normal; float: left; }
+.paymet_block fieldset p.abroad_info i { color: #2d2d2d; font-size: 12px; line-height: 16px; display: block; width: 190px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-bottom: 5px; }
+.paymet_block fieldset p.abroad_info b{background:#fff; font-weight:500; color:#2d2d2d;}
+.paymet_block fieldset p.abroad_info  mark{background:#fff; font-weight:500; color:#2d2d2d; }
+.paymet_block fieldset p.abroad_info em { display: inline-block; line-height: 16px; height: 16px; color: #888; font-size: 12px; overflow: hidden; white-space: nowrap; }
+.paymet_block fieldset p.abroad_info em img{margin:1px 5px; float:right;}
+.paymet_block fieldset p.abroad_info span { display: block; line-height: 18px; height: 18px; color: #888; font-size: 12px; width: 60px; border:1px solid #cccccc; overflow: hidden; white-space: nowrap; margin-bottom:5px; text-align:center;}
+.paymet_block fieldset p.invoice { height: auto; line-height: 24px; padding: 10px 15px; display: none }
+.paymet_block fieldset p.invoice a { color: #888; height: auto; }
+.paymet_block fieldset p.invoice em { color: #2d2d2d; }
+.paymet_block fieldset p.coupons i,.paymet_block fieldset p.freight i { position: absolute; right: 40px; top: 0; line-height: 39px; }
+.paymet_block fieldset p.coupons i em,.paymet_block fieldset p.freight i em { color: #ff3b3b; }
+
+.paymet_block fieldset p.giftCard a { color: #555; display: block; background: url(../../images/order/select_Nbg.png) no-repeat right center; background-size: 21px; }
+.paymet_block fieldset p.giftCard a.cur { background: url(../../images/order/select.png) no-repeat right center; background-size: 21px; }
+.paymet_block fieldset p.giftCard i { color: #ff3b3b; font-size: 12px; padding-left: 20px; }
+/*支付方式*/
+.paymet_block fieldset p.payment-method span { display: block; line-height: normal; padding: 5px 0 5px 55px; background-image: url(../../images/order/bank.png); background-repeat: no-repeat; background-size: 45px; }
+.paymet_block fieldset p.payment-method span a { display: block; font-size: 12px; color: #888; background: url(../../images/order/radio.png) no-repeat right -5px; background-size: 21px; }
+.paymet_block fieldset p.payment-method span a.cur { background: url(../../images/order/radio.png) no-repeat right -45px; background-size: 21px; }
+.paymet_block fieldset p.payment-method span a em { font-size: 12px; color: #555; }
+.paymet_block fieldset p.payment-method span.alipay { background-position: 0 0; }
+.paymet_block fieldset p.payment-method span.unionPay { background-position: 0 -40px; }
+.paymet_block fieldset p.payment-method span.weixinPay { background-position: 0 -160px; }
+.paymet_block fieldset p.payment-method span.cashPay { background-position: 0 -80px; }
+.paymet_block fieldset p.payment-method span.postPay { background-position: 0 -120px; }
+.paymet_block fieldset p.payment-method span.pufaPay { background-position: 0 -201px; }
+.paymet_block fieldset p.payment-method span.CMPay { background-position: 0 -243px; }
+.paymet_block fieldset p.payment-method span.weixinPay a, .paymet_block fieldset p span.cashPay a, .paymet_block fieldset p span.postPay a, .paymet_block fieldset p span.pufaPay a , .paymet_block fieldset p span.CMPay a, .paymet_block fieldset p span.alipay a, .paymet_block fieldset p span.unionPay a { height: 29px; line-height: 29px; color: #555; }
+.other-payment-box { display: none; }
+.paymet_block fieldset p.total { height: auto; text-align: right; font-size: 13px; line-height: 20px; padding: 10px 15px; color: #555; border-bottom:0px;}
+.paymet_block fieldset p.total em { display: block; padding-top: 10px; color: #ff3b3b; }
+.paymet_block fieldset p.total i { display: inline-block; width: 60px; text-align: left; }
+.paymet_block fieldset p.attention{height:auto; font-size:12px; color:#888; line-height:20px; padding:10px 15px 15px 15px;}
+.paymet_block .payment_fixed { position: relative; bottom: 0; left: 0; width: 100%; background-color: #f2f2f2; }
+.paymet_block .payment_submit_all {!important; position: relative; height: 40px; background:#fff;margin: 0px;}
+.paymet_block .payment_submit_all dl { display: -webkit-box; display: -moz-box; display: -o-box; display: box; width: 100%; }
+.paymet_block .payment_submit_all dt { width: 8px; }
+.paymet_block .payment_submit_all dd { -webkit-box-flex: 1; -moz-box-flex: 1; -o-box-flex: 1; box-flex: 1; }
+.paymet_block .payment_btn { background-color: #c62026; border: 1px solid #c62026; height: 40px; line-height: 40px; color: #fff; text-align: center; font-size: 14px; display: block; box-sizing: border-box;}
+.paymet_block .payment_btn:hover { background-color: #aa0006; border: 1px solid #aa0006; color: #fff; }
+.paymet_block input.payment_btn { opacity: 0; outline: none; position: absolute; top: 0; right: 0; z-index: 10; width:37.5%; float:none; }
+.paymet_block input.payment_btn:hover { background-color: #aa0006; border: 1px solid #aa0006; color: #fff; }
+.paymet_block .contiu_btn { background-color: #fff; border: 1px solid #c62026; color: #c62026; height: 38px; line-height: 38px; text-align: center; font-size: 18px; display: block; box-sizing: border-box; }
+.paymet_block .contiu_btn:hover { background-color: #c62026; border: 1px solid #c62026; color: #fff; }
+
+
+.btn-icon{ width:100%; height:38px; overflow:hidden;}
+.btn-icon a{ float:left; display:block; width:48%; box-sizing:border-box;background-color: #c62026;border: 1px solid #c62026;height: 38px;line-height: 38px;color: #fff;text-align: center;font-size: 18px;}
+.btn-icon a.cancel-btn{ margin-right:4%;}
+
+/*选择层*/
+.select-overlay { position: absolute; z-index: 99998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.4); display: none; }
+.select-layer { width: 100%; position: fixed; bottom: 0; left: 0; z-index: 99999; background-color: #fff; display: none; }
+.select-layer .close_btn { position: absolute; top: 10px; right: 10px; background: url(../../images/order/close_invo.png) 0 0 no-repeat; background-size: 15px; text-indent: -3000px; display: block; width: 15px; height: 15px; }
+.select-layer h3 { color: #000; font-size: 16px; font-weight: normal; padding: 0 15px; height: 39px; line-height: 39px; display: block; width: 100%; box-sizing: border-box; background-color: #f2f2f2; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+.select-layer dl { width: 100%;overflow: hidden; overflow-y: auto; }
+.select-layer dl:not(:first-of-type) { display: none; }
+.select-layer dd { border-bottom: 1px solid #d8d8d8; height: 39px; line-height: 39px; color: #999; padding: 0 15px; position: relative; }
+.select-layer dd a { display: block; font-size: 12px; color: #555; background: url(../../images/order/radio.png) no-repeat right 0; background-size: 21px; }
+.select-layer dd a.cur { background: url(../../images/order/radio.png) no-repeat right -40px; background-size: 21px; }
+
+/*身份证弹框样式start*/
+#overlay { position: fixed; z-index: 998; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0,0.5); display: none; }
+#popup_box_id { position: fixed; z-index: 999; display: none; background: #fff; min-width: 300px; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); left: 50%; top: 50%; }
+#popup_message_id { height: auto; padding: 10px; }
+#popup_message_id p { font-size: 12px; line-height: 180%; text-align: left; color: #888; margin-bottom:5px; }
+#popup_title_id { background: #e8e8e8; text-align: left; padding-left: 10px; line-height: 50px; border-radius: 2px; }
+#popup_box_id .title_closeBtn { width: 25px; height: 25px; line-height: 25px; text-align: center; position: absolute; font-size: 28px; color: #333; border-radius: 0; background: none; top: 12px; right: 10px; }
+#popup_panel_id{ margin-top:10px;}
+#popup_content_id button#popup_cancel_id, #popup_content_id button#popup_cancel_id:hover { background: #fff; color: #c62026; }
+#popup_content_id button#popup_cancel_id { height: 28px; line-height: 28px; border: 1px solid #c62026; }
+#popup_content_id button { width: 90px; height: 30px; line-height: 30px; font-size: 14px; text-align: center; border-radius: 0; }
+#popup_content_id button, #popup_content_id button:hover { background: #de4747; color: #fff; padding: 0; cursor: pointer; font-weight: normal; }
+#popup_panel_id {
+    text-align: left;
+    margin: 0;
+    height: 60px;
+    text-align: center;
+}
+#popup_content_id {
+    padding: 0;
+    position: relative;
+}
+/*#popup_message_id p {
+    !* font-size: 14px; *!
+    padding: 20px 0 0;
+    line-height: 180%;
+    text-align: center;
+}*/
+.identification-box {border-top:1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8;height: 36px; line-height: 36px; color: #999;position: relative; text-align:left;}
+.identification-box label { display: inline-block; width: 75px; font-size: 12px; color: #555;  }
+.identification-box input[type=text]{ border: 1px solid #fff; background: rgba(0,0,0,0); height: 24px; width: 190px; z-index: 0; font-size: 12px; }
+
+/*折扣码弹层*/
+.discount{width:100%; height:100%; background:rgba(0,0,0,.7); position:fixed; z-index:999; top:0px; left:0px; display:none;}
+.dis_box{width:90%; position:absolute; top:50%; margin-top:-100px; left:50%; margin-left:-45%; background:#fff;}
+.dis_box input{width:74%; margin:35px 13% 5px; height:35px; padding:0px 5px; color:#000; font-size:14px;}
+.dis_box p{ text-align:center; color:#888;}
+.dis_box a{width:50%; float:left; text-align:center; margin-top:20px; height:50px; line-height:50px; border-top:1px solid #e5e5e5; overflow:hidden; color:#2d2d2d; font-size:16px;}
+.dis_false{border-right:1px solid #e5e5e5; margin-left:-1px;}
+
+/*运费说明弹层*/
+.freight_bg{width:100%; height:100%; background:rgba(0,0,0,.7); position:fixed; z-index:999; top:0px; left:0px; display:none;}
+.freight_box{width:90%; position:absolute; top:50%; margin-top:-100px; left:50%; margin-left:-45%; background:#fff;}
+.freight_box h3{text-align:center; color:#2d2d2d; font-weight:bold; padding:15px 0px;}
+.freight_box p{text-align:left; color:#2d2d2d; padding:10px 8%; line-height:24px;}
+.freight_box a{text-align:center; color:#2d2d2d; font-size:16px; display:block; border-top:1px solid #ccc; padding:10px; margin-top:20px;}
+
+/*地址是否可用样式*/
+.gray_disable{color:#B2AFAF !important;}
+
+
+

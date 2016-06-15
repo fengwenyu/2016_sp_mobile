@@ -1,0 +1,122 @@
+.icon_msg_sender {
+	margin-right: 3px;
+	margin-top: -2px;
+	*margin-top: 2px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.tab_text .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 0 no-repeat
+}
+
+.tab_text.selected .icon_msg_sender, .tab_text:hover .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -30px no-repeat
+}
+
+.tab_img .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -60px no-repeat
+}
+
+.tab_img.selected .icon_msg_sender, .tab_img:hover .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -90px no-repeat
+}
+
+.tab_video .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -120px no-repeat
+}
+
+.tab_video.selected .icon_msg_sender, .tab_video:hover .icon_msg_sender
+	{
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -150px no-repeat
+}
+
+.tab_audio .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -180px no-repeat
+}
+
+.tab_audio.selected .icon_msg_sender, .tab_audio:hover .icon_msg_sender
+	{
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -210px no-repeat
+}
+
+.tab_appmsg .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -240px no-repeat
+}
+
+.tab_appmsg.selected .icon_msg_sender, .tab_appmsg:hover .icon_msg_sender
+	{
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -270px no-repeat
+}
+
+.tab_commondity_appmsg .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -300px no-repeat
+}
+
+.tab_commondity_appmsg.selected .icon_msg_sender, .tab_commondity_appmsg:hover .icon_msg_sender
+	{
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -330px no-repeat
+}
+
+.tab_card .icon_msg_sender {
+	background: transparent
+		url(/mpres/htmledition/images/icon/msg-sender/icon_msg_sender_card.png?__sprite)
+		no-repeat 0 0
+}
+
+.tab_card.selected .icon_msg_sender, .tab_card:hover .icon_msg_sender {
+	background: transparent
+		url(/mpres/htmledition/images/icon/msg-sender/icon_msg_sender_card_selected.png?__sprite)
+		no-repeat 0 0
+}
+
+.tab_cardmsg .icon_msg_sender {
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -360px no-repeat
+}
+
+.tab_cardmsg.selected .icon_msg_sender, .tab_cardmsg:hover .icon_msg_sender
+	{
+	background: url("../../images/menu/msg_tab_z25df2d.png") 0 -390px no-repeat
+}
+
+.msg_sender .tab_navs {
+	background-color: #fff;
+	line-height: 38px;
+	height: 38px
+}
+
+.msg_sender .tab_nav.selected {
+	background-color: #fff
+}
+
+.msg_sender .tab_nav.selected .msg_tab_title {
+	color: #222
+}
+
+.msg_sender .tab_nav .msg_tab_title {
+	color: #8d8d8d
+}
+
+.tab_panel {
+	background-color: #fff;
+	min-height: 216px
+}
+
+.tab_content {
+	padding: 35px 30px 0
+}
+
+.tab_content .inner {
+	border: 1px solid #c6c6c6;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: 14px 20px
+}
+
+.tab_content .inner.no_extra {
+	padding: 0;
+	border-width: 0
+}

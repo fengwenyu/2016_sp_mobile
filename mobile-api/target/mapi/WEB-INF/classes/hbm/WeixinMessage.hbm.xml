@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="WeixinMessage" table="weixinMessage">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="fromUser" type="string">
+			<column name="fromUser" length="50"/>
+		</property>
+		<property name="toUser" type="string">
+			<column name="toUser" length="50"/>
+		</property>
+		<property name="msgId" type="string">
+			<column name="msgId" length="32"/>
+		</property>
+		<property name="content" type="string">
+			<column name="content" length="4096"/>
+		</property>
+		<property name="msgType" type="string">
+			<column name="msgType" length="10"/>
+		</property>
+		<property name="eventType" type="string">
+			<column name="eventType" length="16"/>
+		</property>
+		<property name="mediaId" type="string">
+			<column name="mediaId" length="70"/>
+		</property>
+		<property name="source" type="string">
+			<column name="source" length="8"/>
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="params" type="string">
+			<column name="params" length="8192"/>
+		</property>
+		<property name="custom" type="string">
+			<column name="custom" length="50"/>
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

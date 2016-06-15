@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="IOSDownloadActive" table="ios_channel_download_active">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="callbackUrl" type="string">
+			<column name="callbackUrl" length="500" />
+		</property>
+		<property name="ifa" type="string">
+			<column name="ifa" length="36" />
+		</property>
+		<property name="mac" type="string">
+			<column name="mac" length="32" />
+		</property>
+		<property name="imei" type="string">
+			<column name="imei" length="32" />
+		</property>
+		<property name="appType" type="string">
+			<column name="appType" length="16" />
+		</property>
+		<property name="channel" type="string">
+			<column name="channel" length="16" />
+		</property>
+		<property name="version" type="string">
+			<column name="version" length="32" />
+		</property>
+		<property name="isActive" type="string">
+			<column name="isActive" length="1" />
+		</property>
+		<property name="downloadTime" type="timestamp">
+			<column name="downloadTime" />
+		</property>
+		<property name="activeTime" type="timestamp">
+			<column name="activeTime" />
+		</property>
+		<property name="channelName" type="string">
+			<column name="channelName" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

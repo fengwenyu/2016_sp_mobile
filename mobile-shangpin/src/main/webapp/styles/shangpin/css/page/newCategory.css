@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+
+.cate-box{max-width:640px; }
+.category-search {margin:5px; box-sizing: border-box;}
+.cate-brand-title{width:100%;display:block;position:relative; height:40px;  margin:10px 0;}
+.cate-brand-title em{width:100%;height:1px;display:block;background:#dedede;position:absolute;top:19px;z-index:-1;}
+.cate-brand-title span{ background:#fff; width:120px; text-align:center;font-size:12px; font-weight:normal; color:#ebebeb; position:absolute; left:50%; margin-left:-60px; margin-top:23px;}
+.cate-brand-title a{ width:auto; display:inline-block;text-align:center; width:120px; padding:8px 0 3px;background:#fff; font-family:"微软雅黑"; font-size:16px; color:#555;position:absolute; left:50%; margin-left:-60px; }
+
+.brandBox{width:100%;}
+.brandBox a{float:left; width:25%;text-align: center; padding:3px; box-sizing:border-box;}
+.brandBox a img{min-width:100%; display:block;}
+.brandBox a span{ display:block; line-height:30px; color:#555; font-size:12px;  white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+.pageContent{position:relative; margin:0 auto;}
+.brand_txtList h3{height:22px; line-height:22px; border-bottom:1px solid #f2f2f2; padding:10px 0 0 10px; margin-right:40px;}
+.brand_txtList ul{height:auto;}
+.brand_txtList li a{ color:#888; font-size:12px; line-height:22px; padding:10px 0; display:block;margin:0 40px 0 15px;}
+.brand_txtList li:last-child{border-bottom:none;}
+
+.letter_box1{position: absolute;z-index: 1000;width: 40px;top: 15px;right: 0;}
+.letter_box1 a{display:block; font-size:12px; line-height:16px; text-align:center; color:#646464; font-weight:bold}
+
+.navs {margin: 0 0 10px;overflow: hidden;}
+.navs a {float: left;width: 24%;font-size: 13px;color: #262626; text-align:center; overflow:hidden;white-space:nowrap; text-overflow:ellipsis;padding:5px; box-sizing:border-box;}
+.navs a:first-child, .navs a:nth-child(5), .navs a:nth-child(9), .navs a:nth-child(13), .navs a:nth-child(17), .navs a:nth-child(21), .navs a:nth-child(25), .navs a:nth-child(29) {margin-left: 2%;}
+.navs a i {display: block;margin-bottom: 4px;overflow:hidden; }
+.more-btn{ display:block; background:#fff; color:#232323;font-family:"微软雅黑"; font-size:16px; line-height:16px;padding:15px 0; text-align:center; position:relative;  }
+.more-btn:before{ content:"\f105"; position:absolute; left:50%; margin-left:40px; font-family:'FontAwesome';font-size:20px; color:#777777}

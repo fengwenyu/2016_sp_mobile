@@ -1,0 +1,164 @@
+@charset "utf-8";
+body{background-color:#000;}
+.container { min-width: 320px; max-width: 640px; margin: 0 auto; font-size: 12px; font-family:"Microsoft YaHei", "黑体", "Tahoma", "宋体"; background:url(../../../images/FashionRun/form_bg.jpg) 0 0;background-size: 150px; }
+/*表单start*/
+.form-box {color: #fafafa;}
+.form-box .title{ line-height: 24px;padding-left: 10px; font-size: 14px; font-weight: normal; margin-bottom: 10px;}
+.form-box .row-box {  margin:0 10px 10px;}
+.form-box .row-box label { display: block; font-size: 14px; }
+.form-box .row-box select{ border: 1px solid #eaeaea; background: #fafafa; height: 35px; width: 100%; font-size: 15px; padding: 0 10px;box-sizing: border-box;border-radius: 5px; margin-top: 10px; color:#555;}
+.form-box .row-box input{ border: 1px solid #eaeaea; background: #fafafa; height: 35px; width: 100%; font-size: 15px; padding: 0 10px;box-sizing: border-box;border-radius: 5px; margin-top: 10px;color:#555;}
+.form-box .row-box div{position:relative;}
+.form-box .row-box div button {width: 24px;	height: 24px; position: absolute; border: 0; right: 5px; top: -30px; 	background-color: transparent; text-align: center; display: none; background: url(../../../images/FashionRun/close.png) no-repeat center center; -webkit-background-size: 80%;	-moz-background-size: 80%; background-size: 80%; z-index: 10;}
+.form-box .row-box em{display: inline-block;font-size: 14px; }
+.form-box .row-box > span{ display: inline-block; margin-left: 10px; color: #fff; height: 35px; font-size:14px;}
+.form-box .row-box > span img{ border: 1px solid #ccc; max-height: 100%}
+.form-box .row-box > span img.cur{ border: 1px solid #fb0c60;}
+.form-box .pic-box{ margin: 0 10px 10px;}
+.form-box .pic-box p{ margin-top: 10px; color: #bbb; font-size:10px}
+.form-box .tip-text{ font-size:11px; margin-top:20px; line-height:20px;}
+.select-area{display: inline-block;; border: 1px solid #eaeaea; background: #fafafa; height: 35px; line-height: 35px; width: 100%; font-size: 15px; padding: 0 10px;box-sizing: border-box;border-radius: 5px;margin-top: 10px; color: #555}
+.form-box .row-box.size-box{ padding-top:20px }
+.form-box .row-box.size-box em{display: block;font-size: 14px; float: left; line-height: 20px}
+.form-box .row-box .bar-size{ display:block;float: left ;margin-left:30px;}
+.form-box .row-box .bar-size li{ display: block;margin-right: 10px;margin-bottom: 10px; }
+.form-box .row-box .bar-size li a{display: block;border: 1px solid #fff;color: #fff;line-height: 30px;text-align: left;padding: 2px 10px;font-size: 12px;}
+.form-box .row-box .bar-size li a.cur{ border: 1px solid #f88e92; color:#c62026;}
+.form-box .row-box .bar-size li>span{ display:block;font-size: 11px; text-align:center; line-height: 20px;color: #bbb}
+.form-box .tip-text{ font-size:11px; margin-top:20px; line-height:20px;}
+.agreement{width:105px;margin: 0 auto;}
+.agreement em{ display:inline-block; width:21px; height:39px;background: url(../../../images/radio.png) no-repeat 0 0; background-size: 21px; margin-right:5px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+.agreement em.cur{ background: url(../../../images/radio.png) no-repeat right -40px; background-size: 21px;}
+.agreement a{ display:inline-block;color:#fb0c60;line-height:39px;font-size:12px; vertical-align:top; text-decoration:underline;}
+.agreement-box{font-size:12px; margin:20px 0 20px; line-height:20px;}
+
+.zhifu_way{  font-weight:normal; font-size:14px;display: inline-block; line-height: 37px;vertical-align: top;}
+.payment_method{ display: inline-block;}
+.payment_method li{ width:80px; height:30px; border:1px solid #d8d8d8; display: inline-block;margin-left:8px; position:relative;}
+.payment_method li a{ position:absolute; left:0; width:75px; height:30px; text-align:right; padding-right:5px; color:#fff; font-size:14px; line-height:30px; }
+.payment_method li.alipay{ 
+	background:url(../../../images/FashionRun/zhifu_logo.png) no-repeat 8px 4px; 
+	background-size:25px 50px;
+}
+.payment_method li.wechatpay{ 
+	background:url(../../../images/FashionRun/zhifu_logo.png) no-repeat 16px -23px; 
+	background-size:25px 50px;
+}
+/*表单地址end*/
+
+#bigGlass{height:38px;position:absolute;background-color:#e5e5e5;display:none;line-height:38px;font-size:18px;font-weight:bold;padding:0 5px;color:#555;z-index:999;border-radius:5px;}
+#bigGlass:after{content:""; position: absolute;display: block;height: 0;width: 0;border-width: 8px 8px 0;border-style: solid;border-color: #e5e5e5 transparent;bottom: -8px; left:20px;margin-left: -8px;}
+#bigGlass span{margin-left:8px; color: #666; line-height: 38px;}
+#bigGlass span:first-child{margin-left:0;}
+
+/*提交按钮 start*/
+.btn-box { position: relative; margin: 20px 10px 0; height: 40px; }
+.submit-btn { background-color: #fb0c60; border: 1px solid #c62026; border-radius:5px; height: 40px; line-height: 40px; color: #fff; text-align: center; font-size: 16px; display: block; box-sizing: border-box; }
+.grey-btn{ background:#ccc;border: 1px solid #ccc;}
+/*提交按钮 start*/
+
+/*公共提示弹层start*/
+#popup_container { width:200px;  height: 40px; line-height: 40px; background: rgba(255,255,255,.9); color: #000; }
+#popup_message { min-height: 40px; line-height: 40px; padding: 0 10px; }
+#popup_content button { border: 1px solid #c62026; background: #c62026; font-size: 15px; display: inline-block; text-align: center; margin: 0 auto; border-radius: 2px; cursor: pointer; }
+#popup_content button:hover { background: #c62026; color: #fff; }
+/*公共提示弹层end*/
+
+/*弹框显示地址start*/
+.select-overlay { position: absolute; z-index: 99998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.4); display: none; }
+.area-layer { position: fixed; width: 100%; min-width: 320px; max-width: 640px; bottom: 0; border-radius: 0; left: auto; top: auto; margin: 0 auto; z-index: 99999; background-color: #fff; display: none; }
+.area-layer h3 { color: #000; font-size: 16px; font-weight: normal; padding: 0 15px; height: 39px; line-height: 39px; display: block; width: 100%; box-sizing: border-box; background-color: #f2f2f2; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+.area-layer dl { width: 100%; height: 207px; overflow: hidden; overflow-y: auto; }
+.area-layer dl:not(:first-of-type) { display: none; }
+.area-layer dd { border-bottom: 1px solid #d8d8d8; height: 39px; line-height: 39px; color: #999; padding: 0 15px; position: relative; }
+.area-layer dd a { display: block; font-size: 12px; color: #555; background: url(../../../images/radio.png) no-repeat right 0; background-size: 21px; }
+.area-layer dd a.cur { background: url(/images/radio.png) no-repeat right -40px; background-size: 21px; }
+.area-layer dd { z-index: 999999; }
+.area-layer .close_btn { position: absolute; top: 10px; right: 10px; background: url(../../../images/detail/close.png) 0 0 no-repeat; background-size: 15px; text-indent: -3000px; display: block; width: 15px; height: 15px; }
+.area-layer h2 { background: #f2f2f2; padding: 0 15px; line-height: 32px; height: 32px; }
+.area-layer h2 a.cancel_btn, .area-layer h2 a.sure_btn { float: left; display: block; color: #f03232; font-size: 15px; font-weight: normal; }
+.area-layer h2 a.sure_btn { float: right; }
+/*弹框显示地址end*/
+
+
+/*点击结算提醒弹层*/
+.overlay,.modal .modal-ft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+ 
+}
+.overlay.active {z-index: 980;position: fixed;background-color: rgba(0, 0, 0, 0.8);}
+.modal {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.modal {
+  background-color: #fff;
+  margin: 0 20px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0) scale(0.815);
+  transform: translate3d(0, 0, 0) scale(0.815);
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+   display:none;
+}
+.modal.modal-in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+  border-radius: 5px;
+}
+.modal .modal-hd {
+  text-align: center;
+  line-height: 40px;
+  color: #555;
+  font-size: 14px;
+}
+
+.modal .modal-bd {
+  padding: 0 45px 15px;
+  line-height:24px;
+  color:#2d2d2d;
+}
+.btn-close{ position:absolute; right:20px;top:25px}
+
+.modal .modal-bd strong{ color:#c62026; font-weight:normal}
+.modal .modal-ft {
+  border-top: 1px solid #cccccc;
+  text-align: center;
+  line-height: 40px;
+}
+.modal .modal-ft .btn-modal {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  display:block;
+}
+.modal .modal-ft .btn-modal a{ color:#2d2d2d; font-size:16px; display:block;}
+.modal .modal-ft .btn-modal.sure{ border-left: 1px solid #ccc}
+
+
+.bm-btn{  color: #fb0c60; display:block; text-align: center; font-size: 14px;  margin: 20px 0 40px;}
+.bm-btn:link{text-decoration: underline;}
+/* .shang_share{position: fixed;right:15px;bottom:68px;z-index:999;} */

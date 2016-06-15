@@ -1,0 +1,37 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!-- 数据库信息 -->
+	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	<!-- 其他配置 -->
+	<property name="show_sql">ture</property>
+	<!-- property name="format_sql">true</property -->
+	<!-- 自动建表 -->
+	<property name="hbm2ddl.auto">update</property>
+	<!--
+ 	<property name="hibernate.current_session_context_class">thread</property>  
+    <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>  
+    -->
+	<!-- 声明映射文件 -->
+	<mapping resource="hbm/ErrorLog.hbm.xml" />
+	<mapping resource="hbm/Feedback.hbm.xml" />
+	<mapping resource="hbm/OnlineManage.hbm.xml" />
+	<mapping resource="hbm/Account.hbm.xml" />
+	<mapping resource="hbm/PushconfigAolai.hbm.xml" />
+	<mapping resource="hbm/PushconfigShangpin.hbm.xml" />
+	<mapping resource="hbm/PushManageIos.hbm.xml" />
+	<mapping resource="hbm/PushManageAndroid.hbm.xml" />
+    <mapping resource="hbm/NewProductBrand.hbm.xml" />
+    <mapping resource="hbm/FindManage.hbm.xml" />
+    <mapping resource="hbm/HotBrands.hbm.xml" />
+    <mapping resource="hbm/WXFashionInformation.hbm.xml" />
+   	<mapping resource="hbm/AppPictures.hbm.xml" />
+   	<mapping resource="hbm/AppNavigation.hbm.xml" />
+   	<mapping resource="hbm/AolaiActivity.hbm.xml" />
+   	<mapping resource="hbm/PushDictionary.hbm.xml" />
+	<mapping resource="hbm/AutoReply.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

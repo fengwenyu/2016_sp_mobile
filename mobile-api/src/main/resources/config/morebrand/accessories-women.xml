@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<brands capital="A">
+		<brand>
+			<name>ALEXANDER MCQUEEN</name>
+			<id>B0287</id>
+		</brand>
+		<brand>
+			<name>ALEXANDRE DE PARIS</name>
+			<id>B0457</id>
+		</brand>
+		<brand>
+			<name>ANTON HEUNIS</name>
+			<id>B0565</id>
+		</brand>
+		<brand>
+			<name>AUTUMN CASHMERE</name>
+			<id>B0662</id>
+		</brand>
+	</brands>
+	<brands capital="B">
+		<brand>
+			<name>B-LOW THE BELT</name>
+			<id>B0600</id>
+		</brand>
+		<brand>
+			<name>BLUGIRL</name>
+			<id>B0235</id>
+		</brand>
+		<brand>
+			<name>BOTTEGA VENETA</name>
+			<id>B0010</id>
+		</brand>
+		<brand>
+			<name>BURBERRY</name>
+			<id>B0005</id>
+		</brand>
+	</brands>
+	<brands capital="C">
+		<brand>
+			<name>CALVIN KLEIN</name>
+			<id>B0170</id>
+		</brand>
+		<brand>
+			<name>COLETTE MALOUF</name>
+			<id>B0342</id>
+		</brand>
+		<brand>
+			<name>COMPLEX BIZ</name>
+			<id>B0065</id>
+		</brand>
+		<brand>
+			<name>COSI MODA</name>
+			<id>B0380</id>
+		</brand>
+		<brand>
+			<name>CROCUS</name>
+			<id>B0491</id>
+		</brand>
+		<brand>
+			<name>CZ BY KENNETH JAY LANE</name>
+			<id>B0587</id>
+		</brand>
+	</brands>
+	<brands capital="D">
+		<brand>
+			<name>DIANE VON FURSTENBERG (DVF)</name>
+			<id>B0284</id>
+		</brand>
+		<brand>
+			<name>DIOR</name>
+			<id>B0012</id>
+		</brand>
+		<brand>
+			<name>DOLCE &amp; GABBANA</name>
+			<id>B0004</id>
+		</brand>
+	</brands>
+	<brands capital="E">
+		<brand>
+			<name>EDWARD ACHOUR PARIS</name>
+			<id>B0633</id>
+		</brand>
+	</brands>
+	<brands capital="F">
+		<brand>
+			<name>FALLON </name>
+			<id>B0589</id>
+		</brand>
+		<brand>
+			<name>FENDI</name>
+			<id>B0009</id>
+		</brand>
+	</brands>
+
+
+	<brands capital="G">
+		<brand>
+			<name>GANAELLE</name>
+			<id>B0569</id>
+		</brand>
+		<brand>
+			<name>GENTUCCA PLAY MANTERO</name>
+			<id>B0603</id>
+		</brand>
+		<brand>
+			<name>GL PARIS</name>
+			<id>B0246</id>
+		</brand>
+		<brand>
+			<name>GORJANA</name>
+			<id>B0607</id>
+		</brand>
+		<brand>
+			<name>GUCCI</name>
+			<id>B0003</id>
+		</brand>
+		<brand>
+			<name>GUY LAROCHE</name>
+			<id>B0616</id>
+		</brand>
+	</brands>
+	<brands capital="H">
+		<brand>
+			<name>HOUSE OF HARLOW</name>
+			<id>B0608</id>
+		</brand>
+	</brands>
+	<brands capital="I">
+		<brand>
+			<name>ISHARYA</name>
+			<id>B0601</id>
+		</brand>
+	</brands>
+	<brands capital="J">
+		<brand>
+			<name>JESSICA SIMPSON</name>
+			<id>B0645</id>
+		</brand>
+		<brand>
+			<name>JUICY COUTURE</name>
+			<id>B0280</id>
+		</brand>
+		<brand>
+			<name>JULIET &amp; COMPANY</name>
+			<id>B0588</id>
+		</brand>
+		<brand>
+			<name>JUST CAVALLI</name>
+			<id>B0114</id>
+		</brand>
+	</brands>
+	<brands capital="K">
+		<brand>
+			<name>KENZO</name>
+			<id>B0245</id>
+		</brand>
+		<brand>
+			<name>KIERA COUTURE</name>
+			<id>B0539</id>
+		</brand>
+		<brand>
+			<name>KRIS NATIONS</name>
+			<id>B0590</id>
+		</brand>
+	</brands>
+	<brands capital="I">
+		<brand>
+			<name>LUCAS JACK</name>
+			<id>B0582</id>
+		</brand>
+	</brands>
+	<brands capital="M">
+		<brand>
+			<name>M MISSONI</name>
+			<id>B0533</id>
+		</brand>
+		<brand>
+			<name>MARC BY MARC JACOBS</name>
+			<id>B0429</id>
+		</brand>
+		<brand>
+			<name>MARTINE WESTER</name>
+			<id>B0343</id>
+		</brand>
+		<brand>
+			<name>MELINDA MARIA</name>
+			<id>B0583</id>
+		</brand>
+		<brand>
+			<name>MICKEY LYNN</name>
+			<id>B0584</id>
+		</brand>
+		<brand>
+			<name>MILLY BY MICHELLE SMITH</name>
+			<id>B0584</id>
+		</brand>
+		<brand>
+			<name>MISSONI</name>
+			<id>B0262</id>
+		</brand>
+	</brands>
+	<brands capital="N">
+		<brand>
+			<name>NINA RICCI</name>
+			<id>B0196</id>
+		</brand>
+		<brand>
+			<name>NOIR</name>
+			<id>B0605</id>
+		</brand>
+	</brands>
+	<brands capital="P">
+		<brand>
+			<name>PAUL&amp;JOE</name>
+			<id>B0249</id>
+		</brand>
+		<brand>
+			<name>POLO RALPH LAUREN</name>
+			<id>B0269</id>
+		</brand>
+		<brand>
+			<name>PRADA</name>
+			<id>B0002</id>
+		</brand>
+		<brand>
+			<name>PUSH</name>
+			<id>B0602</id>
+		</brand>
+	</brands>
+	<brands capital="R">
+		<brand>
+			<name>RAINSEA</name>
+			<id>B0503</id>
+		</brand>
+		<brand>
+			<name>RED VALENTINO</name>
+			<id>B0592</id>
+		</brand>
+		<brand>
+			<name>ROMAN LUXE</name>
+			<id>B0604</id>
+		</brand>
+	</brands>
+	<brands capital="S">
+		<brand>
+			<name>SALVATORE FERRAGAMO</name>
+			<id>B0084</id>
+		</brand>
+		<brand>
+			<name>SHAMELESS JEWELRY</name>
+			<id>B0586</id>
+		</brand>
+		<brand>
+			<name>SHASHI</name>
+			<id>B0606</id>
+		</brand>
+		<brand>
+			<name>SUGAR BEAN</name>
+			<id>B0585</id>
+		</brand>
+		<brand>
+			<name>SWAROVSKI</name>
+			<id>B0014</id>
+		</brand>
+	</brands>
+	<brands capital="T">
+		<brand>
+			<name>TIFFANY &amp; CO.</name>
+			<id>B0497</id>
+		</brand>
+		<brand>
+			<name>TOD'S</name>
+			<id>B0316</id>
+		</brand>
+	</brands>
+	<brands capital="V">
+		<brand>
+			<name>VALENTINO</name>
+			<id>B0144</id>
+		</brand>
+	</brands>
+	<brands capital="Y">
+		<brand>
+			<name>YOANA BARASCHI</name>
+			<id>B0579</id>
+		</brand>
+		<brand>
+			<name>YORKS</name>
+			<id>B0665</id>
+		</brand>
+	</brands>
+	<brands capital="Z">
+		<brand>
+			<name>ZIVARLY</name>
+			<id>B0551</id>
+		</brand>
+	</brands>
+</data>
+
+
+
+
+
+
+
+
+
+
+

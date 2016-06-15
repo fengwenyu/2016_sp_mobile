@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+<title>尚品微信页</title>
+
+<style type="text/css">
+  body{
+    margin:0;
+    padding:0;
+  }
+  .download_box_new{ 
+    width:320px; 
+    margin:0 auto 3px; 
+    position:relative;
+  }
+  .download_box_new a{ 
+    display: block;
+    width: 117px;
+    height: 52px;
+    text-indent: -3000px;
+    overflow: hidden;
+  }
+  
+  .download_box_new .download_ios, .download_box_new .download_android{
+    line-height: 30px;
+    position: absolute;
+    top: 398px;
+  }
+  .download_box_new .download_ios{
+    left: 37px;
+  }
+  .download_box_new .download_android{
+    left: 170px;
+  }
+  #popLayer{width:100%; height:504px; background:rgba(0,0,0,.85); position:absolute; top:-568px; left:0; z-index:10000;}
+  #popLayer img{margin:0 auto; width:320px; display:block;}
+
+</style>
+
+<script src="js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	var ver = "?20121023001";
+		loader = SP.core
+			.install("js/jquery.min.js" + ver)
+			.using("js/j.lazyload.js" + ver)
+			.excute()
+			.using("js/config.sim.js" + ver)
+			.excute(function(){
+				$(function(){
+					$("#popLayer").animate({
+						"top":"0"
+					},500);
+					
+					$("#popLayer").click(function(){
+						$("#popLayer").animate({
+							"top":"-568px"
+						},500);
+						return false;
+					});
+				});
+			});
+</script>
+
+</head>
+
+<body>
+<div class="download_box_new">
+	<img src="images/e.gif" lazy="images/download7.jpg" width="320" height="504" />
+    
+    <a class="download_ios" href="https://itunes.apple.com/cn/app/id432489082?mt=8">下载iphone版</a>
+    <a class="download_android" href="http://m.shangpin.com/download.action?p=101&ch=36&fileName=aolai_36.apk">下载android版</a>
+   
+</div>
+<!-- 弹出层内容 -->
+
+<div id="popLayer"><img src="images/weixin_tip.png" width="320" height="225"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 设置为开发模式 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 把action扩展名配置为action -->
+	<constant name="struts.action.extension" value="action,do" />
+	<!-- 把主题设为simple -->
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.multipart.maxSize" value="102097152"></constant>
+	<!-- 设置为在OGNL中可以调用静态方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<package name="default" namespace="/" extends="struts-default,json-default">
+		<interceptors>
+			<!-- 声明拦截器 -->
+			<interceptor name="checkPrivilege" class="com.shangpin.wireless.view.interceptor.CheckPrivilegeInterceptor"></interceptor>
+			<!-- 声明一个新的拦截器栈 -->
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="checkPrivilege" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 指定默认使用我们新定义的拦截器栈 -->
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		
+		<!-- 全局的Result配置 -->
+		<global-results>
+			<result name="loginUI">/pages/userAction/loginUI.jsp</result>
+			<result name="privilegeError">/privilegeError.jsp</result>
+			<result name="parseAppLogSuccess">/parseAppLogSuccess.jsp</result>
+			<result name="editPasswordUI">/pages/userAction/editPasswordUI.jsp</result>
+		</global-results>
+		<!-- 主页 -->
+		<action name="indexAction_*" class="indexAction" method="{1}">
+			<result name="{1}">/pages/indexAction/{1}.jsp</result>
+		</action>
+		<!-- 用户管理 -->
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="list">/pages/userAction/list.jsp</result>
+			<result name="addUI">/pages/userAction/saveUI.jsp</result>
+			<result name="toList" type="redirectAction">userAction_list</result>
+			<result name="setPrivilegeUI">/pages/userAction/setPrivilegeUI.jsp</result>
+			<result name="logout">/pages/userAction/logout.jsp</result>
+			<result name="toIndex" type="redirect">/index.jsp</result>
+		</action>
+		<!-- 渠道管理 -->
+		<action name="channelAction_*" class="channelAction" method="{1}">
+			<result name="list">/pages/channelAction/list.jsp</result>
+			<result name="addUI">/pages/channelAction/saveUI.jsp</result>
+			<result name="toList" type="redirectAction">channelAction_list</result>
+		</action>
+		<!-- 产品管理 -->
+		<action name="productAction_*" class="productAction" method="{1}">
+			<result name="list">/pages/productAction/list.jsp</result>
+			<result name="addUI">/pages/productAction/saveUI.jsp</result>
+			<result name="toList" type="redirectAction">productAction_list</result>
+		</action>
+		<!-- 操作日志管理 -->
+		<action name="operateLogAction_*" class="operateLogAction" method="{1}">
+			<result name="toList">/pages/operateLogAction/list.jsp</result>
+		</action>
+		<!-- 上线管理 -->
+		<action name="onlineManageAction_*" class="onlineManageAction" method="{1}">
+			<result name="list">/pages/onlineManageAction/list.jsp</result>
+			<result name="addUI">/pages/onlineManageAction/addUI.jsp</result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="download" class="download">
+			<!-- 下载功能专用的结果类型 -->
+			<result name="download" type="stream">
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${@java.net.URLEncoder@encode(#name, 'utf-8')}"</param>
+				<param name="contentLength">contentLength</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+		<!-- 错误日志管理 -->
+		<action name="errorLogAction_*" class="errorLogAction" method="{1}">
+			<result name="list">/pages/errorLogAction/list.jsp</result>
+		</action>
+		<!-- 信息反馈管理 -->
+		<action name="feedbackAction_*" class="feedbackAction" method="{1}">
+			<result name="list">/pages/feedbackAction/list.jsp</result>
+			<result name="toList" type="redirectAction">feedbackAction_list</result>
+		</action>
+		<!-- log解析 -->
+		<action name="parseLogAction_*" class="parseLogAction" method="{1}">
+		</action>
+		<!-- 更新订单统计表中的订单信息 -->
+		<action name="updateOrderInfoAction_*" class="updateOrderInfoAction" method="{1}">
+		</action>
+		<!-- 订单统计 -->
+		<action name="orderStatisticsAction_*" class="orderStatisticsAction" method="{1}">
+			<result name="query">/pages/OrderStatisticsAction/list.jsp</result>
+			<result name="rateOfChange">/pages/OrderStatisticsAction/rateOfChange.jsp</result>
+			<result name="orderFrequencyOfUser">/pages/OrderStatisticsAction/orderFrequencyOfUser.jsp</result>
+		</action>
+		<!-- 推送消息管理 -->
+		<action name="pushManageAction_*" class="pushManageAction" method="{1}">
+			<result name="addUI">/pages/pushManageAction/addUI.jsp</result>
+			<result name="list">/pages/pushManageAction/list.jsp</result>
+			<result name="toList" type="redirectAction">pushManageAction_list</result>
+			<result name="toAddUI" type="redirectAction">pushManageAction_addUI?error=${@java.net.URLEncoder@encode(#error, 'utf-8')}</result>
+		</action>
+		<!-- 平台统计 -->
+		<action name="deviceInfoAction_*" class="deviceInfoAction" method="{1}">
+			<result name="list">/pages/deviceInfoAction/list.jsp</result>
+		</action>
+		<!-- 用户统计 -->
+		<action name="accountStatisticsAction_*" class="accountStatisticsAction" method="{1}">
+			<result name="query">/pages/accountStatisticsAction/list.jsp</result>
+			<result name="rateOfChange">/pages/accountStatisticsAction/rateOfChange.jsp</result>
+			<result name="uniqueUsersQuery">/pages/accountStatisticsAction/uniqueUsersQueryList.jsp</result>
+		</action>
+		
+			<!-- 新品品牌推荐 -->
+		<action name="newProductBrandReAction_*" class="newProductBrandReAction" method="{1}">
+			<result name="addNewProduct">/pages/newProductBrandReAction/newProductRecommand.jsp</result>
+		</action>
+		
+		<action name="parseAppLogAction_*" class="parseAppLogAction" method="{1}">
+		</action>
+		
+		
+		<action name="userBehavioralStatisticsAction_*" class="userBehavioralStatisticsAction" method="{1}">
+			<result name="input">/pages/userBehavioralStatisticsAction/userBehavioralStatistics.jsp</result>
+		</action>
+		<action name="findManageAction_*" class="findManageAction" method="{1}">
+			<result name="input">/pages/findManageAction/list.jsp</result>
+			<result name="add">/pages/findManageAction/addUI.jsp</result>
+			<result name="creatNewActivity">/pages/findManageAction/creatNewActivity.jsp</result>
+			<result name="creatNewImgText">/pages/findManageAction/creatNewImgText.jsp</result>
+			<result name="creatNewStaticAtc">/pages/findManageAction/creatNewStaticAtc.jsp</result>
+		</action>
+		<action name="hotBrandsAction_*" class="hotBrandsAction" method="{1}">
+			<result name="input">/pages/hotBrandsAction/hotBrands.jsp</result>
+		</action>
+		<action name="wxFashionInformationAction_*" class="wxFashionInformationAction" method="{1}">
+			<result name="input">/pages/wxFashionInformationAction/list.jsp</result>
+			<result name="addUI">/pages/wxFashionInformationAction/addUI.jsp</result>
+		</action>
+		
+		<action name="appUploadPicAction_*" class="appUploadPicAction" method="{1}">
+			<result name="input">/pages/appUploadPicAction/list.jsp</result>
+			<result name="edit">/pages/appUploadPicAction/edit.jsp</result>
+			<result name="aolai">/pages/appUploadPicAction/aolaiList.jsp</result>
+			<result name="aolaiEdit">/pages/appUploadPicAction/aolaiEdit.jsp</result>
+		</action>
+		
+		<action name="appNavigationAction_*" class="appNavigationAction" method="{1}">
+			<result name="input">/pages/appNavigationAction/list.jsp</result>
+		</action>
+		
+		<action name="aolaiActivityAction_*" class="aolaiActivityAction" method="{1}">
+			<result name="input">/pages/aolaiActivityAction/list.jsp</result>
+		</action>
+		
+		<action name="wechatAction_*" class="wechatAction" method="{1}">
+			<result name="{1}">/pages/wechatAction/{1}.jsp</result>
+		</action>
+		<action name="autoReplyAction_*" class="autoReplyAction" method="{1}">
+			<result name="beadd">/pages/autoReplyAction/beadd.jsp</result>
+			<result name="common">/pages/autoReplyAction/common.jsp</result>
+			<result name="keywords">/pages/autoReplyAction/keywords.jsp</result>
+			<result name="{1}">/pages/autoReplyAction/{1}.jsp</result>
+		</action>
+		
+		<action name="menuAction_*" class="menuAction" method="{1}">
+			<result name="{1}">/pages/menu/{1}.jsp</result>
+		</action>	
+		<action name="menu_*" class="menuAction" method="{1}">
+			<result type="json">
+				<param name="root">info</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,63 @@
+@charset "utf-8";
+body { 
+/* 	background: #fff;   */
+	max-width:640px; 
+	margin:0 auto;
+	}
+a:hover, a:active { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.topFix{max-width:640px; margin:0 auto;}
+/*内容区域 end*/
+.detail_block { background: #f2f2f2; }
+/* 内容区域没查询结果start */
+.no_result { padding: 20px 0; text-align: center; }
+.no_result img { border: 0; }
+.no_result span { padding: 20px 0; font-size: 16px; line-height: 150%; color: #999; }
+.no_result img, .no_result span, .no_result a { display: block; margin: 0 auto; }
+.no_result a { width: 130px; height: 38px; line-height: 38px; background-color: #c62026; border: 1px solid #c62026; color: #fff; font-size: 14px; text-align: center; }
+.no_result a:hover { background-color: #aa0006; border: 1px solid #aa0006; color: #fff; }
+
+/* 图片轮播 */
+.scroll { position: relative; width: 290px; height: 200px; overflow: hidden; margin: 15px auto; }
+.scroll h3 { color: #555; font-size: 16px; margin-bottom: 10px; }
+.scroll .bar_list { width: 290px; height: 175px; overflow: hidden;}
+.scroll .bar_list ul {width:1600px;position:absolute;left:0;top:30px; }
+.scroll .bar_list ul li, .scroll .bar_btn ul li { float: left; }
+.scroll .bar_btn { width: 290px; height: 10px; position: absolute; bottom: 10px; left: 0; text-align: left; }
+.content_scroll { width: 290px; margin: 0 auto; padding-bottom: 14px; }
+.content_scroll p { width: 84px; height: 175px; padding-right: 17px; float: left; }
+.content_scroll p span { width: auto; height: 20px; display: block; text-align: left; }
+.content_scroll p span b { display: block; width: auto; height: 12px; color: #000; font-weight: normal;font-size: 12px;  }
+.content_scroll p a img{ border:1px solid #fff }
+.content_scroll p span em { margin-top: 6px;  height: 28px; overflow: hidden; display: block; color: #555; font-size: 10px; line-height: 14px;}
+.content_scroll p a:hover span em { }
+.content_scroll p:last-child { padding-right: 0; }
+.content_scroll p a img.img-border{ border:1px solid #eee}
+
+/*优惠券*/
+.coupon_menu_order { padding: 10px 8px; display: -webkit-box; display: -moz-box; display: -o-box; display: box; background: #f2f2f2; }
+.coupon_menu_order li { height: 38px; line-height: 38px; -webkit-box-flex: 1; -moz-box-flex: 1; -o-box-flex: 1; box-flex: 1; color: #2d2d2d; text-align: center; background-color: #d8d8d8; cursor: pointer; }
+.coupon_menu_order li.cur { background-color: #fff; color: #de4747; }
+.coupon_block_order { border-top: 1px solid #d8d8d8; padding: 0 10px; background: #fff;}
+.coupons_active_order h3 { font-size: 20px; color: #000; margin: 15px 0 0; }
+.coupons_active_order fieldset { width: 100%; padding: 10px 0 20px; }
+.coupons_active_order fieldset legend { color: #2d2d2d; font-size: 16px; height: 31px; line-height: 31px; display: block; width: 100%; box-sizing: border-box; }
+.coupons_active_order fieldset p { background-color: #fff; height: 31px; line-height: 31px; color: #999; position: relative; }
+.coupons_active_order fieldset p input[type=text] { border: none; background: rgba(0,0,0,0); height: 29px; z-index: 0; width: 62%; font-size: 14px; padding: 0 5px; border-bottom: 1px solid #d8d8d8; }
+.coupons_active_order fieldset p span { display: inline-block; width: 78%; color: #555; }
+.coupons_active_order fieldset p a.coupons_submit { position: absolute; right: 0; display: inline-block; width: 30%; height: 29px; line-height: 29px; text-align: center; font-size: 14px; background-color: #f2f2f2; color: #555; border: 1px solid #aaa; margin-left: 2%; }
+.coupons_active_order fieldset p a.coupons_submited,.coupons_active_order fieldset p a.coupons_submit:hover, .coupons_active_order fieldset p a.coupons_submit:active { background-color: #aa0006; color:#fff; border: 1px solid #fff; }
+.coupon_list_order { }
+.coupon_list_order li { position: relative; background: #fff; border: 1px solid #fff; height: 145px; margin-bottom: 10px; overflow: hidden; }
+.coupon_list_order li.cash {border: 1px solid #f06535;}
+.coupon_list_order li.sale {border: 1px solid #e3406e;}
+.coupon_list_order li h4 { position: absolute; left: -2px; top: -2px; z-index: 2; }
+.coupon_list_order li div { text-align: center; vertical-align: top; margin: 0 75px 0 14px; }
+.coupon_list_order li div i { font-size: 22px; line-height: 30px; color: #000; }
+.coupon_list_order li div em { display: block; font-size: 14px; color: #555; border-bottom: 1px solid #e0e0e0; padding: 0 0 5px; }
+.coupon_list_order li div span { display: block; text-align: left; color: #888; font-size: 12px }
+.coupon_list_order li div span strong { display: block; text-align: left; line-height: 24px; font-size: 14px }
+.coupon_list_order li p { position: absolute; right: 0; top: 0; }
+.coupons_tips_order { color: #888; line-height: 160%; min-height: 80px; font-size: 12px; }
+
+.coupons_select{ display:block; width:21px; height:21px;background:url(../../images/order/select_Nbg.png) no-repeat 0 0;background-size:21px; position:absolute; right:24px; bottom:2px;}
+.coupons_selected{ display:block; width:21px; height:21px;background:url(../../images/order/select_right.png) no-repeat 0 0;background-size:21px; position:absolute; right:24px; bottom:2px;}

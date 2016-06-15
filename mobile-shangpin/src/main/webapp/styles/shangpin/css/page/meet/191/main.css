@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#fff}
+
+.main_box{width:100%;max-width:640px;margin:0 auto 15px;}
+.main_box a{display:block;width:100%;}
+.main_box img{display:block;width:100%;}
+.top_img{width:100%;display:block;}
+
+.flex{display: -webkit-box;display: -webkit-flex;display: flex; padding:5px 5px 0;}
+.flex-1{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+.flex-2{-webkit-box-flex: 2;-webkit-flex: 2;flex: 2;}
+ 
+.padd-l{padding-left:5px;}
+.padd-r{padding-right:5px;}
+.padd-t{padding-top:5px;}
+.padd-b{ padding-bottom:5px;}
+.paddbom10{ padding-bottom:10px;}
+.list-one { background:#fff; padding:5px 5px 0; display: -webkit-box;display: -webkit-flex;display: flex;}
+.list-one li{ -webkit-box-flex: 1;-webkit-flex: 1;flex: 1;  padding-right:5px ;box-sizing:border-box;}
+.list-one li:last-child{ padding-right:0}
+ 
+ul.t_img{ max-width:620px;width:100%;display:block;margin:0 auto;}
+ 
+ul.t_img li{display:block;width:100%; float:left; padding-top:5px; }
+
+ 
+

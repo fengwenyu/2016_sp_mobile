@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="AccountWeixinBinded" table="accountweixinbind">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="weixinId" type="string">
+			<column name="weixinId" length="50"/>
+		</property>
+		<property name="userId" type="string">
+			<column name="userId" length="50"/>
+		</property>
+		<property name="loginName" type="string">
+			<column name="loginName" length="50"/>
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" length="4"/>
+		</property>
+		<property name="nickname" type="string">
+			<column name="nickname" length="50"/>
+		</property>
+		<property name="city" type="string">
+			<column name="city" length="50"/>
+		</property>
+		<property name="regOrigin" type="string">
+			<column name="regOrigin" length="10"/>
+		</property>
+		<property name="regTime" type="timestamp">
+			<column name="regTime" />
+		</property>
+		<property name="bindTime" type="timestamp">
+			<column name="bindTime" />
+		</property>
+		<property name="unbindTime" type="timestamp">
+			<column name="unbindTime" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="markup" type="string">
+			<column name="markup" length="8"/>
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+body{background-color:#fcfcfc;}
+body .alContent{padding-bottom:20px;color:#000;}
+.boxSizing {width: 100%;box-sizing: border-box;}
+ 
+/*STYLE 搭配*/ 
+.styleBigIMG{width:100%;}
+.styleBigIMG dl{ width:100%;border-bottom:1px solid #d8d8d8;}
+.styleBigIMG dl dt{padding:0 15px;width:100%;box-sizing: border-box; }
+.styleBigIMG dl dd{padding:0 15px;width:100%;box-sizing: border-box; height:40px; line-height:40px;}
+.styleBigIMG dl dd span{ padding-right:10px; font-size:13px;}
+/*STYLE 尚*/
+.styleList{width:100%; padding-top:40px; overflow:hidden; background-color:#fff;}
+.styleList li{width:50%; overflow:hidden; vertical-align:top; float:left; font-size:14px;}
+.styleList li:nth-child(2n){width:50%; border-right:none;}
+.styleList li a{display:block; width:100%;position:relative;}
+.styleList li i.saleOut{width:50px; height:30px; position:absolute; right:-1px; top:0; color:#848484; background-color:#ededed; text-align:center; line-height:30px; display:none;}
+.styleList li img{display:block; width:100%;}
+
+.styleList_info{font-size:12px; padding:10px 0 0 10px; height:78px; width:150px; text-align:left; overflow:hidden;}
+.styleList_info p, .styleList_info span{color:#000; display:block;}
+.styleList_info p{line-height:100%; overflow:hidden;}
+.styleList_info p em{display:block; width:100%; font-size:11px; color:#000; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.styleList_info p em:nth-child(2){ color:#555; padding:6px 0;}
+
+.styleList_info span{padding:0;}
+.styleList_info span label{display:block; line-height:16px; font-size:12px; vertical-align:middle; width:100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.styleList_info span label.current_price{color:#000;}
+.styleList_info span label.current_price i{padding-left:0; font-size:14px; vertical-align:middle;}
+ 

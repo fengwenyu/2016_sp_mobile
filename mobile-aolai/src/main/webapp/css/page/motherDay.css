@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+.clr:after, .clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.alContent {
+	background-color: #ffe8d8;
+}
+.spTop {
+	width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.spTop a {
+	display: block;
+}
+.couponBox{
+	width:320px;
+	margin:0 auto;
+}
+.couponBox h3{
+	color:#fb5c5a;
+	text-align:center;
+	background-color:#fff;
+	font-size:16px;
+	font-weight:normal;
+	line-height:30px;
+	height:30px;
+	overflow:hidden;
+}
+.couponBox p{
+	background-color:#25b1b6;
+	text-align:center;
+}
+.couponBox a {
+	display: block;
+}
+
+
+.spBox {
+	width: 320px;
+	margin: 0 auto;
+	background-color:#f45754;
+}
+.spBox .spContent {
+	padding: 5px 5px 5px 5px;
+	background:#F5574B;
+}
+.spBox .spContent_next {
+	padding: 5px 5px 5px 5px;
+	background:#DD4544;
+}
+.spContent_next ol{
+	width:185px;
+	float:left;
+	}
+.spContent_next ol li{
+	margin-right:3px;
+	margin-top: 2px;
+	}
+.myLi a{
+		diplay:block;
+		margin-top:1px;
+	}	
+.sp11List {
+	width: 100%;
+}
+.spContent img{
+	display:block;
+}
+.sp11List li {
+	width: auto;
+	height: auto;
+	vertical-align: top;
+	margin: 0;
+	float: left;
+	overflow: hidden;
+}
+.sp11List li.gap_r{
+	margin-right:3px;
+}
+.sp11List li.gap_l{
+	margin-left:2px;
+}
+.sp11List li.gap_top{
+	margin-left:2px;
+}
+.sp11List li.gap_rTop{
+	margin-top:3px;
+	margin-right:3px;
+}
+.sp11List li.gap_rTop_nodes{
+	margin-top:3px;
+	}
+.sp11List li.r_float{
+	float:right;
+}
+
+.sp11List li a, .sp11List li img {
+	display: block;
+}
+
+.manBox {
+	background-color:#25b1b6;
+}
+
+/*弹出层*/
+#popup_container{
+	width:300px;
+	background:rgba(0,0,0,.7);
+	color:#fff;
+}
+#popup_container h1 {
+	background: #c61d41;
+	color: #fff;
+	line-height: 0;
+	height: 0px;
+	position: relative;
+	border-radius: 0.3em 0.3em 0 0;
+	font-size:0;
+	display:block;
+}
+#popup_container .title_close {
+	background: url(/images/motherDay/close_btn_bg.png) no-repeat center;
+	display: block;
+	position: absolute;
+	right: -15px;
+	top: -25px;
+	width: 50px;
+	height: 50px;
+	background-size: 25px 25px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index:10000;
+}
+#popup_message {
+	margin: 0;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+	text-align: left;
+	min-height:50px;
+	line-height:50px;
+	text-align:center;
+	text-shadow:none;
+	font-weight:normal;
+}
+
+/*单页领券表单*/
+.coupons_form{
+	width:300px;
+	margin:0 auto;
+	min-height:480px;
+}
+.coupons_form li{
+	position:relative;
+}
+.coupons_form span{
+	display:block;
+	height:35px;
+	line-height:35px;
+	color:#484848;
+	font-size:13px;
+}
+.coupons_form input[type="text"]{
+	border:1px solid #cdcdcd;
+	height:22px;
+	line-height:22px;
+	padding:3px;
+	width:200px;
+	vertical-align:middle;
+}
+.coupons_form a{
+	display:inline-block;
+	height:28px;
+	line-height:28px;
+	border:1px solid #838383;
+	font-size:14px;
+	color:#484848;
+	padding:0 6px;
+	vertical-align:middle;
+	margin-left:5px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	background-color:#fff;
+}
+.coupons_form a.countdown_ing{
+	background-color:#c8c8c8;
+	cursor:default;
+}
+
+.myFooter{ width:320px; margin:0 auto; height:73px; background:url(../../images/motherDay/footer.jpg) repeat-x; background-size:100% 100%; border: none;}
+.myFooter img{width:220px; height:36px; margin:10px 0 0 45px;}
+.myFooter p{ color:#fff; text-align:center;margin-top:10px;}
+
+
+
+
+

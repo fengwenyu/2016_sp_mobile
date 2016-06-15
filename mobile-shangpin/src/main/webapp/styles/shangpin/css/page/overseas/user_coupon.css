@@ -1,0 +1,15 @@
+
+.order_fill_coupon_list li { position: relative; background: #fff; border: 1px solid #fff; height: 121px; margin-bottom: 10px; }
+.order_fill_coupon_list li.cash {border: 1px solid #f06535;}
+.order_fill_coupon_list li.sale {border: 1px solid #e3406e;}
+.order_fill_coupon_list li h4 { position: absolute; left: -2px; top: -2px; z-index: 2; }
+.order_fill_coupon_list li div { text-align: center; vertical-align: top; margin: 0 75px 0 14px; }
+.order_fill_coupon_list li div i { font-size: 22px; line-height: 30px; color: #000; }
+.order_fill_coupon_list li div em { display: block; font-size: 14px; color: #555; border-bottom: 1px solid #e0e0e0; padding: 0 0 5px; }
+.order_fill_coupon_list li div span { display: block; text-align: left; color: #888; font-size: 12px }
+.order_fill_coupon_list li div span strong { display: block; text-align: left; line-height: 24px; font-size: 14px }
+.order_fill_coupon_list li p { position: absolute; right: 0; top: 0; }
+.order_fill_coupon_list .coupons_tips { color: #888; line-height: 160%; min-height: 80px; font-size: 12px; }
+
+.order_fill_coupon_list .select{ display:block; width:21px; height:21px;background:url(../../../images/order/select_Nbg.png) no-repeat 0 0;background-size:21px; position:absolute; right:24px; bottom:2px;}
+.order_fill_coupon_list .selected{ display:block; width:21px; height:21px;background:url(../../../images/order/select.png) no-repeat 0 0;background-size:21px; position:absolute; right:24px; bottom:2px;}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 注册送券期间-->
+<couponPeriod>
+	<startDate>2015-01-01 00:00:00</startDate>
+	<endDate>2015-12-31 23:59:59</endDate>
+	<couponNo>6717523085</couponNo>
+	<couponDesc>注册赠100礼包。</couponDesc>
+</couponPeriod>

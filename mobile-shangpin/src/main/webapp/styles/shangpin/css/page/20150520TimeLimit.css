@@ -1,0 +1,33 @@
+body { background: #fff }
+.container { min-width: 320px; max-width: 640px; margin: 0 auto; }
+/*礼品卡列表*/
+.menu-nav { margin:8px; }
+.menu-nav .tab_info { width: 100%; display: table; font-size: 15px; height: 34px; border:1px solid #c62026; }
+.tab_info li { display: table-cell; height: 34px; line-height: 34px; text-align: center; }
+.tab_info li a { display: inline-block; color: #c62026; font-weight:600 }
+.tab_info li.curr{background:url(../../../../images/hotbrand/menu_bg.jpg) no-repeat; background-size:cover; background-color: rgb(194, 38, 38);}
+.tab_info li.curr a { color: #fff; }
+
+/*商品列表*/
+.content_info { padding-bottom: 8px; }
+.list-box{ margin:10px;}
+.list-title{ border:2px solid #626262; }
+.list-title a{ display:block;float:left;width:50%; text-align:center;padding:10px 0; color:#626262; font-size:14px; font-family:"微软雅黑"; font-weight:bold}
+.list-title a.selected{ background:#626262; color:#fff;}
+.prod_list{padding:0 8px 0 0;}
+.prod_list .list_box{float:left;width:50%;margin-top:8px; position:relative;}
+.prod_list .list_box:nth-child(2n){float:right;margin-right:-8px;}
+.prod_list .list_box a{ display:block;}
+.prod_list .list_box a img{ max-width:100%}
+.prod_list .list_box .li_text{}
+.prod_list .list_box .li_text i{display:block;  position:absolute;} 
+.prod_list .list_box .li_text h5{ font-size:12px; font-weight:normal; color:#000;overflow: hidden;text-overflow: ellipsis; padding-top:5px;white-space:nowrap;}
+.prod_list .list_box .li_text p{color:#888;font-size:12px; line-height:16px; height:16px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.prod_list .list_box .li_text span{display:block; height:21px;}
+.prod_list .list_box .li_text span strong{display:inline-block;font-size:14px; color:#000; font-weight:normal; line-height:20px;}
+.prod_list .list_box .li_text span strong.red{color:#c62026; }
+.prod_list .list_box .li_text span em{display:inline-block;color:#888;font-size:11px;font-weight:normal; margin-left:3px;line-height:20px; text-decoration:line-through}
+.c_tag{ display:block; position:absolute; width:35px; height:35px; right:5px; top:5px; z-index:3}
+.saleOut{ width:50px; height:30px; position:absolute; right:0px; top:0; color:#848484; background-color:#ededed; text-align:center; line-height:30px;}
+.new_tag{ display:block; position:absolute; width:35px; height:35px; left:0; top:0; z-index:3}
+.replenishment_tag{ width:50px; height:24px; position:absolute; left:0; bottom:56px; color:#fff; font-size:11px; background-color:#a2a2a2; text-align:center; line-height:24px;}

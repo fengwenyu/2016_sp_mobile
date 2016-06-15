@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="PushconfigShangpin" table="pushconf_shangpin">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="userId" type="string">
+			<column name="userId" length="50" />
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" length="4" />
+		</property>
+		<property name="token" type="string">
+			<column name="token" length="70" not-null="true"/>
+		</property>
+		<property name="imei" type="string">
+			<column name="imei" length="40" not-null="true"/>
+		</property>
+		<property name="isOpen" type="integer">
+			<column name="isOpen" length="4" not-null="true" />
+		</property>
+		<property name="msgType" type="integer">
+			<column name="msgType" length="8" not-null="true" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" not-null="true" />
+		</property>
+		<property name="updateTime" type="timestamp">
+			<column name="updateTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#ffdfe6}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;}
+.title-top{ position:relative;}
+
+.turntable { position: relative;z-index:3;overflow: hidden; }
+.turntable-box{width:241px;height:240px;margin:0px auto; position:relative;background:#fff; border-radius: 50%; border: 10px solid #ffe505; box-shadow: 0 0 2px #fff}
+.turntable-box #turntable_img{ width:241px;height:240px; }
+#turntable_btn {position: absolute; z-index: 3; top:50%; left: 50%; margin-left:-32px; margin-top:-80px;cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(../../../../images/20150707TopShopGoodLuck/turntable_btn_03.png); width: 65px; height:115px; background-size: 100%; }
+#turntable_btn:active { }
+
+.con {position:relative;}
+.con .con-text{margin: 10px 15px; padding:0 20px;}
+.con .con-text li{ list-style:disc; line-height:24px;}
+
+.sroll-text{ border:1px dashed #ff7694; border-radius:10px; margin:0 20px 20px;height: 126px;overflow: hidden;}
+.sroll-text > div{margin:15px;height: 96px;overflow: hidden;}
+.lottery_list{height:96px; overflow:hidden;}
+.lottery_list li{position:relative; line-height:24px; color:#ff7694;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;}
+
+/* #popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:198px;background:url(/images/20150707TopShopGoodLuck/pop_bg.png) no-repeat; background-size:100%;}
+#popup_content{padding:0;}
+#popup_message{height:auto; margin:0;  padding:0;}
+#popup_message h3{ text-align: center; color:#ee5658; line-height:50px; font-size:15px;}
+#popup_message p{text-align: center; color:#fff;font-size:12px; line-height:22px; margin-top:15px;}
+#popup_container.success p a{color: #ffea00; font-weight:bold}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{margin:20px 0 15px; height:28px;}
+#popup_content button{background:#ffea00; width: 105px; height: 28px; border-radius:0 }
+#popup_content button:hover{background:#ffea00; color: #ee5658; cursor:pointer;}
+#popup_container #popup_content button{background:#ffea00; color: #ee5658;}
+#popup_container #popup_content button:hover{background:#ffea00; color: #ee5658; cursor:pointer;}
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00;} */
+
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:190px;background:url(../../../../images/20150707TopShopGoodLuck/pop_bg.png) no-repeat; background-size:100%;-webkit-box-shadow:none;box-shadow:none;}
+#popup_content{padding:0;}
+#popup_container #popup_message{height:auto; margin:0;  padding:0;}
+#popup_container #popup_message h3{ text-align: left; color:#232323; line-height:50px; font-size:15px; font-weight:normal; padding-left:20px; margin-top:5px;}
+#popup_container #popup_message h3 strong{ color:#fc476e; font-size:20px;}
+#popup_container #popup_message p{padding-left:20px;text-align: left; color:#fc476e;font-size:12px; line-height:22px; min-height:0;}
+#popup_container #popup_message p.win-prize{font-size:15px; font-weight:bold; margin:0px 0 10px;}
+#popup_container #popup_message p.win-prize em{font-size:35px;}
+#popup_container #popup_message p.win-info{}
+#popup_container #popup_message p.win-info strong{font-size:14px; font-weight:bold;}
+#popup_container #popup_message p.win-info strong a{ color:#fc476e; text-decoration:underline}
+#popup_container #popup_message p.remainder-times{ color:#000; font-size:12px; font-weight:bold}
+
+#popup_container.second #popup_message p.win-prize{font-size:15px; font-weight:normal; margin:5px 0;}
+#popup_container.second #popup_message p.win-prize a.click-look{ display:inline-block; background:#fff; color:#fc476e; padding-left:5px; text-decoration:underline}
+#popup_container.second #popup_message p.win-prize em{font-size:30px;font-weight:bold;}
+
+#popup_container.success p a{}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{ position:absolute; width:40px;height:40px; right:0; top:0}
+#popup_content button{display:block; width: 20px; height: 20px; padding:0; line-height:20px; text-indent: -9999px; background: transparent; margin:0 0 0 20px; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00; }
+
+
+/*屏幕适配*/
+@media screen and (min-width: 360px) {
+.turntable-box{width:261px;height:260px;}
+.turntable-box #turntable_img{ width:261px;height:260px; }
+}
+
+@media screen and (min-width: 375px) {
+.turntable-box{width:271px;height:270px;}
+.turntable-box #turntable_img{ width:271px;height:270px; }
+}
+@media screen and (min-width: 414px) {
+.turntable-box{width:291px;height:290px;}
+.turntable-box #turntable_img{ width:291px;height:290px; }
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ background:#fff;}
+.container{ min-width:320px; max-width:640px; margin:0 auto; overflow:hidden; background:#f3f3f3}
+
+.headApp {width: 100%}
+.headApp img { display: block;width: 100%}
+
+.topFix{position:relative; height:44px;}
+.topFix section {position:relative; height:44px; overflow:hidden; min-width:320px; max-width:640px;}
+
+.conbox{
+	width:100%;
+	max-width:640px;
+	margin:0 auto 5px;
+}
+
+.conbox img{
+	display:block;
+	width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	margin-bottom:0;
+	
+}
+.padding-top{ position:relative;}
+.padding-top img{ width:auto;}
+.conbox h3{ width:100%;}
+.conbox h1{ margin-top:10px;}
+.conbox .marginTop{ margin-top:0;}
+.conbox .box1{ background:#ffb83d; padding-bottom:10px; overflow:hidden;}
+.conbox .box2{ background:#9bd4d9; padding-bottom:10px; overflow:hidden;}
+.imgList{ margin-top:5px;}
+
+#advice{ position:absolute; top:-44px; display:block;}
+
+article{padding:10px;}
+article p{font-size:14px; font-family:"微软雅黑"; line-height:22px; color:#000; text-indent:2em;}

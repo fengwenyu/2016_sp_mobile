@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#fcc6c9;font-family:'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif, arial;}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto; padding-bottom:30px;}
+
+.turntable { position: relative;z-index:3;overflow: hidden; }
+.turntable-box{width:200px;height:200px;margin:0px auto; position:relative;background:#fff; border-radius: 50%; border: 8px solid #fff; box-shadow: 0 0 2px #d1d1d1}
+.turntable-box #turntable_img{ width:200px;height:200px; }
+#turntable_btn {position: absolute; z-index: 3; top:50%; left: 50%; margin-left:-23px; margin-top:-38px;cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(../../images/activity/turntable_btn_03.png); width: 45px; height:60px; background-size: 100%; }
+
+.con {position:relative; padding-top:10px; padding-left:30px;}
+.con .con-text{margin:15px; padding:0 20px;}
+.con .con-text li{ list-style:disc; line-height:24px;}
+
+/*弹层样式*/
+#popup_container{opacity:1; color:#000; height:auto;background:rgba(255,255,255,0.9);-webkit-box-shadow:none;box-shadow:none; border-radius:10px; width:80%; max-width:500px;}
+#popup_content{padding:0;}
+#popup_container #popup_message{height:auto; margin:0;  padding:25px 10px;text-align:center;}
+
+#popup_message h3{ font-size:24px; color:#df3358; }
+#popup_message p{ font-size:12px;}
+#popup_message p.blod{ font-size:15px; padding:5px 0;}
+
+/*关闭按钮*/
+#popup_panel{ position:absolute; width:40px;height:40px; right:5px; top:5px;}
+#popup_content button{display:block; width: 20px; height: 20px; padding:0; line-height:20px; background-color:transparent; border:none; outline:none; margin:0 0 0 20px; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); color:#000; font-size:16px;}
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00; }
+
+
+/*屏幕适配*/
+@media screen and (min-width: 360px) {
+.turntable-box{width:260px;height:260px;}
+.turntable-box #turntable_img{ width:260px;height:260px; }
+}
+
+@media screen and (min-width: 375px) {
+.turntable-box{width:270px;height:270px;}
+.turntable-box #turntable_img{ width:270px;height:270px; }
+#turntable_btn{ width:50px; height:68px; margin:-40px 0 0 -25px;}
+}
+@media screen and (min-width: 414px) {
+.turntable-box{width:290px;height:290px;}
+.turntable-box #turntable_img{ width:290px;height:290px; }
+#turntable_btn{ width:60px; height:81px; margin:-50px 0 0 -30px;}
+}

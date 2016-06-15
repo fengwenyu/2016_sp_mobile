@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<brands capital="A">
+		<brand>
+			<name>ALEXANDER MCQUEEN</name>
+			<id>B0287</id>
+		</brand>
+			</brands>
+		<brands capital="B">
+		<brand>
+			<name>BALLY</name>
+			<id>B0109</id>
+		</brand>
+	<brand>
+			<name>BRUNO MAGLI</name>
+			<id>B0315</id>
+		</brand>
+	</brands>
+	<brands capital="C">
+		<brand>
+			<name>CALVIN KLEIN COLLECTION</name>
+			<id>B0013</id>
+		</brand>
+		</brands>
+	<brands capital="D">
+		<brand>
+			<name>DOLCE &amp; GABBANA</name>
+			<id>B0004</id>
+		</brand>
+    	</brands>
+<brands capital="E">
+		<brand>
+			<name>ETRO</name>
+			<id>B0258</id>
+		</brand>
+<brands capital="G">
+		</brands>
+		<brand>
+			<name>GIORGIO ARMANI</name>
+			<id>B0321</id>
+		</brand>
+	</brands>
+<brands capital="L">
+		<brand>
+			<name>LANDAX</name>
+			<id>B0639</id>
+		</brand>
+		<brand>
+			<name>LOTTUSSE</name>
+			<id>B0637</id>
+		</brand>
+	</brands>
+<brands capital="M">
+		<brand>
+			<name>MORESCHI</name>
+			<id>B0575</id>
+		</brand>
+		</brands>
+	<brands capital="R">
+		<brand>
+			<name>ROBERTO CAVALLI</name>
+			<id>B0121</id>
+		</brand>
+		</brands>
+	<brands capital="S">
+		<brand>
+			<name>S.TENS</name>
+			<id>B0524</id>
+		</brand>
+		<brand>
+			<name>SALVATORE FERRAGAMO</name>
+			<id>B0084</id>
+		</brand>
+			<brand>
+			<name>SERGIO ROSSI</name>
+			<id>B0202</id>
+		</brand>
+	</brands>	
+</data>
+
+

@@ -1,0 +1,91 @@
+
+.container{ min-width:320px; max-width:640px; margin:0 auto; overflow:hidden; background:#c28d58;}
+.content-box{margin-top:0px;}
+.content-box a{ display:block}
+.content-box h1{ margin-top:2px;}
+.content-box h2{ margin-top:10px;}
+.content-box h3{ margin-top:5px;}
+.content-box h4{ margin:8px 0;}
+
+.publish-list li{float:left;width:50%;margin-bottom:6px;padding-right:3px;box-sizing:border-box;  position:relative;}
+.publish-list li:nth-child(2n){float:right;padding:0 0 0 3px;}
+.publish-list li img{ width:100%}
+
+.four-list{  display:-webkit-box;display:box;display:-webkit-flex; display:flex;padding-top:5px;}
+.four-list li{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;padding-right:3px;box-sizing:border-box;  position:relative;}
+.four-list li:nth-child(4n){padding:0 0 0 0px;}
+.four-list li img{ width:100%}
+
+.venue-list{ padding-top:5px;}
+.venue-list li{margin-bottom:8px;padding-right:4px;}
+.venue-list li:nth-child(2n){padding:0 0 0 4px;}
+
+.btn-list{ margin-right:-8px; overflow:hidden;}
+.btn-list li{float:left;width:25%;box-sizing:border-box;margin-bottom:8px;padding-right:8px;}
+
+
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:198px;background:#fff; border:10px solid #d62500;-webkit-box-shadow:none;box-shadow:none; border-radius:0;}
+#popup_content{padding:0;}
+#popup_container #popup_message{height:auto; margin:0;  padding:0;}
+#popup_container #popup_message h3{color:#d62500; line-height:50px; font-size:20px;margin-top:5px;}
+#popup_container #popup_message p{color:#d62500;font-size:15px; line-height:22px; min-height:0; text-align:center}
+#popup_container #popup_message p.win-prize{font-size:15px; font-weight:bold; margin:10px 0 10px;}
+#popup_container #popup_message p.win-prize em{font-size:35px;}
+#popup_container #popup_message p.tip-info{ background:#d62500; color:#fff; margin:0 40px; font-size:12px; margin-top:10px;}
+#popup_container #popup_message p.remainder-times{ color:#d62500; font-size:12px; font-weight:bold}
+
+#popup_container.second #popup_message p.win-prize{font-size:15px; font-weight:normal; margin:5px 0;}
+#popup_container.second #popup_message p.win-prize a.click-look{ display:inline-block; background:#fff; color:#fc476e; padding-left:5px; text-decoration:underline}
+#popup_container.second #popup_message p.win-prize em{font-size:30px;font-weight:bold;}
+
+#popup_container.success p a{}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{ position:absolute; width:40px;height:40px; right:-13px; top:-12px}
+#popup_content button{background:#000; display:block; margin:7px 0 0 7px; width: 20px; height: 20px; border-radius:0; color:#fff; padding:0; line-height:20px; font-size:12px; font-weight:normal; }
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00;}
+
+
+.draw-info{ background:#ffedce; text-align:center; padding-bottom:10px;}
+.draw-info .draw-info_text{ color:#000000; width:320px; margin:20px auto 0;text-align:left; }
+.draw-info_text dt,.draw-info_text dd{line-height:25px;}
+.draw-info_text dt{ font-size:15px; font-weight:bold;background:url(../../../../styles/shangpin/images/20150715Bags/icon01.png) no-repeat; padding-left:22px;}
+.draw-info_text dd{ padding-left:65px;}
+/*************中奖列表**********/
+.sroll-text{ border:1px dashed #e92800; border-radius:50px; margin:20px 20px 20px;height: 110px;overflow: hidden;}
+.sroll-text > div{margin:40px  15px 15px;height: 24px;overflow: hidden;}
+.lottery_list{height:96px; overflow:hidden;}
+.lottery_list li{position:relative; line-height:24px; color:#000;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;}
+
+
+
+/*抽奖*/
+
+.flip-box{ margin-top:10px;}
+.flip-list{ border:10px solid #e8c486; width:300px; margin:10px auto 0;}
+.flip-list li{ float:left; width:25%;position:relative;}
+.flip-list li img{ position:absolute; width:77px; height:49px;}
+
+/*屏幕适配*/
+@media screen and (min-width: 360px) {
+.flip-list{ width:340px; }
+.flip-list li img{width:85px; height:54px;}
+}
+
+@media screen and (min-width: 400px) {
+.flip-list{width:380px;}
+.flip-list li img{width:95px; height:60px;}
+}
+
+@media screen and (min-width: 480px) {
+.flip-list{width:460px;}
+.flip-list li img{width:115px; height:73px;}
+}
+
+@media screen and (min-width: 640px) {
+.flip-list{width:620px;}
+.flip-list li img{width:155px; height:98px;}
+}
+

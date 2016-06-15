@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {
+	background-color: #fff;
+}
+.clr:after, .clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.topFix {
+	position: fixed;
+	left: 50%;
+	top: 0px;
+	z-index: 10;
+	margin-left: -160px;
+	width: 320px;
+}
+.topFix section {
+	display: block;
+	font-size: 0;
+	position: absolute;
+}
+.alContent {
+	background-color: #ffe8d8;
+}
+.spTop {
+	width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.spTop a {
+	display: block;
+}
+.couponBox{
+	padding:9px 5px;
+	width:310px;
+	margin:0 auto;
+}
+.couponBox h3{
+	color:#fb5c5a;
+	text-align:center;
+	background-color:#fff;
+	font-size:16px;
+	font-weight:normal;
+	line-height:30px;
+	height:30px;
+	overflow:hidden;
+}
+.couponBox p{
+	background-color:#25b1b6;
+	padding:9px 0;
+	text-align:center;
+}
+.couponBox a {
+	display: block;
+}
+
+
+.spBox {
+	width: 310px;
+	padding: 0 5px;
+	margin: 0 auto;
+	background-color:#f45754;
+}
+.spBox .spContent {
+	padding-bottom:10px;
+}
+.spContent h2 {
+	height: 37px;
+	width: 100%;
+	text-align: center;
+}
+.sp11List {
+	width: 100%;
+}
+.sp11List li {
+	width: auto;
+	height: auto;
+	vertical-align: top;
+	margin: 0;
+	float: left;
+	overflow: hidden;
+}
+.sp11List li.gap_r{
+	margin-right:5px;
+}
+.sp11List li.gap_top{
+	margin-top:5px;
+}
+.sp11List li.gap_rTop{
+	margin:5px 5px 0 0;
+}
+.sp11List li.r_float{
+	float:right;
+}
+
+.sp11List li a, .sp11List li img {
+	display: block;
+}
+
+.manBox {
+	background-color:#25b1b6;
+}
+
+/*弹出层*/
+#popup_container{
+	width:300px;
+	color:#fff;
+	font-weight:normal;
+}
+#popup_container h1 {
+	background: #c61d41;
+	color: #fff;
+	line-height: 0;
+	height: 0px;
+	position: relative;
+	border-radius: 0.3em 0.3em 0 0;
+	font-size:0;
+	display:block;
+}
+#popup_container .title_close {
+	display: block;
+	position: absolute;
+	right: -15px;
+	top: -25px;
+	width: 50px;
+	height: 50px;
+	background-size: 25px 25px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index:10000;
+}
+#popup_content{
+	padding:0;
+	position:relative;
+}
+#popup_message {
+	margin: 0;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+	text-align: left;
+	min-height:50px;
+	line-height:50px;
+	text-align:center;
+}
+
+/*单页领券表单*/
+.coupons_form{
+	width:300px;
+	margin:0 auto;
+	min-height:480px;
+}
+.coupons_form li{
+	position:relative;
+}
+.coupons_form span{
+	display:block;
+	height:35px;
+	line-height:35px;
+	color:#484848;
+	font-size:13px;
+}
+.coupons_form input[type="text"]{
+	border:1px solid #cdcdcd;
+	height:22px;
+	line-height:22px;
+	padding:3px;
+	width:200px;
+	vertical-align:middle;
+}
+.coupons_form a{
+	display:inline-block;
+	height:28px;
+	line-height:28px;
+	border:1px solid #838383;
+	font-size:14px;
+	color:#484848;
+	padding:0 6px;
+	vertical-align:middle;
+	margin-left:5px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	background-color:#fff;
+}
+.coupons_form a.countdown_ing{
+	background-color:#c8c8c8;
+	cursor:default;
+}

@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+body{background-color:#f4f4f4;}
+
+body .alContent{padding-bottom:20px;}
+
+/*单页领券表单*/
+.coupons_form{
+	width:300px;
+	margin:0 auto;
+	min-height:480px;
+}
+.coupons_form li{
+	position:relative;
+}
+.coupons_form span{
+	display:block;
+	line-height:180%;
+	color:#484848;
+	font-size:12px;
+	padding:5px 0;
+}
+.coupons_form input[type="text"]{
+	border:1px solid #2d2d2d;
+	background-color:#fff;
+	height:24px;
+	line-height:24px;
+	padding:3px;
+	width:280px;
+	vertical-align:middle;
+	margin-bottom:10px;
+}
+.coupons_form input#code_img{
+	width:160px;
+}
+.coupons_form a{
+	display:inline-block;
+	height:28px;
+	line-height:28px;
+	vertical-align:top;
+	font-size:12px;
+	color:#212121;
+	margin-top:5px;
+}
+.coupons_form a.btn{
+	height:36px;
+	line-height:36px;
+	background-color:#000;
+	font-size:16px;
+	color:#fff;
+	width:166px;
+	text-align:center;
+	margin:0;
+}
+.coupons_form a.btn:hover{
+	background-color:#333333;
+}
+.coupons_form a.gift{
+	background-color:#c5c5c5;
+	color:#282828;
+}
+.coupons_form a.gift:hover{
+	background-color:#d8d8d8;
+}
+
+.coupons_form img.verification{
+	margin:5px 10px 0;
+	vertical-align:top;
+}
+.coupons_form a.countdown_ing{
+	background-color:#c8c8c8;
+	cursor:default;
+}
+
+.coupons_form h2{
+	font-size:18px;
+	color:#000;
+	line-height:30px;
+	margin-top:20px;
+}
+.coupons_form h3{
+	line-height:200%;
+	font-size:14px;
+}
+.coupons_form p{
+	font-size:14px;
+	line-height:160%;
+}
+.coupons_form p.member{
+	margin-top:10px;
+	line-height:200%;
+}
+
+/*弹出层*/
+#popup_container{
+	width:300px;
+	background:rgba(0,0,0,.7);
+	color:#fff;
+}
+#popup_container h1 {
+	background: #c61d41;
+	color: #fff;
+	line-height: 0;
+	height: 0px;
+	position: relative;
+	border-radius: 0.3em 0.3em 0 0;
+	font-size:0;
+	display:block;
+}
+#popup_container .title_close {
+	background: url(/images/motherDay/close_btn_bg.png) no-repeat center;
+	display: block;
+	position: absolute;
+	right: -15px;
+	top: -25px;
+	width: 50px;
+	height: 50px;
+	background-size: 25px 25px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index:10000;
+}
+#popup_message {
+	margin: 0;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+	text-align: left;
+	min-height:50px;
+	line-height:50px;
+	text-align:center;
+}

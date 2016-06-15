@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+fieldset{margin:0 18px;}
+fieldset legend{color:#666; padding:10px 0; line-height:18px; font-size:12px;}
+fieldset p{border:1px solid #ccc; height:24px; line-height:24px; padding:7px 10px; margin:0 0 10px 0; -webkit-border-radius:5px; border-radius:5px; color:#b6b6b6; position:relative;}
+fieldset p label{padding:0 10px 0 0; display:inline-block; height:24px; line-height:24px; border-right:1px solid #999; margin:0 10px 0 0;}
+fieldset p input{border:0 none; background:rgba(0,0,0,0); height:24px; width:70%; z-index:0;}
+fieldset p.rePwd input{width:60%;}
+fieldset p button{width:24px;height:24px;position:absolute;border:0;right:5px;top:7px;background-color:transparent;text-align:center;display:none; background:url(../../images/close.png) no-repeat left center; -webkit-background-size:100%; -moz-background-size:100%; background-size:100%; z-index:10;}
+fieldset p .datalist{width:80%; display:block; position:absolute; border:none; left:55px; top:40px; background:#000; z-index:10; color:#fff; -webkit-border-radius:3px; border-radius:3px; display:none;}
+fieldset p .datalist a{color:#fff; font-size:14px; display:inline-block; width:27%; text-align:center; margin:0 5px; line-height:35px;}
+fieldset p .datalist:after{content:'\00a0';display:block;position:absolute;top:-20px;right:30px;height:0;width:0;border-color:transparent transparent #000 transparent;border-style:solid;border-width:10px;}
+fieldset p.login_errorMsg{border:none; color:#b51111; padding:0; height:25px; line-height:25px; text-align:center;}
+fieldset p.error{border:1px solid #b51111;}
+
+fieldset .fillGender{padding:10px 0; height:28px; line-height:28px;}
+fieldset .fillGender a{display:inline-block; height:26px; width:53px; margin:0 20px 0 0; border:1px solid #adadad; overflow:hidden; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+fieldset .fillGender a em{display:block; height:24px; width:51px; border:1px solid #fff; line-height:24px; text-align:center; color:#000; position:relative;}
+fieldset .fillGender a em i{display:block; width:12px; height:12px; position:absolute; right:0; bottom:0; display:none;}
+fieldset .fillGender a em i img{display:block; float:left;}
+
+fieldset .fillGender a.cur, fieldset .fillGender a.cur em{border:1px solid #b9966a;}
+fieldset .fillGender a.cur em i{display:block;}
+
+fieldset .agreement{height:20px; line-height:20px; display:inline-block; margin:10px 0; color:#666; overflow:hidden;}
+fieldset .agreement img{margin:0 10px 0 0; vertical-align:top;}
+
+fieldset .login_btn{height:36px; display:block; line-height:36px; margin:0 0 15px; background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#e24700),color-stop(0.5,#c50404),color-stop(1,#df4500)); background:-moz-linear-gradient(top, #e24700, #c50404 50%, #df4500 100%); background:-o-repeating-linear-gradient(top, #e24700, #c50404 50%, #df4500 100%); border:1px solid #b00; -webkit-border-radius:4px; border-radius:4px; text-align:center; color:#fff; font-size:18px; -webkit-box-shadow:2px 2px 2px rgba(225,225,225,0.5); box-shadow:2px 2px 2px rgba(225,225,225,0.5); width:100%;}
+fieldset .sigin_btn{height:36px; display:block; line-height:36px; margin:0 0 15px; background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fbfbfb),color-stop(0.5,#ccc),color-stop(1,#fefefe)); background:-moz-linear-gradient(top, #fbfbfb, #ccc 50%, #fefefe 100%); background:-o-repeating-linear-gradient(top, #fbfbfb, #ccc 50%, #fefefe 100%); border:1px solid #b6b5b5; -webkit-border-radius:4px; border-radius:4px; text-align:center; color:#5b5b5b; font-size:18px; -webkit-box-shadow:2px 2px 2px rgba(225,225,225,0.5); box-shadow:2px 2px 2px rgba(225,225,225,0.5);}
+
+fieldset .login_link{color:#00f; line-height:30px;display:block;}
+
+.other_login{margin:0 0; padding:5px 0 20px 0; text-align:center;}
+.other_login p{line-height:180%; margin:0 18px; text-align:left;}
+.other_login menu{display:table; margin:0 auto;}
+.other_login a{padding:0 0 0 5px; display:table-cell; text-align:center;}
+.other_login a:first-child{padding:0;}
+
+.agreement_txt{margin:0 18px;}
+.agreement_txt header{line-height:30px; height:30px;}
+.agreement_txt article{height:200px; font-size:12px;}
+.agreement_txt article ul{width:100%; overflow:hidden; height:200px; position:relative;}
+.agreement_txt article li{padding-bottom:10px;}
+.agreement_txt article p{margin:10px 0; line-height:18px;}
+.agreement_txt .backSigin{text-align:right; padding:20px 0;}
+.agreement_txt .backSigin a{display:inline-block; height:20px; line-height:20px; padding:0 10px; font-size:12px; color:#666; background:#ccc; -webkit-border-radius:3px; border-radius:3px;}

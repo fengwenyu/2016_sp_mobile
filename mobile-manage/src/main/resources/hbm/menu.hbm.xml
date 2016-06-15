@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="Menu" table="menu">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="parentId" type="string" length="50"/>
+		<property name="pwd" type="string" length="50"/>
+		<property name="nickname" type="string" length="40"/>
+		<property name="phoneNum" type="string" length="15"/>
+		<property name="rank" type="integer"/>
+		<property name="createTime" type="timestamp"/>
+		<!-- role属性，与Role是一对一的关系 采用基于外键的一对一映射（有外键方）-->
+		<many-to-one name="role" column="roleId" class="Role" unique="true" lazy="false"></many-to-one>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

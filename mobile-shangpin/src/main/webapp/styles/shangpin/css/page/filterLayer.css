@@ -1,0 +1,188 @@
+/*排序弹出层*/
+.nav_menu{position:absolute; width:100%; left:0; top:145px; overflow:hidden; z-index:10000; background-color:rgba(0,0,0,.5); display:none;}
+.nav_menu dl{width:100%; background-color:#fff;}
+
+.nav_menu dl dd{height:44px; line-height:44px; border-bottom:1px solid #d5d5d5; cursor:pointer; color:#484848; padding-left:25px;}
+.nav_menu dl dd:hover{background-color:#ededed;}
+
+.nav_bg{position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; display:block;}
+
+
+/*品牌弹出层*/
+.brand_menu{position:absolute; width:100%; left:0; top:145px; overflow:hidden; z-index:10000; background-color:rgba(0,0,0,.5); display:none;}
+
+.brand_menu .filter_select{display:-webkit-box; display:-moz-box; display:box; width:100%; height:100%; background-color:#fff;}
+.brand_menu .filter_select > li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1; height:100%;}
+.brand_menu .filter_select > li.first{width:100px;}
+.brand_menu .filter_select > li:last-child{background-color:#f5f5f5;}
+
+.brand_menu .brand_tabsMenu{width:100%; height:100%;}
+.brand_menu .brand_tabsMenu li{border-bottom:1px solid #d5d5d5; height:44px; line-height:44px; text-align:center; color:#484848; font-size:13px; cursor:pointer;}
+.brand_menu .brand_tabsMenu li:hover{background-color:#d5d5d5;}
+.brand_menu .brand_tabsMenu li:last-child{border-right:0;}
+.brand_menu .brand_tabsMenu li.cur{background-color:#f5f5f5;}
+.brand_menu .brand_tabsMenu li.curr{background-image:url(../../images/flagshop/filter_dot.png); background-repeat:no-repeat; background-position:15% center; background-size:6px 6px;}
+
+.brand_menu .brand_tabsCell{width:100%; display:none;}
+.brand_menu .brand_tabsCell:first-of-type{display:block;}
+.brand_menu .brand_tabsCell dd{height:44px; line-height:44px; border-bottom:1px solid #f5f5f5; cursor:pointer; color:#484848; padding-left:35px; border-bottom:1px solid #d5d5d5;}
+.brand_menu .brand_tabsCell dd.curr{background:url(../../images/flagshop/filter_tick.png) no-repeat 90% center #ededed; background-size:13px 13px;}
+
+
+/*筛选弹出层*/
+#filter_layer{width:100%; overflow:hidden; height:100%; position:absolute; left:0; top:0; z-index:10000; display:none;}
+#filter_box{display:block; width:100%; height:100%; background:rgba(0,0,0,.5); position:absolute; top:0;}
+#filter_box .filter_content{background-color:#fff; margin-left:50px; height:100%; position:relative;}
+#filter_box .filter_content .close_Btn{width:50px; height:50px; position:absolute; left:-25px; top:50%; margin:0 0 0 -25px; background:url(../../images/flagshop/filter_arrow.png) no-repeat center center; background-size:13px 13px;}
+#filter_box h2{height:30px; line-height:30px; font-weight:normal; position:relative; padding:10px; }
+#filter_box h2 a{position:absolute; top:10px; left:10px; height:30px; width:50px; text-align:center; -webkit-border-radius:3px; border-radius:3px; background-color:#ededed; color:#d5d5d5; font-size:12px;}
+#filter_box h2 a:last-child{left:auto; right:10px; background-color:#eedb9c; color:#723c0d;}
+#filter_box h2 a.curr{color:#484848;}
+
+#filter_box .filter_select{display:-webkit-box; display:-moz-box; display:box; width:100%; height:100%; border-top:1px solid #d5d5d5;}
+#filter_box .filter_select li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1; height:100%;}
+#filter_box .filter_select li.first{width:100px;}
+
+#filter_box .layer_tabsMenu{width:100%; height:100%; background-color:#ededed;}
+#filter_box .layer_tabsMenu li{border-bottom:1px solid #d5d5d5; height:44px; line-height:44px; text-align:center; color:#484848; font-size:13px; cursor:pointer;}
+#filter_box .layer_tabsMenu li:hover{background-color:#d5d5d5;}
+#filter_box .layer_tabsMenu li:last-child{border-right:0;}
+#filter_box .layer_tabsMenu li.cur{background-color:#fff;}
+#filter_box .layer_tabsMenu li.curr{background-image:url(../../images/flagshop/filter_dot.png); background-repeat:no-repeat; background-position:15% center; background-size:6px 6px;}
+
+.pageContent{margin:0; z-index:10;}
+#filter_box .layer_tabsCell{width:100%; min-height:396px; display:none;}
+#filter_box .layer_tabsCell:first-of-type{display:block;}
+#filter_box .layer_tabsCell dd{height:44px; line-height:44px; border-bottom:1px solid #f5f5f5; cursor:pointer; color:#484848; padding-left:35px;}
+#filter_box .layer_tabsCell dd.curr{background:url(../../images/flagshop/filter_tick.png) no-repeat 90% center #ededed; background-size:13px 13px;}
+
+.slideIn{
+	right:0;
+	animation: slideIn 0.6s ease-in-out;
+	-moz-animation: slideIn 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideIn 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideIn 0.6s ease-in-out;
+}
+.slideOut{	
+	right:-100%;
+	animation: slideOut 0.6s ease-in-out;
+	-moz-animation: slideOut 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideOut 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideOut 0.6s ease-in-out;
+}
+
+@keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+@-moz-keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+@-webkit-keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+@-o-keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+
+
+@keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+@-moz-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+@-webkit-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+@-o-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+
+.slideLeft{
+	left:-270px;
+	animation: slideLeft 0.6s ease-in-out;
+	-moz-animation: slideLeft 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideLeft 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideLeft 0.6s ease-in-out;
+}
+.slideRight{	
+	left:0;
+	animation: slideRight 0.6s ease-in-out;
+	-moz-animation: slideRight 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideRight 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideRight 0.6s ease-in-out;
+}
+
+@keyframes slideLeft
+{
+0%{ left:0; }
+100%{ left:-270px; }
+}
+
+@-moz-keyframes slideLeft
+{
+0%{ left:0; }
+100%{ left:-270px; }
+}
+
+@-webkit-keyframes slideLeft
+{
+0%{ left:0; }
+100%{ left:-270px; }
+}
+
+@-o-keyframes slideLeft
+{
+0%{ left:0; }
+100%{ left:-270px; }
+}
+
+
+
+@keyframes slideRight
+{
+0%{ left: -270px; }
+100%{ left: 0; }
+}
+
+@-moz-keyframes slideRight
+{
+0%{ left: -270px; }
+100%{ left: 0; }
+}
+
+@-webkit-keyframes slideRight
+{
+0%{ left: -270px; }
+100%{ left: 0; }
+}
+
+@-o-keyframes slideRight
+{
+0%{ left: -270px; }
+100%{ left: 0; }
+}

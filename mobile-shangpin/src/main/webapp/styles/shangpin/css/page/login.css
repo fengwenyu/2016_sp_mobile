@@ -1,0 +1,334 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#f2f2f2;
+}
+
+/*Tab切换*/
+.reg_nav{width:100%; overflow:hidden;}
+.reg_nav ul{width:200px; margin:0 auto; height:24px; padding:12px 0 8px; display:-webkit-box; display:-moz-box; display:box;}
+.reg_nav li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-align:center;text-align:center;border-bottom:2px solid #fff;font-size:14px;height:22px;line-height:22px; margin:0 20px; color:#484848;}
+.reg_nav li.cur{border-bottom:2px solid #36393e; color:#36393e;}
+
+
+fieldset {
+	width:100%;
+	margin-top:10px;
+	border-top:1px solid #d8d8d8;
+}
+fieldset legend {
+	color: #2d2d2d;
+	font-size: 16px;
+	height:39px;
+	line-height:39px;
+	border-bottom:1px solid #d8d8d8;
+	display:block;
+	width: 100%;
+	box-sizing: border-box;
+}
+fieldset p {
+	border-bottom:1px solid #d8d8d8;
+	height: 39px;
+	line-height: 39px;
+	color: #999;
+	padding:0 15px;
+	position: relative;
+	background-color:#fff;
+}
+fieldset p.mobiTxt{
+	color:#555;
+}
+fieldset p label {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width:65px;
+	font-size:12px;
+	color: #555;
+}
+fieldset p input[type=text], fieldset p input[type=password]{
+	border: 1px solid #fff;
+	background: rgba(0,0,0,0);
+	height: 24px;
+	width: 65%;
+	z-index: 0;
+	font-size:12px;
+	padding:0 5px;
+	outline:none;
+}
+fieldset input[type=text].error, fieldset input[type=password].error {
+	border: 1px solid #b51111;
+}
+fieldset p input[type=text].verCode{
+	width:45%;
+}
+fieldset p button {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	border: 0;
+	right: 5px;
+	top: 7px;
+	background-color: transparent;
+	text-align: center;
+	display: none;
+	background: url(../../images/close.png) no-repeat left center;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	background-size: 100%;
+	z-index: 10;
+}
+fieldset p .datalist {
+	width: 80%;
+	display: block;
+	position: absolute;
+	border: none;
+	left: 55px;
+	top: 40px;
+	background: #000;
+	z-index: 10;
+	color: #fff;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	display: none;
+}
+fieldset p .datalist a {
+	color: #fff;
+	font-size: 14px;
+	display: inline-block;
+	width: 27%;
+	text-align: center;
+	margin: 0 5px;
+	line-height: 35px;
+}
+fieldset p .datalist:after {
+	content: '\00a0';
+	display: block;
+	position: absolute;
+	top: -20px;
+	right: 30px;
+	height: 0;
+	width: 0;
+	border-color: transparent transparent #000 transparent;
+	border-style: solid;
+	border-width: 10px;
+}
+fieldset p.login_errorMsg {
+	border: none;
+	color: #b51111;
+	padding: 0;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+fieldset .fillGender a {
+	display: inline-block;
+	height: 40px;
+	line-height:40px;
+	margin: 0 20px 0 0;
+	padding:0 0 0 33px;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	vertical-align:middle;
+	color:#888;
+	background-image:url(../../images/check_icon.png);
+	background-repeat:no-repeat;
+	background-size:22px;
+	background-position: 0 0;
+}
+fieldset .fillGender a.cur{
+	background-position: 0 -40px;
+}
+
+fieldset .agreement {
+	height: 20px;
+	line-height: 20px;
+	display: inline-block;
+	margin: 10px 0;
+	color: #666;
+	overflow: hidden;
+}
+fieldset .agreement img {
+	margin: 0 10px 0 0;
+	vertical-align: top;
+}
+fieldset .agreement i{
+	color:#ff3b3b;
+	text-decoration:underline;
+}
+fieldset .login_btn {
+	display: block;
+	margin: 0 4% 15px;
+	height: 34px;
+	line-height: 34px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c62026), color-stop(0.5, #c62026), color-stop(1, #c62026));
+	background: -moz-linear-gradient(top, #c62026, #c62026 50%, #c62026 100%);
+	background: -o-repeating-linear-gradient(top, #c62026, #c62026 50%, #c62026 100%);
+	border:1px solid #000;/*background-color:#c62026;*/
+	border:1px solid #c62026; outline:none; /*20140921 fby*/
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	width: 92%;
+	height: 45px;
+	line-height: 45px;
+	border: none;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+fieldset .login_btn:hover {
+	/*background-color:#333;border:1px solid #000;*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aa0006), color-stop(0.5, #aa0006), color-stop(1, #aa0006));
+	background: -moz-linear-gradient(top, #aa0006, #aa0006 50%, #aa0006 100%);
+	background: -o-repeating-linear-gradient(top, #aa0006, #aa0006 50%, #aa0006 100%);
+	border:1px solid #aa0006; /*20140921 fby*/
+	color: #fff;
+}
+fieldset .sigin_btn {
+	display: block;
+	margin: 0 0 15px; /*height:36px;line-height:36px;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fbfbfb),color-stop(0.5,#ccc),color-stop(1,#fefefe)); background:-moz-linear-gradient(top, #fbfbfb, #ccc 50%, #fefefe 100%); background:-o-repeating-linear-gradient(top, #fbfbfb, #ccc 50%, #fefefe 100%); border:1px solid #b6b5b5;color:#5b5b5b; -webkit-box-shadow:2px 2px 2px rgba(225,225,225,0.5); box-shadow:2px 2px 2px rgba(225,225,225,0.5);*/
+	height: 45px;
+	line-height: 45px;
+	background: -moz-linear-gradient(top, #ededed, #e0e0e0 100%);
+	background: -o-repeating-linear-gradient(top, #ededed, #e0e0e0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#E0E0E0));
+	color: #484848;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 18px;
+}
+fieldset .sigin_btn:hover {
+	background: #d5d5d5;
+}
+fieldset .login_link {
+	color: #555;
+	line-height: 30px;
+	display: block;
+	text-align:right;
+	margin:0 5%;
+	text-decoration:underline;
+}
+
+.btm_img{
+	width:290px;
+	height:70px;
+	background-color:#fff;
+	margin:80px auto 0;
+}
+
+.agreement_txt {
+	margin: 0 18px;
+}
+.agreement_txt header {
+	line-height: 30px;
+	height: 30px;
+}
+.agreement_txt article {
+	font-size: 12px;
+}
+.agreement_txt article ul {
+	width: 100%;
+}
+.agreement_txt article li {
+	padding-bottom: 10px;
+}
+.agreement_txt article p {
+	margin: 10px 0;
+	line-height: 18px;
+}
+.agreement_txt .backSigin {
+	text-align: right;
+	padding: 20px 0;
+}
+.agreement_txt .backSigin a {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	font-size: 12px;
+	color: #666;
+	background: #ccc;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+/**/
+p.verification {
+	margin-right: 110px;
+	position: relative;
+}
+p.verification img {
+	position: absolute;
+	right: -110px;
+	top: 0;
+}
+p.verification input {
+	width: 50%;
+}
+p.verification span{
+	width:110px;
+	position: absolute;
+	right: -110px;
+	top: 0;
+	height:38px;
+	line-height:38px;
+	border-bottom:1px solid #d8d8d8;
+	background-color:#fff;
+}
+p.verification span img{
+	position:static;
+	right:auto;
+	top:auto;
+}
+p.verification span a{
+	display:inline-block;
+	color:#888;
+	margin-left:10px;
+}
+p.verification .reSend_btn{
+	display:block;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	background-color:#f2f2f2;
+	border:1px solid #f2f2f2;
+	margin:3px 0 0;
+	color:#888;
+	font-size:12px;
+	text-align:center;
+}
+p.verification .login_btn{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	border:1px solid #c62026;
+	margin:3px 0 0;
+	color:#fff;
+}
+p.verification .login_btn:hover{
+	background-color:#333;
+	border:1px solid #000;
+}
+
+.bind_legend {
+	padding-top: 20px
+}
+/*绑定成功*/
+.success_info {
+	font-size: 12px;
+	line-height: 30px;
+	margin-bottom: 15px;
+}
+/*公用*/
+.font_blue {
+	color: #0024ff;
+}
+
+/*第三方登录*/
+#others {margin: 80px 0 10px;overflow: hidden;}
+#others p{text-align:center; color:#555; line-height:30px; padding:10px 0;}
+.other-login{display:-webkit-box;display:-webkit-flex;display:flex; width:320px; margin:0 auto;}
+#others a {float: left;width: 21%;-webkit-box-flex:1;box-flex:1;-webkit-flex:1; flex:1;font-size: 13px;color:#888; text-align:center;overflow:hidden;white-space:nowrap; text-overflow:ellipsis; padding:0 2%;}
+/*#others a:first-child{margin-left: 2%;}*/
+#others a i {display: block;margin-bottom: 4px; padding:10px 0 4px; width:50px; height:50px; margin:0 auto;}

@@ -1,0 +1,43 @@
+body{ background:#000}
+.topImg{ background-color:#fff; /*padding:18% 30px 30px; */ position:relative;padding:10px 0;}
+/*.topImg:after{content: "";display: block;padding-top: 120%;position: relative;height: 0;overflow: hidden;width: 100%;}*/
+.topImg img{ display:block;width: 66%; margin:0 auto;}
+.topImg .item-info{ padding:6px; width:66%; margin:0 auto; /*position:absolute; bottom:5%; left: 17%;*/}
+.topImg .item-info .item-name{ font-weight:normal; color:#000;overflow: hidden;text-overflow: ellipsis; white-space: nowrap; font-size:14px; line-height:14px;}
+.topImg .item-info .item-desc{color:#888;line-height:18px; height:18px;overflow: hidden;display: -webkit-box;text-overflow: ellipsis;-webkit-line-clamp: 2;-webkit-box-orient: vertical; margin-top:3px; font-size:13px}
+.topImg .item-info .item-detail{ margin-top:3px;height:16px; overflow:hidden;}
+.topImg .item-info .item-detail .item-price{ display:inline-block; vertical-align:top; }
+.topImg .item-info .item-detail .item-price span{ display:inline-block;}
+.topImg .item-info .item-detail .item-price .refer-price{ color:#555;}
+.content {width: 320px; height:231px; padding-top:136px; margin: 0 auto; background:url(../../images/slot/machine-bg.png) no-repeat;background-size:100% auto;}
+.line { width: 100%; overflow:hidden; }
+.machine-box{clear:both; margin-left:14px;}
+#textMachine, #textMachine2 { width: 520px; height: 67px; overflow: hidden; display: inline-block; text-align: center; }
+.slotMachineButton { width: 60px; height: 60px; overflow: hidden; line-height: 60px;margin-left: 118px; margin-top:107px; position: absolute;}
+.slotMachine { width: 93px; height: 130px; overflow: hidden; display: inline-block; text-align: center; margin-right:2px; /*border: 5px solid #000; background-color: #ffffff; */}
+.noBorder { border: none; background: transparent; }
+.slotMachine .slot { width: 93px; height: 130px; background-size:contain; border-radius:13px; }
+.slot1 { background-image: url(../../images/slot/slot001.png); }
+.slot2 { background-image: url(../../images/slot/slot002.png); }
+.slot3 { background-image: url(../../images/slot/slot003.png); }
+.slot4 { background-image: url(../../images/slot/slot004.png); }
+svg{ display:none}
+
+.rule-text{margin: 40px 15px 20px;padding:30px 10px 20px; line-height:24px; color:#fff; font-size:12px; /*text-align:center;*/ border:2px dashed #ebcb77; position:relative;}
+.rule-title{ width:105px; margin:-45px auto 10px;}
+
+#popup_container{ width:280px;height:176px;background:url(../../images/slot/pop-bg.png) no-repeat; background-size:100%;}
+#popup_content{text-align: center; padding-top:46px; }
+#popup_message p{color:#000;font-size:14px; font-weight:bold; line-height:22px; height:48px;}
+#popup_panel{margin:35px auto 15px; height:28px;}
+#popup_content button{background:url(../../images/slot/pop-btn.png) no-repeat; background-size:100%; width: 114px; height: 30px;font-size:0;border: none; }
+
+
+/*屏幕适配*/
+@media screen and (min-width: 414px) {
+.content{ width:360px;height:263px; padding-top:152px;}
+.machine-box{ margin-left:17px;}
+.slotMachine{width: 104px; height: 145px;margin-right:3px;}
+.slotMachine .slot { width: 104px; height: 145px;}
+.slotMachineButton { width: 80px; height: 80px; line-height: 80px; margin-left: 125px; margin-top: 118px;}
+   

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#fff}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;background:#fff8f9; background-size:100% auto;}
+.conbox img{ display:block; width:100%;}
+.title-top{ position:relative;}
+a,img,button,input,textarea,li{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+#lottery{width:280px; padding:15px; margin:20px auto; z-index:3;background:url(../../../../images/20150817EndLessLove/lottery_box_left.jpg) no-repeat;background-size:100% 100%; /*-webkit-border-image:url(../../../../images0605MarqueeLuck/cirlce_icon.png) 22 round fill;border-image:url(../../../../images0605MarqueeLuck/cirlce_icon.png) 22 round round;*/}
+#lottery ul{ }
+#lottery ul li{ padding:0 0;}
+#lottery ul li span{ display:block; float:left;width:58px;height:58px;text-align:center; border:1px solid rgba(255,255,255,0); margin:5px;border-radius:10px; line-height:58px; border-radius:10px;overflow:hidden;}
+#lottery .lottery-unit {
+  background: url(../../../../images/20150817EndLessLove/lotter_bg.png) no-repeat center center;
+  background-size:cover;}
+#lottery ul li span.start{width:128px;height:58px; overflow:hidden; background:url(../../../../images/20150817EndLessLove/start.png) no-repeat center center; background-size:contain; text-indent:-999px;}
+#lottery ul li span.active{ border:1px dashed #fff; position:relative; z-index:999}
+#lottery ul li span.active em{ display:block;width:58px;height:58px; position:absolute; top:0; left:0;background:rgba(138,138,138,0.5);border-radius:10px;}
+#lottery img{border-radius:10px;overflow:hidden; display:block;}
+
+.sroll-text{ border:1px dashed #232323; border-radius:10px; margin:0 20px 20px;height: 126px;overflow: hidden;}
+.sroll-text > div{margin:15px;height: 96px;overflow: hidden;}
+.lottery_list{height:96px; overflow:hidden;}
+.lottery_list li{position:relative; line-height:24px; color:#232323;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;font-size: 14px;}
+
+.box_con{ background:url(../../../../images/20150817EndLessLove/goodluck_03.jpg) center top no-repeat; background-size:cover; padding-top:14%; padding-bottom:25px;}
+
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:218px;background:url(../../../../images/20150817EndLessLove/lottery_bg.jpg) no-repeat; background-size:100%;-webkit-box-shadow:none;box-shadow:none;}
+#popup_content{padding:0; position:absolute; top:0; right:0; width:100%;}
+#popup_container #popup_message{height:auto; margin:0;  padding:0; padding-left:26px;}
+#popup_container #popup_message h3{ text-align: left; color:#232323; line-height:50px; font-size:15px; font-weight:normal; padding-left:20px; margin-top:14px;}
+#popup_container #popup_message h3 strong{ color:#fc476e; font-size:20px;}
+#popup_container #popup_message p{padding-left:20px;text-align: left; color:#232323;font-size:12px; line-height:20px; min-height:0;}
+#popup_container #popup_message p.win-prize{font-size:14px; font-weight:bold; margin:0; /*margin:16% 0 0;*/ color:#fff; padding-left:28px; height:75px; position:relative; margin-bottom:5px;}
+#popup_container #popup_message p.win-prize strong{ position:absolute; bottom:3px;}
+#popup_container #popup_message p.win-prize em{font-size:20px;}
+#popup_container #popup_message p.win-info{ margin-top:3px;}
+#popup_container #popup_message p.win-info strong{font-size:12px; font-weight:bold;color:#fc476e;}
+#popup_container #popup_message p.win-info strong a{ color:#fc476e; text-decoration:underline}
+#popup_container #popup_message p.remainder-times{ color:#fc476e; font-size:12px; font-weight:bold}
+
+#popup_container.second #popup_message p.win-prize{font-size:15px; font-weight:normal; margin:5px 0;}
+#popup_container.second #popup_message p.win-prize a.click-look{ display:inline-block; background:#fff; color:#fc476e; padding-left:5px; text-decoration:underline}
+#popup_container.second #popup_message p.win-prize em{font-size:30px;font-weight:bold;}
+
+#popup_container.success p a{}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{ position:absolute; width:20px;height:20px; right:0; top:0}
+#popup_content button{background:#fb5f65; display:block; margin:2px 2px 0 0; width: 20px; height: 20px; border-radius:50%; color:#fff; padding:0; line-height:20px; font-size:12px; font-weight:normal; }
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00;}
+
+#popup_container{ width:300px;}
+#popup_container #popup_title{ height:0;}
+
+
+/*屏幕适配*/
+@media screen and (min-width: 360px) {
+#lottery{width:320px;}
+#lottery ul li span{width:68px;height:68px;}
+#lottery ul li span.start{width:148px;height:68px;}
+#lottery ul li span.active em{ width:68px;height:68px;}
+
+}
+
+@media screen and (min-width: 414px) {
+#lottery{width:360px;}
+#lottery ul li span{width:78px;height:78px;}
+#lottery ul li span.start{width:168px;height:78px;}
+#lottery ul li span.active em{ width:78px;height:78px;}
+}

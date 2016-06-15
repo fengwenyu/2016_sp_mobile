@@ -1,0 +1,161 @@
+@charset "utf-8";
+.container {
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto 0;
+	font-size:12px;
+}
+
+/*帮助中心首页*/
+.help_box{
+	width:100%;
+}
+.help_box header{
+	padding:25px 20px;
+	height:62px;
+}
+.help_box header img{
+	float:left;
+	width:60px;
+	height:60px;
+	border:1px solid #fff;
+	border-radius:3px;
+	margin-right:10px;
+}
+.help_box header h5{
+	font-size:16px;
+	color:#fff;
+	line-height:24px;
+	font-weight:normal;
+}
+.help_box header p{
+	color:#fff;
+	line-height:20px;
+}
+.help_box header p i{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	vertical-align:middle;
+	background-repeat:no-repeat;
+	background-position:0 0;
+	background-size:16px;
+}
+.help_box header p i.normal{
+	background-image:url(../../images/help_center/user_normal.png);
+}
+.help_box header p i.gold{
+	background-image:url(../../images/help_center/user_gold.png);
+}
+.help_box header p i.platinum{
+	background-image:url(../../images/help_center/user_platinum.png);
+}
+.help_box header p i.diamond{
+	background-image:url(../../images/help_center/user_diamond.png);
+}
+
+.help_box .tab_info{
+	width:100%;
+	box-sizing:border-box;
+	display:-webkit-box;
+	padding:20px 0 12px;
+	border-bottom:1px solid #e8e8e8;
+
+}
+.help_box .tab_info a{
+	display: block;
+	-webkit-box-flex:1;
+	font-size:12px;
+	color:#666;
+	text-align:center;
+	position:relative;
+	border-right:1px solid #e8e8e8;
+}
+.help_box .tab_info a.curr{
+	color:#c62026;
+}
+.help_box .tab_info a:last-child{
+	border-right:none;
+}
+.help_box .tab_info a i{
+	display:block;
+	margin:0 auto 10px;
+	width:25px;
+	height:20px;
+	background-repeat:no-repeat;
+	
+}
+.help_box .tab_info a.ico_help01 i{
+	background-image:url(../../images/help_center/ico_help01.png);
+	background-size:25px 20px;
+}
+.help_box .tab_info a.ico_help02 i{
+	background-image:url(../../images/help_center/ico_help02.png);
+	background-size:25px 20px;
+}
+.help_box .tab_info a.ico_help03 i{
+	background-image:url(../../images/help_center/ico_help03.png);
+	background-size:25px 20px;
+}
+.help_box .tab_info a.ico_help01.curr i{
+	background-image:url(../../images/help_center/ico_help01_cur.png);
+	background-size:25px 20px;
+}
+.help_box .tab_info a.ico_help02.curr i{
+	background-image:url(../../images/help_center/ico_help02_cur.png);
+	background-size:25px 20px;
+}
+.help_box .tab_info a.ico_help03.curr i{
+	background-image:url(../../images/help_center/ico_help03_cur.png);
+	background-size:25px 20px;
+}
+
+
+.content_list{ min-height:400px}
+.help_box .content-menu{
+	width:100%;
+	padding-bottom:40px
+}
+.content-menu li{
+	width:100%;
+	background:url(../../images/help_center/menu_dot.png) no-repeat 95% center;
+	background-size:16px;
+	border-bottom:1px solid #e8e8e8;
+}
+
+.content-menu li a{
+	width:100%;
+	display:block;
+	height:44px;
+	line-height:44px;
+	font-size:14px;
+	color:#666;
+	padding-left:5%;
+}
+
+.problem-box{ padding:0 10px 20px; color:#2d2d2d; font-size:12px; line-height:18px;}
+.problem-box h3{ font-weight:normal; margin-top:25px;}
+.problem-box p{ margin-top:15px;}
+
+.problem-box ul.location li{ position:relative; margin-top:15px;}
+.problem-box ul.location li i,b{ position:absolute; left:0;}
+.problem-box ul.location li span{margin-left:45px; display:block;}
+.problem-box ul.location li p{margin-left:60px;}
+
+.problem-box h3.arrowbg{ background:url(../../images/help_center/ico_arrow.png) no-repeat 0 center;
+background-size:8px 10px; padding-left:12px;}
+.city_list dt{ margin-top:15px;}
+.city_list em{ margin:0 5px 0 0;}
+
+/*帮助中心首页end*/
+
+/*海外购常见问题*/
+.problem_con dt{background:url(../../images/help_center/ico_ques.png) no-repeat 0 2px; background-size:14px 14px; margin-top:25px;padding-left:22px; }
+.problem_con dd{background:url(../../images/help_center/icon_ask.png) no-repeat 0 2px; background-size:14px 14px;margin-top:15px;padding-left:22px;}
+
+/*登陆说明页*/
+.login-explain-box{padding:0 10px 20px;line-height:18px;color:#2d2d2d; font-size:12px;}
+.step-box{ position:relative;   margin-top:20px;}
+.step-box h3{ position:absolute; left:0;}
+.step-box p{ margin-left:50px;}
+.login-explain-box p{ margin-top:15px; }

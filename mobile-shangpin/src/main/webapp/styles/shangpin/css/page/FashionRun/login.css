@@ -1,0 +1,76 @@
+body,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;font-weight:normal;}
+h1,h2,h3,h4,h5,h6{font-size:100%;margin:0;padding:0;}
+body{ margin:0;padding:0;font: normal 12px "Arial","Tahoma","Helvetica","sans-serif";color:#333333;text-align:center;background:#ffffff;}
+a:link {text-decoration:none; color:#333333;}
+a:visited {text-decoration:none;color: #333333;}
+a:hover {text-decoration: underline;color: #0033FF;}
+a:active {text-decoration:none;color: #0033FF;}
+select{font-size:12px;}
+table{border-collapse:collapse;border-spacing:0;}
+img,abbr,acronym{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; } 
+table caption{margin-left:-1px;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;} 
+q:before,q:after { content:'';} 
+.l { float:left;}.r { float:right;}.c { clear:both;}
+.none {display:none;}
+.inline {display:inline;}
+
+.clr:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.clr{
+	zoom: 1
+}
+/***header***/
+.wrapper100 { min-width:320px; max-width:640px; margin:0 auto; }
+.contnaier,.mainbar,.main {height:auto !important;height:530px; min-height:530px;}
+.contnaier { width:100%; background:#fff;}
+.headerbar { width:100%; margin-top:8px;}
+.logo { width:100%;}
+.logolt img { height:35px;}
+.logort { width:300px; font-size:10px; text-align:right;}
+.logort span a { color:#3ca2f4; font-size:10px;}
+/******************************************************************loginindex******************************************************************/
+.logintopbar {width:100%; margin:110px auto 0px;}
+.lgcontenbar { width:100%;margin:0px auto;}
+.lgcontentbj { width:100%; padding:10px 0px;}
+.lgcontbjbar { width:356px; margin:0 auto;}
+.lgcontbj2 { width:320px; height:223px; background:url(../../../images/FashionRun/loginindexbj.gif) no-repeat 0px 0px;}
+.lgcontbjcnt { width:236px; height:183px; margin:10px 0px 0px 10px; padding:10px 32px; display:inline; background:#ffffff;}
+/*lgconttit*/
+.lgconttit { width:236px; display:inline;}
+.lgconttit dt { float:left; text-align:left; color:#B5B6B6; padding-left:5px; line-height:30px;}
+.lgconttit dd { width:236px; float:left; text-align:left;}
+.lgconttit dd input { width:231px; height:22px; border:1px solid #D9B598; border-top:1px solid #6D605C;}
+.lgmgtop { margin-top:0px;}
+.lgmgtop02 { margin-top:20px;}
+.lgbtn { width:236px; font-weight:normal; color:#636363; height:22px; line-height:22px;}
+.lgbtn a { font-size:10px;}
+.lgbtn label { float:left;}
+.lgbtn label a { text-align:left; padding-left:15px;}
+.lgbtn span { float:left; width:62px; text-align:center; height:22px; background:url(../../../images/FashionRun/loginindexbj.gif) no-repeat 0px -225px; display:inline;}
+.lgbtn span a { display:block; width:62px; height:22px; font-size:12px;}
+.lgbtnmglt { margin-left:9px;}
+/* sheng guojun start*/
+.infolist_tr_odd{height:25px;background:#dddddd;}
+.infolist_tr_even{height:25px;background:#cfcfcf;}
+.infolist_table{font-size:12px;width:758px}
+.infolist_tr_title{background:#8695ab;color:#ffffff;height:25px;}
+.infolist_tr_titletwo{background:#B2B2B2;color:#ffffff;height:20px;}
+.infoinput_table{font-size:12px;border:#96a7ba 0px solid; width:758px; margin-top:2px;}
+.infoinput_table_tree{font-size:12px;border:#96a7ba 0px solid;width:560px}
+.infoinput_tr{height:22px;line-height:22px;}
+.infoinput_td_label{text-align:right;padding-right:3px;width:100px}
+.infoinput_td_control{text-align:left;width:280px}
+.infoinput_div_required{border-left:red 3px solid;padding-left:3px;padding-bottom:2px}
+.infoinput_div_empty{border-left:#ededed 3px solid;padding-left:3px}
+.div_hr_area{width:728px; margin-top:30px; background:#ededed; border-top:3px solid #8695ab;padding:10px 15px 0px;}
+/* sheng guojun end*/
+.infolist_table1{font-size:12px;border:#96a7ba 1px solid;width:278px}
+.infotable_tr_background{ background-color:#999999;height:25px; color:#ffffff;}

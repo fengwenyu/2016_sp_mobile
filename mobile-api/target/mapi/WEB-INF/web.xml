@@ -1,0 +1,1755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- 配置Spring的用于初始化ApplicationContext的Listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext*.xml</param-value>
+	</context-param>
+	<!-- 配置做初始化工作的监听器 -->
+	<listener>
+		<listener-class>com.shangpin.wireless.api.listener.InitServletContextListener</listener-class>
+	</listener>
+	
+	<!-- 配置数据编码Filter -->
+	<filter>
+		<filter-name>CharacterFilter</filter-name>
+		<filter-class>com.shangpin.wireless.api.filter.CharacterFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 客户端请求读取做decode -->
+	<filter>
+        <filter-name>RequestFilter</filter-name>
+        <filter-class>com.shangpin.wireless.api.filter.RequestFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RequestFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 下载 -->
+	<servlet>
+		<servlet-name>DownServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.util.DownServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DownServlet</servlet-name>
+		<url-pattern>/DownServlet</url-pattern>
+	</servlet-mapping>
+	<!-- 升级管理 -->
+	<servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.UpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	<!-- 支付 -->
+	<!-- 银联支付 -->
+	<servlet>
+		<servlet-name>NotifyReceiverUnipay</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.unionpay.NotifyReceiverUnipay</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NotifyReceiverUnipay</servlet-name>
+		<url-pattern>/unionpay_notify</url-pattern>
+	</servlet-mapping>
+	<!-- 支付宝支付通知 -->
+	<servlet>
+		<servlet-name>RSANotifyReceiverAlipay</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.alipay.RSANotifyReceiverAlipay</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RSANotifyReceiverAlipay</servlet-name>
+		<url-pattern>/alipay_notify</url-pattern>
+	</servlet-mapping>
+	<!-- 海外支付宝支付通知 -->
+	<servlet>
+		<servlet-name>OutsideNotifyServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.alipay.OutsideNotifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OutsideNotifyServlet</servlet-name>
+		<url-pattern>/outside_notify</url-pattern>
+	</servlet-mapping>
+	<!-- 支付宝钱包快捷支付通知 -->
+	<servlet>
+		<servlet-name>RSANotifyReceiverAlipayWallet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.alipay.RSANotifyReceiverAlipayWallet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RSANotifyReceiverAlipayWallet</servlet-name>
+		<url-pattern>/alipaywallet_notify</url-pattern>
+	</servlet-mapping>
+	<!-- 支付宝快捷登录通知 -->
+	<servlet>
+		<servlet-name>RSANotifyReceiverAlipayLogin</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.alipay.RSANotifyReceiverAlipayLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RSANotifyReceiverAlipayLogin</servlet-name>
+		<url-pattern>/alipaylogin_notify</url-pattern>
+	</servlet-mapping>
+	<!-- 获取支付宝钱包用户token -->
+	<servlet>
+		<servlet-name>GetAlipayTokenServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.alipay.GetAlipayTokenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAlipayTokenServlet</servlet-name>
+		<url-pattern>/getalipaytoken</url-pattern>
+	</servlet-mapping>
+	<!-- 获取支付宝快捷登录参数 -->
+	<servlet>
+		<servlet-name>GetAlipayLoginDataServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.alipay.GetAlipayLoginDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAlipayLoginDataServlet</servlet-name>
+		<url-pattern>/getalipaylogindata</url-pattern>
+	</servlet-mapping>
+	<!-- 拉卡拉支付 -->
+	<servlet>
+		<servlet-name>NotifyReceiverLakala</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.lakalapay.NotifyReceiverLakala</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NotifyReceiverLakala</servlet-name>
+		<url-pattern>/lakala_notify</url-pattern>
+	</servlet-mapping>
+	<!--微信开放平台支付异步通知-->
+	<servlet>
+		<servlet-name>WeChatOpenNotifyServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.WeChatOpenNotifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeChatOpenNotifyServlet</servlet-name>
+		<url-pattern>/WeChatOpenNotify</url-pattern>
+	</servlet-mapping>
+	<!--微信开放平台支付异步通知-->
+	<servlet>
+		<servlet-name>OutWeChatOpenNotifyServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.OutWeChatOpenNotifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OutWeChatOpenNotifyServlet</servlet-name>
+		<url-pattern>/OutWeChatOpenNotify</url-pattern>
+	</servlet-mapping>
+	<!-- 支付 -->
+	<!-- 登录 -->
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<!-- 判断APP是否登录 -->
+	<servlet>
+		<servlet-name>AppAuthServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AppAuthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AppAuthServlet</servlet-name>
+		<url-pattern>/appAuth</url-pattern>
+	</servlet-mapping>
+	<!-- 注册 -->
+	<servlet>
+		<servlet-name>RegistServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.RegistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistServlet</servlet-name>
+		<url-pattern>/regist</url-pattern>
+	</servlet-mapping>
+	<!-- 找回密码 -->
+	<servlet>
+		<servlet-name>FindPasswordServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FindPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindPasswordServlet</servlet-name>
+		<url-pattern>/findpassword</url-pattern>
+	</servlet-mapping>
+	<!-- 重置登录密码 -->
+	<servlet>
+		<servlet-name>ResetLoginPasswrodServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ResetLoginPasswrod</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResetLoginPasswrodServlet</servlet-name>
+		<url-pattern>/resetLoginPasswrod</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱主页 -->
+	<servlet>
+		<servlet-name>AolaiIndexServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AolaiIndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AolaiIndexServlet</servlet-name>
+		<url-pattern>/aolaiindex</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱活动列表 -->
+	<servlet>
+		<servlet-name>ActivitylistServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ActivitylistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ActivitylistServlet</servlet-name>
+		<url-pattern>/activitylist</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱专题页面 -->
+	<servlet>
+		<servlet-name>TopicServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.TopicServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TopicServlet</servlet-name>
+		<url-pattern>/topic</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品商品详情 -->
+	<servlet>
+		<servlet-name>ShangpinGoodsDetailServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ShangpinGoodsDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShangpinGoodsDetailServlet</servlet-name>
+		<url-pattern>/shangpinproductdetail</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱商品详情 -->
+	<servlet>
+		<servlet-name>GoodsDetailServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GoodsDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GoodsDetailServlet</servlet-name>
+		<url-pattern>/detail</url-pattern>
+	</servlet-mapping>
+	<!-- 购物车列表 -->
+	<servlet>
+		<servlet-name>ShoppingcartServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ShoppingcartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingcartServlet</servlet-name>
+		<url-pattern>/shoppingcart</url-pattern>
+	</servlet-mapping>
+	<!-- 删除购物车中的商品 -->
+	<servlet>
+		<servlet-name>ShoppingcartDelServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ShoppingcartDelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingcartDelServlet</servlet-name>
+		<url-pattern>/shoppingcartdel</url-pattern>
+	</servlet-mapping>
+	<!-- 订单管理 -->
+	<servlet>
+		<servlet-name>OrderManageServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.OrderManageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderManageServlet</servlet-name>
+		<url-pattern>/ordermanage</url-pattern>
+	</servlet-mapping>
+	<!-- 取消订单 -->
+	<servlet>
+		<servlet-name>CancelOrderServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CancelOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelOrderServlet</servlet-name>
+		<url-pattern>/cancelorder</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 取消订单新接口 -->
+	
+	<servlet>
+		<servlet-name>CancelMergeOrderServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CancelMergeOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelMergeOrderServlet</servlet-name>
+		<url-pattern>/cancelMergeOrder</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 提交订单 -->
+	<servlet>
+		<servlet-name>OrderSubmitServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.OrderSubmitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderSubmitServlet</servlet-name>
+		<url-pattern>/order</url-pattern>
+	</servlet-mapping>
+	<!-- 支付订单 -->
+	<servlet>
+		<servlet-name>PayOrderServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PayOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PayOrderServlet</servlet-name>
+		<url-pattern>/payorder</url-pattern>
+	</servlet-mapping>
+	<!-- 信息反馈 -->
+	<servlet>
+		<servlet-name>FeedbackServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FeedbackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FeedbackServlet</servlet-name>
+		<url-pattern>/feedback</url-pattern>
+	</servlet-mapping>
+	<!-- 获取收货地址 -->
+	<servlet>
+		<servlet-name>GetAddrssServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetAddrssServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAddrssServlet</servlet-name>
+		<url-pattern>/getaddr</url-pattern>
+	</servlet-mapping>
+	<!-- 删除收货地址 -->
+	<servlet>
+		<servlet-name>DelAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.DelAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelAddressServlet</servlet-name>
+		<url-pattern>/deladdr</url-pattern>
+	</servlet-mapping>
+	<!-- 新增收货地址 -->
+	<servlet>
+		<servlet-name>AddAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AddAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddAddressServlet</servlet-name>
+		<url-pattern>/addaddress</url-pattern>
+	</servlet-mapping>
+	<!-- 编辑收货地址 -->
+	<servlet>
+		<servlet-name>EditAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.EditAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditAddressServlet</servlet-name>
+		<url-pattern>/editaddr</url-pattern>
+	</servlet-mapping>
+
+	<!-- 删除发票地址 -->
+	<servlet>
+		<servlet-name>DelInvoiceAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.DelInvoiceAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelInvoiceAddressServlet</servlet-name>
+		<url-pattern>/delinvoiceaddr</url-pattern>
+	</servlet-mapping>
+	<!-- 新增发票地址 -->
+	<servlet>
+		<servlet-name>AddInvoiceAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AddInvoiceAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddInvoiceAddressServlet</servlet-name>
+		<url-pattern>/addinvoiceaddr</url-pattern>
+	</servlet-mapping>
+	<!-- 编辑发票地址 -->
+	<servlet>
+		<servlet-name>EditInvoiceAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.EditInvoiceAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditInvoiceAddressServlet</servlet-name>
+		<url-pattern>/editinvoiceaddr</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 添加商品到购物车 -->
+	<servlet>
+		<servlet-name>AddShoppingcartServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AddShoppingcartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddShoppingcartServlet</servlet-name>
+		<url-pattern>/addcart</url-pattern>
+	</servlet-mapping>
+	<!-- 确认订单信息 -->
+	<servlet>
+		<servlet-name>ConfirmOrderInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ConfirmOrderInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmOrderInfoServlet</servlet-name>
+		<url-pattern>/confirmorderinfo</url-pattern>
+	</servlet-mapping>
+	<!-- 确认订单信息 (尚品奥莱合并)-->
+	<servlet>
+		<servlet-name>ConfirmOrderServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ConfirmOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmOrderServlet</servlet-name>
+		<url-pattern>/confirmorder</url-pattern>
+	</servlet-mapping>
+	<!-- 更新确认订单信息 -->
+	<servlet>
+		<servlet-name>UpdateConfirmOrderInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.UpdateConfirmOrderInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateConfirmOrderInfoServlet</servlet-name>
+		<url-pattern>/updateconfirmorderinfo</url-pattern>
+	</servlet-mapping>
+	<!-- 获取用户收货信息 -->
+	<servlet>
+		<servlet-name>GetReceiveMsgServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetReceiveMsgServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetReceiveMsgServlet</servlet-name>
+		<url-pattern>/getreceivemsg</url-pattern>
+	</servlet-mapping>
+	<!-- 个人信息页面 -->
+	<servlet>
+		<servlet-name>PersonalInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PersonalInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PersonalInfoServlet</servlet-name>
+		<url-pattern>/personalinfo</url-pattern>
+	</servlet-mapping>
+	<!-- 添加错误日志 -->
+	<servlet>
+		<servlet-name>AddErrorLogServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AddErrorLogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddErrorLogServlet</servlet-name>
+		<url-pattern>/errorlog</url-pattern>
+	</servlet-mapping>
+	<!-- 获取IPhone Token -->
+	<servlet>
+		<servlet-name>GetIOSTokenServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetIOSTokenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetIOSTokenServlet</servlet-name>
+		<url-pattern>/getiostoken</url-pattern>
+	</servlet-mapping>
+	<!-- Push设置 -->
+	<servlet>
+		<servlet-name>GetIosPushFlagServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetIosPushFlagServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetIosPushFlagServlet</servlet-name>
+		<url-pattern>/pushconfig</url-pattern>
+	</servlet-mapping>
+	<!-- 确认收货 -->
+	<servlet>
+		<servlet-name>ConfirmRecvOrderGoodsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ConfirmRecvOrderGoodsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmRecvOrderGoodsServlet</servlet-name>
+		<url-pattern>/orderconfirm</url-pattern>
+	</servlet-mapping>
+	<!-- 获取用户购物车及订单数量的接口 -->
+	<servlet>
+		<servlet-name>UserBuyInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.UserBuyInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserBuyInfoServlet</servlet-name>
+		<url-pattern>/userbuyinfo</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品帮助页面 -->
+	<!-- 
+	<servlet>
+		<servlet-name>ShangpinHelpServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ShangpinHelpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShangpinHelpServlet</servlet-name>
+		<url-pattern>/shangpinhelp</url-pattern>
+	</servlet-mapping>
+	 -->
+	<!-- 奥莱帮助页面 -->
+	<servlet>
+		<servlet-name>AolaiHelpServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AolaiHelpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AolaiHelpServlet</servlet-name>
+		<url-pattern>/aolaihelp</url-pattern>
+	</servlet-mapping>
+	<!-- 尺码对照表 -->
+	<servlet>
+		<servlet-name>SizeContrastServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SizeContrastServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SizeContrastServlet</servlet-name>
+		<url-pattern>/sizecontrast</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品首页 -->
+	<servlet>
+		<servlet-name>topicservlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.TopicServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>topicservlet</servlet-name>
+		<url-pattern>/shangpintopic</url-pattern>
+	</servlet-mapping>
+
+	<!-- 一级品类下的所有子品类 -->
+	<servlet>
+		<servlet-name>childCategoryServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ChildCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>childCategoryServlet</servlet-name>
+		<url-pattern>/shangpinchildcategory</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品首页20130911 -->
+	<servlet>
+		<servlet-name>ShangpinIndexServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ShangpinIndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShangpinIndexServlet</servlet-name>
+		<url-pattern>/shangpinindex</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品专题商品列表 -->
+	<servlet>
+		<servlet-name>topicProductsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.TopicProductsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>topicProductsServlet</servlet-name>
+		<url-pattern>/shangpintopicproducts</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品品类新品商品列表 -->
+	<servlet>
+		<servlet-name>newProductsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.NewProductsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>newProductsServlet</servlet-name>
+		<url-pattern>/shangpinnewproducts</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品品类品牌商品列表 -->
+	<servlet>
+		<servlet-name>productsInCateAndBrandServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ProductsInCateAndBrandServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productsInCateAndBrandServlet</servlet-name>
+		<url-pattern>/shangpinproductsincateandbrand</url-pattern>
+	</servlet-mapping>
+	<!-- 所有品牌 -->
+	<servlet>
+		<servlet-name>brandsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BrandsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>brandsServlet</servlet-name>
+		<url-pattern>/shangpinbrands</url-pattern>
+	</servlet-mapping>
+	<!-- 更多品牌 -->
+	<servlet>
+		<servlet-name>moreBrandsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.MoreBrandsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>moreBrandsServlet</servlet-name>
+		<url-pattern>/shangpinmorebrands</url-pattern>
+	</servlet-mapping>
+	<!-- 商品发现列表 -->
+	<servlet>
+		<servlet-name>FindManageServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FindManageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindManageServlet</servlet-name>
+		<url-pattern>/discoverindex</url-pattern>
+	</servlet-mapping>
+	<!-- 导航图 启动图 -->
+	<servlet>
+		<servlet-name>AppPicturesServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AppPicturesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AppPicturesServlet</servlet-name>
+		<url-pattern>/appPictures</url-pattern>
+	</servlet-mapping>
+	<!-- 旗舰店列表 -->
+	<servlet>
+		<servlet-name>FlagshipServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FlagshipServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FlagshipServlet</servlet-name>
+		<url-pattern>/flagshiplist</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品商品简要信息 -->
+	<servlet>
+		<servlet-name>productInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ProductInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productInfoServlet</servlet-name>
+		<url-pattern>/shangpinproductinfo</url-pattern>
+	</servlet-mapping>
+	<!-- 物流列表 -->
+	<servlet>
+		<servlet-name>logisticsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.LogisticsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logisticsServlet</servlet-name>
+		<url-pattern>/logistics</url-pattern>
+	</servlet-mapping>
+	<!-- 物流详情 -->
+	<servlet>
+		<servlet-name>logisticsDetailServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.LogisticsDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logisticsDetailServlet</servlet-name>
+		<url-pattern>/logisticsdetail</url-pattern>
+	</servlet-mapping>
+	<!-- 订单的物流信息 -->
+	<servlet>
+		<servlet-name>orderlogisticservlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.OrderLogisticServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>orderlogisticservlet</servlet-name>
+		<url-pattern>/orderlogistic</url-pattern>
+	</servlet-mapping>
+	<!-- 第三方登录 -->
+	<servlet>
+		<servlet-name>thirdloginservlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ThirdLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>thirdloginservlet</servlet-name>
+		<url-pattern>/thirdlogin</url-pattern>
+	</servlet-mapping>
+	<!-- push信息(仅android平台使用) -->
+	<servlet>
+		<servlet-name>pushManageServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PushManageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pushManageServlet</servlet-name>
+		<url-pattern>/pushManage</url-pattern>
+	</servlet-mapping>
+	<!-- 上传终端文件 -->
+	<servlet>
+		<servlet-name>fileuploadTerminalServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FileuploadTerminalServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fileuploadTerminalServlet</servlet-name>
+		<url-pattern>/fileuploadTerminal</url-pattern>
+	</servlet-mapping>
+	<!-- 微信公众平台接口功能 -->
+	<servlet>
+		<servlet-name>WeXinPlatformServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.WeXinPlatformServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeXinPlatformServlet</servlet-name>
+		<url-pattern>/weixinapi</url-pattern>
+	</servlet-mapping>
+	<!-- 微信在线客服接口功能 -->
+	<servlet>
+		<servlet-name>WeiXinOnlineServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.WeiXinOnlineServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeiXinOnlineServlet</servlet-name>
+		<url-pattern>/weixinonline</url-pattern>
+	</servlet-mapping>
+	<!-- 微信在线客服上传图片接口功能 -->
+	<servlet>
+		<servlet-name>WeiXinUploadServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.WeiXinUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeiXinUploadServlet</servlet-name>
+		<url-pattern>/weixinupload</url-pattern>
+	</servlet-mapping>
+	<!-- 微信在线客服声音下载-->
+	<servlet>
+		<servlet-name>WeiXinDownloadServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.WeiXinDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeiXinDownloadServlet</servlet-name>
+		<url-pattern>/weixindownload</url-pattern>
+	</servlet-mapping>
+	<!-- 优惠券列表接口 -->
+	<servlet>
+		<servlet-name>couponsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CouponsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>couponsServlet</servlet-name>
+		<url-pattern>/coupons</url-pattern>
+	</servlet-mapping>
+	<!-- 优惠券激活、列表接口 -->
+	<servlet>
+		<servlet-name>activateCouponServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ActivateCouponServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>activateCouponServlet</servlet-name>
+		<url-pattern>/activateCoupon</url-pattern>
+	</servlet-mapping>
+	<!-- 优惠券列表接口，按状态分组 -->
+	<servlet>
+		<servlet-name>couponGroupServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CouponGroupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>couponGroupServlet</servlet-name>
+		<url-pattern>/couponGroup</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱品类列表 -->
+	<servlet>
+		<servlet-name>aolaiCategorysServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AolaiCategorysServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aolaiCategorysServlet</servlet-name>
+		<url-pattern>/aolaiCategorys</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱首页新版本 -->
+	<servlet>
+		<servlet-name>aolaiActListservlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AolaiActListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aolaiActListservlet</servlet-name>
+		<url-pattern>/aolaiActList</url-pattern>
+	</servlet-mapping>
+	<!-- 去结算-->
+	<servlet>
+		<servlet-name>SettlementServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SettlementServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SettlementServlet</servlet-name>
+		<url-pattern>/submitSettlement</url-pattern>
+	</servlet-mapping>
+	<!-- 奥莱品类活动列表 -->
+	<!-- 
+	<servlet>
+		<servlet-name>aolaiCateActivityServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AolaiCateActivityServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aolaiCateActivityServlet</servlet-name>
+		<url-pattern>/aolaiCateActivity</url-pattern>
+	</servlet-mapping>
+	 -->
+	<!-- APP客户端下载链接
+	<servlet>
+		<servlet-name>appAddressServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AppAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>appAddressServlet</servlet-name>
+		<url-pattern>/appAddress</url-pattern>
+	</servlet-mapping>
+	 -->
+	<!-- 浏览器参数测试 -->
+	<servlet>
+		<servlet-name>BrowserTestServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.BrowserTestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BrowserTestServlet</servlet-name>
+		<url-pattern>/browsertest</url-pattern>
+	</servlet-mapping>
+	<!-- 获取礼品卡 -->
+	<servlet>
+		<servlet-name>giftCardsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetGiftCardsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>giftCardsServlet</servlet-name>
+		<url-pattern>/giftCards</url-pattern>
+	</servlet-mapping>
+	<!-- 选择礼品卡 -->
+	<servlet>
+		<servlet-name>selectGiftCardsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SelectGiftCardsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectGiftCardsServlet</servlet-name>
+		<url-pattern>/selectGiftCards</url-pattern>
+	</servlet-mapping>
+	<!-- 礼品卡支付 -->
+	<servlet>
+		<servlet-name>payGiftCardsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PayGiftCardsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>payGiftCardsServlet</servlet-name>
+		<url-pattern>/payGiftCards</url-pattern>
+	</servlet-mapping>
+	<!--  获取奥莱频道 -->
+	<servlet>
+		<servlet-name>aolaiChannelServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetChannelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aolaiChannelServlet</servlet-name>
+		<url-pattern>/aolaiChannel</url-pattern>
+	</servlet-mapping>
+	<!-- 获取频道下已开启的活动 -->
+	<servlet>
+		<servlet-name>aolaiChannelActivityServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetAolaiChannelActivityServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>aolaiChannelActivityServlet</servlet-name>
+		<url-pattern>/aolaiChannelActivity</url-pattern>
+	</servlet-mapping>
+	<!-- 删除购物车中的商品(新架构) -->
+	<servlet>
+		<servlet-name>ShoppingcartDelv2Servlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ShoppingcartDelv2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingcartDelv2Servlet</servlet-name>
+		<url-pattern>/shoppingcartdelv2</url-pattern>
+	</servlet-mapping>
+	<!-- 提交订单(新架构) -->
+	<servlet>
+		<servlet-name>OrderSubmitv2Servlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.OrderSubmitv2Servlet</servlet-class>                                                   
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderSubmitv2Servlet</servlet-name>
+		<url-pattern>/orderv2</url-pattern>
+	</servlet-mapping>
+	<!-- 获取优惠码信息 -->
+	<servlet>
+		<servlet-name>CouponCodeInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CouponCodeInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CouponCodeInfoServlet</servlet-name>
+		<url-pattern>/couponcodeinfo</url-pattern>
+	</servlet-mapping>
+	<!-- 获取促销广告 -->
+	<servlet>
+		<servlet-name>PromotionsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PromotionsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PromotionsServlet</servlet-name>
+		<url-pattern>/promotions</url-pattern>
+	</servlet-mapping>
+	<!-- 获取系统时间 -->
+	<servlet>
+		<servlet-name>SystemTimeServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SystemTimeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemTimeServlet</servlet-name>
+		<url-pattern>/systime</url-pattern>
+	</servlet-mapping>
+	<!-- 接收并保存需要发送给用户的信息 -->
+	<servlet>
+		<servlet-name>SaveNotifyUserMsgServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SaveNotifyUserMsgServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveNotifyUserMsgServlet</servlet-name>
+		<url-pattern>/savenotifymsg</url-pattern>
+	</servlet-mapping>
+	<!-- 收藏商品 -->
+	<servlet>
+		<servlet-name>CollectProductServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.CollectProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CollectProductServlet</servlet-name>
+		<url-pattern>/addproducttocollect</url-pattern>
+	</servlet-mapping>
+	<!-- 获取收藏商品的列表 -->
+	<servlet>
+		<servlet-name>SelectCollectListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.SelectCollectListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SelectCollectListServlet</servlet-name>
+		<url-pattern>/selectcollectlist</url-pattern>
+	</servlet-mapping>
+	<!-- 取消收藏商品 -->
+	<servlet>
+		<servlet-name>DelCollectServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.DelCollectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelCollectServlet</servlet-name>
+		<url-pattern>/delcollect</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品分类商品列表 -->
+	<servlet>
+		<servlet-name>ProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductListServlet</servlet-name>
+		<url-pattern>/shangpinproductlist</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品分类商品列表筛选条件 -->
+	<servlet>
+		<servlet-name>ProductListFilterServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ProductListFilterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductListFilterServlet</servlet-name>
+		<url-pattern>/shangpinproductlistfilter</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品品牌商品列表 -->
+	<servlet>
+		<servlet-name>BrandProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BrandProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BrandProductListServlet</servlet-name>
+		<url-pattern>/shangpinbrandproductlist</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品品牌商品列表筛选条件 -->
+	<servlet>
+		<servlet-name>BrandProductListFilterServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BrandProductListFilterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BrandProductListFilterServlet</servlet-name>
+		<url-pattern>/shangpinbrandproductlistfilter</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品新品商品列表 -->
+	<servlet>
+		<servlet-name>NewProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.NewProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewProductListServlet</servlet-name>
+		<url-pattern>/shangpinnewproductlist</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品新品商品列表筛选条件 -->
+	<servlet>
+		<servlet-name>NewProductListFilterServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.NewProductListFilterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewProductListFilterServlet</servlet-name>
+		<url-pattern>/shangpinnewproductlistfilter</url-pattern>
+	</servlet-mapping>
+	<!-- 新品首页列表 -->
+	<servlet>
+		<servlet-name>LatestProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.LatestProductList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LatestProductListServlet</servlet-name>
+		<url-pattern>/latestProductList</url-pattern>
+	</servlet-mapping>
+	<!-- 新品更多列表 -->
+	<servlet>
+		<servlet-name>LatestProductMoreListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.LatestProductMoreList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LatestProductMoreListServlet</servlet-name>
+		<url-pattern>/latestProductMoreList</url-pattern>
+	</servlet-mapping>
+	<!-- 商品热门品牌列表 -->
+	<servlet>
+		<servlet-name>HotBrandsServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.HotBrandsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HotBrandsServlet</servlet-name>
+		<url-pattern>/sphotBrands</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SpCategoryHomeServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SpCategoryHomeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SpCategoryHomeServlet</servlet-name>
+		<url-pattern>/spcategoryhome</url-pattern>
+	</servlet-mapping>
+	<!-- 获取订单详情信息 -->
+	<servlet>
+		<servlet-name>OrderDetailServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.OrderDetailServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>OrderDetailServlet</servlet-name>
+		<url-pattern>/getorderdetail</url-pattern>
+	</servlet-mapping>
+	<!-- 获取礼品卡列表 -->
+	<servlet>
+		<servlet-name>GiftCardListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCardListServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GiftCardListServlet</servlet-name>
+		<url-pattern>/giftcardlist</url-pattern>
+	</servlet-mapping>
+	<!-- 获取礼品卡消费记录 -->
+	<servlet>
+		<servlet-name>GiftCardConsumptionServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCardConsumptionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GiftCardConsumptionServlet</servlet-name>
+		<url-pattern>/giftcardconsumption</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 微信维权通知 -->
+	<servlet>
+		<servlet-name>CustomerPayFeedBackServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.wxpay.CustomerPayFeedBack</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CustomerPayFeedBackServlet</servlet-name>
+		<url-pattern>/weixinpay_customer</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 标记微信客户的投诉处理状态 -->
+	<servlet>
+		<servlet-name>UpdateFeedBackServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.wxpay.UpdateFeedBack</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateFeedBackServlet</servlet-name>
+		<url-pattern>/updateFeedBack</url-pattern>
+	</servlet-mapping>
+	
+	<!--告知微信后台该订单的发货状态 -->
+	<servlet>
+		<servlet-name>DelivernotifyServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.pay.wxpay.DeliverNotify</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelivernotifyServlet</servlet-name>
+		<url-pattern>/pay/delivernotify</url-pattern>
+	</servlet-mapping>
+	<!-- 添加商品到购物车尚品奥莱合并 -->
+	<servlet>
+		<servlet-name>AddProducttocartServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AddProducttocartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddProducttocartServlet</servlet-name>
+		<url-pattern>/addnewcart</url-pattern>
+	</servlet-mapping>
+	<!-- 删除商品到购物车尚品奥莱合并 -->
+	<servlet>
+		<servlet-name>DelProductcartServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.DelProductcartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DelProductcartServlet</servlet-name>
+		<url-pattern>/delcart</url-pattern>
+	</servlet-mapping>
+	<!--购物车列表尚品奥莱合并 -->
+	<servlet>
+		<servlet-name>ProductcartServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ProductcartServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductcartServlet</servlet-name>
+		<url-pattern>/shoppingnewcart</url-pattern>
+	</servlet-mapping>
+	<!-- 尚品商品快照 -->
+	<servlet>
+		<servlet-name>SproductSnapServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SpProductSnapServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SproductSnapServlet</servlet-name>
+		<url-pattern>/spproductsnap</url-pattern>
+	</servlet-mapping>
+	<!-- 发送手机验证码到手机 -->
+	<servlet>
+		<servlet-name>SendSMSCodeServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.SendSMSCodeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SendSMSCodeServlet</servlet-name>
+		<url-pattern>/sendsmscode</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 手机下发的验证码做验证 -->
+	<servlet>
+		<servlet-name>VerifySMSCodeServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.VerifySMSCodeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>VerifySMSCodeServlet</servlet-name>
+		<url-pattern>/verifysmscode</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 用户id绑定手机号码 -->
+	<servlet>
+		<servlet-name>BindPhoneServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BindPhoneServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>BindPhoneServlet</servlet-name>
+		<url-pattern>/bindphone</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 用户手机绑定激活码 -->
+	<servlet>
+		<servlet-name>BindCouponServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BindCouponServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>BindCouponServlet</servlet-name>
+		<url-pattern>/bindcoupon</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 获取地址信息 -->
+	<servlet>
+		<servlet-name>LocationServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.LocationServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>LocationServlet</servlet-name>
+		<url-pattern>/location</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 订单合并 -->
+	<servlet>
+		<servlet-name>OrderMergeManageServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.OrderMergeManageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderMergeManageServlet</servlet-name>
+		<url-pattern>/orderList</url-pattern>
+	</servlet-mapping>
+	<!-- 微信跳转 -->
+	<servlet>
+		<servlet-name>WeiXinRedirectServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.WeiXinRedirectServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>WeiXinRedirectServlet</servlet-name>
+		<url-pattern>/weixinredirect</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 查询收藏 -->
+	<servlet>
+		<servlet-name>QueryCollectionServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.QueryCollectionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>QueryCollectionServlet</servlet-name>
+		<url-pattern>/queryCollection</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 增加收藏 -->
+	<servlet>
+		<servlet-name>AddCollectionServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AddCollectionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AddCollectionServlet</servlet-name>
+		<url-pattern>/addCollection</url-pattern>
+	</servlet-mapping>
+	
+	
+    <!-- 删除收藏 -->
+	<servlet>
+		<servlet-name>DelCollectionServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.DelCollectionServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>DelCollectionServlet</servlet-name>
+		<url-pattern>/delCollection</url-pattern>
+	</servlet-mapping>
+	<!-- app导航-->
+	<servlet>
+		<servlet-name>AppNavigationServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.AppNavigationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AppNavigationServlet</servlet-name>
+		<url-pattern>/appnavigation</url-pattern>
+	</servlet-mapping>
+		<!-- 礼品卡充值-->
+	<servlet>
+		<servlet-name>GiftCardRechargeServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCardRechargeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GiftCardRechargeServlet</servlet-name>
+		<url-pattern>/cardRecharge</url-pattern>
+	</servlet-mapping>
+		<!-- 礼品卡设置支付密码-->
+	<servlet>
+		<servlet-name>GiftCartSetPwdServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCartSetPwdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GiftCartSetPwdServlet</servlet-name>
+		<url-pattern>/setGiftCartPwd</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 奥莱活动商品筛选列表-->
+	<servlet>
+		<servlet-name>QuerySubjectProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.QuerySubjectProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuerySubjectProductListServlet</servlet-name>
+		<url-pattern>/querySubjectProductList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 商品筛选条件-->
+	<servlet>
+		<servlet-name>SubjectProductFilterServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SubjectProductFilterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubjectProductFilterServlet</servlet-name>
+		<url-pattern>/subjectProductFilter</url-pattern>
+	</servlet-mapping>
+	
+		<!-- 礼品卡重置置支付密码-->
+	<servlet>
+		<servlet-name>GiftCartResetPwdServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCartResetPwdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GiftCartResetPwdServlet</servlet-name>
+		<url-pattern>/resetGiftCartPwd</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 合并订单详情 -->
+	
+	
+	<servlet>
+		<servlet-name>MergeOrderDetailServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.MergeOrderDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MergeOrderDetailServlet</servlet-name>
+		<url-pattern>/orderDetail</url-pattern>
+	</servlet-mapping>
+	<!-- 订单物流跟踪 -->
+	<servlet>
+		<servlet-name>OrderLogisticInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.OrderLogisticInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderLogisticInfoServlet</servlet-name>
+		<url-pattern>/orderLogisticInfo</url-pattern>
+	</servlet-mapping>
+	<!-- 礼品卡历史记录-->
+	<servlet>
+		<servlet-name>GiftCardHistoryServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCardHistoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GiftCardHistoryServlet</servlet-name>
+		<url-pattern>/giftHistory</url-pattern>
+	</servlet-mapping>
+	<!-- 新提交订单 -->
+	<servlet>
+		<servlet-name>SubmitOrderServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SubmitOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitOrderServlet</servlet-name>
+		<url-pattern>/submitOrder</url-pattern>
+	</servlet-mapping>
+	<!-- 新提交订单 2.9.12 -->
+	<servlet>
+		<servlet-name>SubmitOrderServletV2</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SubmitOrderServletV2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitOrderServletV2</servlet-name>
+		<url-pattern>/submitOrderV2</url-pattern>
+	</servlet-mapping>
+
+	<!-- 修改订单信息 支付订单 -->
+	
+	
+	<servlet>
+		<servlet-name>ModifyPayOrderServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ModifyPayOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyPayOrderServlet</servlet-name>
+		<url-pattern>/modifyPayOrder</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 修改订单信息 -->
+	<servlet>
+		<servlet-name>ModifyOrderInfoServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ModifyOrderInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyOrderInfoServlet</servlet-name>
+		<url-pattern>/modifyOrderInfo</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 获取礼品卡账户状态-->
+	<servlet>
+		<servlet-name>GiftCardStatusServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GiftCardStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GiftCardStatusServlet</servlet-name>
+		<url-pattern>/queryGiftCardStatus </url-pattern>
+	</servlet-mapping>
+	
+	<!-- 记录渠道下载下载-->
+	<servlet>
+		<servlet-name>IosChannelDownloadServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.IosChannelDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IosChannelDownloadServlet</servlet-name>
+		<url-pattern>/iosChannelDownload</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 记录渠道下载下载-->
+	<servlet>
+		<servlet-name>IOSDownloadActiveServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.IOSDownloadActiveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IOSDownloadActiveServlet</servlet-name>
+		<url-pattern>/iosDownloadActive</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 关键字搜索 -->
+	<servlet>
+		<servlet-name>SearchKeyWordServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SearchKeyWordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchKeyWordServlet</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 品牌商品搜索 -->
+	<servlet>
+		<servlet-name>SearchBrandProductServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SearchBrandProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchBrandProductServlet</servlet-name>
+		<url-pattern>/searchBrandProductList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 查询一级品类含全部品牌 -->
+	<servlet>
+		<servlet-name>QueryCategoryServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.QueryCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryCategoryServlet</servlet-name>
+		<url-pattern>/queryCategoryList</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 用于尚品客户端查询全部品牌或者一级品类下的子品类列表内容 -->
+	<servlet>
+		<servlet-name>QuerySubCateServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.QuerySubCateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuerySubCateServlet</servlet-name>
+		<url-pattern>/querySubCateList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 品类商品搜索 -->
+	<servlet>
+		<servlet-name>SearchCategoryProductServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.SearchCategoryProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchCategoryProductServlet</servlet-name>
+		<url-pattern>/searchCategoryProductList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 新礼品卡支付（账户概念）-->
+	<servlet>
+		<servlet-name>PayGiftCardsNewServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PayGiftCardsNewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PayGiftCardsNewServlet</servlet-name>
+		<url-pattern>/payGiftCardNew </url-pattern>
+	</servlet-mapping>
+	<!-- 新去结算-->
+	<servlet>
+		<servlet-name>PayOrderNewServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.PayOrderNewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PayOrderNewServlet</servlet-name>
+		<url-pattern>/payOrderNew</url-pattern>
+	</servlet-mapping>
+
+	<!-- 尚品导航-->
+	<servlet>
+		<servlet-name>HomeNavServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.HomeNavServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeNavServlet</servlet-name>
+		<url-pattern>/homeNav</url-pattern>
+	</servlet-mapping>
+	<!-- 收藏品牌列表-->
+	<servlet>
+		<servlet-name>CollectedBrandlistServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CollectedBrandlistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CollectedBrandlistServlet</servlet-name>
+		<url-pattern>/collectedBrandlist</url-pattern>
+	</servlet-mapping>
+	<!-- 收藏商品列表-->
+	<servlet>
+		<servlet-name>CollectedProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CollectedProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CollectedProductListServlet</servlet-name>
+		<url-pattern>/collectedProductList</url-pattern>
+	</servlet-mapping>
+	<!-- 收藏品牌-->
+	<servlet>
+		<servlet-name>CollectBrandServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CollectBrandServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CollectBrandServlet</servlet-name>
+		<url-pattern>/collectBrand</url-pattern>
+	</servlet-mapping>
+	<!-- 取消收藏品牌-->
+	<servlet>
+		<servlet-name>CancelCollectBrandServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CancelCollectBrandServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CancelCollectBrandServlet</servlet-name>
+		<url-pattern>/cancelCollectBrand</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    <servlet-name>MallServlet</servlet-name>
+    <servlet-class>com.shangpin.wireless.api.view.servlet.MallServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MallServlet</servlet-name>
+    <url-pattern>/mall</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 验证验证码-->
+	<servlet>
+		<servlet-name>VerifyCaptchaServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.VerifyCaptchaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyCaptchaServlet</servlet-name>
+		<url-pattern>/verifyCaptcha</url-pattern>
+	</servlet-mapping>
+	<!--获取验证码-->
+	<servlet>
+		<servlet-name>GetCaptchaServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.GetCaptchaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCaptchaServlet</servlet-name>
+		<url-pattern>/getCaptcha</url-pattern>
+	</servlet-mapping>
+	
+		<!-- 新版本重置登录密码 -->
+	<servlet>
+		<servlet-name>ResetUserPasswordServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ResetUserPasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResetUserPasswordServlet</servlet-name>
+		<url-pattern>/resetUserPassword</url-pattern>
+	</servlet-mapping>
+		<!-- 查找手机是否注册或绑定-->
+	<servlet>
+		<servlet-name>CheckUserServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.CheckUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckUserServlet</servlet-name>
+		<url-pattern>/checkUser</url-pattern>
+	</servlet-mapping>
+	<!-- 页面无内容推荐 -->
+	<servlet>
+		<servlet-name>recProductServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.recProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>recProductServlet</servlet-name>
+		<url-pattern>/recProduct</url-pattern>
+	</servlet-mapping>
+	<!-- 客户端缓存静态资源 -->
+	<servlet>
+		<servlet-name>StaticCacheServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.StaticCacheServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StaticCacheServlet</servlet-name>
+		<url-pattern>/staticCache</url-pattern>
+	</servlet-mapping>
+	<!-- app首页第一部分 -->
+	<servlet>
+		<servlet-name>AppIndexFirstServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.AppIndexFirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AppIndexFirstServlet</servlet-name>
+		<url-pattern>/appIndexFirst</url-pattern>
+	</servlet-mapping>
+	<!-- app首页第二部分 -->
+	<servlet>
+		<servlet-name>AppIndexSecondServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.AppIndexSecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AppIndexSecondServlet</servlet-name>
+		<url-pattern>/appIndexSecond</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 更多主题-->
+	<servlet>
+		<servlet-name>MoreThemesServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.MoreThemesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoreThemesServlet</servlet-name>
+		<url-pattern>/moreThemes</url-pattern>
+	</servlet-mapping>
+	<!-- 更多特卖 -->
+	<servlet>
+		<servlet-name>MoreSaleServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.MoreSaleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoreSaleServlet</servlet-name>
+		<url-pattern>/moreSale</url-pattern>
+	</servlet-mapping>
+	<!-- 更多上架 -->
+	<servlet>
+		<servlet-name>MoreReleasesServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.MoreReleasesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoreReleasesServlet</servlet-name>
+		<url-pattern>/moreReleases</url-pattern>
+	</servlet-mapping>
+	<!-- 获取省级行政区信息 -->
+	<servlet>
+		<servlet-name>FindProvinceListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FindProvinceListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindProvinceListServlet</servlet-name>
+		<url-pattern>/provinceList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 获取城市行政区信息 -->
+	<servlet>
+		<servlet-name>FindCityListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FindCityListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindCityListServlet</servlet-name>
+		<url-pattern>/cityList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 获取地区行政区信息 -->
+	<servlet>
+		<servlet-name>FindAreaListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FindAreaListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindAreaListServlet</servlet-name>
+		<url-pattern>/areaList</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 获取县镇行政区信息 -->
+	<servlet>
+		<servlet-name>FindTownListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.FindTownListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindTownListServlet</servlet-name>
+		<url-pattern>/townList</url-pattern>
+	</servlet-mapping>
+	<!-- 活动筛选首页-->
+	<servlet>
+		<servlet-name>ActivityProductIndexServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ActivityProductIndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ActivityProductIndexServlet</servlet-name>
+		<url-pattern>/activityProductIndex</url-pattern>
+	</servlet-mapping>
+	<!--品牌店-->
+	<servlet>
+		<servlet-name>BrandShopServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BrandShopServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BrandShopServlet</servlet-name>
+		<url-pattern>/brandShop</url-pattern>
+	</servlet-mapping>
+	<!--商品详情(支持sku不同价格)-->
+	<servlet>
+		<servlet-name>ProductDetailServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ProductDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductDetailServlet</servlet-name>
+		<url-pattern>/productDetail</url-pattern>
+	</servlet-mapping>
+	<!--商品评论-->
+	<servlet>
+		<servlet-name>ProductCommentServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.ProductCommentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductCommentServlet</servlet-name>
+		<url-pattern>/productComment</url-pattern>
+	</servlet-mapping>
+	<!--品类运营内容-->
+	<servlet>
+		<servlet-name>CategoryOperationServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.CategoryOperationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CategoryOperationServlet</servlet-name>
+		<url-pattern>/categoryOperation</url-pattern>
+	</servlet-mapping>
+	<!--关键词联想搜索-->
+	<servlet>
+		<servlet-name>SearchSuggestionServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.SearchSuggestionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchSuggestionServlet</servlet-name>
+		<url-pattern>/searchSuggestion</url-pattern>
+	</servlet-mapping>
+	<!--标签商品搜索-->
+	<servlet>
+		<servlet-name>SearchTagProductListServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.SearchTagProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchTagProductListServlet</servlet-name>
+		<url-pattern>/searchTagProductList</url-pattern>
+	</servlet-mapping>
+	<!--立即购买-->
+	<servlet>
+		<servlet-name>BuyNowServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.spServlet.BuyNowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BuyNowServlet</servlet-name>
+		<url-pattern>/buyNow</url-pattern>
+	</servlet-mapping>
+	<!-- 去结算(新接口)-->
+	<servlet>
+		<servlet-name>ConfirmSettlementServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.ConfirmSettlementServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmSettlementServlet</servlet-name>
+		<url-pattern>/confirmSettlement</url-pattern>
+	</servlet-mapping>
+	<!-- ios推广验证ifa是否下载-->
+	<servlet>
+		<servlet-name>IosCheckDownloadServlet</servlet-name>
+		<servlet-class>com.shangpin.wireless.api.view.servlet.IosCheckDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IosCheckDownloadServlet</servlet-name>
+		<url-pattern>/checkDownload</url-pattern>
+	</servlet-mapping>
+	<!-- XFire 配置 -->
+   <servlet>
+    <servlet-name>XFireServlet</servlet-name>
+    <servlet-class>org.codehaus.xfire.transport.http.XFireConfigurableServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>XFireServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+	<!-- 小能TOKEN接口 -->
+   <servlet>
+    <servlet-name>WeixinXiaoNengTokenServlet</servlet-name>
+    <servlet-class>com.shangpin.wireless.api.view.servlet.WeixinXiaoNengToken</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WeixinXiaoNengTokenServlet</servlet-name>
+    <url-pattern>/shangpinToken</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<title>功能引导</title>
+<link href="../styles/shangpin/css/help.css" rel="stylesheet" />
+<script src="../styles/shangpin/js/swipe.min.js"></script>
+<link href="../styles/shangpin/css/base.css" rel="stylesheet" />
+<script>
+window.onload = function(){
+	var slider = new Swipe(document.getElementById('slider'), {
+      callback: function(e, pos) {
+        
+        var i = bullets.length;
+        while (i--) {
+          bullets[i].className = ' ';
+        }
+        bullets[pos].className = 'on';
+
+      }
+    }),
+	bullets = document.getElementById('position').getElementsByTagName('em');
+};
+</script>
+</head>
+
+<body>
+  <!--头部 start-->
+    <div class="topFix">
+    <section>
+        <div class="topBack" >
+        <a href="javascript:history.go(-1);" class="backBtn">&nbsp;</a>
+      功能引导
+      <ul class="alUser_icon clr">
+		    <li><a href="../index"><img src="../shangpin_new/images/home_icon.png" width="25" height="25" alt="首页"></a></li>
+<!-- 		    <li><a href="allcartaction!listCart"><img src="../shangpin_new/images/order_icon.png" width="25" height="25" alt="购物车"></a></li> -->
+<!-- 		    <li><a href="accountaction!info"><img src="../shangpin_new/images/user_icon.png" width="25" height="25" alt="账户"></a></li> -->
+		</ul>
+        </div>
+    </section>
+  </div>
+  
+  <!--头部 end-->
+ <div class="alContent">
+ <div class="warp" id="slider">
+  <ul>
+   <li><img src="../shangpin_new/images/yindaotu_zhou.png" height="402"></li>
+   <li><img src="../shangpin_new/images/yindaotu_menu.png" height="402"></li>
+   <li><img src="../shangpin_new/images/yindaotu_del.jpg" height="402"></li>
+  </ul>
+  
+  <span id='position'><em class='on'>&bull;</em><em>&bull;</em><em>&bull;</em></span>
+  
+ </div>
+ </div>
+</body>
+</html>

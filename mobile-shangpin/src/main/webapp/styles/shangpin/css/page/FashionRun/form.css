@@ -1,0 +1,63 @@
+@charset "utf-8";
+.container { min-width: 320px; max-width: 640px; margin: 0 auto; font-size: 12px; font-family:"Microsoft YaHei", "黑体", "Tahoma", "宋体"; background: #fff; }
+/*表单start*/
+.form-box { padding:0 30px}
+.form-box legend { color: #2d2d2d; font-size: 16px; padding: 0 15px; height: 39px; line-height: 39px; border-bottom: 1px solid #d8d8d8; display: block; width: 100%; box-sizing: border-box; }
+.form-box .row-box { line-height: 39px; color: #999; margin-top:10px;}
+.form-box .price { color: #555; margin-top: 10px; border-top: 1px solid #d8d8d8; }
+.form-box .select a { background: url(/styles/shangpin/images/process/arrow_r.png) no-repeat right center; background-size: 7px 12px; color: #555; display: block; }
+.form-box .row-box label { display: inline-block; font-size: 14px; color: #000; }
+.form-box .row-box input[type=text], .form-box .row-box input[type=password] { border: 1px solid #fff; border-bottom: 1px solid #888; background: rgba(0,0,0,0); height: 24px; width: 56%; z-index: 0; font-size: 12px; padding: 0 5px; }
+.form-box .row-box input[type=password].giftCard { border: 1px solid #eee; height: 28px; margin: 5px 0; width: 95%; }
+.form-box .row-box input[type=text].error, .form-box p input[type=password].error { border: 1px solid #f00; }
+.form-box .row-box .bar-size{ display:inline-block;}
+.form-box .row-box .bar-size li{ display:inline-block; line-height:20px; padding:5px 17px; margin-right:5px;border: 1px solid #888;color:#888;font-size: 14px; }
+.form-box .row-box .bar-size li.cur{ border: 1px solid #f88e92; color:#c62026;}
+.form-box .tip-text{ font-size:11px; margin-top:20px; line-height:20px;}
+.agreement{width:105px;}
+.agreement em{ display:inline-block; width:21px; height:39px;background: url(../../../images/radio.png) no-repeat 0 0; background-size: 21px; margin-right:5px;-webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+.agreement em.cur{ background: url(../../../images/radio.png) no-repeat right -40px; background-size: 21px;}
+.agreement a{ display:inline-block;color:#000;line-height:39px;font-size:12px; vertical-align:top; text-decoration:underline}
+.form-box .phone{ display:block; width:145px; margin:5px auto 10px;font-size:16px; font-weight:bold; color:#000; height:30px;}
+.form-box .phone i{ display:inline-block; margin-right:5px; width:18px; height:18px;}
+.agreement-box{font-size:12px; margin:20px 0 20px; line-height:20px;}
+/*表单地址end*/
+
+#bigGlass{height:38px;position:absolute;background-color:#e5e5e5;display:none;line-height:38px;font-size:18px;font-weight:bold;padding:0 5px;color:#555;z-index:999;border-radius:5px;}
+#bigGlass:after{content:""; position: absolute;display: block;height: 0;width: 0;border-width: 8px 8px 0;border-style: solid;border-color: #e5e5e5 transparent;bottom: -8px; left:20px;margin-left: -8px;}
+#bigGlass span{margin-left:8px;}
+#bigGlass span:first-child{margin-left:0;}
+
+/*提交按钮 start*/
+.btn-box { position: relative; margin: 10px 0; height: 40px; }
+.btn-box.right_btn { position: absolute; right: 0; bottom: 0; width: 130px; }
+.btn-box dl { display: -webkit-box; display: -moz-box; display: -o-box; display: box; width: 100%; }
+.btn-box dt { width: 8px; }
+.btn-box dd { -webkit-box-flex: 1; -moz-box-flex: 1; -o-box-flex: 1; box-flex: 1; }
+.submit-btn { background-color: #c62026; border: 1px solid #c62026; border-radius:5px; height: 40px; line-height: 40px; color: #fff; text-align: center; font-size: 16px; display: block; box-sizing: border-box; }
+.grey-btn{ background:#ccc;border: 1px solid #ccc;}
+/*提交按钮 start*/
+
+/*弹框显示地址start*/
+.select-overlay { position: absolute; z-index: 99998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.4); display: none; }
+.area-layer { position: fixed; width: 100%; min-width: 320px; max-width: 640px; bottom: 0; border-radius: 0; left: auto; top: auto; margin: 0 auto; z-index: 99999; background-color: #fff; display: none; }
+.area-layer h3 { color: #000; font-size: 16px; font-weight: normal; padding: 0 15px; height: 39px; line-height: 39px; display: block; width: 100%; box-sizing: border-box; background-color: #f2f2f2; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+.area-layer dl { width: 100%; height: 207px; overflow: hidden; overflow-y: auto; }
+.area-layer dl:not(:first-of-type) { display: none; }
+.area-layer dd { border-bottom: 1px solid #d8d8d8; height: 39px; line-height: 39px; color: #999; padding: 0 15px; position: relative; }
+.area-layer dd a { display: block; font-size: 12px; color: #555; background: url(../../../images/radio.png) no-repeat right 0; background-size: 21px; }
+.area-layer dd a.cur { background: url(../../../images/radio.png) no-repeat right -40px; background-size: 21px; }
+.area-layer dd { z-index: 999999; }
+.area-layer .close_btn { position: absolute; top: 10px; right: 10px; background: url(../../../images/close.png) 0 0 no-repeat; background-size: 15px; text-indent: -3000px; display: block; width: 15px; height: 15px; }
+.area-layer h2 { background: #f2f2f2; padding: 0 15px; line-height: 32px; height: 32px; }
+.area-layer h2 a.cancel_btn, .area-layer h2 a.sure_btn { float: left; display: block; color: #f03232; font-size: 15px; font-weight: normal; }
+.area-layer h2 a.sure_btn { float: right; }
+/*弹框显示地址end*/
+
+/*公共提示弹层start*/
+#popup_container { width:200px;  height: 40px; line-height: 40px; background: rgba(0,0,0,.7); color: #fff; }
+#popup_message { min-height: 40px; line-height: 40px; padding: 0 10px; }
+#popup_content button { border: 1px solid #c62026; background: #c62026; font-size: 15px; display: inline-block; text-align: center; margin: 0 auto; border-radius: 2px; cursor: pointer; }
+#popup_content button:hover { background: #c62026; color: #fff; }
+/*公共提示弹层end*/
+.select-area{ display:inline-block; border-bottom: 1px solid #888; height: 24px; width: 56%; font-size: 12px; padding: 0 5px; line-height:25px;}

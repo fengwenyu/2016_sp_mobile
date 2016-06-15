@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clr:after, .clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/**************/
+.sp520_list{width:100%; background-color:#88f7fd;}
+.sp520_list p.top_img{width:320px; height:160px; margin: 0 auto; overflow:hidden;}
+.sp520_list p.top_img img{display:block;}
+
+.sp520_list ul{width:314px;	margin:0 auto;}
+.sp520_list li{width:155px; margin:0 4px 4px 0; float:left;}
+.sp520_list li:nth-child(2n){margin-right:0;}
+.sp520_list li a, .sp520_list li img{display: block;}
+
+.sp520_box{width:100%; background-color:#eaeaea;}
+
+
+/*国际大牌样式*/
+.sp520_box .page_header{background:none; height:auto; border-bottom:none 0; text-align:center; padding:4px 0;}
+
+.sp520_list ul.prod_list{width:305px; padding-bottom:5px;}
+.prod_list li{width:150px; height:220px; float:left; margin:0 5px 5px 0;}
+

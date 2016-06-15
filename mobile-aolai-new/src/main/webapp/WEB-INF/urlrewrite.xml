@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+	<outbound-rule encodefirst="true">
+		<name>过滤存在jsessionid参数</name>
+		<note>
+			过滤存在jsessionid参数URL
+		</note>
+		<from>^(.*);jsessionid=.*$</from>
+		<to>$1</to>
+	</outbound-rule>
+	<outbound-rule match-type="wildcard">
+		<from>*;jsessionid=*</from>
+		<to>$1</to>
+	</outbound-rule>
+	
+	
+	<rule>
+		<name>最新特卖</name>
+		<note>
+			最新特卖URL
+		</note>
+		<from>^/newly/([0-9]+)_([0-9]+)$</from>
+		<to>/allnew?pageType=$1&amp;gender=$2</to>
+	</rule>
+	<outbound-rule>
+		<from>/allnew\?pageType=([0-9]+)&amp;gender=([0-9]+)</from>
+		<to>/newly/$1_$2</to>
+	</outbound-rule>
+
+	<rule>
+		<name>预售日历</name>
+		<note>
+			预售日历URL
+		</note>
+		<from>^/presell/([0-9]+)/([0-9-]+)_([0-9-]+)$</from>
+		<to>/presell?id=$1&amp;startTime=$2&amp;endTime=$3</to>
+	</rule>
+	<outbound-rule>
+		<from>/presell\?id=([0-9]+)&amp;startTime=([0-9-]+)&amp;endTime=([0-9-]+)</from>
+		<to>/presell/$1/$2_$3</to>
+	</outbound-rule>
+
+	<rule>
+		<name>活动列表URL</name>
+		<note>
+			活动列表URL
+		</note>
+		<from>^/activity/list/([0-9]+)_([0-9]+)_([0-9]+)$</from>
+		<to>/activity/lv2?activityId=$1&amp;typeFlag=$2&amp;pageType=$3</to>
+	</rule>
+	<outbound-rule>
+		<from>/activity/lv2\?activityId=([0-9]+)&amp;typeFlag=([0-9]+)&amp;pageType=([0-9]+)</from>
+		<to>/activity/list/$1_$2_$3</to>
+	</outbound-rule>
+
+	<rule>
+		<name>商品详情页</name>
+		<note>
+			商品详情页URL
+		</note>
+		<from>^/product/([0-9]+)_([0-9]+)_([0-9]+)_([0-9]+)_([0-9]+)$</from>
+		<to>/activity/detail?categoryNo=$1&amp;goodsId=$2&amp;pageType=$3&amp;typeFlag=$4&amp;activityId=$5</to>
+	</rule>
+	<outbound-rule>
+		<from>/activity/detail\?categoryNo=([0-9]+)&amp;goodsId=([0-9]+)&amp;pageType=([0-9]+)&amp;typeFlag=([0-9]+)&amp;activityId=([0-9]+)</from>
+		<to>/product/$1_$2_$3_$4_$5</to>
+	</outbound-rule>
+
+	<!-- 个人中心 -->
+
+	<rule>
+		<name>订单列表</name>
+		<note>
+			订单列表URL
+		</note>
+		<from>^/user/order/list-([0-9]+)$</from>
+		<to>/user/order/list?statusType=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/user/order/list\?statusType=([0-9]+)</from>
+		<to>/user/order/list-$1</to>
+	</outbound-rule>
+
+	<rule>
+		<name>修改收货地址</name>
+		<note>
+			修改收货地址URL
+		</note>
+		<from>^/user/address/edit-([0-9]+)$</from>
+		<to>/user/address/edit?addressId=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/user/address/edit\?addressId=([0-9]+)</from>
+		<to>/user/address/edit-$1</to>
+	</outbound-rule>
+
+	<rule>
+		<name>订单详情</name>
+		<note>
+			订单详情URL
+		</note>
+		<from>^/user/order/detail-([0-9]+)$</from>
+		<to>/user/order/detail?orderId=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/user/order/detail\?orderId=([0-9]+)</from>
+		<to>/user/order/detail-$1</to>
+	</outbound-rule>
+
+	<rule>
+		<name>选择支付</name>
+		<note>
+			选择支付URL
+		</note>
+		<from>^/cart/submit/pay-([0-9]+)$</from>
+		<to>/cart/submit/pay?orderId=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/cart/submit/pay\?orderId=([0-9]+)</from>
+		<to>/cart/submit/pay-$1</to>
+	</outbound-rule>
+	
+	<rule>
+		<name>会场信息</name>
+		<note>
+			会场信息URL1
+		</note>
+		<from>^/meet/([0-9]+)$</from>
+		<to>/meet/index?id=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/meet/index\?id=([0-9]+)</from>
+		<to>/meet/$1</to>
+	</outbound-rule>
+</urlrewrite>
+
