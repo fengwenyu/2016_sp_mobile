@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+.topFix{position: relative;height:45px;}
+.topFix section {position: relative;height:45px;overflow: hidden;min-width:320px; max-width:640px;}	
+/*downloadApp*/
+.headApp {position: relative; overflow: hidden; -webkit-transition: height 0.6s;transition: height 0.6s;}
+.headApp img { display: block;width: 100%;} 
+.download_bottom_app{}
+.download_bottom_app img {width: 100%}
+
+body .alContent {margin-top: 0px;}
+
+.new-arrival-box{ margin-top:15px;}
+.new-arrival-box .title{ font-size:13px; color:#000; font-family:"微软雅黑"; margin:0 6px; font-weight:normal; position:relative;}
+.new-arrival-box .title .all-new{ display:block; position:absolute; right:4px;  top:0;font-size:10px; color:#555;line-height:11px; vertical-align:top}
+.new-arrival-box .title .all-new .icon-angle-right{ margin-left:5px;font-size:15px; }
+.new-arrival-box .title .all-new  [class^="icon-"], [class*=" icon-"]{ display:inline-block;margin-top:-2px}
+.new-arrival-box .subtitle{font-size:10px; color:#888;font-weight:normal; margin-top:7px;}
+.new-arrival-box .subtitle em{ display:inline-block; background:#c62026; margin:0 7px; color:#fff; font-weight:normal; font-size:10px; padding:2px 5px;}
+.new-arrival-list{ margin:10px 0 6px; width:100%} 
+.new-arrival-list li {font-size: 18px;width: 33.33%; float:left; box-sizing:border-box; position:relative; }
+.new-arrival-list li:first-child{ padding-right:4px}
+.new-arrival-list li:nth-child(2){padding:0 2px}
+.new-arrival-list li:last-child{ padding-left:4px}
+.new-arrival-list li a{ display:block;width:100%;position:relative;}
+.new-arrival-list li a span{ position:absolute; bottom:0; right:0; background:rgba(0,0,0,0.5); color:#fff; font-size:10px; padding:2px 5px;}
+.new-arrival-list li a i{position:absolute; top:6px; left:6px; width:16px; height:16px;}
+.line{ width:100%; height:7px; background:#f6f6f6;}
+
+ /* app新版尾部 */
+.app_foot{border-top:0 none;}
+.app_user{text-align:center; font-size:14px; line-height:30px; color:#2d2d2d;border-top:1px solid #bababa;border-bottom:1px solid #bababa;}
+.app_user a{color:#555;}
+.appCopyright{ text-align:center; line-height:160%; padding:5px 0; font-size:12px; color:#555;}
+.appCopyright span{display:block; color:#484848; line-height:200%; font-size:14px;}
+.appCopyright a:link, .appCopyright a:visited{color:#555; font-weight:bold; font-size:12px;}
+
+.app_bg{background-color:#fff; width:100%; padding:5px 0;}
+.app_bg .appCopyright{ color:#555;border-top:none;}

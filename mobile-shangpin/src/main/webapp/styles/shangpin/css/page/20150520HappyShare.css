@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#ee5658}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;background:url(../../../../styles/shangpin/images/happyShare/top_bg.png) center top no-repeat; background-size:100% auto;}
+.title-top{ position:relative;}
+
+.turntable-top img{border:0; display:block;}
+.turntable { position: relative;z-index:3;overflow: hidden;background:url(../../../../styles/shangpin/images/happyShare/turntable_bg.jpg) #fffaf0 center bottom no-repeat; background-size:100% auto; padding:10px 0 50px;}
+
+.rule-box{ position:relative; margin-top:30px;}
+.rule-box h2{ width:120px; height:30px; position:absolute; top:-15px; left:50%; margin-left:-60px; line-height:30px; color:#fff; font-weight:normal; text-align:center;background:url(../../../../styles/shangpin/images/happyShare/title_bg.png) no-repeat; background-size:contain;}
+.rule-box h2.long{width:150px;margin-left:-75px;background:url(../../../../styles/shangpin/images/happyShare/title_bg1.png) no-repeat; background-size:contain;}
+.rule-text{ background:#fcd9d2; border-radius:5px; margin:0 30px; padding:10px; }
+.rule-text p{ font-size:13px; line-height:20px;color:#e04443; margin-top:15px;}
+.prize-box{display: -webkit-box; display: -webkit-flex;display: flex;}
+.prize-box span.prize-pic{ display:inline-block; border:1px solid #f7aea8; border-radius:5px; width:60px;margin:10px 10px 0 0;-webkit-box-pack:center;-webkit-box-align:center; vertical-align:middle; padding-bottom:5px}
+.prize-box span.prize-pic img{  border-radius:5px;}
+.prize-box p.prize-text{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1; maring:10px 0 0;}
+
+
+.con {padding: 0 0 10px; line-height: 2; position:relative;}
+.con h2{ margin:25px 0 20px}
+.con-text{ margin:20px 25px 10px; color:#fff}
+.con-text h3{ border-bottom:1px dashed #fff;border-top:1px dashed #fff; line-height:20px; padding:8px 0; text-align:center; margin-bottom:15px}
+
+.con ul{background: #FFEDE3; padding: 0 10px;}
+.con h1{color: #fff;text-align: center;margin-top: 10px;}
+.con .back_main{ display:block; border:1px solid #fff; margin:40px 55px; line-height:45px; text-align:center; color:#fff; font-size:15px; vertical-align:middle;}
+.con .back_main i{ display:inline-block; width:13px; height:14px; margin-right:10px; margin-top:15px;vertical-align:top;}
+.con .back_main i img{ display:block;}
+
+.share-tip{ background:rgba(0,0,0,0.6); width:100%; height:100%; left:0; top:0; right:0 ; bottom:0; position:fixed; z-index:999; display:none}
+.share-tip img{ position:absolute; right:0; top:0; width:155px; height:105px;}

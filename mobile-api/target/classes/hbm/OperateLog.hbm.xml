@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="OperateLog" table="operatelog">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="content" type="string">
+			<column name="content" length="512"/>
+		</property>
+		<property name="operateTime" type="timestamp">
+			<column name="operateTime" />
+		</property>
+		<property name="operateUserName" type="string">
+			<column name="operateUserName" length="20"/>
+		</property>
+		<property name="reserve0" type="string">
+			<column name="reserve0"/>
+		</property>
+		<property name="reserve1" type="string">
+			<column name="reserve1"/>
+		</property>
+		<property name="reserve2" type="string">
+			<column name="reserve2"/>
+		</property>
+		<property name="reserve3" type="string">
+			<column name="reserve3"/>
+		</property>
+		<property name="reserve4" type="string">
+			<column name="reserve4"/>
+		</property>
+		<property name="reserve5" type="string">
+			<column name="reserve5"/>
+		</property>
+	</class>
+</hibernate-mapping>

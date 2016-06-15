@@ -1,0 +1,84 @@
+body .alContent{background-color:#000;}
+/*Æì½¢µêÊ×Ò³*/
+.flagIndex{width:320px; margin:0 auto; background-color:#000; height:100%;}
+
+.flagIndex_img{width:100%; min-height:480px;}
+.flagIndex_img a, .flagIndex_img img{display:block; width:320px;}
+.flagIndex_img a:not(:first-child){margin-top:20px;}
+
+/*Æì½¢µêÁÐ±í*/
+.flagBlock{width:320px; margin:0 auto; background-repeat:no-repeat; background-position:0 0; background-size:100%; background-color:#000; background-size:320px auto;}
+.flagHead{width:100%; height:145px; overflow:hidden; position:relative;}
+.flagHead img{display:block; width:320px; height:95px;}
+.flagHead p{position:absolute; left:0; bottom:0; width:100%; height:38px; line-height:30px; background-color:rgba(0,0,0,.6); font-weight:normal; padding-top:6px; color:#fff;}
+.flagHead p span{display:block; width:274px; height:16px; line-height:16px; display:table; padding:7px 0;}
+.flagHead p span a{color:#fff; width:98px; display:table-cell; text-align:center; position:relative;}
+.flagHead p span a:not(:first-child){border-left:1px solid #d5d5d5;}
+.flagHead p span a i{position:absolute; left:0; top:21px; width:100%; height:10px; background:url(../../images/flagshop/filter_top.png) no-repeat center 0; background-size:10px 10px; display:none;}
+.flagHead p span a.brand_nav i{background:url(../../images/flagshop/filter_top2.png) no-repeat center 0; background-size:10px 10px;}
+.flagHead p .fillBtn{display:block; position:absolute; bottom:8px; right:0; width:44px; height:30px; line-height:30px; color:#fff; background:url(../../images/flagshop/fillDot.png) no-repeat center center; background-size:14px 14px; text-indent:-9999px;}
+
+.filter_txt{height:23px; line-height:23px; padding:5px 6px; margin-bottom:1px; background-color:#fff;}
+.filter_txt span{display:inline-block; padding:0 7px; background-color:#e1b401; color:#fff; font-size:12px;}
+
+.flagList{width:320px; overflow:hidden;}
+.flagList li{width:160px; overflow:hidden; vertical-align:top; float:left; font-size:14px; margin:0 1px 1px 0; background-color:#fff;}
+.flagList li:nth-child(2n){width:159px; margin:0 0 1px 0;}
+.flagList li a{display:block; width:159px; position:relative;}
+.flagList li i.saleOut{width:50px; height:30px; position:absolute; right:-1px; top:0; color:#848484; background-color:#ededed; text-align:center; line-height:30px;}
+.flagList li img{display:block; width:159px; height:212px;}
+
+.flagList_info{font-size:12px; padding:5px 0 0 9px; width:150px; text-align:left;}
+.flagList_info p, .flagList_info span{color:#484848; display:block;}
+.flagList_info p{line-height:130%; overflow:hidden;}
+.flagList_info p em{display:block; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.flagList_info span{color:#ba8f42; line-height:30px; font-size:14px;}
+.flagList_info span em{font-size:16px;}
+.flagList_info span del{color:#838383; margin-left:8px;}*/
+/**.flagList_info span{padding:5px 0px;}*/
+.flagList_info span label{display:block; line-height:16px; font-size:12px; vertical-align:middle; width:100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.flagList_info span label.market_price{color:#838383;}
+.flagList_info span label.market_price del{padding-left:8px; font-size:12px; vertical-align:middle;}
+.flagList_info span label.current_price{color:#df9f04}
+.flagList_info span label.current_price i{padding-left:8px; font-size:12px; vertical-align:middle;}
+.flagList_info span label.anny_price{color:#de0101}
+.flagList_info span label.anny_price em{padding-left:8px; font-size:12px; vertical-align:middle;}
+
+
+/*Æì½¢µêÄ£°å*/
+.topSearch{background-color:#36393e; height:30px; padding:8px 0;}
+fieldset{margin:0 12px; clear:both;}
+fieldset.curr{margin:0;}
+fieldset p{height:24px; line-height:24px; padding:3px 0; background-color:#fff; position:relative; float:left; width:100%; -webkit-border-radius:15px; border-radius:15px;}
+fieldset p label{display:inline-block; width:30px; height:24px; background:url(../../images/search_icon.png) no-repeat center center; background-size:13px 13px;}
+fieldset p input{border:0 none; background:rgba(0,0,0,0); height:24px; width:85%; z-index:0; color:#d5d5d5;}
+fieldset p button{width:24px;height:24px;position:absolute;border:0;right:5px;top:3px;background-color:transparent;text-align:center;display:none; background:url(../../images/close.png) no-repeat left center; -webkit-background-size:100%; -moz-background-size:100%; background-size:100%; z-index:10;}
+fieldset .search_btn{height:32px; width:50px; display:block; text-align:center; line-height:32px; color:#fff; font-weight:bold; float:left; display:none;}
+.slideLeft{width:80%;}
+.slideRight{width:100%;}
+.topBack{border-bottom:0 none;}
+
+#J_m-slider{width:320px;height:160px;margin:0 auto;overflow:hidden;position:relative;}
+#J_m-slider .slider-outer{width:320px;height:160px;overflow:hidden;position:relative;}
+#J_m-slider ul{width:1600px;height:160px;position:absolute;left:0;top:0;}
+#J_m-slider ul li{width:320px;height:160px;overflow:hidden;float:left;}
+#J_m-slider ul li a{display:block;}
+#J_m-slider .slider-status{width:100%;height:10px;bottom:10px;left:0;text-align:center; position:absolute;}
+#J_m-slider .slider-status span{display:inline-block;width:6px;height:6px;background-color:#a9a9a9;;border-radius:3px;line-height:3px;cursor:pointer;margin:0 5px 0 0;}
+#J_m-slider .slider-status span.sel{background-color:#36393e;}
+
+.brand_imgList{width:320px; margin:0 auto; background-color:#000; padding-top:2px;}
+.brand_imgList a, .brand_imgList img{display:block;}
+.brand_imgList a{float:left; margin:0 1px 1px 0; overflow:hidden; position:relative;}
+.brand_imgList a:nth-child(2n){margin-right:0;}
+.brand_imgList a span{position:absolute; bottom:0; left:0; background-color:rgba(0,0,0,.5); height:34px; width:100%; line-height:34px; color:#fff; padding-left:10px;}
+
+
+
+
+
+
+
+
+
+/* jiayou dsfdag*/

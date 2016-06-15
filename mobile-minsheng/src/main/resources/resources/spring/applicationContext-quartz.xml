@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 要调用的工作类 -->
+	<bean id="checkUnionPayJob" class="com.shangpin.mobileShangpin.common.unionPay.UnionUtil"></bean>
+	<bean id="indexCacheUtil" class="com.shangpin.mobileShangpin.common.util.IndexCacheUtil"></bean>
+	<bean id="mobileAolaiIndexAction" class="com.shangpin.mobileShangpin.platform.action.MobileAolaiIndexAction"></bean>
+	<!-- 定义调用对象和调用对象的方法 -->
+
+	<!-- 定时检查银联支付结果的配置 -->
+	<bean id="checkUnionPayTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="checkUnionPayJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>checkQueue</value>
+		</property>
+	</bean>
+<!-- 定时检查首页缓存对象-->
+	<bean id="checkIndexObject"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="indexCacheUtil" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>timerdel</value>
+		</property>
+	</bean>	
+	<!-- 对启动tomcat一些缓存对象进行定时更新如支付方式-->
+	<bean id="checkPropdaderLoad"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="mobileAolaiIndexAction" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>loadPayment</value>
+		</property>
+	</bean>
+	
+	
+	
+	<!-- 定义触发时间 -->
+	<bean id="checkUnionPayDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="checkUnionPayTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每分钟调用一次 -->
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>	
+<!-- 首页数据定义触发时间 -->
+	<bean id="checkIndexCache" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="checkIndexObject" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每天上午和下午九点半各调用一次 -->
+			<value>0 30 9,21 * * ?</value>
+		</property>
+	</bean>	
+	<!--对启动tomcat一些缓存对象进行定时更新如支付方式-->
+	<bean id="checkPropeaderPayment" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="checkPropdaderLoad" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每天半个小时调用一次 -->
+			<value>0 0/30 * * * ?</value>
+		</property>
+	</bean>
+	
+	
+	<!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 -->
+	<bean id="startQuertz" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="checkUnionPayDoTime" />
+				<ref bean="checkIndexCache" />
+				<ref bean="checkPropeaderPayment" />
+			</list>
+		</property>
+	</bean>
+</beans>

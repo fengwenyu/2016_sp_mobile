@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+.spSizeInfo{width:320px; padding:0 0 10px 0; position:relative; margin:0 auto;}
+.spSizeInfo h2{height:28px; line-height:28px; padding:0 20px; background:#e1e1e1; margin:0 0 10px 0;}
+.spSizeInfo dl{width:100%; display:table; line-height:24px; color:#333; font-size:12px; padding:0 0 0 20px;}
+.spSizeInfo dt, .spSizeInfo dd{display:table-cell;}
+.spSizeInfo dt{width:80px;}
+.spSizeInfo dd{padding:0 10px 0 0; color:#d5d5d5}
+.spSizeInfo dd em{color:#333; display:inline-block; background:url(../../images/size_dot.png) no-repeat center bottom;}
+.spSizeInfo dd span{color:#d5d5d5; display:inline-block;}
+
+.spSizeInfo dd span, .spSizeInfo dd em{width:30%; text-align:center;}
+
+
+.tab_content{overflow:hidden; color:#333; position:relative; margin:0 auto; border:1px solid #dfdfdf; max-width:278px;}
+.tab_content li{display:block; width:100%;}
+.tab_content table{width:100%;}
+.tab_content table td{text-align:center; line-height:35px; width:65px;}
+.tab_content table tr td:first-child{width:auto;}
+.tab_content table tr:nth-child(2n){background-color:#f4f4f4;}
+.tab_content table td strong{font-weight:normal;}

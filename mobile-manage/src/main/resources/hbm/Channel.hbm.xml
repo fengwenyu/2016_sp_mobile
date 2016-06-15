@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+
+	<class name="Channel" table="channel">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="channelName" type="string" length="40"/>
+		<property name="channelNum" type="long"/>
+		<property name="invitationCode" type="string" length="20"/>
+		<!-- products属性，本对象与Product的多对多 -->
+		<set name="products" table="channel_product" lazy="false">
+			<key column="channelId"></key>
+			<many-to-many class="Product" column="productId"></many-to-many>
+		</set>
+		<property name="createTime" type="timestamp"/>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+	
+</hibernate-mapping>

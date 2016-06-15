@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="AolaiActivity" table="aolai_activity">
+		<id name="id">
+			<generator class="native" />
+		</id>
+	
+	
+
+		<property name="startTime" type="timestamp">
+			<column name="startTime" />
+		</property>
+		<property name="endTime" type="timestamp">
+			<column name="endTime" />
+		</property>
+		
+	
+		<property name="display">
+			<column name="display" not-null="true" default="0" length="2" />
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.shangpin.wireless.api.domain.DisplayEnum</param>
+				<!-- 12为java.sql.Types.VARCHAR的常量值，相当于注解中的EnumType.STRING。如果不指定，默认保存枚举的索引值，相当于注解中的EnumType.ORDINAL。 -->
+				<param name="type">4</param>
+			</type>
+		</property>
+	
+		<property name="getUrl" type="string">
+			<column name="getUrl" length="200" />
+		</property>
+		<property name="createDate" type="timestamp">
+			<column name="createDate" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<brands capital="A">
+		<brand>
+			<name>ARMANI JEANS</name>
+			<id>B0373</id>
+		</brand>
+	</brands>
+	<brands capital="C">
+		<brand>
+			<name>CALVIN KLEIN</name>
+			<id>B0170</id>
+		</brand>
+	</brands>
+	<brands capital="E">
+		<brand>
+			<name>EMPORIO ARMANI</name>
+			<id>B0001</id>
+		</brand>
+		<brand>
+			<name>ERMENEGILDO ZEGNA</name>
+			<id>B0038</id>
+		</brand>
+	</brands>
+	<brands capital="I">
+		<brand>
+			<name>ICEBERG</name>
+			<id>B0268</id>
+		</brand>
+	</brands>
+	<brands capital="M">
+		<brand>
+			<name>MONCLER</name>
+			<id>B0334</id>
+		</brand>
+	</brands>
+	<brands capital="V">
+		<brand>
+			<name>VALENTINO</name>
+			<id>B0144</id>
+		</brand>
+		<brand>
+			<name>VERSACE</name>
+			<id>B0008</id>
+		</brand>
+	</brands>
+</data>
+
+

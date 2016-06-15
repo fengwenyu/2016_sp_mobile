@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="Token" table="token">
+		<id name="id">
+			<generator class="native" />
+		</id>
+	
+		<property name="code" type="string">
+			<column name="code" length="200" />
+		</property>
+
+		<property name="lastUpdated" type="timestamp">
+			<column name="lastUpdated" />
+		</property>
+
+		<property name="efftime" type="timestamp">
+			<column name="efftime" />
+		</property>
+		 
+		<property name="serverId" type="string">
+			<column name="serverId" length="32" />
+		</property>
+
+		<property name="status" type="string">
+			<column name="status" length="16" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<brands capital="A">
+		<brand>
+			<name>ASH</name>
+			<id>B0581</id>
+		</brand>
+		</brands>
+	<brands capital="B">
+		<brand>
+			<name>BEVERLY FELDMAN</name>
+			<id>B0613</id>
+		</brand>
+    	</brands>
+	<brands capital="C">
+		<brand>
+			<name>CAPEZZANI</name>
+			<id>B0577</id>
+		</brand>
+		<brand>
+			<name>CESARE CASADEI</name>
+			<id>B0638</id>
+		</brand>
+        <brand>
+			<name>CHLOE</name>
+			<id>B0040</id>
+		</brand>
+		<brand>
+			<name>CHRISTIAN LOUBOUTIN</name>
+			<id>B0636</id>
+		</brand>
+		<brand>
+			<name>COACH</name>
+			<id>B0073</id>
+		</brand>
+	</brands>
+    <brands capital="D">
+		<brand>
+			<name>DOLCE &amp; GABBANA</name>
+			<id>B0004</id>
+		</brand>
+		<brand>
+			<name>DOLCE VITA</name>
+			<id>B0610</id>
+		</brand>
+	</brands>
+    <brands capital="F">
+		<brand>
+			<name>FRENCH SOLE</name>
+			<id>B0548</id>
+		</brand>
+	</brands>
+    <brands capital="G">
+		<brand>
+			<name>G&amp;G</name>
+			<id>B0574</id>
+		</brand>
+	</brands>
+    <brands capital="J">
+		<brand>
+			<name>JEAN MICHEL CAZABAT</name>
+			<id>B0611</id>
+		</brand>
+	</brands>
+    <brands capital="L">
+		<brand>
+			<name>LK BENNETT</name>
+			<id>B0612</id>
+		</brand>
+    	<brand>
+			<name>LOTTUSSE</name>
+			<id>B0637</id>
+		</brand>
+		<brand>
+			<name>LUIS ONOFRE</name>
+			<id>B0568</id>
+		</brand>
+	</brands>
+   <brands capital="M">
+		<brand>
+			<name>MARC JACOBS</name>
+			<id>B0011</id>
+		</brand>
+		<brand>
+			<name>MCQ</name>
+			<id>B0703</id>
+		</brand>	
+    	<brand>
+			<name>MENBUR</name>
+			<id>B0614</id>
+		</brand>
+		<brand>
+			<name>MINNETONKA</name>
+			<id>B0697</id>
+		</brand>
+	</brands>
+	<brands capital="O">
+		<brand>
+			<name>OASIS</name>
+			<id>B0617</id>
+		</brand>
+		</brands>
+		<brands capital="P">
+		<brand>
+			<name>PRADA</name>
+			<id>B0002</id>
+		</brand>
+		<brand>
+			<name>PRETTY BALLERINAS</name>
+			<id>B0693</id>
+		</brand>
+		</brands>
+		<brands capital="R">
+		<brand>
+			<name>RED VALENTINO</name>
+			<id>B0592</id>
+		</brand>
+		</brands>
+	   <brands capital="S">
+		<brand>
+			<name>S.TENS</name>
+			<id>B0524</id>
+		</brand>
+		<brand>
+			<name>SALVATORE FERRAGAMO</name>
+			<id>B0084</id>
+		</brand>	
+    	<brand>
+			<name>SEBASTIAN</name>
+			<id>B0525</id>
+		</brand>
+		<brand>
+			<name>SERGIO ROSSI</name>
+			<id>B0202</id>
+		</brand>
+		<brand>
+			<name>STUART WEITZMAN</name>
+			<id>B0514</id>
+		</brand>
+	</brands>
+    <brands capital="T">
+		<brand>
+			<name>TOD'S</name>
+			<id>B0316</id>
+		</brand>
+	</brands>
+    <brands capital="V">
+		<brand>
+			<name>VELETTO</name>
+			<id>B0615</id>
+		</brand>
+	</brands>
+	<brands capital="Y">
+		<brand>
+			<name>YELLOW EARTH</name>
+			<id>B0492</id>
+		</brand>
+	</brands>
+</data>
+
+

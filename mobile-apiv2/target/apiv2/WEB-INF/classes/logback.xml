@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[%-5level] %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/data/logs/8083/mobile-apiv2.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/data/logs/8083/mobile-apiv2.%d{yyyyMMdd}.log</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>[%-5level] %d [%thread] %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- ignore package -->
+	<logger name="org" level="ERROR" />
+	<logger name="ch.qos" level="ERROR" />
+
+	<!-- project default level -->
+	<logger name="com.shangpin" level="INFO" />
+
+	<!--log4jdbc -->
+	<!-- 
+ 	<logger name="jdbc.sqltiming" level="INFO"/> 
+	<logger name="org.apache.ibatis" level="INFO"/> 
+	<logger name="java.sql" level="INFO"/>
+	 -->
+
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="rollingFile" />
+	</root>
+</configuration>

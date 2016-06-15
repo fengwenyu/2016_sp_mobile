@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clr:after, .clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.topFix {
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+}
+.topFix section {
+	display: block;
+	font-size: 0;
+	position: absolute;
+}
+nav#filter_box{
+	width:100%;
+	z-index: 100;
+	zoom:1;
+	height:41px;
+	overflow: hidden;
+	overflow-x: auto;
+	position: relative;
+	background:url(../../../images/2014618/header_bg.png) repeat-x 0 0;
+	background-size:5px;
+}
+.header_nav{
+	overflow: hidden;
+	height:41px;
+	position:relative;
+}
+.header_nav li{
+	float:left; 
+	font-size:15px; 
+	font-family: "微软雅黑", "Microsoft YaHei", "黑体", "Tahoma", "宋体";
+	padding:0 14px;
+	line-height: 41px;
+	overflow: hidden;
+	min-width:60px;
+}
+.header_nav li a{
+	color:#fff;
+}
+.header_nav li.hover a{
+	color:#fd7fba;
+}
+/**************/
+.sp520_list{width:100%; background-color:#f9dfda; margin-top:41px;}
+.sp520_list p.top_img{width:320px; height:160px; margin: 0 auto; overflow:hidden;}
+.sp520_list p.top_img img{display:block;}
+
+.sp520_list ul{width:314px;	margin:0 auto;}
+.sp520_list li{width:155px; margin:0 4px 4px 0; float:left;}
+.sp520_list li:nth-child(2n){margin-right:0;}
+.sp520_list li a, .sp520_list li img{display: block;}
+
+.sp520_box{width:100%; background-color:#eaeaea;}
+
+.box01{margin:10px 0 0;}
+.box02{margin:0;}
+.box03{border-top:4px solid #f50037;}
+.box04{border-top:4px solid #3c6a9d;}
+.box05{border-top:4px solid #cc8d24;}
+.box06{border-top:4px solid #00b29e;}
+.box07{border-top:4px solid #ff6b00;}
+.box08{border-top:4px solid #f773b5;}
+.box09{border-top:4px solid #7eb757;}
+.box10{border-top:4px solid #de0000;}
+
+.box01 li, .box02 li{width:100%; margin:0 0 10px 0; }
+.box01 li img, .box02 li img{width:300px; height:auto; margin:0 auto;}
+
+.sp520_nav{width:100%; background-color:#eaeaea; padding-bottom:10px;}
+.sp520_nav ul{width:307px;	margin:0 auto;}
+.sp520_nav li{width:73px; margin:0 5px 10px 0; float:left;}
+.sp520_nav li:nth-child(4n){margin-right:0;}
+.sp520_nav li a, .sp520_nav li img{display: block;}
+
+
+/*国际大牌样式*/
+.sp520_box .page_header{background:none; height:auto; border-bottom:none 0; text-align:center; padding:4px 0;}
+
+.sp520_list ul.prod_list{width:305px; padding-bottom:5px;}
+.prod_list li{width:150px; height:220px; float:left; margin:0 5px 5px 0;}
+

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+body { background: #fff; }
+.main_box { width: 100%; max-width: 640px; margin: 0 auto 10px; }
+.main_box a { display: block; }
+.main_box img { display: block; width: 100%; }/**/
+.top_img { width: 100%; display: block; margin-bottom: 0px; }
+.prod_list { padding: 0 5px; box-sizing:border-box; width:100%;}
+.prod_list li { float:left; width:50%; box-sizing:border-box; padding:10px 5px 0; }
+.main_box h1 { width: 100%; display: block; margin: 10px 0 0; }
+
+.second-box{ display: -webkit-box; display: -webkit-flex; display: flex; width:100%; overflow:hidden;}
+.second-box > div.left-box{ width:33.3%}
+.second-box > div.right-box{width:66.7%}
+
+.main_box .second-box > div.right-box a{ float:left;  width:50%}
+.main_box .second-box > div.left-box a{display: block;  width:100%}
+.main_box .second-box > div.left-box a img{ display: block;  width:100%}
+.main_box .second-box > div.right-box a img{ display: block;  width:100%}

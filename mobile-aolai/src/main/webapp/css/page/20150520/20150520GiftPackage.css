@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#ee5658}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;background:url(../../../images/20150520preheat/20150520GiftPackage/top_bg.png) center top no-repeat; background-size:100% auto;}
+.title-top{ position:relative;}
+.title-top .try-tag{ display:block; width:44px; height:44px; position:absolute; left:0; top:0;}
+.turntable-top{margin:0 20px}
+.turntable-top img{border:0; display:block;}
+.turntable { position: relative;z-index:3;background:#fcf5f5; margin:0 20px; padding:0 15px 75px;}
+.turntable p{ padding-top:25px; line-height:24px; font-size:12px; color:#333333}
+.turntable p strong{ display:inline-block; width:17px; height:17px; margin-right:5px; background:#e27171; border-radius:50%; text-align:center; line-height:18px; color:#fff; font-weight:normal}
+.turntable p span.red{ color:#ee5658}
+
+.receive-btn{ display:block; width:120px; height:44px; position:absolute; left:-11px; bottom:28px;}
+.gift-bg{display:block; width:172px; height:201px; position:absolute; right:-20px; bottom:20px;}
+
+.con {padding: 0 0 10px; line-height: 2; position:relative;}
+.con h2{ margin:25px 0 20px}
+.con ul{background: #FFEDE3; padding: 0 10px;}
+.con h1{color: #fff;text-align: center;margin-top: 10px;}
+
+.con .back_main{ display:block; border:1px solid #fff; margin:40px 55px; line-height:45px; text-align:center; color:#fff; font-size:20px; vertical-align:middle;}
+.con .back_main i{ display:inline-block; width:13px; height:14px; margin-right:10px;vertical-align:middle;}
+.con .back_main i img{ display:block;}
+
+
+
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:198px;background:url(../../../images/20150520preheat/20150520GiftPackage/pop_bg.png) no-repeat; background-size:100%;}
+#popup_content{padding:0;}
+#popup_message{height:auto; padding:20px;}
+#popup_message h3{ text-align: center; color:#fff; font-weight:normal; line-height:24px; font-size:13px; margin-top:40px;}
+#popup_message p{text-align: center; color:#fff;font-size:12px; line-height:22px; margin-top:0px;}
+#popup_container.success p a{color: #ffea00; font-weight:bold}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{margin:0 0 15px; height:28px;}
+#popup_content button{background:#ffea00; width: 105px; height: 28px; border-radius:0 }
+#popup_content button:hover{background:#ffea00; color: #ee5658; cursor:pointer;}
+#popup_container #popup_content button{background:#ffea00; color: #ee5658;}
+#popup_container #popup_content button:hover{background:#ffea00; color: #ee5658; cursor:pointer;}
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00;}
+

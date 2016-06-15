@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<title>功能引导</title>
+<link href="../../css/help.css" rel="stylesheet" />
+<script src="../../js/swipe.min.js"></script>
+<script>
+window.onload = function(){
+	var slider = new Swipe(document.getElementById('slider'), {
+      callback: function(e, pos) {
+        
+        var i = bullets.length;
+        while (i--) {
+          bullets[i].className = ' ';
+        }
+        bullets[pos].className = 'on';
+
+      }
+    }),
+	bullets = document.getElementById('position').getElementsByTagName('em');
+};
+</script>
+</head>
+
+<body>
+ 
+ <div class="warp" id="slider">
+  <ul>
+   <li><img src="../../images/yindaotu_zhou.png" height="402"></li>
+   <li><img src="../../images/yindaotu_menu.png" height="402"></li>
+   <li><img src="../../images/yindaotu_del.jpg" height="402"></li>
+  </ul>
+  
+  <span id='position'><em class='on'>&bull;</em><em>&bull;</em><em>&bull;</em></span>
+  
+ </div>
+ 
+</body>
+</html>

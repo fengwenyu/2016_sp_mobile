@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.shangpin</groupId>
+		<artifactId>mobile-master</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>mobile-utils</artifactId>
+
+	<properties>
+		<!-- 项目环境变量和应用版本 -->
+		<env>dev</env>
+	</properties>
+
+	<dependencies>
+		<!-- 用于整合Redis3.0集群  start-->
+		<dependency>
+  			<groupId>com.shangpin.common</groupId>
+  			<artifactId>commons-redis</artifactId>
+  			<version>1.0.2.RELEASE</version>
+  			<exclusions>
+  				<exclusion>
+  					<artifactId>spring-oxm</artifactId>
+  					<groupId>org.springframework</groupId>
+  				</exclusion>
+  				<exclusion>
+  					<artifactId>spring-data-commons</artifactId>
+  					<groupId>org.springframework.data</groupId>
+  				</exclusion>
+  			</exclusions>
+		</dependency>
+		<!-- 用于整合Redis3.0集群  end-->
+		<!-- spring web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+
+		<!-- fastDFS client -->
+		<dependency>
+			<groupId>org.csource</groupId>
+			<artifactId>fastdfs-client</artifactId>
+		</dependency>
+
+		<!-- qrcode config -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+		</dependency>
+
+		<!--redis config begin -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+		<!--redis config end -->
+
+		<!-- j2ee web spec -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+		</dependency>
+		<!-- j2ee web end -->
+
+		<!-- xml解析 -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+		</dependency>
+
+		<!-- httpclient config begin -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+		</dependency>
+		<!-- httpclient config end -->
+
+		<!-- property config begin -->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+		</dependency>
+		<!-- property config end -->
+
+		<!-- JSON begin -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.woodstox</groupId>
+			<artifactId>stax2-api</artifactId>
+			<version>3.1.4</version>
+		</dependency>
+		<!-- JSON end -->
+
+		<!-- LOGGING begin -->
+		<!-- slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<!-- logback -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+		<!-- pcaptcha验证码 -->
+		<dependency>
+			<groupId>net.pusuo</groupId>
+			<artifactId>patchca</artifactId>
+		</dependency>
+		
+		<!-- jcaptcha验证码 -->
+		<dependency>
+  			<groupId>com.octo.captcha</groupId>
+  			<artifactId>jcaptcha</artifactId>
+		</dependency>
+			
+		<dependency>
+  			<groupId>com.octo.captcha</groupId>
+  			<artifactId>jcaptcha-api</artifactId>
+		</dependency>
+		<!-- log4j 实际调用slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- common-logging 实际调用slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- pcaptcha验证码 -->
+		<dependency>
+			<groupId>net.pusuo</groupId>
+			<artifactId>patchca</artifactId>
+		</dependency>
+		
+		<!-- jcaptcha验证码 -->
+		<dependency>
+  			<groupId>com.octo.captcha</groupId>
+  			<artifactId>jcaptcha</artifactId>
+		</dependency>
+			
+		<dependency>
+  			<groupId>com.octo.captcha</groupId>
+  			<artifactId>jcaptcha-api</artifactId>
+		</dependency>
+		<!-- java.util.logging 实际调用slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- LOGGING end -->
+		<!-- ftp  -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<!-- ftp  -->
+		<!-- GENERAL UTILS begin -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<!-- google java library -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+		<!-- OTHER TOOLS begin -->
+
+		<!-- TEST begin -->
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- mockito -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.mockito</groupId>
+					<artifactId>mockito-all</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- TEST end -->
+	</dependencies>
+
+	<build>
+		<finalName>mobile-utils-${project.version}</finalName>
+		<filters>
+			<filter>src/main/filters/filter-${env}.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<env>dev</env>
+				<conf.dir>${project.basedir}/conf_dev</conf.dir>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>${conf.dir}</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<env>test</env>
+				<conf.dir>${project.basedir}/conf_test</conf.dir>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>${conf.dir}</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>product</id>
+			<properties>
+				<env>product</env>
+				<conf.dir>${project.basedir}/conf_product</conf.dir>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>${conf.dir}</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>pre</id>
+			<properties>
+				<env>pre</env>
+				<conf.dir>${project.basedir}/conf_pre</conf.dir>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<directory>${conf.dir}</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+	</profiles>
+
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="UserBehavioralSPAndriod" table="userBehavioralSPAndriod">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="behaviorName" type="string">
+			<column name="behaviorName" length="50"/>
+		</property>
+		
+		<property name="imei" type="string">
+			<column name="imei" length="100"/>
+		</property>
+		<property name="date" type="timestamp">
+			<column name="date" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>帮助中心</title>
+<link href="../../css/base.css" rel="stylesheet" />
+<link href="../../css/public.css" rel="stylesheet" />
+<link href="../../css/page/help_center.css" rel="stylesheet" /><!--页面专用CSS-->
+
+<script src="../../js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  var ver = Math.random();
+    loader = SP.core
+      .install("../../js/jquery.min.js?" + ver)  //jquery库文件
+        .using("../../js/lazyload.js?" + ver)    //图片懒加载
+        .excute()
+        .using("../../js/config.sim.js?" + ver)  //图片懒加载
+		.using("../../js/page/help_center.js?" + ver)
+        .excute();
+      
+</script>
+</head>
+<body>
+  <div class="container">      
+    <!-- 页面内容start -->
+    <div class="alContent">
+      <div class="problem-box">
+        <p style=" margin-top:25px;">1. 货到付款，退款至银行卡，完成退款之后的2-5个工作日到个人账户</p>
+        <p>2. 在线支付，原支付方式退回，支付宝、快钱、交通银行、中国银行、浦发银行、招商银行、民生信用卡、建设银行、光大银行、广发银行、农业银行尚品网完成退款后的3-7个工作日到个人账户，其余银行尚品网完成退款后的3-15个工作日到个人账户</p>
+        <p>3. 在您的订单状态为交易全部完成之后，尚品网方可完成您的退款，因此如果您需要退款请点击确认收货，货到付款形式需等待系统变更状态才可退款，如有疑问请致电4006-900-900。礼品卡支付金额无法兑换成现金，不能办理现金退款。</p>
+    </div>
+    <!-- 页面内容end -->
+  </div>
+
+  
+</body>
+</html>

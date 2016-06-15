@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#ee5658}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;background:url(../../../../images/20150520GoodLuck/top_bg.png) center top no-repeat; background-size:100% auto;}
+.title-top{ position:relative;}
+.title-top .try-tag{ display:block; width:44px; height:44px; position:absolute; left:0; top:0;}
+.turntable-top img{border:0; display:block;}
+.turntable { position: relative;z-index:3;overflow: hidden;background:url(../../../../images/20150520GoodLuck/turntable_bg.png) #fef5f5 center bottom no-repeat; background-size:100% auto;}
+.share-icon{ position:absolute; width:30px; height:42px; right:15px; top:15px;}
+
+.turntable-box{width:241px;height:240px; background:#ee5658; border-radius:50%; border:10px solid #ee5658;margin:20px auto 35px; position:relative;}
+.turntable-box #turntable_img{ width:241px;height:240px; }
+
+#turntable_btn {position: absolute; z-index: 3; top:50%; left: 50%; margin-left:-32px; margin-top:-75px;cursor: pointer; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(../../../../images/20150520GoodLuck/turntable_btn_03.png); width: 64px; height:109px; background-size: 100%; }
+#turntable_btn:active { }
+.con {padding: 0 0 10px; line-height: 2; position:relative;}
+.con h2{ margin:25px 0 20px}
+.con ul{background: #FFEDE3; padding: 0 10px;}
+.con h1{color: #fff;text-align: center;margin-top: 10px;}
+.con dl{position: absolute;top: 230px;width: 320px;height: 100px;overflow: hidden;}
+.con dd { padding: 14px; }
+.con dd.lottery_list{height:140px; overflow:hidden; padding:0 14px; margin:14px 0;}
+.con .back_main{ display:block; border:1px solid #fff; margin:40px 55px; line-height:45px; text-align:center; color:#fff; font-size:15px; vertical-align:middle;}
+.con .back_main i{ display:inline-block; width:13px; height:14px; margin-right:10px; margin-top:15px;vertical-align:top;}
+.con .back_main i img{ display:block;}
+.lottery_list li{position:relative;}
+.lottery_list span{position:absolute; right:0; top:0; line-height:28px;}
+
+.myimg a{float: left; display: block;}
+.myimg img{display: block;}
+#popup_container{opacity:1; color:#000; font-weight:normal; line-height:1.5; height:198px;background:url(../../../../images/20150520GoodLuck/pop_bg.png) no-repeat; background-size:100%;}
+#popup_content{padding:0;}
+#popup_message{height:auto; margin:0;  padding:0;}
+#popup_message h3{ text-align: center; color:#ee5658; line-height:50px; font-size:15px;}
+#popup_message p{text-align: center; color:#fff;font-size:12px; line-height:22px; margin-top:15px;}
+#popup_container.success p a{color: #ffea00; font-weight:bold}
+#popup_container p span{ color:#e13624;}
+#popup_container.faid #popup_message p{ margin-top:25px;}
+
+#popup_panel{margin:20px 0 15px; height:28px;}
+#popup_content button{background:#ffea00; width: 105px; height: 28px; border-radius:0 }
+#popup_content button:hover{background:#ffea00; color: #ee5658; cursor:pointer;}
+#popup_container #popup_content button{background:#ffea00; color: #ee5658;}
+#popup_container #popup_content button:hover{background:#ffea00; color: #ee5658; cursor:pointer;}
+.bodyHei{height:100%; overflow: hidden;}
+#popup_message p span{color: #f6ff00;}
+
+.share-tip{ background:rgba(0,0,0,0.6); width:100%; height:100%; left:0; top:0; right:0 ; bottom:0; position:fixed; z-index:999; display:none}
+.share-tip img{ position:absolute; right:0; top:0; width:155px; height:105px;}
+
+
+/*屏幕适配*/
+@media screen and (min-width: 360px) {
+.title-top .try-tag{width:64px; height:64px;}
+.share-icon{ width:40px; height:52px;}
+.turntable-box{width:261px;height:260px;}
+.turntable-box #turntable_img{ width:261px;height:260px; }
+}
+
+@media screen and (min-width: 375px) {
+.turntable-box{width:271px;height:270px;}
+.turntable-box #turntable_img{ width:271px;height:270px; }
+}
+@media screen and (min-width: 414px) {
+.turntable-box{width:291px;height:290px;}
+.turntable-box #turntable_img{ width:291px;height:290px; }
+}

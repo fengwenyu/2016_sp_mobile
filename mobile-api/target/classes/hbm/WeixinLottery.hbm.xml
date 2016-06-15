@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="WeixinLottery" table="weixinlottery">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="issueId" type="string">
+			<column name="issueId" length="20"/>
+		</property>
+		<property name="weixinId" type="string">
+			<column name="weixinId" length="40"/>
+		</property>
+		<property name="userId" type="string">
+			<column name="userId" length="50"/>
+		</property>
+		<property name="prizeLevel" type="string">
+			<column name="prizeLevel" length="4"/>
+		</property>
+		<property name="activateCode" type="string">
+			<column name="activateCode" length="20"/>
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

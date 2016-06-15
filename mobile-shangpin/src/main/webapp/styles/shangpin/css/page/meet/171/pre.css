@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ background-color:#000} 
+.main_box{
+	width:100%;
+	max-width:640px;
+	margin:0 auto 15px;
+}
+.main_box a{
+	display:block;
+	width:100%;
+}
+.main_box img{
+	display:block;
+	width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	margin-bottom:11px;
+	
+}
+.prod_list{
+	padding:4px 4px 0 0;
+}
+.prod_list li{
+	float:left;
+	width:50%;
+	/*margin-bottom:4px;*/
+}
+.prod_list li:nth-child(2n){
+	float:right;
+	margin-right:-4px;
+}
+
+.main_box h2{
+	width:100%;
+	display:block;
+	margin:15px 0 0px;
+}
+.main_box h3{
+	width:100%;
+	padding:10px 0;
+	display:block;
+}
+.main_box h4{
+	width:100%;
+	display:block;
+	padding-top:4px;
+}
+.main_box h5{
+	width:100%;
+	display:block;
+	padding-top:4px;
+}
+/*弹框*/
+.overlay{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex; 
+	background:rgba(0,0,0,0.8); 
+	position:fixed; 
+	left:0; 
+	top:0; bottom:0; 
+	right:0; 
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	overflow:hidden;
+	z-index:-1
+ }
+.pop-box{background:#fff;width:300px; border-radius:5px; padding:20px; opacity:0; position:relative;}
+.pop-box a.close-btn{ display:block; width:15px; height:15px; position:absolute; right:10px; top:10px; background:url(../../../images/2015YearEndTop/close_icon.png) no-repeat;background-size:contain;}
+.pic-box{max-height:300px;overflow-y:auto; text-align:center;}
+.pop-box img{ width:100%;}
+.pic-box a{ display:block; line-height:30px; margin-top:10px; color:#F00; font-size:16px; font-weight:bold;}
+
+

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>帮助中心</title>
+<link href="../styles/shangpin/css/base.css" rel="stylesheet" />
+<link href="../styles/shangpin/css/public.css" rel="stylesheet" />
+<link href="../styles/shangpin/css/page/help_center.css" rel="stylesheet" /><!--页面专用CSS-->
+
+<script src="../styles/shangpin/js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  var ver = Math.random();
+    loader = SP.core
+      .install("../styles/shangpin/js/jquery.min.js?" + ver)  //jquery库文件
+        .using("../styles/shangpin/js/lazyload.js?" + ver)    //图片懒加载
+        .excute()
+        .using("../styles/shangpin/js/config.sim.js?" + ver)  //图片懒加载
+		.using("../styles/shangpin/js/page/help_center.js?" + ver)
+        .excute();
+      
+</script>
+</head>
+<body>
+
+  
+
+  <div class="container">
+
+    
+   <!--头部 start-->
+    <div class="topFix">
+        <section>
+            <div class="topBack">
+            <a href="javascript:history.go(-1);" class="backBtn">&nbsp;</a>
+            <span class="top-title">100%海外直邮</span>
+            <ul class="alUser_icon clr">
+                <li><a href="../index"><img src="../styles/shangpin/images/home_icon.png" width="25" height="25" alt="首页"></a></li>
+            </ul>
+            </div>
+        </section>
+    </div>
+    <!--头部 end-->
+    
+    <!-- 页面内容start -->
+    <div class="alContent">
+      <div class="problem-box">
+        <h3>尚品网海外购所有商品100%从业界优秀的品牌原厂商、品牌海外指定分销商以及品牌海外代理商体系直接采购。</h3>
+		<p>尚品网海外购的每件商品均由尚品网认证的优秀海外供应商提供，并经过尚品网海外买手团队的精选挑选，确保能为您提供符合最新潮流时尚的最新、最快、最保值的时尚单品。</p>
+		<p>尚品网海外购的每件商品均经由中国海关正规入关申报、认证合法，并依法纳税后，直接进口直邮到您手中，无任何其他国内流转销售环节，充分节省您的时间。</p>
+    </div>
+    <!-- 页面内容end -->
+  </div>
+
+  
+</body>
+</html>

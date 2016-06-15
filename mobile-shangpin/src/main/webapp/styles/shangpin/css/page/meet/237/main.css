@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ background-color:#fff}
+
+.main_box{
+	width:100%;
+	max-width:640px;
+	margin:0 auto;
+}
+.main_box img{ display:block;}
+.main_box p{ padding:0; margin:0;}
+.main_box a{
+	display:block;
+	width:100%;
+}
+.main_box img{
+	max-width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	margin-bottom:0px;
+	
+}
+
+/*优惠劵*/
+.coupon{ cursor:pointer}
+
+
+
+
+/*优惠劵弹层*/
+.overlay,
+.modal .modal-ft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+ 
+}
+.overlay.active {z-index: 980;position: fixed;background-color: rgba(0, 0, 0, 0.8);}
+.modal {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.modal {
+  background-color: #fff;
+  margin: 0 10px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0) scale(0.815);
+  transform: translate3d(0, 0, 0) scale(0.815);
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  display:none;
+}
+.modal.modal-in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.modal .modal-hd {
+  text-align: center;
+  line-height: 50px;
+  background-color: #fff;
+  color: #555;
+  border-bottom:1px dashed #898989;
+}
+
+.modal .modal-bd {
+  background:#f2f2f2;
+  padding: 25px;
+  line-height:24px;
+  color:#2d2d2d;
+}
+.modal .modal-bd strong{ color:#c62026; font-weight:normal}
+.modal .modal-ft {
+  border-top: 1px solid #cccccc;
+  display:block;
+  text-align: center;
+  line-height: 40px;
+}
+.modal .modal-ft .btn-modal {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background-color: #c62026;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  display:block;
+}
+

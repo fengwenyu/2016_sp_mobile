@@ -1,0 +1,101 @@
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+
+.menu {  background:url(../../../../images/20150520preheat/menu_bg.jpg) 0 0 no-repeat; background-size: cover;overflow: hidden;padding:10px; margin:0 0 8px;}
+.menu a {float: left;width: 24%;padding:0 5px; box-sizing:border-box;}
+.menu a:first-child{margin-left: 2%;}
+.menu a i{display: block;padding: 5px;background:url(../../../../images/20150520preheat/icon_bg.png) 0 0 no-repeat; background-size: cover;}
+.menu a:hover i{background:url(../../../../images/20150520preheat/icon_bg_h.png) 0 0 no-repeat; background-size: cover;}
+.menu.aolai a{width: 32%;padding:0 12px;}
+
+
+.end-time-box{background: url(../../../../images/20150520preheat/time_bg.jpg) 0 0 no-repeat;background-size:cover;}
+#curdatetime_108{background: url(../../../../images/20150520preheat/bg_endtime.png) 0 0 no-repeat;background-size: 320px;width:320px;height:63px;margin:0 auto;}
+#leftdays_108, #lefthours_108, #leftminutes_108, #leftseconds_108{width:23px;padding-top:25px;line-height:35px;padding-left:11px;text-align:center; display:inline-block;color:#ff5454;}
+#leftdays_108{width:18px;padding-left:75px;}
+#leftseconds_108{padding-left:13px;}
+#leftminutes_108{padding-left:24px;}
+
+
+.content-box{margin-top:0px;}
+.content-box.first-box{background:url(../../../../images/20150520preheat/img_bg.jpg) 0 0 no-repeat; background-size: cover; }
+.content-box a{ display:block}
+.content-box .pic-list{ margin:0 4px;}
+.content-box .pic-list li{box-sizing:border-box;  padding:0 4px;width: 33.3%; float: left; margin-bottom:8px; }
+.content-box .pic-list li img{border:1px solid #e9e8e8}
+.content-box p.activity-pic{ margin-bottom:8px;}
+.publish-list li{float:left;width:50%;margin-bottom:6px;padding-right:3px;box-sizing:border-box;  position:relative;}
+.publish-list li:nth-child(2n){float:right;padding:0 0 0 3px;}
+.publish-list li img{ width:100%}
+
+
+.flex{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.flex li{
+	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 1;         /* OLD - Firefox 19- */
+	-webkit-flex: 1;          /* Chrome */
+	-ms-flex: 1;              /* IE 10 */
+	flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.content-box h2{ margin-bottom:8px;}
+.content-box h3{ margin-top:8px;}
+.content-box h4{ margin:8px 0;}
+
+.more-box ul li{ width:50%; height:100%; float:left;}
+.more-box ul li a{ width:100%; height:100%; display:block; }
+
+.more-third-box ul li{ width:33.3%; height:100%; float:left;}
+.more-third-box ul li a{ width:100%; height:100%; display:block; }
+
+.venue-list{ margin-top:8px;}
+.venue-list li{margin-bottom:8px;padding-right:4px;}
+.venue-list li:nth-child(2n){padding:0 0 0 4px;}
+
+/*弹出层样式*/
+.nav_more { width: 50px; height: auto; z-index: 101; }
+.nav_more span { display: block; width: 50px; height: 50px; background: url(../../../../images/20150520preheat/pic_arrow_new.png) 0 0 no-repeat; cursor: pointer; position: fixed; right: 12px; }
+.nav_more span.nav_list { background-size: 50px; background-position: 0 -150px; bottom: 70px; }
+.nav_more span.nav_top { background-size: 50px; margin-top: 10px; display: none; bottom: 25px; }
+
+.nav_menu_bg{ background:rgba(0,0,0,0.6); position:fixed; left:0; right:0 ;top:0; bottom:0; z-index:101; display:none;}
+ul.nav_menu { width: 110px; background: url(../../../../images/20150520preheat/pic_top_bg.png) 0 0 no-repeat; background-size: 100% auto; position: fixed; bottom: 0; z-index: 102; display:none }
+ul.nav_menu_aolai { background: url(../../../../images/2014ifc/pic_top_bg_aolai.png) 0 0 no-repeat; background-size: 110px; }
+ul.nav_menu li.top { height: 60px; background: none; padding: 0; }
+ul.nav_menu li.top .pop_close { width: 20px; height: 20px; float: right; text-indent: -3000px; }
+ul.nav_menu li.top .pop_return { width: 130px; height: 30px; float: right; text-indent: -3000px; display: block; }
+ul.nav_menu li { width:110px; background: url(../../../../images/20150520preheat/pic_li_bg.png) 0 0 no-repeat; background-size:100% auto; height: 30px; line-height: 30px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+ul.nav_menu li a { display:block; color: #fff; text-align:center; }
+ul.nav_menu li span { display: inline-block; }
+ul.nav_menu li.curr { background-position: 0 -30px; background-size: 100% auto; }
+ul.nav_menu li:last-child{width:110px; background: url(../../../../images/20150520preheat/pic_bottom_bg.png) 0 0 no-repeat; background-size:100% auto; height: 12px;}
+.back-main i{ display:inline-block; width:9px; margin-right:5px;}
+
+/*弹出层*/
+#popup_container { width: 300px; background: rgba(0,0,0,.7); color: #fff; }
+#popup_container h1 { background: #c61d41; color: #fff; line-height: 0; height: 0px; position: relative; border-radius: 0.3em 0.3em 0 0; font-size: 0; display: block; }
+#popup_container .title_close { background: url(../../../../images/motherDay/close_btn_bg.png) no-repeat center; display: block; position: absolute; right: -15px; top: -25px; width: 50px; height: 50px; background-size: 25px 25px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 10000; }
+#popup_message { margin: 0; height: auto; padding: 10px; font-size: 16px; text-align: left; min-height: 50px; line-height: 50px; text-align: center; }
+.slideIn { right: 0; animation: slideIn 0.6s ease-in-out; -moz-animation: slideIn 0.6s ease-in-out;	/* Firefox */ -webkit-animation: slideIn 0.6s ease-in-out;	/* Safari 和 Chrome */ -o-animation: slideIn 0.6s ease-in-out; }
+.slideOut { right: -100%; animation: slideOut 0.6s ease-in-out; -moz-animation: slideOut 0.6s ease-in-out;	/* Firefox */ -webkit-animation: slideOut 0.6s ease-in-out;	/* Safari 和 Chrome */ -o-animation: slideOut 0.6s ease-in-out; }
+
+@-webkit-keyframes slideIn { 
+0% {right: -100%;}
+100% {right: 0;}
+}
+@keyframes slideIn { 
+0% {right: -100%;}
+100% {right: 0;}
+}
+@-webkit-keyframes slideOut { 
+0% {right: 0;}
+100% {right: -100%;}
+}
+@keyframes slideOut { 
+0% {right: 0;}
+100% {right: -100%;}
+}

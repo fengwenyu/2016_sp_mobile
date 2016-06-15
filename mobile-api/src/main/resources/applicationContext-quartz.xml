@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd"
+		default-lazy-init="true">
+
+	<!-- 要调用的工作类 -->
+	<bean id="writeLogJob" class="com.shangpin.wireless.api.util.FileUtil"></bean>
+	<bean id="pushMsgJob" class="com.shangpin.wireless.api.util.PushUtil"></bean>
+	<bean id="updateIndexCacheJob" class="com.shangpin.wireless.api.util.AolaiIndexCacheUtil"></bean>
+	<bean id="updatePayConfigCacheJob" class="com.shangpin.wireless.api.util.PayConfigCacheUtil"></bean>
+	<bean id="updateWeixinConfigCacheJob" class="com.shangpin.wireless.api.view.servlet.WeXinPlatformServlet"></bean>
+	<bean id="checkUnionPayJob" class="com.shangpin.wireless.api.pay.unionpay.UnionUtil"></bean>
+	<bean id="updateJob" class="com.shangpin.wireless.api.util.UpdateCacheUtil"></bean>
+	<bean id="refreshDataPerHalfHourJob" class="com.shangpin.wireless.api.util.RefreshDataUtil"></bean>
+	
+	
+	<!-- 定义调用对象和调用对象的方法 -->
+	<bean id="writeLogTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="writeLogJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>write</value>
+		</property>
+	</bean>
+	 
+	 
+	 <bean id="pushMsgManualTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="pushMsgJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>sendPush</value>
+		</property>
+	</bean>
+	 
+	<bean id="updateIndexCacheTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="updateIndexCacheJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>update</value>
+		</property>
+	</bean>
+	
+	<bean id="getAllHotBrandTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="refreshDataPerHalfHourJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>refreshDataPerHalfHour</value>
+		</property>
+	</bean>
+	
+	<bean id="pushMsgManualTaskDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="pushMsgManualTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<value>0 0/2 * * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 更新支付方式的配置 -->
+	<bean id="updatePayConfigCacheTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="updatePayConfigCacheJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>update</value>
+		</property>
+	</bean>
+	<!-- 更新微信的配置 -->
+	<bean id="updateWeixinConfigCacheTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="updateWeixinConfigCacheJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>updateConfig</value>
+		</property>
+	</bean>
+	<!-- 定时检查银联支付结果的配置 -->
+	<bean id="checkUnionPayTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="checkUnionPayJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>checkQueue</value>
+		</property>
+	</bean>
+	<!-- 每隔2分钟更新缓存数据的配置 -->
+	<bean id="updateCachePerMinuteTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<!-- 调用的类 -->
+		<property name="targetObject">
+			<ref bean="updateJob" />
+		</property>
+		<!-- 调用类中的方法 -->
+		<property name="targetMethod">
+			<value>updatePerMinute</value>
+		</property>
+	</bean>
+	
+ 
+
+
+	<!-- 定义触发时间 -->
+	<bean id="writeLogTaskDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="writeLogTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每隔1分钟调用一次 -->
+			<!--<value>0 0/1 * * * ?</value> -->
+			<!-- 10:59:57,18:59:57,23:59:57调用 -->
+			<value>57 59 10,18,23 ? * *</value>
+		</property>
+	</bean>
+	 
+	<bean id="updateIndexCacheTaskDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="updateIndexCacheTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每隔1分钟调用一次 -->
+			<!--<value>0 0/1 * * * ?</value> -->
+			<value>57 00 8,12,13,14,18,19,20,22,23,0,1,2,3 ? * *</value>
+		</property>
+	</bean>
+	<bean id="updateIndexCacheTaskDoTime1" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="updateIndexCacheTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<value>10 5/10 9,10,11,15,16,17 * * ?</value>
+		</property>
+	</bean>
+	<bean id="updatePayConfigCacheTaskDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="updatePayConfigCacheTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每隔30分钟调用一次 -->
+			<value>0 0/30 * * * ?</value>
+		</property>
+	</bean>
+	<bean id="updateWeixinConfigCacheTaskDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="updateWeixinConfigCacheTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每隔30分钟调用一次 -->
+			<value>0 0/30 * * * ?</value>
+		</property>
+	</bean>
+	<bean id="checkUnionPayDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="checkUnionPayTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每分钟调用一次 -->
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>
+	<bean id="updateCachePerMinuteDoTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="updateCachePerMinuteTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<!-- 每分钟调用一次 -->
+			<value>0 0 0/8 * * ?</value>
+		</property>
+	</bean>
+	
+		<!-- 热点品牌定义触发时间 -->
+	<bean id="checkHotBrands" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="getAllHotBrandTask" />
+		</property>
+		<!-- cron表达式 ([秒] [分] [小时] [日] [月] [周] [年]) -->
+		<property name="cronExpression">
+			<value>0 0/30 * * * ?</value>
+		</property>
+	</bean>	
+	
+	<!-- 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 -->
+	<bean id="startQuertz" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="writeLogTaskDoTime" />
+				<ref bean="updatePayConfigCacheTaskDoTime" />
+				<ref bean="updateWeixinConfigCacheTaskDoTime" />
+				<ref bean="checkUnionPayDoTime" />
+				<ref bean="pushMsgManualTaskDoTime" />
+				<!-- 
+				<ref bean="updateCachePerMinuteDoTime" />
+				 -->
+				<ref bean="checkHotBrands"/>
+			</list>
+		</property>
+	</bean>
+</beans>

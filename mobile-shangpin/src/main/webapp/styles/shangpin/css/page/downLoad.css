@@ -1,0 +1,49 @@
+ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,figure {padding:0;margin:0;}
+fieldset,img{border:0;}
+:focus {outline:0;}
+address,caption,cite,code,dfn,em,th,var,optgroup {font-style:normal;font-weight:normal;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+abbr,acronym {border:0;font-variant:normal;}
+input,button,textarea,select,optgroup,option {font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+code,kbd,samp,tt {font-size:100%;}
+body {line-height:1.5;}
+ol,ul,li {list-style:none;}
+table {border-collapse:collapse;border-spacing:0;}
+caption,th {text-align:left;}
+sup,sub {font-size:100%;vertical-align:baseline;}
+blockquote,q {quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}
+
+section,div,img,a{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color:transparent;/* For some Androids */
+}
+
+html,body,.wrapper{position:relative;width:100%;height:100%;background:#e6e3e1;}
+.slideMain{position:absolute;top:0;left:0;overflow:hidden;width:100%;height:100%;margin:auto;}
+
+.layer{position:absolute;left:0;top:0;width:100%;height:100%;background-repeat:no-repeat;background-size:100%;}
+
+/* #page .layer0{background:url(../../../../styles/shangpin/images/download/shangpin_bg.jpg?201408261461) no-repeat center top;background-size:100%;} */
+#page .layer1{background-image:url(../../../../styles/shangpin/images/download/shangpin_logo.png?201408261461); height:20%;}
+#page .layer2{background-image:url(../../../../styles/shangpin/images/download/shangpin_mobi.png?201408261465); top:15%;}
+#page .layer3{background-image:url(../../../../styles/shangpin/images/download/shangpin_btn.png?201408261461); height:15%; top:auto; bottom:2%;}
+#page .layer3 a{display:block; width:50%; height:100%;}
+
+.shopLink{position:absolute;z-index:999;width:100%;height:100%;top:0;left:0;pointer-events:none;}
+.shopLink a{position:absolute;pointer-events:auto;}
+#popLayer{width:100%; height:504px; background:rgba(0,0,0,.85); position:absolute; top:-568px; left:0; z-index:10000;}
+#popLayer img{margin:0 auto; width:320px; display:block;}
+
+
+html,body{ height:100%;}
+.down_page{ height:100%; max-width:640px; margin:0 auto; width:100%; overflow:hidden; position:relative;
+	background: #fbfbfb url(../../images/download/app_download/download_bg.png) no-repeat center 0;
+	background-size:cover;
+}
+.download_box{ position:absolute; bottom:0; left:0;}
+.download_box .phone_btn,.download_box .android_btn{ 
+	position:absolute; bottom:11%; width:43%; padding-top:15%; background-color:transparent;
+}
+.download_box .phone_btn{ left:20px;}
+.download_box .android_btn{ right:20px;}

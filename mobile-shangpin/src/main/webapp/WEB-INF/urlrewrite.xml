@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+	<outbound-rule encodefirst="true">
+		<name>过滤存在jsessionid参数</name>
+		<note>
+			过滤存在jsessionid参数URL
+		</note>
+		<from>^(.*);jsessionid=.*$</from>
+		<to>$1</to>
+	</outbound-rule>
+	<outbound-rule match-type="wildcard">
+		<from>*;jsessionid=*</from>
+		<to>$1</to>
+	</outbound-rule>
+	<rule>
+		<name>首页</name>
+		<note>
+			首页URL
+		</note>
+		<from>^/$</from>
+		<to>/index</to>
+	</rule>
+	<outbound-rule>
+		<from>^/index$</from>
+		<to>/</to>
+	</outbound-rule>
+	
+	<rule>
+		<name>style商品列表</name>
+		<note>
+			style商品列表URL
+		</note>
+		<from>^/style/list_([0-9]+)$</from>
+		<to>/style/list?id=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/style/list\?id=([0-9]+)</from>
+		<to>/style/list_$1</to>
+	</outbound-rule>
+	<rule>
+		<name>品牌商品列表4</name>
+		<note>
+			品牌商品列表URL4  参数为 $1 为 brandNo $2为brandName $3为categoryNo
+		</note>
+		<from>^/brand/product/list_([a-zA-Z0-9]+)_(.*)_([a-zA-Z0-9]+)$</from>
+		<to>/brand/product/list?brandNo=$1&amp;brandName=$2&amp;categoryNo=$3</to>
+	</rule>
+<!-- 	<outbound-rule>
+		<from>/brand/product/list\?brandNo=([a-zA-Z0-9]+)&amp;brandName=(.*)&amp;categoryNo=([a-zA-Z0-9]+)</from>
+		<to>/brand/product/list_$1_$2_$3</to>
+	</outbound-rule> -->
+	<rule>
+		<name>品牌商品列表3</name>
+		<note>
+			品牌商品列表URL3 参数为 $1 为 brandNo $2为brandName
+		</note>
+		<from>^/brand/product/list_([a-zA-Z0-9]+)_(.*)$</from>
+		<to>/brand/product/list?brandNo=$1&amp;brandName=$2</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/brand/product/list\?brandNo=([a-zA-Z0-9]+)&amp;brandName=(.*)</from>
+		<to>/brand/product/list_$1_$2</to>
+	</outbound-rule> -->
+	<rule>
+		<name>品牌商品列表2</name>
+		<note>
+			品牌商品列表2URL 参数为 $1 为 brandNo $2为categoryNo
+		</note>
+		<from>^/brand/product/list_([a-zA-Z0-9]+)-([a-zA-Z0-9]+)$</from>
+		<to>/brand/product/list?brandNo=$1&amp;categoryNo=$2</to>
+	</rule>
+<!-- 	<outbound-rule>
+		<from>/brand/product/list\?brandNo=([a-zA-Z0-9]+)&amp;categoryNo=([a-zA-Z0-9]+)</from>
+		<to>/brand/product/list_$1-$2</to>
+	</outbound-rule> -->
+	<rule>
+		<name>品牌商品列表1</name>
+		<note>
+			品牌商品列表1URL 参数为 $1 为 brandNo
+		</note>
+		<from>^/brand/product/list_([a-zA-Z0-9]+)$</from>
+		<to>/brand/product/list?brandNo=$1</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/brand/product/list\?brandNo=([a-zA-Z0-9]+)</from>
+		<to>/brand/product/list_$1</to>
+	</outbound-rule> -->
+		<rule>
+		<name>活动尚品列表2</name>
+		<note>
+			活动尚品列表URL  $1.topicId $2.  postArea
+		</note>
+		<from>^/subject/product/list_([a-zA-Z0-9]+)_([0-9]+)$</from>
+		<to>/subject/product/list?topicId=$1&amp;postArea=$2</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/subject/product/list\?topicId=([a-zA-Z0-9]+)&amp;postArea=([0-9]+)</from>
+		<to>/subject/product/list_$1_$2</to>
+	</outbound-rule> -->
+	<rule>
+		<name>活动尚品列表</name>
+		<note>
+			活动尚品列表URL
+		</note>
+		<from>^/subject/product/list_([a-zA-Z0-9]+)$</from>
+		<to>/subject/product/list?topicId=$1</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/subject/product/list\?topicId=([a-zA-Z0-9]+)</from>
+		<to>/subject/product/list_$1</to>
+	</outbound-rule> -->
+
+	<rule>
+		<name>品类商品列表3</name>
+		<note>
+			品类商品列表URL3
+		</note>
+		<from>^/category/product/list_([a-zA-Z0-9]+)-(.*)$</from>
+		<to>/category/product/list?categoryNo=$1&amp;categoryName=$2</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/category/product/list\?categoryNo=([a-zA-Z0-9]+)&amp;categoryName=(.*)</from>
+		<to>/category/product/list_$1-$2</to>
+	</outbound-rule> -->
+	<rule>
+		<name>品类商品列表2</name>
+		<note>
+			品类商品列表URL2
+		</note>
+		<from>^/category/product/list_([a-zA-Z0-9]+)_(0|1)$</from>
+		<to>/category/product/list?categoryNo=$1&amp;gender=$2</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/category/product/list\?categoryNo=([a-zA-Z0-9]+)&amp;gender=(0|1)</from>
+		<to>/category/product/list_$1_$2</to>
+	</outbound-rule> -->
+	<rule>
+		<name>品类商品列表</name>
+		<note>
+			品类商品列表URL
+		</note>
+		<from>^/category/product/list_([a-zA-Z0-9]+)$</from>
+		<to>/category/product/list?categoryNo=$1</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/category/product/list\?categoryNo=([a-zA-Z0-9]+)</from>
+		<to>/category/product/list_$1</to>
+	</outbound-rule> -->
+	<rule>
+		<name>商品详情2</name>
+		<note>
+			商品详情URL2   参数为 $1 为 productNo $2为topicId
+		</note>
+		<from>^/product/detail_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$</from>
+		<to>/product/detail?productNo=$1&amp;topicId=$2</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/product/detail\?productNo=([a-zA-Z0-9]+)&amp;topicId=([a-zA-Z0-9]+)</from>
+		<to>/product/detail_$1_$2</to>
+	</outbound-rule> -->
+	<rule>
+		<name>商品详情1</name>
+		<note>
+			商品详情URL1   参数为 $1 为 productNo
+		</note>
+		<from>^/product/detail_([a-zA-Z0-9]+)$</from>
+		<to>/product/detail?productNo=$1</to>
+	</rule>
+	<!-- <outbound-rule>
+		<from>/product/detail\?productNo=([a-zA-Z0-9]+)</from>
+		<to>/product/detail_$1</to>
+	</outbound-rule> -->
+	
+	<rule>
+		<name>会场信息</name>
+		<note>
+			会场信息URL1
+		</note>
+		<from>^/meet/([0-9]+)$</from>
+		<to>/meet/index?id=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/meet/index\?id=([0-9]+)</from>
+		<to>/meet/$1</to>
+	</outbound-rule>
+
+
+	<!-- 个人中心 -->
+	<rule>
+		<name>订单列表</name>
+		<note>
+			订单列表URL
+		</note>
+		<from>^/order/list-([0-9]+)$</from>
+		<to>/order/list?statusType=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/order/list\?statusType=([0-9]+)</from>
+		<to>/order/list-$1</to>
+	</outbound-rule>
+
+	<rule>
+		<name>修改收货地址</name>
+		<note>
+			修改收货地址URL
+		</note>
+		<from>^/address/update-([0-9]+)$</from>
+		<to>/address/update?addressId=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/address/update\?addressId=([0-9]+)</from>
+		<to>/address/update-$1</to>
+	</outbound-rule>
+
+	<rule>
+		<name>订单详情</name>
+		<note>
+			订单详情URL
+		</note>
+		<from>^/order/detail-([0-9]+)$</from>
+		<to>/order/detail?mainOrderNo=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>/order/detail\?mainOrderNo=([0-9]+)</from>
+		<to>/order/detail-$1</to>
+	</outbound-rule>
+	
+	<!-- 旗舰店匹配短连接 -->
+	<rule>
+		<name>lanvin旗舰店详情页</name>
+		<note>
+			lanvin旗舰店详情URL
+		</note>
+		<from>^/lanvin$</from>
+		<to>/brand/product/list?brandNo=B0059&amp;brandName=LANVIN+%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>ash旗舰店详情页</name>
+		<note>
+			ash旗舰店详情URL
+		</note>
+		<from>^/ash$</from>
+		<to>/brand/product/list?brandNo=B0581&amp;brandName=ASH+%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>laperla旗舰店详情页</name>
+		<note>
+			laperla旗舰店详情URL
+		</note>
+		<from>^/laperla$</from>
+		<to>/brand/product/list?brandNo=B0458&amp;brandName=LA+PERLA%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>juicycouture旗舰店详情页</name>
+		<note>
+			juicycouture旗舰店详情URL
+		</note>
+		<from>^/juicycouture$</from>
+		<to>/brand/product/list?brandNo=B0280&amp;brandName=JUICY+COUTURE+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+	<rule>
+		<name>diesel旗舰店详情页</name>
+		<note>
+			diesel旗舰店详情URL
+		</note>
+		<from>^/diesel$</from>
+		<to>/brand/product/list?brandNo=B0136&amp;brandName=DIESEL+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+
+	<rule>
+		<name>moncler旗舰店详情页</name>
+		<note>
+			moncler旗舰店详情URL
+		</note>
+		<from>^/moncler$</from>
+		<to>/brand/product/list?brandNo=B0334&amp;brandName=MONCLER%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>hugoboss旗舰店详情页</name>
+		<note>
+			hugoboss旗舰店详情URL
+		</note>
+		<from>^/hugoboss$</from>
+		<to>/brand/product/list?brandNo=B0092&amp;brandName=HUGO%20BOSS%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+
+	<rule>
+		<name>vs旗舰店详情页</name>
+		<note>
+			vs旗舰店详情URL
+		</note>
+		<from>^/vs$</from>
+		<to>/brand/product/list?brandNo=B0209&amp;brandName=VICTORIA'S%20SECRET%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+
+	<rule>
+		<name>dvf旗舰店详情页</name>
+		<note>
+			dvf旗舰店详情URL
+		</note>
+		<from>^/dvf$</from>
+		<to>/brand/product/list?brandNo=B0284&amp;brandName=DIANE%20VON%20FURSTENBERG%20(DVF)%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>rayban旗舰店详情页</name>
+		<note>
+			rayban旗舰店详情URL
+		</note>
+		<from>^/rayban$</from>
+		<to>/brand/product/list?brandNo=B0036&amp;brandName=RAYBAN%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>swarovsk旗舰店详情页</name>
+		<note>
+			swarovsk旗舰店详情URL
+		</note>
+		<from>^/swarovsk$</from>
+		<to>/brand/product/list?brandNo=B0014&amp;brandName=SWAROVSKI%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>rimowa旗舰店详情页</name>
+		<note>
+			rimowa旗舰店详情URL
+		</note>
+		<from>^/rimowa$</from>
+		<to>/brand/product/list?brandNo=B0228&amp;brandName=RIMOWA%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>prettyballerinas旗舰店详情页</name>
+		<note>
+			prettyballerinas旗舰店详情URL
+		</note>
+		<from>^/prettyballerinas$</from>
+		<to>/brand/product/list?brandNo=B0693&amp;brandName=PRETTY%20BALLERINAS+%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>prettyballerinas旗舰店详情页</name>
+		<note>
+			prettyballerinas旗舰店详情URL
+		</note>
+		<from>^/prettyballerinas$</from>
+		<to>/brand/product/list?brandNo=B0693&amp;brandName=PRETTY%20BALLERINAS+%E6%97%97%E8%88%B0%E5%BA%97</to>
+	</rule>
+	<rule>
+		<name>dkny旗舰店详情页</name>
+		<note>
+			dkny旗舰店详情URL
+		</note>
+		<from>^/dkny$</from>
+		<to>/brand/product/list?brandNo=B0066&amp;brandName=DKNY+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+	<rule>
+		<name>chrisbychristopherbu旗舰店详情页</name>
+		<note>
+			chrisbychristopherbu旗舰店详情URL
+		</note>
+		<from>^/chrisbychristopherbu$</from>
+		<to>/brand/product/list?brandNo=B1514&amp;brandName=CHRIS+BY+CHRISTOPHER+BU+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+	<rule>
+		<name>ashworth旗舰店详情页</name>
+		<note>
+			ashworth旗舰店详情URL
+		</note>
+		<from>^/ashworth$</from>
+		<to>/brand/product/list?brandNo=B1136&amp;brandName=Ashworth+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+	<rule>
+		<name>laperla旗舰店详情页</name>
+		<note>
+			laperla旗舰店详情URL
+		</note>
+		<from>^/laperla$</from>
+		<to>/brand/product/list?brandNo=B0458&amp;brandName=LA+PERLA+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+	<rule>
+		<name>topshop旗舰店详情页</name>
+		<note>
+			topshop旗舰店详情URL
+		</note>
+		<from>^/topshop/index$</from>
+		<to>/brand/product/list?brandNo=B1885&amp;brandName=TOPSHOP</to>
+	</rule>
+	<rule>
+		<name>topshop旗舰店详情页</name>
+		<note>
+			topshop旗舰店详情URL
+		</note>
+		<from>^/topshop$</from>
+		<to>/brand/product/list?brandNo=B1885&amp;brandName=TOPSHOP</to>
+	</rule>
+	<rule>
+		<name>replay旗舰店详情页</name>
+		<note>
+			replay旗舰店详情URL
+		</note>
+		<from>^/replay$</from>
+		<to>/brand/product/list?brandNo=B0257&amp;brandName=REPLAY+%e6%97%97%e8%88%b0%e5%ba%97</to>
+	</rule>
+	
+	
+	<rule>
+		<name>会场浦发银行跳转页面</name>
+		<note>
+			会场浦发银行跳转页面
+		</note>
+		<from>^/pf88$</from>
+		<to>/meet/index?id=235</to>
+	</rule>
+	<rule>
+		<name>会场中行银行跳转页面</name>
+		<note>
+			会场中行银行跳转页面
+		</note>
+		<from>^/icbc88$</from>
+		<to>/meet/index?id=199</to>
+	</rule>
+	<rule>
+		<name>topman页面转化</name>
+		<note>
+			topman页面转化
+		</note>
+		<from>^/DenimFitGuide$</from>
+		<to>/brandStory/raider</to>
+	</rule>
+	<!-- 旧链接转向 -->
+	<rule>
+		<name>活动列表</name>
+		<note>
+			活动列表URL
+		</note>
+		<from>^/women/subject/([0-9]+)$</from>
+		<to type="redirect">%{context-path}/subject/product/list?topicId=$1</to>
+	</rule>
+</urlrewrite>
+

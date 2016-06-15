@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+.coupon {
+	padding: 10px;
+}
+.coupon h3 {
+	line-height: 48px;
+}
+.coupon dt {
+	line-height: 32px;
+}
+.coupon dd {
+	width: 100%;
+	overflow: hidden;
+}
+.coupon input[type="tel"], #J_Code {
+	height: 38px;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 18px;
+	width: 60%;
+	padding: 0 5px;
+	float: left;
+}
+.alList_moreBtn {
+	display: inline-block;
+	width: 33%;
+	margin: 0;
+	float: right;
+	height: 38px;
+	line-height: 38px;
+	color: #303030;
+	cursor: pointer;
+}
+.mobile_errorMsg, .code_errorMsg {
+	height: 32px;
+	line-height: 32px;
+	display: block;
+	clear: left;
+	color: #B51111;
+}
+.coupon_success p a {
+	color: #0024ff;
+	text-decoration: underline;
+}

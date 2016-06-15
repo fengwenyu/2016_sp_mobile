@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+.alBrand_list{width:100%; clear:both;}
+.alBrand_list header{height:auto; line-height:30px; border-bottom:1px solid #dbdbdb; color:#000; padding:0 10px 5px;}
+.alBrand_list header h3{padding:0 30px 0 10px; font-weight:normal; line-height:120%; font-weight:700; font-size:14px; padding:10px 0 0 0;}
+.alBrand_list header h3 em{font-weight:normal; display:block; color:#666;}
+.alBrand_list header span{display:block; font-size:12px; line-height:150%;height: 18px;}
+.alBrand_list header span em{color:#b51111;}
+
+.alBrand_list ul{margin:0 auto 25px; font-size:0; width:320px; letter-spacing:-3px; font-size:0;}
+@media only screen and (device-width: 800px) {
+.alBrand_list ul {letter-spacing:0px;}
+}
+.alBrand_list ul li{width:159px; vertical-align:top; display:inline-block; overflow:hidden; letter-spacing:normal; font-size:14px; border-bottom:1px solid #dbdbdb; border-right:1px solid #dbdbdb;}
+.alBrand_list ul li:nth-child(2n){border-right:none;}
+.alBrand_list ul li a{display:block; text-align:center; position:relative;}
+.alBrand_list_info{font-size:12px; padding:10px 0 0 10px; text-align:left;}
+.alBrand_list_info p, .alBrand_list_info span{color:#000; display:block;}
+.alBrand_list_info p{line-height:130%; overflow:hidden;}
+.alBrand_list_info p em{display:block; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.alBrand_list_info span{color:#b51111; line-height:30px; font-size:14px;}
+.alBrand_list_info span i{font-weight:700;}
+.alBrand_list_info span em{font-size:16px; font-weight:700;}
+.alBrand_list_info span del{color:#666; margin-left:8px;}
+
+.alBrand_list ul li a i.saletip{display:block; position:absolute; top:10px; right:10px; font-size:10px;}
+.alBrand_list ul li a i.newTip{width:0; height:0; color:#fff; border-left:18px solid #fff; border-bottom:18px solid #fff; border-top:18px solid #d41313; border-right:18px solid #d41313; top:0; right:0;}
+.alBrand_list ul li a i.newTip em{display:block; position:absolute; top:0; left:0;
+	-moz-transform:translate(-8px,-12px) rotate(45deg);
+	-webkit-transform:translate(-8px,-12px) rotate(45deg);
+	-o-transform:translate(-8px,-12px) rotate(45deg);
+	transform:translate(-8px,-12px) rotate(45deg);
+}
+.alBrand_list ul li a i.saleoutTip{width:32px; height:32px; line-height:32px; text-align:center; overflow:hidden; background:#d5d5d5; -webkit-border-radius:18px; border-radius:18px; color:#fff;}
+.alBrand_list ul li a i.salelastTip{width:32px; height:32px; text-align:center; overflow:hidden; background:#b51111; -webkit-border-radius:18px; border-radius:18px; color:#fff;}
+.alBrand_list ul li a i.salelastTip em{line-height:120%; display:inline-block; margin:5px 0 0 0;}
+.alBrand_list ul li a i.salelastTip em.newTip{line-height:25px;}
+.alBrand_list ul li a i.salelastTip em b{font-weight:normal; font-size:10px;}
+.alBrand_list ul li a p.soonBegin{width:100%; background:rgba(0,0,0,.3); color:#fff; height:25px; line-height:25px; position:absolute; left:0; top:197px;}

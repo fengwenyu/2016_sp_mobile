@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*downloadApp*/
+.headApp {width: 100%}
+.headApp img { display: block;width: 100%}
+.daoliuBanner {position: fixed;bottom: 0;box-sizing: border-box; z-index: 10}
+.daoliuBanner img {width: 100%}
+.track{ position:relative;}
+.close-app{ display:block;width: 25px;height: 25px;position:absolute;top:0;left: 0; z-index:999; cursor:pointer}
+.topFix section { position:static;max-width: 640px;}
+body .alContent {margin-top: 0px;}
+.topFix{min-width:320px; max-width:640px;position:static; height:45px;}
+
+
+.topBack p{position:absolute; right:15px; top:0px; }
+.topBack p a{color:#fff;}
+
+
+.shang_share{position: fixed;
+right:15px;
+bottom: 20px;
+z-index:99;}

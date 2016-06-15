@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#fff}
+
+.main_box{width:100%;max-width:640px;margin:0 auto 15px;}
+.main_box a{display:block;width:100%;}
+.main_box img{display:block;width:100%;}
+.top_img{width:100%;display:block;}
+
+.flex{display: -webkit-box;display: -webkit-flex;display: flex;}
+.flex-1{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1;}
+.flex-2{-webkit-box-flex: 2;-webkit-flex: 2;flex: 2;}
+.flex-3{-webkit-box-flex: 3;-webkit-flex: 3;flex: 3;}
+.padd-l{padding-left:5px;}
+.padd-r{padding-right:5px;}
+.padd-t{padding-top:5px;}
+
+.list-one { background:#fff; padding-top:5px; display: -webkit-box;display: -webkit-flex;display: flex;}
+.list-one li{ -webkit-box-flex: 1;-webkit-flex: 1;flex: 1;  padding-right:5px ;box-sizing:border-box;}
+.list-one li:last-child{ padding-right:0}
+
+.list-two{ background:#fafafa; padding:5px 10px 5px 0; }
+.list-two li{ padding-right: 20px}
+
+.line{background:#f4f4f4; height:30px; margin:5px 0}
+.t_img{width:100%;display:block;padding:8px 0;}
+.t_text{ font-family:"微软雅黑"; font-size:14px; color:#777; padding:10px 10px 0; line-height:22px;}

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+
+	<class name="OrderStatistics" table="orderstatistics">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="userId" type="string">
+			<column name="userId" length="50"/>
+		</property>
+		<property name="orderId" type="string">
+			<column name="orderId" length="30"/>
+		</property>
+		<property name="orderAmount" type="float">
+			<column name="orderAmount"/>
+		</property>
+		<property name="onlineAmount" type="float">
+			<column name="onlineAmount"/>
+		</property>
+		<property name="couponAmount" type="float">
+			<column name="couponAmount"/>
+		</property>
+		<property name="giftcardAmount" type="float">
+			<column name="giftcardAmount"/>
+		</property>
+		<property name="skucounts" type="integer">
+			<column name="skucounts"/>
+		</property>
+		<property name="objectcounts" type="integer">
+			<column name="objectcounts"/>
+		</property>
+		<property name="orderProduct" type="long">
+			<column name="orderProduct"/>
+		</property>
+		<property name="orderChannel" type="long">
+			<column name="orderChannel"/>
+		</property>
+		<property name="isok" type="string">
+			<column name="isok" length="4"/>
+		</property>
+		<property name="payProduct" type="long">
+			<column name="payProduct"/>
+		</property>
+		<property name="payChannel" type="long">
+			<column name="payChannel"/>
+		</property>
+		<property name="ispaid" type="string">
+			<column name="ispaid" length="4"/>
+		</property>
+		<property name="orderTime" type="timestamp">
+			<column name="orderTime" />
+		</property>
+		<property name="payTime" type="timestamp">
+			<column name="payTime" />
+		</property>
+		<property name="mainPayMode" type="string">
+			<column name="mainPayMode" length="8"/>
+		</property>
+		<property name="subPayMode" type="string">
+			<column name="subPayMode" length="8"/>
+		</property>
+		<property name="orderOrigin" type="string">
+			<column name="orderOrigin" length="10"/>
+		</property>
+		<property name="orderType" type="string">
+			<column name="orderType" length="4"/>
+		</property>
+		<property name="orderRetcode" type="string">
+			<column name="orderRetcode" length="20"/>
+		</property>
+		<property name="ip" type="string">
+			<column name="ip" length="40"/>
+		</property>
+		<property name="city" type="string">
+			<column name="city" length="200"/>
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="markup" type="string">
+			<column name="markup" length="40"/>
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+
+/*老版本发票地址*/
+.invoice_select{width:100%; padding:5px 0; border-bottom:1px solid #dbdbdb;}
+#invoice_addr{border-bottom:none;}
+.invoice_select li{width:100%;}
+.invoice_select li dl{display:table; width:100%;}
+.invoice_select li dl dt, .invoice_select li dl dd{display:table-cell;}
+.invoice_select li dl dt{color:#636363; padding:5px 0 0 10px; line-height:150%; width:70px;}
+.invoice_select li dl dd a{display:inline-block;width:68px; margin:4px 5px 4px 0; background:#fff; text-align:center; font-size:12px; border:1px solid #dbdbdb; color:#636363; height:28px; line-height:28px; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.invoice_select li dl dd a.big{width:95px;}
+.invoice_select li dl dd a em{border:1px solid #fff; display:block; height:26px; line-height:26px; position:relative;}
+.invoice_select li dl dd a em i{display:block; width:12px; height:12px; position:absolute; right:0; bottom:0; display:none;}
+.invoice_select li dl dd a em i img{display:block; float:left;}
+.invoice_select li dl dd a.cur{border:1px solid #000;}
+.invoice_select li dl dd a.cur em{border:1px solid #000;}
+.invoice_select li dl dd a.cur em i{display:block;}
+.invoice_select span{display:block; margin:5px 0;}
+.invoice_select span input{border:1px solid #dbdbdb; height:26px; width:90%; margin:0 auto; display:block; padding:0 5px;}
+.invoice_select span input:last-child{display:none;}
+.invoice_select p{padding:5px 10px; color:#000; line-height:160%;}
+.invoice_select p em{color:#d4070e;}
+
+.invoice_addrForm{display:none;}
+.invoice_addrForm li { padding-bottom:12px; }
+.invoice_addrForm li label { display:inline-block; width:70px; text-align:right; }
+.invoice_addrForm li input { width:180px; height:30px; line-height:28px; border:1px solid #dbdbdb; }
+.invoice_addrForm li select { height:auto; line-height:normal; padding:4px 2px; width:182px;}

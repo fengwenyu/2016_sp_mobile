@@ -1,0 +1,62 @@
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 
+	<include file="struts-plugin.xml" />
+	<include file="struts-default.xml" />
+ -->
+
+	<!-- 配制国际化资源文件 -->
+	<constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+	<constant name="struts.devMode" value="true" />
+	<!-- 配制请求编码(request) -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+
+	<constant name="struts.objectFactory" value="spring" />
+
+	<!-- 配置启动重新读取文件 -->
+	<constant name="struts.i18n.reload" value="true"></constant>
+	
+	<!-- struts-2.3.15.2 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+	<!-- 配置启动action返回global-results的默认父类 -->
+	<constant name="struts.configuration.classpath.defaultParentPackage" value="mobileShangpin" />
+	<!-- 确保Spring的自动装配策略总是被考虑的
+	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" />  -->
+	<package name="mobileShangpin" extends="json-default">
+		<interceptors>
+			<!-- 声明拦截器 -->
+			<interceptor name="log" class="com.shangpin.mobileShangpin.common.interceptor.LogInterceptor"></interceptor>
+			<!-- 声明一个新的拦截器栈 -->
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="log" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 指定默认使用我们新定义的拦截器栈 -->
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		
+		<!-- 配置全局的result页面
+		<global-results>
+			<result name="message">/WEB-INF/pages/common/message.jsp</result>
+			<result name="intercept">/WEB-INF/pages/common/no_privilege.jsp</result>
+			<result name="session_login">/WEB-INF/pages/shop_back_user/login_index.jsp</result>
+		</global-results>
+        -->
+	</package>
+
+	<!-- 为支付Servlet放行 -->
+	<package name="alipay" extends="struts-default" namespace="/alipay">
+		<action name="*">
+			<result>{1}</result>
+		</action>
+	</package>
+   <!-- 为支付Servlet放行 -->
+	<package name="minshengpay" extends="struts-default" namespace="/minshengpay">
+		<action name="*">
+			<result>{1}</result>
+		</action>
+	</package>
+</struts> 

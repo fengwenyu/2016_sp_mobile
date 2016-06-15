@@ -1,0 +1,14 @@
+
+.topSearch{background-color:#36393e; height:30px; padding:8px 0 8px 44px;}
+fieldset{margin:0 12px 0 0; clear:both;}
+fieldset.curr{margin:0;}
+fieldset p{height:24px; line-height:24px; padding:3px 0; background-color:#fff; position:relative; float:left; width:100%; -webkit-border-radius:15px; border-radius:15px;}
+fieldset p label{display:inline-block; width:30px; height:24px; background:url(../../../../styles/shangpin/images/search_icon.png) no-repeat center center; background-size:13px 13px;}
+fieldset p input{border:0 none; background:rgba(0,0,0,0); height:24px; width:85%; z-index:0; color:#d5d5d5;}
+fieldset p button{width:24px;height:24px;position:absolute;border:0;right:5px;top:3px;background-color:transparent;text-align:center;display:none; background:url(../../images/close.png) no-repeat left center; -webkit-background-size:100%; -moz-background-size:100%; background-size:100%; z-index:10;}
+fieldset .search_btn{height:32px; width:50px; display:block; text-align:center; line-height:32px; color:#fff; font-weight:bold; float:left; display:none;}
+.slideLeft{width:80%;}
+.slideRight{width:100%;}
+
+.search_fail{width:250px; margin:0 auto; line-height:22px; padding-top:20px; height:150px;}
+.search_fail span{color:#ea1616;}

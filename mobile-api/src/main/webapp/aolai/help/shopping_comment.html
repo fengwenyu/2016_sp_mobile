@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>帮助中心</title>
+<link href="../../css/base.css" rel="stylesheet" />
+<link href="../../css/public.css" rel="stylesheet" />
+<link href="../../css/page/help_center.css" rel="stylesheet" /><!--页面专用CSS-->
+
+<script src="../../js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  var ver = Math.random();
+    loader = SP.core
+      .install("../../js/jquery.min.js?" + ver)  //jquery库文件
+        .using("../../js/lazyload.js?" + ver)    //图片懒加载
+        .excute()
+        .using("../../js/config.sim.js?" + ver)  //图片懒加载
+		.using("../../js/page/help_center.js?" + ver)
+        .excute();
+      
+</script>
+</head>
+<body>
+  <div class="container">    
+    <!-- 页面内容start -->
+    <div class="alContent">
+      <div class="problem-box">
+        <h3>在您确认收货之后，则能够进行商品评价，目前我们的评价体系还未完善，敬请期待。</h3>
+    </div>
+    <!-- 页面内容end -->
+  </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+.main_box{
+	width:100%;
+	max-width:640px;
+	min-width:320px;
+	margin:0 auto;
+}
+.main_box a{
+	display:block;
+	width:100%;
+}
+.main_box img{
+	display:block;
+	width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	min-width:167px;
+	max-height:334px;
+	padding-bottom:10px;
+}
+.prod_list{
+	padding:10px 20px 0 10px;
+}
+.prod_list li{
+	float:left;
+	width:50%;
+	margin-bottom:10px;
+}
+.prod_list li:nth-child(2n){
+	float:right;
+	margin-right:-10px;
+}
+
+.main_box h2{
+	width:100%;
+}
+.category_box{}
+
+#loading{width:320px; margin:10px auto; text-align:center;}
+#loading img{ display:inline-block;}
+#loading p{ line-height:20px; font-size:14px;}
+
+
+/*右侧导航*/
+.nav_menu_pop{
+	position:absolute; 
+	width:100%; 
+	left:0; 
+	top:0; 
+	overflow:hidden; 
+	z-index:100; 
+	background-color:rgba(0,0,0,0);
+	/*display:none;*/ 
+}
+.nav_more{
+	width:50px;
+	height:auto;	
+	z-index:101;
+}
+.nav_more span{
+	display: block;
+	width:50px;
+	height:50px;
+	background:url(../../images/20141113/pic_arrow_new.png) 0 0 no-repeat;
+	cursor:pointer;
+	position:fixed;
+	right:0;
+
+}
+.nav_more span.nav_list{
+	background-size:50px;
+	background-position:0 -150px;
+	bottom:80px;
+}
+.nav_more span.nav_top{
+	background-size:50px;
+	margin-top:10px;
+	display:none;
+	bottom:25px;
+}
+ul.nav_menu{
+	width:134px;
+	background:url(../../images/20141113/pic_top_bg.png) 0 0 no-repeat;
+	background-size:134px;
+	position:fixed;
+	bottom:0;
+	z-index:102; 
+	
+}
+ul.nav_menu li.top{
+	height:61px;
+	background:none;
+	padding:0;
+}
+ul.nav_menu li.top .pop_close{
+	width:20px;
+	height:20px;
+	float:right;
+	text-indent:-3000px;
+}
+ul.nav_menu li.top .pop_return{
+	width:130px;
+	height:30px;
+	float:right;
+	text-indent:-3000px;
+	display: block;
+}
+ul.nav_menu li{
+	background:url(../../images/20141113/pic_li_bg.png) 0 0 no-repeat;
+	background-size:134px;
+	height:35px;
+	line-height:35px;
+	padding:0 20px; 
+	
+
+}
+ul.nav_menu li a{
+	color:#fff;
+}
+ul.nav_menu li span{
+	padding-left:15px;
+	display: inline-block;
+}
+ul.nav_menu li.curr{
+	background-position:0 -35px;
+	background-size:134px;
+}
+
+
+ul.slideIn{
+	right:0;
+	animation: slideIn 0.6s ease-in-out;
+	-moz-animation: slideIn 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideIn 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideIn 0.6s ease-in-out;
+}
+ul.slideOut{	
+	right:-100%;
+	animation: slideOut 0.6s ease-in-out;
+	-moz-animation: slideOut 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideOut 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideOut 0.6s ease-in-out;
+}
+
+@keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+@-moz-keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+@-webkit-keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+@-o-keyframes slideIn
+{
+0%{ right: -100%; }
+100%{ right: 0; }
+}
+
+
+
+@keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+@-moz-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+@-webkit-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}
+
+@-o-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -100%; }
+}

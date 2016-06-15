@@ -1,0 +1,335 @@
+@charset "utf-8";
+.container {
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto 0;
+	font-size:12px;
+	font-family: "微软雅黑", "Microsoft YaHei", "黑体", "Tahoma", "宋体";
+	background:#f2f2f2;
+}
+
+
+/*收货地址start*/
+.paymet_block{
+	width:100%;
+	font-size:14px;
+}
+.paymet_block p.addr_block{
+	margin-top:10px;
+	padding:0 15px;
+	background-color:#fff;
+	color:#555;
+	border-top:1px solid #d8d8d8;
+	border-bottom:1px solid #d8d8d8;
+}
+.paymet_block p.addr_block span{
+	display:block;
+	padding:10px 0;
+	line-height:20px;
+	border-bottom:1px solid #d8d8d8;
+}
+.paymet_block p.addr_block span i{
+	display:block;
+	line-height:30px;
+}
+.paymet_block p.addr_block span.addr_edit{
+	border:none;
+	text-align:right;
+}
+.paymet_block p.addr_block span.addr_edit a{
+	display:inline-block;
+	color:#2d2d2d;
+	height:20px;
+	padding-left:20px;
+	background-image:url(../../../images/process/edit_icon.png);
+	background-repeat:no-repeat;
+	background-size:16px;
+}
+.paymet_block p.addr_block span.addr_edit a.editBtn{
+	background-position:0 0;
+}
+.paymet_block p.addr_block span.addr_edit a.deletBtn{
+	background-position:0 -20px;
+}
+
+.paymet_block fieldset {
+	width:100%;
+	padding-bottom:70px;
+}
+.paymet_block fieldset ul{
+	border-bottom: 1px solid #d8d8d8;
+	background-color: #fff;
+	height: auto;
+	padding: 10px;
+	position: relative;
+}
+.paymet_block fieldset ul li{
+	color:#888;
+	line-height: 150%;
+	background: url(../../../images/process/pic_warning.png) 0 center no-repeat;
+	background-size:18px;
+	padding:0 15px 0 30px;
+}
+.paymet_block fieldset.notBtm{
+	padding-bottom:0;
+}
+.paymet_block fieldset legend {
+	color: #2d2d2d;
+	font-size: 16px;
+	padding:0 15px;
+	height:39px;
+	line-height:39px;
+	border-bottom:1px solid #d8d8d8;
+	display:block;
+	width: 100%;
+	box-sizing: border-box;
+}
+.paymet_block fieldset p {
+	border-bottom:1px solid #d8d8d8;
+	background-color:#fff;
+	height: 39px;
+	line-height: 39px;
+	color: #999;
+	padding:0 15px;
+	position: relative;
+}
+.paymet_block fieldset p.price{
+	color:#555;
+	margin-top:10px;
+	border-top:1px solid #d8d8d8;
+}
+
+.paymet_block fieldset p.select a{
+	background:url(../../../images/process/arrow_r.png) no-repeat right center;
+	background-size:7px 12px;
+	color: #555;
+	display:block;
+}
+
+.paymet_block fieldset p label {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width:75px;
+	font-size:12px;
+	color: #555;
+}
+.paymet_block fieldset p input[type=text], .paymet_block fieldset p input[type=password]{
+	border: 1px solid #fff;
+	background: rgba(0,0,0,0);
+	height: 24px;
+	width: 65%;
+	z-index: 0;
+	font-size:12px;
+	padding:0 5px;
+}
+.paymet_block fieldset p input[type=password].giftCard{
+	border:1px solid #eee;
+	height:28px;
+	margin:5px 0;
+	width:95%;
+}
+.paymet_block fieldset p input[type=text].error, .paymet_block fieldset p input[type=password].error{
+	border:1px solid #f00;
+}	
+.explain{
+	width:auto;
+	padding:0 15px 20px;
+}
+.explain h3{
+	color:#555;
+	font-size:14px;
+	padding:0 0 10px;
+	line-height:200%;
+	font-weight:normal;
+	text-align:center;
+}
+.explain p{
+	font-size:13px;
+	color:#888;
+	line-height:200%;
+
+}
+/*收货地址end*/
+
+/*提交按钮 start*/
+.payment_fixed{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	background-color:#f2f2f2;
+	border-top:1px solid #d8d8d8;
+}
+.payment_submit{	
+	position:relative;
+	margin: 15px;
+	height:40px;
+}
+.payment_submit.right_btn{position:absolute; right:0; bottom:0; width:130px;}
+.payment_submit dl{
+	display:-webkit-box;
+	display:-moz-box;
+	display:-o-box;
+	display:box;
+	width:100%;
+}
+.payment_submit dt{
+	width:8px;
+}
+.payment_submit dd{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	box-flex:1;
+}
+.payment_btn {
+	background-color:#c62026;
+	border:1px solid #c62026;
+	height: 38px;
+	line-height: 38px;
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	box-sizing: border-box;
+}
+.payment_btn:hover{
+	background-color:#aa0006;
+	border:1px solid #aa0006;
+}
+input.payment_btn{
+	opacity:0; outline:none;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	width: 100%;
+	margin:0 auto;
+	cursor:pointer;
+}
+input.payment_btn:hover{
+	background-color:#aa0006;
+	border:1px solid #aa0006;
+}
+/*提交按钮 start*/
+
+/*弹框显示地址start*/
+._area_overlay{
+	position:absolute;
+	z-index:99998;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,.4);
+	display:none;
+}
+._area_layer{
+	position: fixed;
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	bottom: 0;
+	border-radius:0;
+	left: auto;
+	top:auto;
+	margin: 0 auto;
+	z-index: 99999;
+	background-color: #fff;
+	display: none;
+
+}
+._area_layer h3 {
+	color: #000;
+	font-size: 16px;
+	font-weight:normal;
+	padding:0 15px;
+	height:39px;
+	line-height:39px;
+	display:block;
+	width: 100%;
+	box-sizing: border-box;
+	background-color:#f2f2f2;
+	-webkit-border-top-left-radius:5px;
+	border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-right-radius:5px;
+	text-align: center;
+}
+
+._area_layer dl{
+	width:100%;
+	height:207px;	
+	overflow:hidden;
+	overflow-y:auto;
+}
+._area_layer dl:not(:first-of-type){
+	display:none;
+}
+._area_layer dd {
+	border-bottom:1px solid #d8d8d8;
+	height: 39px;
+	line-height: 39px;
+	color: #999;
+	padding:0 15px;
+	position: relative;
+}
+._area_layer dd  a{
+	display:block;
+	font-size:12px;
+	color:#555;
+	background:url(../../../images/radio.png) no-repeat right 0;
+	background-size:21px;
+}
+._area_layer dd  a.cur{
+	background:url(../../../images/radio.png) no-repeat right -40px;
+	background-size:21px;
+}
+
+
+._area_layer dd{
+	z-index:999999;
+}
+
+._area_layer .prev_btn {
+	position: absolute;
+	top: 12px;
+	left: 10px;
+	background: url(../../../images/prev_btn.png) 0 0 no-repeat;
+	background-size: 15px;
+	text-indent: -3000px;
+	display: none;
+	width: 15px;
+	height: 15px;
+}
+
+._area_layer .close_btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: url(../../../images/detail/close.png)  no-repeat;
+	background-size: 15px;
+	text-indent: -3000px;
+	display: block;
+	width: 15px;
+	height: 15px;
+}
+._area_layer h2{
+	background:#f2f2f2;
+	padding: 0 15px;
+	line-height:32px;
+	height:32px;
+}
+._area_layer h2 a.cancel_btn, ._area_layer h2 a.sure_btn{
+	float:left;
+	display:block;
+	color:#f03232;
+	font-size:15px;
+	font-weight:normal;
+}
+._area_layer h2 a.sure_btn{
+	float:right;
+}
+
+/*弹框显示地址end*/
+

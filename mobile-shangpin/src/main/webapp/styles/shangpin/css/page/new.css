@@ -1,0 +1,14 @@
+body .alContent{background-color:#000;}
+/*最新到货*/
+.new_box{width:320px; margin:0 auto; min-height:480px; max-height:504px; height:auto; background:url(../../images/new/new_bg.jpg) no-repeat 0 0; background-size:320px auto; position:relative;}
+.new_box ul{position:absolute; left:0; bottom:50px; width:100%;}
+.new_box ul li{width:316px; margin:0 auto;}
+.new_box h2{width:100%; text-align:center; padding-bottom:200px; line-height:30px; font-size:16px; color:#fff; font-weight:normal;}
+.new_box p{width:100%; height:60px;}
+.new_box p a{width:150px; height:50px; padding-top:10px; float:left; margin:0 4px; text-align:center; color:#fff; font-size:20px; background-color:rgba(18,20,25,.8); line-height:100%;}
+.new_box p a em{display:block; font-size:12px;}
+
+@media screen and (max-device-height: 480px) {
+	.new_box{min-height:320px;}
+	.new_box h2{padding-bottom:100px;}
+}

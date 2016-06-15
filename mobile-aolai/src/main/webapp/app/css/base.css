@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+*{/*-webkit-tap-highlight-color:rgba(0, 0, 0, 0);*/ margin:0;padding:0;}
+body{background:#333; font-size:13px; -webkit-touch-callout:none; -webkit-user-select:none; -webkit-text-size-adjust:none; font-family:arial; background:#fff;}
+ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+a, fieldset, img{border:none;}
+input,img{vertical-align:middle;}
+i,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+input[type=text],input[type=password],input[type=number],input[type=url],input[type=email],input[type=tel]{font-size:14px; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); -webkit-appearance:none; appearance:none;  outline:none;}
+input[type=checkbox],input[type=radio],select{vertical-align:middle;}
+select{font-size:16px;height:30px;line-height:30px;}
+textarea{font-size:14px;border:1px #ccc solid;-webkit-box-shadow:inset 0 2px 2px #999;box-shadow:inset 0 2px 2px #999;}
+header,nav,section,footer{display:block;}
+.txt_center { text-align:center;}
+.txt_right { text-align:right;}
+a, a:link, a:visited, a:hover, a:active{text-decoration:none;}
+
+/* 弹出对话框样式 */
+/*#popup_container{font-family: helvetica; font-size:21px; width:280px; min-width: 280px; max-width: 320px; background: #444; border:4px solid #b2b7c2; color: #fff; -moz-border-radius: .7em; -webkit-border-radius: .7em; border-radius: .7em; -webkit-box-shadow:rgba(0, 0, 0, 0.4) 0 0.1em 5px;}
+#popup_title{font-size: 21px; font-weight: normal; text-align: center; height:40px; line-height:40px; color: #fff; cursor: default; padding: 0em; margin: 0em;}
+#popup_content{padding: 0 0 15px; margin: 0em;}
+#popup_content button{border:1px solid #4b4b4b; color:white; width:130px; height:40px; line-height:40px; margin:0 0.2em; -moz-border-radius: .3em; -webkit-border-radius:0.3em; border-radius:0.3em; overflow:hidden; font-size:18px; font-weight:bold; -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+#popup_ok{background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#7e7e7e),color-stop(0.5,#404040),color-stop(0.51,#282828),color-stop(1,#313131)); background:-moz-linear-gradient(top, #7e7e7e, #404040 50%, #282828 51%, #313131 100%); background:-o-repeating-linear-gradient(top, #7e7e7e, #404040 50%, #282828 51%, #313131 100%);}
+#popup_cancel{background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#b4b4b4),color-stop(0.5,#737477),color-stop(0.51,#5a5a5d),color-stop(1,#6a6b6e)); background:-moz-linear-gradient(top, #b4b4b4, #737477 50%, #5a5a5d 51%, #6a6b6e 100%); background:-o-repeating-linear-gradient(top, #b4b4b4, #737477 50%, #5a5a5d 51%, #6a6b6e 100%);}
+/*#popup_content button:active{background:#333;}
+#popup_message{text-align: center; margin:25px 0; padding:6px 0; text-shadow:rgba(0, 0, 0, 0.5) 0 -0.08em 0;}
+#popup_panel{text-align: center; margin: .5em 0em 0em 0em;}
+#popup_prompt{margin: .5em 0em;}*/
+/* 弹出对话框样式 */
+
+/* 弹出对话框样式 */
+#popup_container{font-family: helvetica; font-size:16px; font-weight:bold; width:310px; min-width: 300px; /* Dialog will be no smaller than this */ max-width: 600px; /* Dialog will wrap after this width */ opacity:0.75; background: #000; border: 0; color: #fff; -moz-border-radius: 0.3em; -webkit-border-radius: 0.3em; border-radius: 0.3em; -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 5px;}
+#popup_title{font-size: 14px; font-weight: bold; text-align: center; line-height: 1.75em; color: #666; background: #CCC; border: solid 1px #FFF; border-bottom: solid 1px #999; cursor: default; padding: 0em; margin: 0em; display:none;}
+#popup_content{padding: 15px; margin: 0em;}
+#popup_content button{background:#666; border:0; color:white; -webkit-box-shadow:rgba(255, 255, 255, 0.1) 0 0.1em 0; width:100px; height:40px; margin:0 0.2em; padding:.3em .6em; -webkit-border-radius:0.5em; border-radius:0.5em; overflow:hidden; font-size:0.7em; font-weight:bold;}
+#popup_content button:active{background:#333;}
+#popup_message{text-align: center; height:30px; margin-top:10px; padding:6px 0; text-shadow:rgba(0, 0, 0, 0.5) 0 -0.08em 0;}
+#popup_message img{vertical-align:central;}
+#popup_panel{text-align: center; margin: .5em 0em 0em .5em;}
+#popup_prompt{margin: .5em 0em;}
+/* 弹出对话框样式 */
+
+/* ====================   头部通用  ================= */
+header{width:100%;height:50px; position:relative;}
+#alLogo{width:120px;height:30px;position:absolute;left:10px;top:10px;background:url(../../images/logo.png) no-repeat; background-size:100%;}
+#alLogo a{display:block;height:100%;text-indent:-9999px;overflow:hidden;}
+
+.alUser_icon{position:absolute; right:10px; top:10px;}
+.alUser_icon ul{width:auto; height:31px; clear:both;}
+.alUser_icon ul li{width:31px; height:31px; overflow:hidden; margin-left:15px; float:left;}
+.alUser_icon a{display:block; width:31px; height:32px;}
+
+.alMenu{height:28px;line-height:28px;background:#f7f7f7; border-top:1px solid #f3f3f3; border-bottom:1px solid #e4e4e4;}
+.alMenu ul{display:-webkit-box; display:-moz-box; display:box; width:100%;}
+.alMenu li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-align:center;border-right:1px solid #e4e4e4;}
+.alMenu li:last-child{border-right:0;}
+.alMenu li.cur{font-size:14px;position:relative;background-color:#666;}
+.alMenu li a{display:block;height:28px;line-height:28px;overflow:hidden;color:#000; font-size:14px;}
+.alMenu li.cur a{color:#fff;}
+
+.alNav{height:28px; line-height:28px; background:#f7f7f7; border-top:1px solid #f3f3f3; border-bottom:1px solid #e4e4e4; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.alNav ul{/*margin:0 3px 0 0; */overflow:hidden; display:-webkit-box; display:-moz-box; display: -o-box; display:box; -webkit-box-lines:single; -moz-box-lines:single; -o-box-lines:single; box-lines:single;}
+.alNav li{padding:0 25px 0 10px; background:url(../../images/list/bread.png) no-repeat right top; color:#333;}
+.alNav li:last-child{padding-right:0; background:none;}
+.alNav li a{display:block; color:#333;}
+
+body .alContent{width:100%; min-width:320px; overflow:hidden; overflow-x:hidden;}
+
+
+.tagList{width:320px; margin:10px auto 0; letter-spacing:-4px;}
+.tagList a{margin:3px 0 18px 14px; min-width:42px; padding:0 10px; height:30px; line-height:32px;  text-align:center; color:#000; display:inline-block; overflow:hidden; letter-spacing:normal; background-color:#e4e4e4;}
+
+.tagNav{width:100%;}
+.tagNav li{line-height:38px;width:100%;background:#fff;cursor:pointer;}
+.tagNav span{display:block;color:#000;padding-left:18px;border-bottom:1px solid #e4e4e4;position:relative;}
+.tagNav span i{display:block;position:absolute;top:0;right:18px; width:14px; background:url(../../images/index/icon-slide-down.png) no-repeat center center;}
+.tagNav span i.up{background-image:url(../images/index/icon-slide-up.png);}
+.tagNav .tagList{display:none;width:100%;border-bottom:1px solid #e4e4e4;}
+
+.tagList{width:320px;margin:0 auto; letter-spacing:-10px; } 
+.tagList a{width:47px;margin:14px 0 14px 14px; min-width:42px;  padding:0 10px; height:30px; line-height:32px;  text-align:center; color:#000; display:inline-block; overflow:hidden; letter-spacing:normal; background-color:#e4e4e4;}
+
+.tagListbrand{width:320px; margin:0 auto; letter-spacing:-10px; } 
+.tagListbrand a{width:72px; margin:3px 0 22px 14px; min-width:70px;  padding:0 10px; height:30px; line-height:32px;  text-align:center; color:#000; display:inline-block; overflow:hidden; letter-spacing:normal; background-color:#e4e4e4;}
+
+.tagNav{width:100%;}
+.tagNav li{line-height:38px;width:100%;background:#fff;cursor:pointer;}
+.tagNav span{display:block;color:#000;padding-left:18px;border-bottom:1px solid #e4e4e4;position:relative;}
+.tagNav span i{display:block;position:absolute;top:0;right:18px; width:14px; background:url(../../images/index/icon-slide-down.png) no-repeat center center;}
+.tagNav span i.up{background-image:url(../images/index/icon-slide-up.png);}
+.tagNav .tagList{display:none;width:100%;border-bottom:1px solid #e4e4e4;}
+
+.alList_moreBtn{height:43px; display:block; line-height:43px; margin:10px 40px 20px; background: -moz-linear-gradient(top, #f8f8f8, #e9e9e9 100%); background:-o-repeating-linear-gradient(top, #f8f8f8, #e9e9e9 100%); background:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#e9e9e9)); border:1px solid #e9e9e9; -webkit-border-radius:5px; border-radius:5px; text-align:center; color:#666; font-size:16px;}
+.alList_submitBtn{height:43px; display:block; line-height:43px; margin:10px 40px 20px; background: -moz-linear-gradient(top, #3e3e3e, #201f1f 100%); background:-o-repeating-linear-gradient(top, #3e3e3e, #201f1f 100%); background:-webkit-gradient(linear,left top,left bottom,from(#3e3e3e),to(#201f1f)); border:1px solid #343434; -webkit-border-radius:5px; border-radius:5px; text-align:center; color:#ccc; font-size:16px;}
+.alOrder_buyBtn{height:36px; display:block; line-height:36px; margin:20px 20px 0; background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#e24700),color-stop(0.5,#d30402),color-stop(0.51,#c50404),color-stop(1,#df4500)); background:-moz-linear-gradient(top, #e24700, #d30402 50%, #c50404 51%, #df4500 100%); background:-o-repeating-linear-gradient(top, #e24700, #d30402 50%, #c50404 51%, #df4500 100%); border:1px solid #b00; -webkit-border-radius:5px; border-radius:5px; text-align:center; color:#fff; font-size:18px;}
+#invoice .alList_submitBtn, #invoice .alList_moreBtn { display:inline-block; width:40%; margin:10px; }
+.invoice_submitBtn{vertical-align:top; -webkit-border-radius:6px; border-radius:6px; height:45px; line-height:45px;}
+
+
+
+/*========================分类列表=============================*/
+.tagNav .categoryList{display:none;width:100%;border-bottom:1px solid #e4e4e4;}
+.categoryList a{border-radius: 5px;width:72px;margin:3px 0 5px 9px; min-width:42px;  padding:0 10px; height:30px; line-height:32px;  text-align:center; color:#000; display:inline-block; overflow:hidden; letter-spacing:normal; background-color:#f7f7f7;}
+
+.appContent{width:320px; margin:0 auto;}
+
+/* ====================   尾部通用  ================= */
+
+footer{width:100%; border-top:1px solid #dbdbdb;}
+
+.alDownload_AppBtn{width:285px; margin:0 auto; padding:35px 0;}
+.alDownload_AppBtn dd{height:44px; line-height:20px; overflow:hidden; clear:both;}
+.alDownload_AppBtn dd a{display:block; color:#333; font-size:12px; float:left; width:130px; height:44px;}
+.alDownload_AppBtn dd a:last-child{float:right;}
+.alDownload_AppBtn dd a.android{
+	background-image:url(../images/android-download.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	background-size:100%;
+}
+
+.alDownload_AppBtn dd a.android:link, .alDownload_AppBtn dd a.android:visited{
+	background-image:url(../images/android-download.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	background-size:100%;
+}
+.alDownload_AppBtn dd a.android:hover, .alDownload_AppBtn dd a.android:active{
+	background-image:url(../images/android-downloadHover.png);
+}
+.alDownload_AppBtn dd a.iphone{
+	background-image:url(../images/iphone-download.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	background-size:100%;
+}
+.alDownload_AppBtn dd a.iphone:link, .alDownload_AppBtn dd a.iphone:visited{
+	background-image:url(../images/iphone-download.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	background-size:100%;
+}
+.alDownload_AppBtn dd a.iphone:hover, .alDownload_AppBtn dd a.iphone:active{
+	background-image:url(../images/iphone-downloadHover.png);
+}
+
+.alService{height:30px; padding:5px 0 10px 0;}
+.alNotice{display:-webkit-box; display:-moz-box; display:-o-box; display:box; width:100%;}
+.alNotice li{height:30px; line-height:30px; -webkit-box-flex:1; -moz-box-flex:1; -o-box-flex:1; box-flex:1; color:#333; text-align:center;}
+.alNotice li a{display:block; color:#333; text-align:center;}
+.alNotice li img{vertical-align:middle;}
+
+.alCopyright{text-align:center; background:#f5f5f5; padding:5px 0 0 0;}
+.alCopyright p{height:35px; line-height:35px;}
+.alCopyright p a{margin:0 8px; color:#333;}
+.alCopyright p a.tel{color:#000;}
+.alCopyright p a.userBtn{color:#b51111;}
+.alScrollTop{display:block; padding:5px 0; height:30px; line-height:30px; color:#333; overflow:hidden;}
+.alScrollTop img{vertical-align:text-top;}

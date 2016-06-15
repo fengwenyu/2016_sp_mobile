@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+
+	<class name="DeviceInfo" table="deviceinfo">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="platform" type="string">
+			<column name="platform" length="100"/>
+		</property>
+		<property name="osv" type="string">
+			<column name="osv" length="200"/>
+		</property>
+		<property name="imei" type="string">
+			<column name="imei" length="40"/>
+		</property>
+		<property name="apn" type="string">
+			<column name="apn" length="40"/>
+		</property>
+		<property name="resolution" type="string">
+			<column name="resolution" length="16"/>
+		</property>
+		<property name="phoneType" type="string">
+			<column name="phoneType" length="20"/>
+		</property>
+		<property name="phoneModel" type="string">
+			<column name="phoneModel" length="200"/>
+		</property>
+		<property name="operator" type="string">
+			<column name="operator" length="30"/>
+		</property>
+		<property name="ua" type="string">
+			<column name="ua" length="400"/>
+		</property>
+		<property name="browser" type="string">
+			<column name="browser" length="200"/>
+		</property>
+		<property name="browserInfo" type="string">
+			<column name="browserInfo" length="200"/>
+		</property>
+		<property name="ip" type="string">
+			<column name="ip" length="40"/>
+		</property>
+		<property name="city" type="string">
+			<column name="city" length="20"/>
+		</property>
+		<property name="logTime" type="timestamp">
+			<column name="logTime" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+	
+</hibernate-mapping>

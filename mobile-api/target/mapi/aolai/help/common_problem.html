@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>帮助中心</title>
+<link href="../../css/base.css" rel="stylesheet" />
+<link href="../../css/public.css" rel="stylesheet" />
+<link href="../../css/page/help_center.css" rel="stylesheet" /><!--页面专用CSS-->
+
+<script src="../../js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  var ver = Math.random();
+    loader = SP.core
+      .install("../../js/jquery.min.js?" + ver)  //jquery库文件
+        .using("../../js/lazyload.js?" + ver)    //图片懒加载
+        .excute()
+        .using("../../js/config.sim.js?" + ver)  //图片懒加载
+		.using("../../js/page/help_center.js?" + ver)
+        .excute();
+      
+</script>
+</head>
+<body>
+  <div class="container">   
+    <!-- 页面内容start -->
+    <div class="alContent">
+      <div class="problem-box">
+        <dl class="problem_con">
+        	<dt>为什么我提交订单的时候提示商品金额超过800/1000，不能结算？ </dt>
+            <dd>海外进口的个人商品价值港澳台超过800人民币、 其他国家或地区超过1000人民币的包裹必须是不可分割的一件商品。因此，当您购买多个商品且总金额超过限额时，需要下在多个订单里。</dd>
+            <dt>订单商品什么时候发货？</dt>
+            <dd>尚品网海外够商品在您提交订单后需要经过海关审核才能发出。因此一般情况下海关审核通过后，48小时内订单可以从海外发货。如遇特殊情况，一般发货时间一般不会超出海关审核后的5天。</dd>
+            <dt>我什么时候可以收到我的货品？</dt>
+            <dd>因为是海外直发，发货后一般5-7天即可将您订购的商品送达到您手中。</dd>
+            <dt>我怎么查询物流状态？</dt>
+            <dd>您可以通过电话或在线客服联系尚品网客服人员帮您查询，或者在“个人中心”中“我的订单”实时查看订单国际和国内段的物流状态。由于物流公司与尚品网物流系统的数据交换有一定数据延迟，所有您看到的物流状态稍有滞后，请您谅解。</dd>
+            <dt>下订单的时候，怎么看不见使用优惠券的地方？</dt>
+            <dd>很抱歉，目前尚品网海外购商品暂不支持使用任何优惠券及优惠码。</dd>
+            <dt>订单支付的时候，是否可以使用礼品卡余额进行支付？</dt>
+            <dd>很抱歉，尚品网海外购商品暂无法使用礼品卡余额支付，您可以选择支付宝、银联在线等支付方式，给您带来的不便望您谅解。</dd>
+            <dt>海外购商品是否可以提供发票？</dt>
+            <dd>由于国内及海外报税方式的差异，海外购商品发货时均会附上商品清单，无法提供国内消费发票，给您带来的不便望您谅解。</dd>
+            <dt>海外购的商品可以货到付款吗？</dt>
+            <dd>由于海外购商品的在办理清关手续时，必须同步向中国海关提交您的支付凭证才能完，因此订单不能货到付款，只能在线支付。</dd>
+            <dt>到手价是什么意思？</dt>
+            <dd>网页上显示的到手价，是包含商品货款、税费及运费的总价，即您支付到手价之后，商品就可以安排送到您的手中，不会再产生其他费用。</dd>
+            <dt>我是否还需要缴纳其他进口税？</dt>
+            <dd>请您放心， 尚品网严格按照海关总署条例办理个人物品和包裹的清关手续， 您无需再缴纳任何进口税。</dd>
+            <dt>订单生成后是否可以取消？怎么操作？</dt>
+            <dd>身份证审核之前，订单可以取消，办理订单取消，需联系尚品网客服帮您处理；身份证审核之后，订单进入到正常的配货流程，将无法帮您取消订单。</dd>
+            <dt>商品签收是否可以退货？</dt>
+            <dd>您签收后无论任何原因，如果您需要办理退货，您均可在签收之日起的7天内提出退货申请。超过7天退货时限的，我们将无法为您办理退货申请。非商品本身质量原因的退货，我们将只退还商品货款，无法退还运费及税费。</dd>
+            <dt>一个订单里买了多件商品，是否可以部分退货？</dt>
+            <dd>尚品网海外购订单暂时不支持部分退货，如果您的订单涉及一个包裹（一个订单）多件商品的情况，只能办理整单退货。</dd>
+            <dt>退货产生的运费怎么办？</dt>
+            <dd>尚品网海外购商品由于非商品质量问题退货产生的运费，国内运送部分需要由您本人承担，尚品网将承担国际运费的部分。</dd>
+            <dt>退货的商品发出后，什么时候办理退款？多久可以收到退款？</dt>
+            <dd>尚品网在收到您的退货商品后，会有2-3个工作日内完成退货入库质检；如果质检符合尚品网海外购商品的退货政策，您支付的相关款项将会在3-15个工作日原路返回到您当时支付的账户内。但您支付时使用的银行或者支付工具不同，到账时间可能也会稍有差异。</dd>
+            <dt>商品发错货了怎么办？</dt>
+            <dd>不用担心，任何情况下您发现收到的商品有错，都可以联系客服人员，我们会尽快帮您处理。</dd>
+        </dl>
+    </div>
+    <!-- 页面内容end -->
+  </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif, arial;}
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+.topFix{min-width:320px; max-width:640px;position:relative; height:45px; z-index:100;}
+body .alContent{ margin-top:0; font-size:12px; color:#888; line-height:22px;}
+.info_tip{ background:#f6f6f6 url(../images/beepTimer/icon_tip.png) no-repeat 20px center; background-size:20px auto; padding:8px 0 8px 45px;}
+.wapper{ padding:0 20px;}
+.input_box{ padding-top:10px;}
+.input_box input{ outline: none; border:none; font-size:13px; width:100%; height:100%; float:left;}
+.input_box li{ border-bottom:1px solid #e5e5e5; height:22px; line-height:22px; padding:8px 0 8px 25px;}
+.input_box .input_text{ width:100%; height:100%;}
+.input_box .icon_mobile{background:url(../images/beepTimer/icon_user.png) no-repeat 0 center;background-size:20px auto;}
+.input_box .icon_yzm{position:relative; background:url(../images/beepTimer/icon_code.png) no-repeat 0 center;background-size:20px auto; padding-right:120px; }
+.input_box .get_yzm_btn{ position:absolute; top:8px; right:0; line-height:inherit; width:120px; text-align:center; border-left:1px solid #e5e5e5; color:#000;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+.input_box .get_yzm_btn.cur{ color:#888;}
+
+.title_h3{ font-size:13px; font-weight:normal; margin-top:25px; margin-bottom:5px;}
+.select_time a{ display:inline-block; font-size:13px; height:28px; line-height:30px; padding:0 15px; border:1px solid #e5e5e5; color:#888; margin-bottom:10px; margin-right:6px;}
+.select_time a.cur{color:#c92028;border:1px solid #f88e92;}
+.submit_btn{ width:100%; height:40px; line-height:40px; background-color:#c92028; font-size:16px; color:#fff; display:block; text-align:center; margin-top:20px;}
+
+
+/*提示层*/
+.tip-overlay{position: fixed; z-index: 998; top:0; left:0; bottom:0; right:0;background: rgba(0, 0, 0,0.4); display:none;}
+.tip-container{position:fixed;left:50%;top:50%;width:300px;border-radius:5px;background:rgba(0,0,0,.7);color:#fff; margin-left:-150px;z-index:999;display:none;}
+.tip-message {min-height:50px;padding: 10px;font-size: 14px;line-height:50px;text-align:center;}
+
+

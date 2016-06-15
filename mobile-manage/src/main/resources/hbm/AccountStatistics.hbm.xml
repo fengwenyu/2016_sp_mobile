@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+
+	<class name="AccountStatistics" table="accountstatistics">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="userId" type="string">
+			<column name="userId" length="50"/>
+		</property>
+		<property name="username" type="string">
+			<column name="username" length="50"/>
+		</property>
+		<property name="imei" type="string">
+			<column name="imei" length="40"/>
+		</property>
+		<property name="mode" type="string">
+			<column name="mode" length="20"/>
+		</property>
+		<property name="productNum" type="long">
+			<column name="productNum"/>
+		</property>
+		<property name="channelNum" type="long">
+			<column name="channelNum"/>
+		</property>
+		<property name="regOrigin" type="string">
+			<column name="regOrigin" length="10"/>
+		</property>
+		<property name="platform" type="string">
+			<column name="platform" length="10"/>
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" length="4"/>
+		</property>
+		<property name="ip" type="string">
+			<column name="ip" length="40"/>
+		</property>
+		<property name="city" type="string">
+			<column name="city" length="200"/>
+		</property>
+		<property name="regTime" type="timestamp">
+			<column name="regTime" />
+		</property>
+		<property name="loginTime" type="timestamp">
+			<column name="loginTime" />
+		</property>
+		<property name="logTime" type="timestamp">
+			<column name="logTime" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="logincountoneday" type="int">
+			<column name="logincountoneday"/>
+		</property>
+		<property name="markup" type="string">
+			<column name="markup" length="8"/>
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+	
+</hibernate-mapping>

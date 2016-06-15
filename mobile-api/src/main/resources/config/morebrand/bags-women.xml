@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<brands capital="B">
+		<brand>
+			<name>BALENCIAGA</name>
+			<id>B0006</id>
+		</brand>
+		<brand>
+			<name>BALLY</name>
+			<id>B0109</id>
+		</brand>
+		<brand>
+			<name>BOTTEGA VENETA</name>
+			<id>B0010</id>
+		</brand>
+		<brand>
+			<name>BRACCIALINI</name>
+			<id>B0239</id>
+		</brand>
+		<brand>
+			<name>BURBERRY</name>
+			<id>B0009</id>
+		</brand>
+	</brands>
+	<brands capital="C">
+		<brand>
+			<name>CELINE</name>
+			<id>B0029</id>
+		</brand>
+		<brand>
+			<name>CHLOE</name>
+			<id>B0040</id>
+		</brand>
+		<brand>
+			<name>COACH</name>
+			<id>B0073</id>
+		</brand>
+	</brands>
+	<brands capital="D">
+		<brand>
+			<name>DIANE VON FURSTENBERG (DVF)</name>
+			<id>B0284</id>
+		</brand>
+		<brand>
+			<name>DOLCE &amp; GABBANA</name>
+			<id>B0004</id>
+		</brand>
+	</brands>
+	<brands capital="F">
+		<brand>
+			<name>FENDI</name>
+			<id>B0009</id>
+		</brand>
+	</brands>
+	<brands capital="G">
+		<brand>
+			<name>GUCCI</name>
+			<id>B0003</id>
+		</brand>
+		<brand>
+			<name>GUY LAROCHE</name>
+			<id>B0616</id>
+		</brand>
+	</brands>
+	<brands capital="H">
+		<brand>
+			<name>HALSTON HERITAGE</name>
+			<id>B0597</id>
+		</brand>
+	</brands>
+	<brands capital="J">
+		<brand>
+			<name>JIMMY CHOO</name>
+			<id>B0061</id>
+		</brand>
+		<brand>
+			<name>JESSICA SIMPSON</name>
+			<id>B0645</id>
+		</brand>
+	</brands>
+	<brands capital="K">
+		<brand>
+			<name>KELSI DAGGER</name>
+			<id>B0653</id>
+		</brand>
+	</brands>
+	<brands capital="L">
+		<brand>
+			<name>LANA MARKS</name>
+			<id>B0658</id>
+		</brand>
+		<brand>
+			<name>LANCEL</name>
+			<id>B0550</id>
+		</brand>
+		<brand>
+			<name>LOEWE</name>
+			<id>B0141</id>
+		</brand>
+		<brand>
+			<name>LONGCHAMP</name>
+			<id>B0318</id>
+		</brand>
+		<brand>
+			<name>LOTTUSSE</name>
+			<id>B0637</id>
+		</brand>
+	</brands>
+	<brands capital="M">
+		<brand>
+			<name>M MISSONI</name>
+			<id>B0533</id>
+		</brand>
+		<brand>
+			<name>MILLY BY MICHELLE SMITH</name>
+			<id>B0564</id>
+		</brand>
+		<brand>
+			<name>MIU MIU</name>
+			<id>B0007</id>
+		</brand>
+		<brand>
+			<name>MOSCHINO</name>
+			<id>B0063</id>
+		</brand>
+		<brand>
+			<name>MULBERRY</name>
+			<id>B0313</id>
+		</brand>
+	</brands>
+	<brands capital="P">
+		<brand>
+			<name>PINEIDER</name>
+			<id>B0644</id>
+		</brand>
+		<brand>
+			<name>POUR LA VICTOIRE</name>
+			<id>B0634</id>
+		</brand>
+		<brand>
+			<name>PRADA</name>
+			<id>B0002</id>
+		</brand>
+		<brand>
+			<name>PROENZA SCHOULER</name>
+			<id>B0493</id>
+		</brand>
+	</brands>
+	<brands capital="R">
+		<brand>
+			<name>REBECCA MINKOFF</name>
+			<id>B0640</id>
+		</brand>
+		<brand>
+			<name>RED VALENTINO</name>
+			<id>B0592</id>
+		</brand>
+	</brands>
+	<brands capital="S">
+		<brand>
+			<name>SALVATORE FERRAGAMO</name>
+			<id>B0084</id>
+		</brand>
+	</brands>
+	<brands capital="T">
+		<brand>
+			<name>TOD'S</name>
+			<id>B0316</id>
+		</brand>
+	</brands>
+	<brands capital="V">
+		<brand>
+			<name>VERSACE</name>
+			<id>B0008</id>
+		</brand>
+	</brands>
+</data>

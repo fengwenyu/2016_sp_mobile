@@ -1,0 +1,174 @@
+.icon_emotion.emotion_switch {
+	background: url("../../images/menu/emotion_editor_z218878.png") 0 0 no-repeat;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.icon_emotion.emotion_switch:hover {
+	background: url("../../images/menu/emotion_editor_z218878.png") 0 -30px
+		no-repeat
+}
+
+.emotion_editor {
+	position: relative;
+	z-index: 1;
+	border: 1px solid #e7e7eb;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0
+}
+
+.test .emotion_editor {
+	margin: 20px
+}
+
+.emotion_editor .edit_area {
+	padding: 14px 20px;
+	outline: 0;
+	word-wrap: break-word;
+	word-break: break-all;
+	border-top-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	background-color: #fff;
+	height: 188px
+}
+
+.emotion_editor .edit_area img {
+	vertical-align: middle
+}
+
+.editor_toolbar {
+	*zoom: 1;
+	padding: 0 20px;
+	line-height: 36px;
+	background-color: #fff;
+	border-top: 1px solid #e7e7eb
+}
+
+.editor_toolbar:after {
+	content: "\200B";
+	display: block;
+	height: 0;
+	clear: both
+}
+
+.editor_tip {
+	float: right;
+	color: #8d8d8d
+}
+
+.editor_tip em {
+	font-weight: 400;
+	font-style: normal;
+	margin-left: 3px;
+	margin-right: 3px
+}
+
+.editor_tip .warn {
+	color: #e15f63
+}
+
+.emotion_switch {
+	float: left;
+	margin-top: 8px;
+	height: 28px;
+	line-height: 999em;
+	overflow: hidden
+}
+
+.emotion_wrp {
+	display: none;
+	position: absolute;
+	width: 421px;
+	top: 100%;
+	left: -1px
+}
+
+.emotions {
+	-moz-user-select: none;
+	overflow: hidden;
+	*zoom: 1;
+	border-top: 1px solid #c0bfc5;
+	border-right: 1px solid #c0bfc5;
+	background-color: #e7e7eb
+}
+
+.emotions_item {
+	float: left;
+	line-height: 27px;
+	height: 27px;
+	font-size: 0;
+	text-align: center;
+	width: 27px;
+	border-bottom: 1px solid #c0bfc5;
+	border-left: 1px solid #c0bfc5;
+	background-color: #fff
+}
+
+.emotions_item:hover {
+	background: rgba(255, 255, 255, 0.75) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,
+		startColorstr='#bfffffff', endcolorstr= '#bfffffff')
+}
+
+.emotions_item i {
+	display: inline-block;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	background: transparent url(../images/default218877.gif) no-repeat 0 0
+}
+
+.emotions_preview {
+	position: absolute;
+	top: 0;
+	right: -81px;
+	display: block;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 0;
+	text-align: center;
+	border: 1px solid #c0bfc5;
+	background-color: #fff
+}
+
+.emotions_preview img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -12px;
+	margin-top: -12px
+}
+
+.hook {
+	position: absolute;
+	left: 21px;
+	top: 0
+}
+
+.hook .hook_dec {
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px
+}
+
+.hook .hook_top {
+	top: -16px;
+	border-color: transparent transparent #c0bfc5
+}
+
+.hook .hook_btm {
+	top: -15px;
+	border-color: transparent transparent #f6f6f6
+}

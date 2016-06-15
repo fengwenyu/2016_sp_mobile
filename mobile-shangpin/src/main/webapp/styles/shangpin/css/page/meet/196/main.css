@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ background-color:#fe643e}
+
+.main_box{
+	width:100%;
+	max-width:640px;
+	margin:0 auto 15px;
+}
+
+.main_box a{
+	display:block;
+	width:100%;
+}
+.main_box img{
+	max-width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	margin-bottom:0px;
+	
+}
+.prod_list{
+	padding:0 4px 0 0;
+}
+.prod_list li{
+	float:left;
+	width:50%;
+	margin-top:4px;
+}
+.prod_list li:nth-child(2n){
+	float:right;
+	margin-right:-4px;
+}
+
+
+.content {/* width: 160px;*/ height: 220px; position: relative; margin: -10px auto 0; }
+.egg-box { }
+.egg-box li { /**/  text-align: center; float: left; }
+.egg-box li.setting_btn{ padding:0 10px; box-sizing:border-box;}
+.egg-box li a { display: inline-block; text-align: center;width: 150px; height: 98px;overflow: hidden;}
+
+
+.main_box h1{
+	width:100%;
+	display:block;
+	margin:4px 0 0;
+}
+.main_box h2{
+	width:100%;
+	display:block;
+	margin:0;
+}
+.main_box h3{
+	width:100%;
+	padding:4px 0 6px;
+	display:block;
+}
+.main_box h4{
+	width:100%;
+	display:block;
+	padding-top:4px;
+}
+.main_box h5{
+	width:100%;
+	display:block;
+	padding-top:10px;
+}
+
+
+#popup_container { /*overflow: hidden;*/box-shadow:none; border-radius:0; }
+#popup_container h1 { width:0; height:0}
+#popup_container .title_close { }
+#popup_message { margin: 0; height: auto; padding:0;  font-size: 14px; text-align: left; }
+#popup_message .rule { color: #fff; font-size: 12px;background:#ff714e;padding:0 20px 60px; }
+#popup_message .rule .rule-title{ display:block; text-align:center; line-height:34px; font-size:14px; font-weight:bold;}
+#popup_message .rule .bg-icon { width:105px; height:110px; display:block;background:url(../../../../images/20150326AprilFoolDay/pop_bg1.png) no-repeat; background-size:105px 110px; position:absolute; bottom:-30px; right:10px  }
+#popup_message .rule .btn-icon {z-index:9999;width:73px; height:32px; display:block;background:url(../../../../images/20150326AprilFoolDay/btn.png) no-repeat; background-size:contain; position:absolute; bottom:15px; left:90px ;  }
+#popup_message .tip { color: #000; font-size: 12px;background:#ffffd3;padding:20px 20px 40px; line-height:20px; width:180px; overflow:hidden; white-space:nowrap; text-overflow: ellipsis; }
+#popup_message .tip .bg-icon { width:83px; height:130px; display:block;background:url(../../../../images/20150326AprilFoolDay/pop_bg2.png) no-repeat; background-size:83px 130px; position:absolute; top:-20px; right:5px  }
+#popup_message .tip .btn-icon {z-index:9999;width:73px; height:32px; display:block;background:url(../../../../images/20150326AprilFoolDay/btn.png) no-repeat; background-size:contain; position:absolute; bottom:5px; left:90px ;  }
+
+#popup_message li { padding-left: 12px; text-indent: -12px; }
+

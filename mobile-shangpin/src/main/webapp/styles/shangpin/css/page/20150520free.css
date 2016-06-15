@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#ee5658}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto;}
+
+.con {padding: 0 0 10px; line-height: 2; position:relative;}
+.con .back_main{ display:block; border:1px solid #fff; margin:10px 55px 10px; line-height:45px; text-align:center; color:#fff; font-size:15px; vertical-align:middle;}
+.con .back_main i{ display:inline-block; width:13px; height:14px; margin-right:10px; margin-top:15px;vertical-align:top;}
+.con .back_main i img{ display:block;}

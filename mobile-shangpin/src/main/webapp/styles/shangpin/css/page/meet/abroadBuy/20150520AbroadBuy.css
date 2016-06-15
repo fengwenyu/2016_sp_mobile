@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* 20150520AbroadBuy */
+body{ background:#ffffff}
+body .alContent{margin-top:0; min-width: 320px; max-width:640px; margin: 0 auto; background-size:100% auto;}
+.alContent .prBox{overflow:hidden;}
+.alContent .prBox img{display:block;}
+.alContent .detail{overflow:hidden; padding:0 30px 30px; font-size:14px; color:#555555; line-height:24px;}
+.alContent .detail h3{font-weight:normal;}
+.alContent .link{display:block; background-color:#3661b7; height:44px; line-height:44px; color:#FFF; font-size:18px; width:60%; margin:0 auto 10px; text-align:center;}
+
+

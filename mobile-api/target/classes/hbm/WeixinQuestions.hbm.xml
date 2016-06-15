@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="WeixinQuestions" table="weixinquestions">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="issueId" type="string">
+			<column name="issueId" length="20"/>
+		</property>
+		<property name="questionId" type="string">
+			<column name="questionId" length="20"/>
+		</property>
+		<property name="questionNextId" type="string">
+			<column name="questionNextId" length="20"/>
+		</property>
+		<property name="questionBody" type="string">
+			<column name="questionBody" length="5000"/>
+		</property>
+		<property name="option1" type="string">
+			<column name="option1" length="100"/>
+		</property>
+		<property name="option2" type="string">
+			<column name="option2" length="100"/>
+		</property>
+		<property name="option3" type="string">
+			<column name="option3" length="100"/>
+		</property>
+		<property name="option4" type="string">
+			<column name="option4" length="100"/>
+		</property>
+		<property name="option5" type="string">
+			<column name="option5" length="100"/>
+		</property>
+		<property name="option6" type="string">
+			<column name="option6" length="100"/>
+		</property>
+		<property name="option7" type="string">
+			<column name="option7" length="100"/>
+		</property>
+		<property name="score" type="int">
+			<column name="score" length="8"/>
+		</property>
+		<property name="isFinalReply" type="int">
+			<column name="isFinalReply" length="4"/>
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="Feedback" table="feedback">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="userId" type="string">
+			<column name="userId" length="50"/>
+		</property>
+		<property name="loginName" type="string">
+			<column name="loginName" length="50"/>
+		</property>
+		<property name="msg" type="string">
+			<column name="msg" length="1024"/>
+		</property>
+		<property name="product" type="long">
+			<column name="product"/>
+		</property>
+		<property name="ver" type="string">
+			<column name="ver" length="10"/>
+		</property>
+		<property name="channel" type="long">
+			<column name="channel"/>
+		</property>
+		<property name="platform" type="string">
+			<column name="platform" length="10"/>
+		</property>
+		<property name="phoneType" type="string">
+			<column name="phoneType" length="20"/>
+		</property>
+		<property name="phoneModel" type="string">
+			<column name="phoneModel" length="40"/>
+		</property>
+		<property name="phone" type="string">
+			<column name="phone" length="20"/>
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+		<property name="reserve3" />
+		<property name="reserve4" />
+		<property name="reserve5" />
+	</class>
+</hibernate-mapping>

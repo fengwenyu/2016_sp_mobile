@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+#J_m-slider{width:320px;height:222px;margin:0 auto; padding-bottom:15px; overflow:hidden;position:relative;}
+#J_m-slider .slider-outer{width:320px;height:222px;overflow:hidden;position:relative;}
+#J_m-slider ul{width:1600px;height:222px;position:absolute;left:0;top:0;}
+#J_m-slider ul li{width:320px;height:222px;overflow:hidden;float:left;}
+#J_m-slider .slider-status{ position:absolute; z-index:2;width:320px ; height:20px;bottom:15px;left:0;text-align:center; overflow:hidden;}
+#J_m-slider .slider-status span{display:inline-block;width:18px;height:3px;background-color:#fff; line-height:3px;cursor:pointer;margin:0 4px 0 0;}
+#J_m-slider .slider-status span.sel{background:rgba(255,255,255,.6);}
+
+.activityPage  {padding:0 10px 10px;display: -webkit-box;}
+.divWidthSizing {width: 100%;box-sizing: border-box;}
+/*-----ICON图标-----*/
+.lady,.bags,.child,.homes,.men,.shoes,.Acces,.all{background: url(/images/20140814/Icon.png) no-repeat;line-height: 888px; display: inline-block; overflow: hidden; background-size:250px 90px;}
+.bdtop{border-top: 1px solid #ccc; margin-top:15px; }
+.activityPage a,.activityTitle span.gotoimg a{color:#3f3f41; text-decoration:none;}
+.activityPage a{display: block;-webkit-box-flex:1;width: 0%; height:70px;font-size:12px; color: #3f3f41; text-align: center;}
+.activityPage a b{display: block; margin:0 auto; padding:15px 0 5px; height:33px;}
+.lady{width:20px;background-position:0 15px;}
+.bags{width:24px;background-position:-75px 15px;}
+.child{width:29px;background-position:-145px 15px;}
+.homes{width:26px;background-position:-222px 15px;}
+.men{width:20px;background-position:-2px -43px;}
+.shoes{width:33px;background-position:-72px -43px;}
+.Acces{width:27px;background-position:-147px -43px;}
+.all{width:26px;background-position:-222px -43px;} 
+
+.activityTitle{padding:0 10px;display: -webkit-box; }
+.activityTitle span{-webkit-box-flex:3;width: 0%; display:block; height:50px; line-height:50px; font-size:20px; color: #3f3f41; text-align:left; padding:10px 0 0 15px;}
+.activityTitle span.gotoimg{ text-align:right; padding:10px 7px 0 0; -webkit-box-flex:1;}
+.activityTitle span.gotoimg a{display:block;}
+
+.brandBox{border-bottom: 1px solid #ccc; width:100%;}
+.brandBox a{float:left; width:21%; margin:0 2% 15px; text-align: center;}
+.brandBox a img{ width:100%; display:block;}
+
+.newBox{padding:0 0 0 5px;}
+.newBox a{ position:relative; float:left; display:block; width:33%; margin:0 0 26px 0; text-align: center;}
+.newBox a img{ width:100%; display:block; min-width:105px;}
+.newBox a p{width: 100%; padding-top:14%;background: rgba(255,255,255,.6);color: #000;height:34%;position: absolute;left: 0;top:33%;  font-style: italic;}
+.newBox a p span{ float:left; width:100%;letter-spacing:-1px;  font-size:16px;}
+.newBox a p span:last-child{ font-size:24px; line-height:24px; font-weight:600;}
+
+.hallBox a{ float:left;width:50%;display:block; overflow: hidden;}
+
+.btm_left {float:left; padding:36px 0 36px 20px;overflow: hidden;}
+.btm_logo{ float:right; padding:33px 18px 0 0 ;}

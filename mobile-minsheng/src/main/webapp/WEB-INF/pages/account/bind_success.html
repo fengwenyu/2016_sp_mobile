@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>尚品奥莱-触摸屏版</title>
+<link href="/css/base.css" rel="stylesheet" />
+<link href="/css/page/login.css" rel="stylesheet" />
+<!-- icon -->
+<link rel="apple-touch-icon" href="/images/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/touch-icon-iphone4.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/touch-icon-newipad.png">
+<!-- 启动自定义图片(png, 320X640) -->
+<link rel="apple-touch-startup-image" sizes="72x72" href="/images/logo/loading.png">
+<script src="/js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	var ver = "?20121023001";
+		loader = SP.core
+			.install("/js/zepto.min.js" + ver)
+			.using("/js/comm.js" + ver)
+			.using("/js/login.js" + ver)
+			.excute();
+</script>
+</head>
+
+<body>
+<header>
+    <h1 id="alLogo"> <a href="#">尚品奥莱</a> </h1>
+    <nav class="alUser_icon">
+        <ul>
+            <li><a href="#"><img src="/images/cart_icon.png" width="31" height="31" alt="购物袋"></a></li>
+            <li><a href="#"><img src="/images/order_icon.png" width="31" height="31" alt="订单"></a></li>
+            <li><a href="#"><img src="/images/user_icon.png" width="31" height="31" alt="账户"></a></li>
+        </ul>
+    </nav>
+</header>
+<nav class="alNav">
+    <ul>
+        <li><a href="/html/index.html">首页</a></li>
+        <li>绑定账号</li>
+    </ul>
+</nav>
+<div class="alContent">
+    <form name="login" id="J_Login">
+        <fieldset>
+            <legend class="font_blue bind_legend">您的民生银行账号已绑定尚品网账户</legend>
+            <div class="font_blue success_info">
+            	账户：shangpin001@qq.com<br>
+            	密码：123123<br>
+            </div>
+            <!--<input type="submit" class="login_btn" value="确认绑定" />-->
+            <a href="#" class="login_btn">解除绑定</a>
+            <a href="#" class="login_btn">继续购物</a>
+        </fieldset>
+    </form>
+</div>
+<footer>
+    <dl class="alDownload_AppBtn">
+        <dd><a href="#">尚品奥莱客户端<br />
+            iPhone　版下载 <img src="/images/app_btn.png" width="143" height="40" alt="iPhoneapp"></a></dd>
+    </dl>
+    <div class="alService">
+        <ul class="alNotice">
+            <li><img src="/images/zp_icon.png" width="30" height="30" alt="正品保证"> 正品保证</li>
+            <li><img src="/images/my_icon.png" width="30" height="30" alt="免运费"> 免运费　</li>
+            <li><img src="/images/sc_icon.png" width="30" height="30" alt="支持试穿"> 支持试穿</li>
+        </ul>
+    </div>
+    <div class="alCopyright">
+        <p> <a href="#" class="userBtn">vgnxpjty,正式会员</a> </p>
+        <p> <a href="#">首页</a> <a href="#">购物袋</a> <a href="#">查看订单</a> <a href="#">我的账户</a> </p>
+        <p>客服电话：4006-900-900</p>
+        <a href="javascript:;" class="alScrollTop"><img src="/images/scrollTop_icon.png" width="13" height="14" alt="回顶部"> 回顶部</a> </div>
+</footer>
+</body>
+</html>

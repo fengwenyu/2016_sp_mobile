@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+.clr:after, .clearfix:after { content: ""; display: block; height: 0; clear: both; visibility: hidden }
+/*筛选导航*/
+#filter_box {  margin:10px auto 0; overflow: hidden; overflow-x:auto; height: 28px; border-top: 1px solid #e4e4e4; border-bottom: 1px solid #e4e4e4; background: #f7f7f7; }
+#filter_box li { float: left;  border-right: 1px solid #e4e4e4; }
+#filter_box li:last-child { border: none; }
+#filter_box li a{ color:#000; width:68px; height:28px; display:block; line-height:28px; text-align:center;}
+
+/*排序*/
+
+#sort_box,#list_box { overflow:hidden; margin:0 auto;}
+#sort_box{padding: 0 10px;}
+#sort_box span, #sort_box a { display: inline-block; line-height: 28px; }
+#sort_box span { color: #838383; padding:0 10px;}
+#sort_box a{ color: #000; padding: 0 10px 0 0; background:url(../../../../styles/shangpin/images/search/sort_icon.png) no-repeat right 10px;}
+#sort_box a.sort_bottom{ background-position:right -40px;}
+
+/*尚品列表*/
+#list_box a { display: block; padding:10px 0; width:100%; overflow:hidden; border-top:1px solid #e4e4e4; line-height:24px;background:url(../../../../styles/shangpin/images/search/search_arrow_icon.png) no-repeat 98% center;}
+#list_box a span.img_box { float:left; width:90px; text-align:center;}
+#list_box a dl { float:left; width:200px; padding-left:5px; color:#000; }
+#list_box a dd { width:100%; overflow:hidden;}
+#list_box a dd em{ color:#c89800; float:left; width:80px;}
+#list_box a dd i{ color:#838383; float:left;}
+
+/*筛选区域*/
+#filter_hide{ width:100%; overflow:hidden; height:480px; position:absolute; top:0; left:0; z-index:10000; display:none;}
+#filter_con{ background:#fff; width:70%; min-width:220px; position:absolute;  top:0; z-index:3; height:100%;}
+#filter_con h3{background: url(/images/topBg.png) repeat-x 0 0; height:43px; border-bottom: 1px solid #B5B5B5; line-height:42px; text-align:center;}
+#filter_con dl{border-bottom:1px solid #f2f2f2;}
+#filter_con dt{padding:0 10px; height:30px; line-height:30px; }
+#filter_con dt.curr{ background:#f5f5f5;border-bottom:1px solid #f2f2f2;}
+#filter_con dt span{ float:right;}
+#filter_con dd { display:none; max-height:280px; overflow:hidden; overflow-y:auto;}
+#filter_con dd a{ height:28px; line-height:28px;  display:inline-block; margin:0 10px 10px 0; background:#f4f4f4; color:#303030;}
+#filter_con dd a.full{ display:block;}
+#filter_con dd ul li a{ width:auto; margin:0; background:none; text-align:left; border:none; display:block; padding:0 10px;}
+#filter_con dd ul li a.curr{ color:#f00;}
+
+/*尺码 颜色 单独样式*/
+#filter_size dd,#filter_color dd{ padding:10px 0 0 10px; }
+#filter_size dd a,#filter_color dd a,#filter_color dd a.full{text-align:center;border:1px solid #e2e2e2;width:58px; height:30px;}
+#filter_size dd a.curr,#filter_color dd a.curr{ border-color:#000;}
+#filter_color dd a{width:26px; height:26px;}
+#filter_color dd a i,#filter_color dt span i{display:block; width:26px; height:26px;}
+#filter_color dt span i{ margin-top:1px; border:1px solid #e2e2e2;}
+
+/*关闭筛选*/
+#filter_close{ width:100%; background: url(../../../../styles/shangpin/images/search/close_filter.png) no-repeat 50px 240px; height:100%; cursor:pointer; background-color:rgba(0,0,0,0.6); position:absolute; top:0; left:0; z-index:1;}
+
+/*确定取消按钮*/
+#btn_box{text-align:center; padding-top:40px;}
+#btn_box a{ display:inline-block; text-align:center; height:30px; line-height:30px; width:78px; border:1px solid #d4d4d3; color:#333; border-radius:3px;background: -moz-linear-gradient(top, #fefefe, #e6e6e6 100%);
+background: -o-repeating-linear-gradient(top, #fefefe, #e6e6e6 100%);
+background: -webkit-gradient(linear,left top,left bottom,from(#fefefe),to(#e6e6e6));}
+
+/**/
+.filter_con_in{
+	right:0;
+	animation: slideIn 0.6s ease-in-out;
+	-moz-animation: slideIn 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideIn 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideIn 0.6s ease-in-out;
+}
+.filter_con_out{	
+	right:-70%;
+	animation: slideOut 0.6s ease-in-out;
+	-moz-animation: slideOut 0.6s ease-in-out;	/* Firefox */
+	-webkit-animation: slideOut 0.6s ease-in-out;	/* Safari 和 Chrome */
+	-o-animation: slideOut 0.6s ease-in-out;
+}
+
+@keyframes slideIn
+{
+
+0%{ right: -70%; }
+100%{ right: 0; }
+}
+
+@-moz-keyframes slideIn
+{
+0%{ right: -70%; }
+100%{ right: 0; }
+}
+
+@-webkit-keyframes slideIn
+{
+0%{ right: -70%; }
+100%{ right: 0; }
+}
+
+@-o-keyframes slideIn
+{
+0%{ right: -70%; }
+100%{ right: 0; }
+}
+
+
+
+@keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -70%; }
+}
+
+@-moz-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -70%; }
+}
+
+@-webkit-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -70%; }
+}
+
+@-o-keyframes slideOut
+{
+0%{ right: 0; }
+100%{ right: -70%; }
+}

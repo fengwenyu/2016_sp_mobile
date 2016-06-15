@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+<title>微信推广H5</title>
+<link href="css/base.css" rel="stylesheet" />
+<link href="css/packet.css" rel="stylesheet" />
+</head>
+<body>
+<div class="wapper">
+ 
+  <!--内容区域 start-->
+  <section class="main">
+  
+  	<div class="video_nav">
+        <a href="" class="show_video" data-id="i0199hlgjmz">
+        	<img src="img/vedio_img.jpg">
+        </a>
+        
+        <!--视频-->
+        <div class="video_box" style="display: block;">
+        	<iframe height="100%" width="100%" src="http://v.qq.com/iframe/player.html?vid=i0199hlgjmz&tiny=0&auto=0" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <ul class="sp_list">
+    	<li><img src="img/img01.jpg"></li>
+        <li><a href="/brand/product/list?brandNo=B02850&postArea=0&Source=weixin&Campaign=00"><img src="img/img02.jpg"></a></li>
+    </ul>
+    <a href="/brand/product/list?brandNo=B1885&postArea=0&Source=weixin&Campaign=00"><img src="img/img03.jpg"></a>
+    <ul class="sp_list">
+    	<li><img src="img/img04.jpg"></li>
+        <li><a href="/brand/product/list?brandNo=B1885&postArea=0&Source=weixin&Campaign=00"><img src="img/img05.jpg"></a></li>
+    </ul>
+    <a href="/brand/product/list?brandNo=B1885&postArea=0&Source=weixin&Campaign=00"><img src="img/img06.jpg"></a>
+    <img src="img/img07.png">
+    <img src="img/text_img.png">
+    
+    <div id="js_show_box">
+    	<img src="img/icon01.png">
+        <div class="form-box">
+            <input class="tip-input" id="J_mobileNum" type="tel" value="" placeholder="请输入手机号" maxlength="11" required />
+            <div class="yzm-box">
+              <div class="login_list"><input id="J_yzm" type="tel" value="" placeholder="请输入验证码" maxlength="6" required></div>
+              <em id="passwordGetCode" data-waiting="秒">获取验证码</em>
+            </div> 
+          
+             <p class="prompt"></p> 
+            <a class="start-btn js-start-btn" href="javascript:;">立即领取</a>
+            
+        </div>
+        <img src="img/icon02.png">
+    </div>
+    <img src="img/icon03.png">
+  </section>
+  <!--内容区域 start-->
+  
+  <div id="popup_overlay"></div>
+  <div id="popup_container">
+      <div id="popup_message">您已经领过了</div>
+  </div>
+  
+  <!--视频播放-->
+  <!--<div class="mask"><a href="" class="close_btn">x</a></div>
+  <div class="video_box"></div>-->
+  
+  <!--领取成功提示-->
+  <!--提示结果弹层-->
+  <div class="select-overlay">
+      <div class="show_window_con">              
+          <img src="img/show_sucess_img.png">
+          <a href="/subject/product/list?topicId=60512985&postArea=0&Source=weixin&Campaign=00" class="link_btn"><img src="img/link_btn.png"></a>
+      </div>
+  </div>
+  
+  
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/packet.js?4"></script>
+</body>
+</html>

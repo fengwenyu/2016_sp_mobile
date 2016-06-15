@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clr:after, .clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.topFix {
+	position: fixed;
+	top: 0px;
+	z-index: 10;
+	
+}
+.topFix section {
+	display: block;
+	font-size: 0;
+	position: absolute;
+}
+nav#filter_box{width:100%; z-index: 100; zoom:1; height:41px; overflow: hidden;background:#d0062f;overflow-x: auto; position: relative;}
+.header_nav{
+	overflow: hidden;
+	height:41px;
+	position:relative;
+
+}
+.header_nav li{
+	float:left; 
+	font-size:15px; 
+	font-family: "微软雅黑", "Microsoft YaHei", "黑体", "Tahoma", "宋体";
+	padding:0 14px;
+	line-height: 41px;
+	overflow: hidden;
+	min-width:60px;
+}
+.header_nav li a{
+	color:#fff;
+}
+.header_nav li.hover a{
+	color:#ffd745;
+}
+
+/**************/
+.sp520_list{width:100%; background-color:#cd003c;}
+.sp520_list p.top_banner{width:320px; height:135px; margin: 0 auto; overflow:hidden;}
+.sp520_list p.top_img{width:320px; height:220px; margin: 0 auto; overflow:hidden;}
+.sp520_list p.top_img img{display:block;}
+.sp520_list ul{width:305px;	margin:0 auto;}
+.sp520_list li{width:150px; height:80px; margin:0 5px 5px 0; float:left;}
+.sp520_list li:nth-child(2n){margin-right:0;}
+.sp520_list li a, .sp520_list li img{display: block;}
+
+.sp520_box{width:100%; overflow:hidden;}
+.sp520_box .page_header{background:#000; height:auto; border-bottom:none 0; text-align:center; margin:4px 0 6px;}
+.page_header h3{height:35px; line-height:35px;}
+.page_header h3 img{display:block; margin:0 auto;}
+
+.sp520_list ul.prod_list{width:305px;}
+.prod_list li{width:150px; height:220px;}
+
+/*国际大牌样式*/
+.sp520_list ul.big_list{width:300px;}
+.big_list li{width:300px; height:147px; margin:0; padding-bottom:10px;}
+
+/*频道导航*/
+.sp520_list ul.channel_list{width:309px;}
+.channel_list li{width:100%; height:73px; margin:0; padding-bottom:10px;}
+
+
+/*******/
+.sp_more{width:100%; text-align: center;}

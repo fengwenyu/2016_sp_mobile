@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* 微信绑定 */
+.wx_bind{margin:10px; min-height:240px;}
+.wx_bind dt, .account_info dd{display:inline-block; vertical-align:top;}
+.wx_bind .bind_txt{line-height:26px; color:#838383;}
+.wx_bind .bind_txt strong{color:#36393e;}
+.wx_bind .bind_btn{width:100%; text-align:center;}
+.wx_bind .bind_btn a{ margin:20px 0; width:45%; display:inline-block;}
+.wx_bind .bind_btn a:last-child{margin-left:4%;}
+
+.wx_bind h2, .wx_bind p{padding-left:45px;}
+.wx_bind h2{height:36px; line-height:36px; font-size:16px; color:#36393e; padding-top:24px; background:url(../../../images/weixin/success.png) no-repeat 20px 31px; background-size:18px 18px;}
+.wx_bind h2.fail{background-image:url(../../../images/weixin/fail.png);}
+.wx_bind p{font-size:14px; line-height:18px; min-height:60px;}
+.wx_bind p i{color:#2d6ccb;}
+
+.alList_submitBtn{
+background-color: #c62026;
+border: 1px solid #c62026;
+height: 38px;
+line-height: 38px;
+color: #fff;
+text-align: center;
+font-size: 18px;
+display: block;
+box-sizing: border-box;
+}

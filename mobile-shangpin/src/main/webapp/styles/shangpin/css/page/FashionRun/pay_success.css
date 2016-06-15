@@ -1,0 +1,15 @@
+
+.container{ min-width:320px; max-width:640px; margin:0 auto;}
+.topFix{position:fixed; top:0; z-index:10;min-width:320px; max-width:640px; height:45px;}
+.topFix section { position:static;}
+body .alContent {line-height:20px;padding-bottom:10px; }
+.receive_box{width:100%; }
+.receive_box p{ padding:0 30px; font-size:12px;}
+.receive_con{ text-align:center; }
+.receive_con span{ font-size:16px;}
+.receive_con i{ width:100px; height:105px; margin: 19% auto 10px; display:block;}
+.receive_con i img{ max-width:100%;}
+.receive_text{ padding:0 30px; margin:42px 0 31px 0; font-size:12px;}
+.receive_btn{ padding:0 30px;}
+.receive_btn a{width:100%;font-size:16px;}
+.abtn{ text-align:center; height:40px; line-height:40px; display:block;background:#c62026; border-radius:5px; color:#fff;}

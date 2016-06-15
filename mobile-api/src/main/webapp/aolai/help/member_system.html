@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>帮助中心</title>
+<link href="../../css/base.css" rel="stylesheet" />
+<link href="../../css/public.css" rel="stylesheet" />
+<link href="../../css/page/help_center.css" rel="stylesheet" /><!--页面专用CSS-->
+
+<script src="../../js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  var ver = Math.random();
+    loader = SP.core
+      .install("../../js/jquery.min.js?" + ver)  //jquery库文件
+        .using("../../js/lazyload.js?" + ver)    //图片懒加载
+        .excute()
+        .using("../../js/config.sim.js?" + ver)  //图片懒加载
+		.using("../../js/page/help_center.js?" + ver)
+        .excute();
+      
+</script>
+</head>
+<body>
+  <div class="container">  
+    
+    <!-- 页面内容start -->
+    <div class="alContent">
+      <div class="problem-box">
+        <h3 class="arrowbg">发票性质</h3>
+        <p>根据中国税法及税务管理部门的要求，在尚品网销售的商品所开具的发票均合法有效。</p>
+        <h3 class="arrowbg">发票金额</h3>
+        <p>1. 发票金额不能高于订单金额。</p>
+        <p>2. 发票金额只含现金购物金额，不包含运费、优惠券、代金券金额。</p>
+        <h3 class="arrowbg">发票信息</h3>
+        <p>1. 发票抬头内容不能为空，您可选择个人、公司或您的姓名。</p>
+        <p>2. 发票内容：商品名称、箱包、饰品、钟表、化妆品、服装、鞋帽、眼镜，当您购买礼品卡时还可以选择如下发票内容：文化用品、办公用品、日用品、劳保用品、礼品。</p>
+        <p>请您根据需要自行选择。如果一个订单中购买两件以上商品，请根据商品品类多项勾选需要开发票的内容。</p>
+        <p>温馨提示：</p>
+        <p>手表类商品只能开具为品牌和型号，其它内容无法开具。</p>
+        <h3 class="arrowbg">补开发票</h3>
+        <p>尚品网提供正规发票，请在订单发票信息中准确填写抬头和内容，否则我们将不能为您开具；如需补开发票，请拨打尚品网客户客服电话4006-900-900，由客服人员为您办理相关事宜。</p>
+        <p>温馨提示：</p>
+        <p>尚品网会为您提供免费正规发票，请于购买商品三个月内补开，逾期将不予受理。</p>
+        <p>由客服人员为您办理补开发票事宜，快递费用由尚品网承担。</p>
+        <h3 class="arrowbg">换开发票</h3>
+        <p>您在收到发票后一个月内如果发现因尚品网原因所致票据抬头、内容或金额错误，请拨打尚品网客户客服电话：4006-900-900，由客服人员为您办理换开发票事宜。尚品网收到退回的发票后会尽快开具新发票。</p>
+        <p>温馨提示：</p>
+        <p>原发票退回后才能重新开具。</p>
+    </div>
+    <!-- 页面内容end -->
+  </div>
+
+  
+</body>
+</html>

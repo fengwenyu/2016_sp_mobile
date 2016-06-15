@@ -1,0 +1,32 @@
+.explain{
+	width:auto;
+	padding:0 15px 20px;
+}
+.explain h3{
+	color:#555;
+	font-size:14px;
+	padding:0 0 10px;
+	line-height:200%;
+	font-weight:normal;
+	text-align:center;
+}
+.explain p{
+	font-size:13px;
+	color:#888;
+	line-height:200%;
+
+}
+.paymet_block fieldset ul{
+	border-bottom: 1px solid #d8d8d8;
+	background-color: #fff;
+	height: auto;
+	padding: 10px;
+	position: relative;
+}
+.paymet_block fieldset ul li{
+	color:#888;
+	line-height: 150%;
+	background: url(../../images/process/pic_warning.png) 0 center no-repeat;
+	background-size:18px;
+	padding:0 15px 0 30px;
+}

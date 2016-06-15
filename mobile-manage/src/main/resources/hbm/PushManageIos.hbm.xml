@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="PushManageIos" table="pushManage_ios">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="platform" type="string">
+			<column name="platform" length="10" />
+		</property>
+		<property name="productNum" type="long">
+			<column name="productNum" />
+		</property>
+		<property name="channelNum" type="long">
+			<column name="channelNum" />
+		</property>
+		<property name="username" type="string">
+			<column name="username" length="50" />
+		</property>
+		<property name="userId" type="string">
+			<column name="userId" length="150" />
+		</property>
+		<property name="action" type="string">
+			<column name="action" length="50" />
+		</property>
+		<property name="actionarg" type="string">
+			<column name="actionarg" length="500" />
+		</property>
+		<property name="actionobj" type="string">
+			<column name="actionobj" length="500" />
+		</property>
+		<property name="pushContent" type="string">
+			<column name="pushContent" length="500" />
+		</property>
+		<property name="msgType" type="integer">
+			<column name="msgType" length="8" />
+		</property>
+		<property name="pushType" type="int">
+			<column name="pushType" length="4" />
+		</property>
+		<property name="notice" type="string">
+			<column name="notice" length="500" />
+		</property>
+		<property name="showTime" type="timestamp">
+			<column name="showTime" />
+		</property>
+		<property name="createTime" type="timestamp">
+			<column name="createTime" />
+		</property>
+		<property name="title" type="string">
+			<column name="title" length="50" />
+		</property>
+		<property name="dictId">
+			<column name="dict_id"  />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta content-type="text/html" charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>首页</title>
+<link href="/css/base.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/font-css/font-awesome.min.css">	
+<link href="/css/page/home.css" rel="stylesheet" />
+
+<script src="/js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	var ver = Math.random();
+		loader = SP.core
+		    .install("/js/zepto.1.1.3.js?" + ver)
+			.using("/js/lazyload.js?" + ver)
+			.excute()
+			.using("/js/config.sim.js?" + ver)
+			.using("/js/css3.js?" + ver)
+			.using("/js/slideLayer1.js?" + ver)
+			.excute()
+			.using("/js/comm.js?" + ver)
+			.using("/js/page/home.js?" + ver)
+</script>
+</head>
+<body>
+<div class="container">
+	<!-- 顶部下载APP -->
+    <div class="headApp" red_url="">			
+    	<img src="/images/download_top.png">
+        
+    </div>
+    
+	<!--头部 start-->
+    <div class="topFix" style="position:relative; height:44px;">
+        <section style="position:relative; height:44px; overflow:hidden;">
+            <div class="topBack" >
+            <p class="logo"><img src="/images/logo.png" width="46" height="21"></p>
+            <ul class="alUser_icon clr">
+              <li><a href="#"><img src="/images/home_icon.png" width="25" height="25" alt="首页"></a></li>
+                <li><a href="#"><img src="/images/order_icon.png" width="25" height="25" alt="购物车"></a></li>
+                <li><a href="#"><img src="/images/user_icon.png" width="25" height="25" alt="账户"></a></li>
+            </ul>
+            </div>
+        </section>
+    </div>
+    <!--头部 end-->
+ 
+<div class="alContent">
+
+<!-- 底部下载APP -->
+<div class="daoliuBanner">			
+  <div class="track">				
+    <span class="slider" red_url="">					
+      <img src="/images/download_bottom.png">				
+    </span>	
+    <span class="close-app"><img src="/images/but_close2.png"></span>				
+  </div>			
+</div>
+
+<!-- 焦点图 Start -->
+<div class="content" id="J_m-slider">
+	<div class="slider-outer">
+    	<ul class="slider-wrap">
+        	<li><a href="#"><img alt="" src="/images/home/focusimg01.jpg" width="100%"></a></li>
+            <li><a href="#"><img alt="" src="/images/home/focusimg01.jpg" width="100%"></a></li>
+            <li><a href="#"><img alt="" src="/images/home/focusimg01.jpg" width="100%"></a></li>
+            <li><a href="#"><img alt="" src="/images/home/focusimg01.jpg" width="100%"></a></li>
+            <li><a href="#"><img alt="" src="/images/home/focusimg01.jpg" width="100%"></a></li>
+		</ul>
+	</div>
+    <div class="slider-status" ></div>
+</div>
+<!-- 焦点图 End -->
+
+<div id="navs" class="clr">
+<a href=""><i><img alt="" src="/images/home/icon01.png"></i>海外购</a>
+<a href=""><i><img alt="" src="/images/home/icon02.png"></i>优惠券</a>
+<a href=""><i><img alt="" src="/images/home/icon03.png"></i>物流</a>
+<a href=""><i><img alt="" src="/images/home/icon04.png"></i>订单</a>
+<a href=""><i><img alt="" src="/images/home/icon05.png"></i>展开</a>
+<a href=""><i><img alt="" src="/images/home/icon01.png"></i>图片</a>
+<a href=""><i><img alt="" src="/images/home/icon02.png"></i>优惠券</a>
+<a href=""><i><img alt="" src="/images/home/icon03.png"></i>物流</a>
+<a href=""><i><img alt="" src="/images/home/icon04.png"></i>订单</a>
+<a href=""><i><img alt="" src="/images/home/icon05.png"></i>展开</a>
+</div>
+<div class="line"></div>
+<!--最新上架-->
+<h2 class="title">最新上架<em class="text-color-green">NEW ARRIVALS</em></h2>
+<div class="hallBox clr">
+    <a href="#" class="on-sale"><img alt="" src="/images/home/btm_banner00.jpg" width="100%"></a>
+    <a href="#" class="on-sale martop">
+    	<img alt="" src="/images/home/btm_banner15.jpg" width="100%">
+        <div class="pic-des"><p>春夏新款抢先购300多款精选 多彩情人节  </p><strong>¥<b>576</b>起</strong></div>
+    </a>
+</div>
+<a href="#" class="more-btn btn-color-green">全部今日上新</a>
+<div class="line"></div>
+
+<!--今日风格-->
+<h2 class="title">今日风格<em class="text-color-red">TODAY STYLE </em></h2>
+<div class="hallBox clr">
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/btm_banner14.jpg" width="100%"></a> 
+</div>
+<div class="line"></div>
+<!--今日特卖-->
+<h2 class="title">今日特卖<em class="text-color-red">TODAY'S EVENTS </em></h2>
+<div class="hallBox clr">
+    <a href="#" class="tag">
+    	<img alt="" src="/images/e.gif" lazy="/images/home/btm_banner03.jpg" width="100%">
+    	<span><img alt="" src="/images/e.gif" lazy="/images/tag01.png" width="100%"></span>
+        <div class="pic-des"><p>春夏新款抢先购300多款精选 多彩情人节  </p><strong>¥<b>576</b>起</strong></div>
+    </a> 
+    <a href="#" class="tag">
+      <img alt="" src="/images/e.gif" lazy="/images/home/btm_banner10.jpg" width="100%">
+      <span><img alt="" src="/images/e.gif" lazy="/images/tag02.png" width="100%"></span>
+      <div class="pic-des"><p>春夏新款抢先购300多款精选 多彩情人节  </p><strong>¥<b>576</b>起</strong></div>
+    </a>
+    <a href="#" class="tag">
+      <img alt="" src="/images/e.gif" lazy="/images/home/btm_banner09.jpg" width="100%">
+      <span><img alt="" src="/images/e.gif" lazy="/images/tag03.png" width="100%"></span>
+      <div class="pic-des"><p>春夏新款抢先购300多款精选 多彩情人节  </p><strong>¥<b>576</b>起</strong></div>
+    </a> 
+</div>
+<a href="#" class="more-btn btn-color-red">全部特卖</a>
+<div class="hallBox clr">
+	<a href="#" class="on-sale no_open">
+      <img alt="" src="/images/e.gif" lazy="/images/home/btm_banner06.jpg" width="100%">
+      <span><em class="open-time">20:00</em>开启</span>
+      <div class="pic-des"><p>春夏新款抢先购300多款精选 多彩情人节  </p><strong>¥<b>576</b>起</strong></div>
+    </a>
+</div>
+<div class="line"></div>
+
+<!-- 人气单品排行榜 -->
+<div class="list-box">
+	<div class="list-title clr">
+    	<a href="javascript:;" class="selected">24小时人气排行榜</a>
+        <a href="javascript:;" class="worth-buy-btn">今日值得买</a>
+    </div>
+    <ul class="prod_list clr">
+        <li>
+        	<a href="#">
+              <i class="c_tag"><img src="/images/e.gif" lazy="/images/c_tag01.png" /></i>
+              <img src="/images/e.gif" lazy="/images/home/img001.jpg" />
+              <div class="li_text">
+              	<h5>ASOS</h5>
+                <p>石灰编织背心</p>
+                <span>
+                    <strong class="red">¥576</strong>
+                    <em>¥870</em>
+                </span>
+              </div>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+              <i class="c_tag"><img src="/images/e.gif" lazy="/images/c_tag02.png" /></i>
+              <img src="/images/e.gif" lazy="/images/home/img002.jpg" />
+              <div class="li_text">
+              	<h5>ASOS</h5>
+                <p>石灰编织背心</p>
+                <span>
+                    <strong>¥576</strong>
+                    <em>¥870</em>
+                </span>
+              </div>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+              <i class="c_tag"><img src="/images/e.gif" lazy="/images/c_tag03.png" /></i>
+              <img src="/images/e.gif" lazy="/images/home/img003.jpg" />
+              <div class="li_text">
+              	<h5>ASOS</h5>
+                <p>石灰编织背心</p>
+                <span>
+                    <strong>¥576</strong>
+                    <em>¥870</em>
+                </span>
+              </div>
+            </a>
+        </li>
+        <li>
+        	<a href="#">
+              <img src="/images/e.gif" lazy="/images/home/img004.jpg" />
+              <div class="li_text">
+              	<h5>ASOS</h5>
+                <p>石灰编织背心</p>
+                <span>
+                    <strong>¥576</strong>
+                    <em>¥870</em>
+                </span>
+              </div>
+            </a>
+        </li>
+        <!-- 今日值得买 -->
+        <div class="worth-buy-title">
+        <a id="worthBuy" href="#" name="worthBuy"></a>
+        <a href="javascript:;">今日值得买</a><span> WORTH BUY</span><em></em></div>
+        <li>
+            <a href="#">
+              <img src="/images/e.gif" lazy="/images/home/img005.jpg" />
+              <div class="li_text">
+                <h5>ASOS</h5>
+                <p>石灰编织背心</p>
+                <span>
+                    <strong>¥576</strong>
+                    <em>¥870</em>
+                </span>
+              </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+              <img src="/images/e.gif" lazy="/images/home/img006.jpg" />
+              <div class="li_text">
+                <h5>ASOS</h5>
+                <p>石灰编织背心</p>
+                <span>
+                    <strong>¥576</strong>
+                    <em>¥870</em>
+                </span>
+              </div>
+            </a>
+        </li>
+    </ul> 
+    
+</div>
+<div class="line"></div>
+
+<!-- 品类 -->
+<h2 class="title">品类<em class="text-color-gray"> CATEGORY</em></h2>
+<div class="pl_box">
+	<img src="/images/home/pl_img00.jpg"/>
+    <ul>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+</div>
+
+<div class="line"></div>
+
+<!--推荐品牌-->
+<h2 class="title">推荐品牌<em class="text-color-gray"> HOT BRAND</em></h2>
+<div class="brandBox clr">
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_m.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_t.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_p.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_c.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_lv.png"></a> 
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_l.png"></a> 
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_g.png"></a> 
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_z.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_m.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_t.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_p.png"></a>
+    <a href="#"><img alt="" src="/images/e.gif" lazy="/images/home/brand_c.png"></a>
+</div>
+<a href="#" class="more-btn">全部品牌</a>
+
+</div>
+
+<!-- 公共尾部 start -->
+<div class="app_bg">
+    <footer class="app_foot">
+        <p class="app_user"><a href="#">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">注册</a></p>
+        <div class="appCopyright">
+            客服电话：<a href="tel:4006-900-900">4006-900-900</a>（08:00-24:00）<br />
+            Copyright  2010-2014 Shangpin.com 版权所有
+        </div>
+    </footer>
+</div>
+<!-- 公共尾部 end -->
+
+<!-- 特卖未开启弹层 --> 
+<div id="popup_overlay"></div>
+<div id="popup_container" >
+    <div id="popup_message">还没开始呢，20:00 再来吧！</div>
+</div>
+
+</div>
+
+</body>
+</html>

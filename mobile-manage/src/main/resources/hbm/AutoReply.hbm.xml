@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.shangpin.wireless.domain">
+	<class name="AutoReply" table="autoReply">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="name" type="string">
+			<column name="name" length="256"/>
+		</property>
+		<property name="type" type="string">
+			<column name="type" length="10"/>
+		</property>
+		<property name="keywords" type="string">
+			<column name="keywords" length="512"/>
+		</property>
+		<property name="reply" type="string">
+			<column name="reply" length="1024"/>
+		</property>
+		<property name="replyType" type="string">
+			<column name="replyType" length="1"/>
+		</property>
+		<property name="status" type="string">
+			<column name="status" length="1"/>
+		</property>
+	</class>
+</hibernate-mapping>

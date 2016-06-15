@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<brands capital="B">
+		<brand>
+			<name>BALLY</name>
+			<id>B0109</id>
+		</brand>
+		<brand>
+			<name>BOTTEGA VENETA</name>
+			<id>B0010</id>
+		</brand>
+	</brands>
+	<brands capital="F">
+		<brand>
+			<name>FENDI</name>
+			<id>B0009</id>
+		</brand>
+		</brands>
+	<brands capital="G">
+		<brand>
+			<name>GUCCI</name>
+			<id>B0003</id>
+		</brand>
+			<brand>
+			<name>GUY LAROCHE</name>
+			<id>B0616</id>
+		</brand>
+    	</brands>
+   <brands capital="I">
+		<brand>
+			<name>IDEALITIC</name>
+			<id>B0580</id>
+		</brand>
+		</brands>
+	<brands capital="L">
+		<brand>
+			<name>LOTTUSSE</name>
+			<id>B0637</id>
+		</brand>
+	</brands>
+	<brands capital="M">
+		<brand>
+			<name>MONTBLANC</name>
+			<id>B0051</id>
+		</brand>
+		</brands>
+	<brands capital="P">
+		<brand>
+			<name>PINEIDER</name>
+			<id>B0644</id>
+		</brand>
+		<brand>
+			<name>PRADA</name>
+			<id>B0002</id>
+		</brand>
+		<brand>
+			<name>PIQUADRO</name>
+			<id>B0679</id>
+		</brand>
+	</brands>
+</data>
+
+	

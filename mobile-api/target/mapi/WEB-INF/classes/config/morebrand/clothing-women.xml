@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+	<brands capital="A">
+		<brand>
+			<name>ALICE BY TEMPERLEY</name>
+			<id>B0623</id>
+		</brand>
+		<brand>
+			<name>ANNA STUDIO</name>
+			<id>B0649</id>
+		</brand>
+			<brand>
+			<name>ARYN K</name>
+			<id>B0545</id>
+		</brand>
+		<brand>
+			<name>AUTUMN CASHMERE</name>
+			<id>B0662</id>
+		</brand>
+	</brands>
+		<brands capital="B">
+		<brand>
+			<name>BLACK ORCHID</name>
+			<id>B0566</id>
+		</brand>
+		<brand>
+			<name>BLUGIRL</name>
+			<id>B0235</id>
+		</brand>
+	</brands>
+	<brands capital="C">
+		<brand>
+			<name>CHARLIE JADE HOLIDAY</name>
+			<id>B0593</id>
+		</brand>
+		</brands>
+			<brands capital="D">
+		<brand>
+			<name>DIANE VON FURSTENBERG (DVF)</name>
+			<id>B0284</id>
+		</brand>
+		</brands>
+			<brands capital="E">
+		<brand>
+			<name>EDWARD ACHOUR PARIS</name>
+			<id>B0633</id>
+		</brand>
+		<brand>
+			<name>ERYN BRINIE</name>
+			<id>B0661</id>
+		</brand>
+	</brands>
+		<brands capital="H">
+		<brand>
+			<name>HALSTON HERITAGE</name>
+			<id>B0597</id>
+		</brand>
+	</brands>
+	<brands capital="I">
+		<brand>
+			<name>ILSEE</name>
+			<id>B0528</id>
+		</brand>
+		</brands>
+		<brands capital="J">
+		<brand>
+			<name>JUICY COUTURE</name>
+			<id>B0280</id>
+		</brand>
+	</brands>
+	<brands capital="L">
+		<brand>
+			<name>LAUNDRY BY SHELLI SEGAL</name>
+			<id>B0069</id>
+		</brand>
+		<brand>
+			<name>LIU JO</name>
+			<id>B0333</id>
+		</brand>
+	</brands>
+		<brands capital="M">
+		<brand>
+			<name>M MISSONI</name>
+			<id>B0533</id>
+		</brand>
+		<brand>
+			<name>MILLY BY MICHELLE SMITH</name>
+			<id>B0564</id>
+		</brand>
+	</brands>
+		<brands capital="O">
+		<brand>
+			<name>OASIS</name>
+			<id>B0617</id>
+		</brand>
+			</brands>
+				<brands capital="P">
+		<brand>
+			<name>PLENTY</name>
+			<id>B0595</id>
+		</brand>
+	</brands>
+		<brands capital="R">
+		<brand>
+			<name>RODIKA ZANIAN</name>
+			<id>B0652</id>
+		</brand>
+		</brands>
+		<brands capital="S">
+		<brand>
+			<name>SB BY SHERI BODELL</name>
+			<id>B0537</id>
+		</brand>
+		<brand>
+			<name>SHAE</name>
+			<id>B0624</id>
+		</brand>
+		<brand>
+			<name>SHERI BODELL</name>
+			<id>B0663</id>
+		</brand>
+		<brand>
+			<name>SINEQUANONE</name>
+			<id>B0535</id>
+		</brand>
+		<brand>
+			<name>SUBTLE LUXURY</name>
+			<id>B0651</id>
+		</brand>
+	</brands>
+	<brands capital="T">
+		<brand>
+			<name>TRACY REESE</name>
+			<id>B0596</id>
+		</brand>
+		<brand>
+			<name>TWENTY8TWELVE</name>
+			<id>B0659</id>
+		</brand>
+	</brands>
+	<brands capital="W">
+		<brand>
+			<name>WAVERLY GREY</name>
+			<id>B0682</id>
+		</brand>
+		</brands>
+		<brands capital="Y">
+		<brand>
+			<name>YOANA BARASCHI</name>
+			<id>B0579</id>
+		</brand>
+	</brands>
+</data>
+
+	

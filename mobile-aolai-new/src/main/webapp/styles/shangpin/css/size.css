@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+*{-webkit-tap-highlight-color:rgba(0, 0, 0, 0); margin:0;padding:0; -webkit-touch-callout:none;}
+body{font-size:14px; -webkit-user-select:none; -webkit-text-size-adjust:none; font-family:arial; background:#fff;}
+ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+a img{border:none;}
+input,img{vertical-align:middle;}
+table{border-collapse:collapse;border-spacing:0;}
+input[type=text],input[type=password],input[type=number],input[type=url],input[type=email],input[type=tel]{height:35px;line-height:35px;border:1px #ccc solid;text-indent:5px;font-size:14px;border-top-color:#9c9c9d;color:#a0a0a0;-webkit-box-shadow:inset 0 1px 3px #aaa;-webkit-border-radius:3px;}
+input[type=checkbox],input[type=radio],select{vertical-align:middle;}
+select{font-size:16px;height:30px;line-height:30px;}
+textarea{font-size:14px;border:1px #ccc solid;-webkit-box-shadow:inset 0 2px 2px #999;}
+header,nav,section,footer{display:block;}
+
+a, a:link, a:visited, a:hover, a:active{text-decoration:none; color:#666;}
+
+/* ====================   头部通用  ================= */
+
+
+
+/* ====================   尺码对照  ================= */
+
+.goBack{margin:10px 10px 0;display: block;}
+.content{margin:5px 10px 0; padding:0;}
+.tab_nav{height:30px; line-height:30px;}
+.tab_nav a{display:inline-block; width:65px; height:28px; line-height:30px; text-align:center; margin:0 5px 0 0; background-color:#2f2f2f; color:#fff; -webkit-border-top-right-radius:3px; border-top-left-radius:3px; -webkit-border-top-right-radius:3px; border-top-right-radius:3px;}
+.tab_nav a.cur{background-color:#cdcdcd; height:30px; color:#202020;}
+.tab_nav a.big{width:100px;}
+
+.tab_content{border:8px solid #cdcdcd; -webkit-border-radius:5px; border-radius:5px; overflow:hidden; color:#202020; -webkit-border-top-left-radius:0; border-top-left-radius:0; /*overflow:scroll; -webkit-overflow:auto;  -webkit-overflow-scrolling:touch;*/ position:relative; width:284px;}
+.tab_content li{display:block; width:680px;}
+.tab_content table{border: none; width:680px;/* position:relative; left:0;*/}
+.tab_content table tr:nth-child(2n){background-color:#cdcdcd;}
+.tab_content table td{padding:0 0 0 5px; line-height:37px;}
+.tab_content table td strong{font-weight:normal;}
+.tab_content table p{line-height:25px;}

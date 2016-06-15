@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta content-type="text/html" charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- 开启对web app程序的支持 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 全屏模式浏览 -->
+<meta name="apple-touch-fullscreen" content="yes">
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- 改变Safari状态栏的外观 -->
+<meta name="apple-itunes-app" content="app-id=432489082"/>
+
+<!-- 禁止自动识别5位以上数字为电话 -->
+<meta name="format-detection" content="telephone=no">
+
+<title>尚品奥莱-触摸屏版</title>
+<link href="css/base.css" rel="stylesheet" />
+
+<!-- icon -->
+<link rel="apple-touch-icon" href="../images/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../images/touch-icon-iphone4.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../images/touch-icon-newipad.png">
+<!-- 启动自定义图片(png, 320X640) -->
+<link rel="apple-touch-startup-image" sizes="72x72" href="../images/logo/loading.png">
+
+<script src="../js/core.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	var ver = "?20121023001";
+		loader = SP.core
+			.install("/js/zepto.min.js" + ver)
+			.using("/js/lazyload.js" + ver)
+			.excute()
+			.using("/js/config.sim.js" + ver);
+</script>
+</head>
+<script>
+	function parentRedirect(url){
+		window.parent.location.href= url;
+	}
+</script>
+<body>
+
+<header>
+  <h1 id="alLogo">
+    <a href="#">尚品奥莱</a>
+  </h1>
+  <nav class="alUser_icon">
+   <ul>
+    <li><a href="http://m.shangpin.com/cartaction!showcart?ch=4"><img src="../images/cart_icon.png" width="31" height="31" alt="购物袋"></a></li>
+    <li><a href="http://m.shangpin.com/orderaction!orderlist?ch=4"><img src="../images/order_icon.png" width="31" height="31" alt="订单"></a></li>
+    <li><a href="http://m.shangpin.com/accountaction!info?ch=4"><img src="../images/user_icon.png" width="31" height="31" alt="账户"></a></li>
+   </ul>
+  </nav>
+</header>
+
+<nav class="alNav">
+  <ul>
+    <li><a href="http://m.shangpin.com?gender=0&ch=4">首页</a></li>
+    <li>App下载</li>
+  </ul>
+</nav>
+
+<div class="alContent">
+	<div class="appContent"><img src="images/banner.png" width="320" height="160"></div>
+</div>
+
+<footer>
+
+  <dl class="alDownload_AppBtn">
+    <dd>
+    	<a href="http://m.shangpin.com/spindex!toAppStore?ch=4&store=android"" class="android" title="Android"></a>
+        <a href="http://m.shangpin.com/spindex!toAppStore?ch=4&store=iphone" class="iphone" title="Iphone"></a>
+    </dd>
+  </dl>
+  
+  <div class="alCopyright">
+    <p>客服电话：<a class="tel" href="tel:4006-900-900">4006-900-900</a></p>
+     <a href="javascript:;" class="alScrollTop"><img src="/images/scrollTop_icon.png" width="13" height="14" alt="回顶部"> 回顶部</a>
+  </div>
+  
+</footer>
+</body>
+</html>

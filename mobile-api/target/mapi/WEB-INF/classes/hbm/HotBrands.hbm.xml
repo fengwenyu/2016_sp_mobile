@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="HotBrands" table="hotBrands">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="brandName" type="string">
+			<column name="brandName" length="100" />
+		</property>
+		<property name="brandId" type="string">
+			<column name="brandId" length="50" />
+		</property>
+		<property name="imgUrl" type="string">
+			<column name="imgUrl" length="200" />
+		</property>
+		<property name="imgWidth" type="string">
+			<column name="imgWidth" length="50" />
+		</property>
+		<property name="imgHeight" type="string">
+			<column name="imgHeight" length="50" />
+		</property>
+		<property name="topImgUrl" type="string">
+			<column name="topImgUrl" length="200" />
+		</property>
+		<property name="topImgWidth" type="string">
+			<column name="topImgWidth" length="50" />
+		</property>
+		<property name="topImgHeight" type="string">
+			<column name="topImgHeight" length="50" />
+		</property>
+		<property name="sort" not-null="true" type="integer">
+			<column name="sort" />
+		</property>
+		<property name="createDate" type="timestamp">
+			<column name="createDate" />
+		</property>
+
+		<property name="reserve0" />
+		<property name="reserve1" />
+		<property name="reserve2" />
+
+	</class>
+</hibernate-mapping>

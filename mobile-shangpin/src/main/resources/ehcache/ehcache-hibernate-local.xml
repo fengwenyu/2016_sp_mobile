@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="false">
+	<diskStore path="java.io.tmpdir/hibernate/mshangpin" />
+
+	<cacheManagerPeerProviderFactory
+		class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+		properties="peerDiscovery=automatic, multicastGroupAddress=230.0.0.1,
+	    multicastGroupPort=4446,timeToLive=32,hostName=localhost" />
+	    <!-- hostName=localhost 在多台server 需要配置成IP -->
+	<cacheManagerPeerListenerFactory
+		class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+		properties="port=40001,hostName=localhost" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache maxEntriesLocalHeap="10000" eternal="false"
+		timeToIdleSeconds="300" timeToLiveSeconds="600" overflowToDisk="true"
+		maxEntriesLocalDisk="100000" memoryStoreEvictionPolicy="LFU" />
+
+	<!-- security entity <cache name="com.shangpin.core.entity.Account" maxEntriesLocalHeap="1000" 
+		eternal="false" overflowToDisk="true" maxEntriesLocalDisk="10000" /> -->
+
+	<!-- ehcache web缓存 -->
+	<cache name="pageCachingFilter" maxElementsInMemory="100000"
+		maxElementsOnDisk="100000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="120" timeToLiveSeconds="120"
+		memoryStoreEvictionPolicy="LFU">
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+		<bootstrapCacheLoaderFactory
+			class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory" />
+	</cache>
+	<cache name="pageFragmentCachingFilter" maxElementsInMemory="100000"
+		maxElementsOnDisk="100000" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="120" timeToLiveSeconds="120"
+		memoryStoreEvictionPolicy="LFU">
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+		<bootstrapCacheLoaderFactory
+			class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory" />
+	</cache>
+
+	<cache name="testPageFragmentCachingFilter" maxElementsInMemory="100"
+		maxElementsOnDisk="100" eternal="false" overflowToDisk="true"
+		timeToIdleSeconds="120" timeToLiveSeconds="120"
+		memoryStoreEvictionPolicy="LFU">
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+		<bootstrapCacheLoaderFactory
+			class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory" />
+	</cache>
+</ehcache>

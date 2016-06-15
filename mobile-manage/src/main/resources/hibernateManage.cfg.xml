@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!-- 数据库信息 -->
+	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	<!-- 其他配置 -->
+	<property name="show_sql">ture</property>
+	<!-- 自动建表 -->
+	<property name="hbm2ddl.auto">update</property>
+	<!--
+ 	<property name="hibernate.current_session_context_class">thread</property>  
+    <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>  
+    -->
+	<!-- 声明映射文件 -->
+	<mapping resource="hbm/AccountStatistics.hbm.xml" />
+	<mapping resource="hbm/Channel.hbm.xml" />
+	<mapping resource="hbm/DeviceInfo.hbm.xml" />
+	<mapping resource="hbm/OperateLog.hbm.xml" />
+	<mapping resource="hbm/OrderStatistics.hbm.xml" />
+	<mapping resource="hbm/PageView.hbm.xml" />
+	<mapping resource="hbm/AoLaiWapPageView.hbm.xml" />
+	<mapping resource="hbm/ShangPinWapPageView.hbm.xml" />
+	<mapping resource="hbm/DownloadStatistics.hbm.xml" />
+	<mapping resource="hbm/Privilege.hbm.xml" />
+	<mapping resource="hbm/Product.hbm.xml" />
+	<mapping resource="hbm/Role.hbm.xml" />
+	<mapping resource="hbm/User.hbm.xml" />
+	<mapping resource="hbm/UserBehavioralAolaiAndriod.hbm.xml" />
+	<mapping resource="hbm/UserBehavioralSPAndriod.hbm.xml" />
+	<mapping resource="hbm/UserBehavioralSPIphone.hbm.xml" />
+	<mapping resource="hbm/UserBehavioralAolaiIphone.hbm.xml" />
+</session-factory>
+</hibernate-configuration>

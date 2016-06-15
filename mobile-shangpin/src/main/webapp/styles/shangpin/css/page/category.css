@@ -1,0 +1,26 @@
+/*品类*/
+.category_nav{width:100%; height:43px; overflow:hidden; border-bottom:1px solid #d5d5d5;}
+.category_nav ul{width:160px; margin:0 auto; height:24px; padding:12px 0 7px; display:-webkit-box; display:-moz-box; display:box;}
+.category_nav li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-align:center;text-align:center;border-bottom:2px solid #fff;font-size:14px;height:22px;line-height:22px; margin:0 24px; color:#484848;}
+.category_nav li.cur{border-bottom:2px solid #36393e; color:#36393e;}
+.category_nav li a{color:#484848;}
+.category_nav li.cur a{color:#484848;}
+.category_list{ width:320px; margin:0 auto; overflow:hidden;}
+.category_list a{color:#484848;}
+.category_list a.category_list_title{display:inline-table; background:#fff;}
+.category_list a.category_list_title p{ float:right;}
+.category_list a.category_list_title span{ width:160px; height:160px; display:table-cell;vertical-align:middle; text-align:center;}
+.category_list a.category_list_title span strong{ display:block; font-size:22px; font-weight:normal;}
+.category_list a.category_list_title span em{ display:block; font-size:12px; font-family:Arial;}
+.category_list_con{ background:#ededed; box-shadow:0 0 5px rgba(0,0,0,0.5) inset; width:320px; padding:0 5px; margin-left:-5px; position:relative; display:none;}
+.category_list_con table{ position:relative; z-index:2;}
+.category_list_con tr{border-bottom:1px solid #d5d5d5;}
+.category_list_con tr:last-child{border-bottom:none;}
+.category_list_con td{ width:33.3%;}
+.category_list_con td:nth-child(2n){border-left:1px solid #d5d5d5;border-right:1px solid #d5d5d5;}
+.category_list_con a{ display:block; width:106px; overflow:hidden;white-space: nowrap;text-overflow: ellipsis; height:44px; text-align:center; line-height:44px; }
+
+.category_list_con a.cur,.category_list_con a:hover,.category_list_con a:visited{ background:#d5d5d5;}
+.category_list_con .icon_arrow{ position:absolute; top:-8px; width:11px; height:11px; background:url(../../images/category/icon_arrow.png) no-repeat; background-size:11px 11px; right:75px; display:none; z-index:1;}
+.category_list:nth-child(2n) a.category_list_title p{float:left;}
+.category_list:nth-child(2n) .category_list_con .icon_arrow{ right:auto; left:75px;}

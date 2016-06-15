@@ -1,0 +1,75 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+
+	<!-- 数据库信息 -->
+	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	<property name="connection.pool_size">120</property>
+	<!-- 其他配置 -->
+	<property name="show_sql">false</property>
+	<!-- 
+	<property name="format_sql">true</property>
+	 -->
+	<!-- 自动建表 -->
+	<property name="hbm2ddl.auto">update</property>
+ 	
+	<!-- 声明映射文件 -->
+	<!-- <mapping resource="com/shangpin/wireless/api/domain/Account.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/ErrorLog.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/Feedback.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/OnlineManage.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/PushconfigAolai.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/PushconfigShangpin.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/PushManageAndroid.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/PushManageIos.hbm.xml" />
+    <mapping resource="com/shangpin/wireless/api/domain/AccountAlipay.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/AccountWeixin.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/AccountWeixinBinded.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/WeixinActivities.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/WeixinAnswerRecords.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/WeixinQuestions.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/NewProductBrand.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/BestpayorderShangpin.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/WeixinLottery.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/WeixinMessage.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/HotBrands.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/FindManage.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/Token.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/AppPictures.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/WeixinPayOrder.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/AppNavigation.hbm.xml" />
+	<mapping resource="com/shangpin/wireless/api/domain/AolaiActivity.hbm.xml" /> -->
+	
+	<mapping resource="hbm/Account.hbm.xml" />
+	<mapping resource="hbm/ErrorLog.hbm.xml" />
+	<mapping resource="hbm/Feedback.hbm.xml" />
+	<mapping resource="hbm/OnlineManage.hbm.xml" />
+	<mapping resource="hbm/PushconfigAolai.hbm.xml" />
+	<mapping resource="hbm/PushconfigShangpin.hbm.xml" />
+	<mapping resource="hbm/PushManageAndroid.hbm.xml" />
+	<mapping resource="hbm/PushManageIos.hbm.xml" />
+    <mapping resource="hbm/AccountAlipay.hbm.xml" />
+	<mapping resource="hbm/AccountWeixin.hbm.xml" />
+	<mapping resource="hbm/AccountWeixinBinded.hbm.xml" />
+	<mapping resource="hbm/WeixinActivities.hbm.xml" />
+	<mapping resource="hbm/WeixinAnswerRecords.hbm.xml" />
+	<mapping resource="hbm/WeixinQuestions.hbm.xml" />
+	<mapping resource="hbm/NewProductBrand.hbm.xml" />
+	<mapping resource="hbm/BestpayorderShangpin.hbm.xml" />
+	<mapping resource="hbm/WeixinLottery.hbm.xml" />
+	<mapping resource="hbm/WeixinMessage.hbm.xml" />
+	<mapping resource="hbm/HotBrands.hbm.xml" />
+	<mapping resource="hbm/FindManage.hbm.xml" />
+	<mapping resource="hbm/Token.hbm.xml" />
+	<mapping resource="hbm/AppPictures.hbm.xml" />
+	<mapping resource="hbm/WeixinPayOrder.hbm.xml" />
+	<mapping resource="hbm/AppNavigation.hbm.xml" />
+	<mapping resource="hbm/AolaiActivity.hbm.xml" />
+	<mapping resource="hbm/IOSDownloadActive.hbm.xml" />
+	<mapping resource="hbm/AutoReply.hbm.xml" />
+	
+</session-factory>
+</hibernate-configuration>

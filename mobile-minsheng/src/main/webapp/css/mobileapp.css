@@ -1,0 +1,27 @@
+body{
+	width:100%;
+	background-color: #f3f3f3;
+	margin:0 0 0 0;
+	text-align:center;
+	padding: 0;
+}
+ul {
+
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.spMobi_box {
+	width: 100%;
+	background: #f3f3f3;
+
+}
+
+.spMobi_content ul li {
+	line-height: 0;
+
+}
+
+.pad_bot {
+	padding-bottom: 10px
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+
+	<description>CDN Server URL </description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>cdn</short-name>
+	<uri>http://m.shangpin.com/cdn</uri>
+
+	<function>
+		<name>js</name>
+		<function-class>com.shangpin.biz.tags.CDNTag</function-class>
+		<function-signature>java.lang.String jsCDN(javax.servlet.http.HttpServletRequest)</function-signature>
+		<example>${cdn:js(pageContext.request)}</example>
+	</function>
+
+	<function>
+		<name>css</name>
+		<function-class>com.shangpin.biz.tags.CDNTag</function-class>
+		<function-signature>java.lang.String cssCDN(javax.servlet.http.HttpServletRequest)</function-signature>
+		<example>${cdn:css(pageContext.request)}</example>
+	</function>
+
+	<function>
+		<name>pic</name>
+		<function-class>com.shangpin.biz.tags.CDNTag</function-class>
+		<function-signature>java.lang.String picCDN(javax.servlet.http.HttpServletRequest)</function-signature>
+		<example>${cdn:pic(pageContext.request)}</example>
+	</function>
+
+</taglib>
+   

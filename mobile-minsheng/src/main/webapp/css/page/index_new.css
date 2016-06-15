@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+#J_m-slider{width:320px;height:180px;margin:0 auto;overflow:hidden;padding:10px 0 0 0;position:relative;}
+#J_m-slider .slider-outer{width:320px;height:160px;overflow:hidden;position:relative;}
+#J_m-slider ul{width:1600px;height:160px;position:absolute;left:0;top:0;}
+#J_m-slider ul li{width:320px;height:160px;overflow:hidden;float:left;}
+#J_m-slider .slider-status{width:100%;height:10px;bottom:10px;left:0;text-align:center;}
+#J_m-slider .slider-status span{display:inline-block;width:6px;height:6px;background-color:#707070;;border-radius:3px;line-height:3px;cursor:pointer;margin:0 5px 0 0;}
+#J_m-slider .slider-status span.sel{background-color:#ccc;}
+
+
+.tagMenu{height:42px;line-height:42px; padding:10px 0 4px;}
+.tagMenu ul{display:-webkit-box; display:-moz-box; display:box; width:100%;}
+.tagMenu li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-align:center;border-right:1px solid #fff;}
+.tagMenu li:first-child{background-color:#a186be;}
+.tagMenu li:nth-child(2){background-color:#7accc8;}
+.tagMenu li:last-child{border-right:0;background-color:#f49ac1;}
+.tagMenu li a{display:block;height:42px;line-height:42px;overflow:hidden;color:#fff; font-size:20px;}
+
+
+/*民生银行*/
+.category_box{width:100%;}
+.category_box ul{width:300px; margin:0 auto; padding:16px 0 19px;}
+.category_box li{width:94px; height:94px; border:1px solid #ececec; float:left; margin-top:4px;}
+.category_box li.middle{margin-left:4px;}
+.category_box li.middle2{margin-left:8px;}
+.category_box li.big{width:194px; height:194px;}
+.category_box li.frt{float:right;}
+.category_box li a, .category_box li img{display:block; width:94px; height:94px;}
+.category_box li.big a, .category_box li.big img{width:194px; height:194px;}
+.category_box .btmBg{width:100%; height:10px; background:url(../../images/index/cmbc/btmBg.png) repeat-x 0 0; background-size:5px 10px;}

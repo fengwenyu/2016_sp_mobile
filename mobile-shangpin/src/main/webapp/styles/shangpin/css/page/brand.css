@@ -1,0 +1,97 @@
+/*品牌*/
+
+body .alContent{position:relative;}
+
+.topSearch{background-color:#d5d5d5; height:30px; padding:8px 0 8px 44px;}
+fieldset{margin:0 12px 0 0; clear:both;}
+fieldset.curr{margin:0;}
+fieldset p{height:24px; line-height:24px; padding:3px 0; background-color:#fff; position:relative; float:left; width:100%; -webkit-border-radius:15px; border-radius:15px;}
+fieldset p label{display:inline-block; width:30px; height:24px; background:url(../../images/search_icon.png) no-repeat center center; background-size:13px 13px;}
+fieldset p input{border:0 none; background:rgba(0,0,0,0); height:24px; width:85%; z-index:0; color:#d5d5d5;}
+fieldset p button{width:24px;height:24px;position:absolute;border:0;right:5px;top:3px;background-color:transparent;text-align:center;display:none; background:url(../../images/close.png) no-repeat left center; -webkit-background-size:100%; -moz-background-size:100%; background-size:100%; z-index:10;}
+fieldset .search_btn{height:32px; width:50px; display:block; text-align:center; line-height:32px; color:#000; float:left; display:none;}
+.slideLeft{width:80%;}
+.slideRight{width:100%;}
+.noBtmLine{border-bottom:0 none;}
+
+.brand_nav{width:100%; overflow:hidden;}
+.brand_nav ul{width:160px; margin:0 auto; height:24px; padding:12px 0 8px; display:-webkit-box; display:-moz-box; display:box;}
+.brand_nav li{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-align:center;text-align:center;border-bottom:2px solid #fff;font-size:14px;height:22px;line-height:22px; margin:0 24px; color:#484848;}
+.brand_nav li.cur{border-bottom:2px solid #36393e; color:#36393e;}
+
+.brand_imgList{width:320px; margin:0 auto; background-color:#000;}
+.brand_imgList a, .brand_imgList img{width:159px; height:159px; display:block;}
+.brand_imgList a{float:left; margin:0 2px 2px 0; overflow:hidden; position:relative;}
+.brand_imgList a:nth-child(2n){margin-right:0;}
+.brand_imgList a span{position:absolute; bottom:0; left:0; background-color:rgba(0,0,0,.5); height:34px;  width:149px; line-height:34px; color:#fff; padding-left:10px;}
+
+.brand_txtList h3{background:#ededed; height:22px; line-height:22px; padding-left:10px; margin-right:40px;}
+.brand_txtList ul{height:auto;}
+.brand_txtList li a{ color:#000; font-size:12px; line-height:22px; padding:10px 0; display:block; border-bottom:1px solid #ededed; margin:0 40px 0 15px;}
+.brand_txtList li:last-child{border-bottom:none;}
+/*.brand_txtList li a:hover, .brand_txtList li a:active{background-color:#e8e1ca;}*/
+
+.letter_box{position: absolute;z-index: 1000;width: 40px;top: 46px;right: 0;overflow: hidden; display:none;}
+.letter_box a{display:block; font-size:12px; line-height:16px; text-align:center; color:#333;}
+
+@media screen and (max-device-height: 480px) {
+.letter_box{top: 46px;}
+.letter_box a{line-height:12px;}
+}
+
+/*品牌列表*/
+.brandBanner{width:320px; height:100px; margin:0 auto;}
+.brandBlock{width:320px; margin:0 auto;}
+.brandBlock .menu{width:100%; font-weight:normal; height:38px; padding-top:6px; position:relative; border-bottom:1px solid #d5d5d5;}
+.brandBlock .menu span{display:block; width:274px; height:16px; line-height:16px; display:table; padding:7px 0;}
+.brandBlock .menu span a{color:#484848; width:98px; display:table-cell; text-align:center; position:relative;}
+.brandBlock .menu span a:not(:first-child){border-left:1px solid #d5d5d5;}
+.brandBlock .menu span a i{position:absolute; left:0; top:22px; width:100%; height:10px; background:url(../../images/flagshop/filter_top.png) no-repeat center 0; background-size:10px 10px; display:none;}
+.brandBlock .menu span a.category_nav i{background:url(../../images/flagshop/filter_top2.png) no-repeat center 0; background-size:10px 10px;}
+.brandBlock .menu .fillBtn{display:block; position:absolute; bottom:8px; right:0; width:44px; height:30px; line-height:30px; color:#484848; background:url(../../images/brand/fillDot.png) no-repeat center center; background-size:14px 14px; font-size:12px; text-indent:-9999px;}
+
+.filter_txt{height:23px; line-height:23px; padding:5px 6px; border-bottom: 1px solid #ededed;}
+.filter_txt span{display:inline-block; padding:0 7px; background-color:#e1b401; color:#fff; font-size:12px;}
+
+.brandList{width:320px; overflow:hidden; background-color:#fff;}
+.brandList li{width:160px; overflow:hidden; vertical-align:top; float:left; font-size:14px; border-right:1px solid #fff; border-bottom:1px solid #fff;}
+.brandList li:nth-child(2n){width:159px; border-right:none;}
+.brandList li a{display:block; width:159px; position:relative;}
+.brandList li i.saleOut{width:50px; height:30px; position:absolute; right:-1px; top:0; color:#848484; background-color:#ededed; text-align:center; line-height:30px;}
+.brandList li img{display:block; width:159px; height:212px;}
+
+.brandList_info{font-size:12px; padding:5px 0 0 9px; width:150px; text-align:left;}
+.brandList_info p, .brandList_info span{color:#484848; display:block;}
+.brandList_info p{line-height:130%; overflow:hidden;}
+.brandList_info p em{display:block; width:100%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; color:#555;}
+.brandList_info p em:first-child{color:#000;}
+.brandList_info span{color:#ba8f42; line-height:30px; font-size:14px;}
+.brandList_info span em{font-size:14px; color:#000; font-style:italic;}
+.brandList_info span del{color:#838383; margin-left:8px;}
+
+/*无结果*/
+.brand_noresults{ display:table-cell; vertical-align:middle; height:230px; text-align:center; width:320px; line-height:19px; color:#484848;}
+.list_moreLink {
+	display:block; 
+	height:44px; 
+	line-height:44px; 
+	overflow:hidden; 
+	text-align:center; 
+	color:#36393e; 
+	border-bottom:1px solid #ededed; 
+	background-color:#fff;
+	}
+.alList_moreBtn{ 
+	display:block;  
+	margin:10px 40px 20px; 
+	background: -moz-linear-gradient(top, #ededed, #e0e0e0 100%); 
+	background:-o-repeating-linear-gradient(top, #ededed, #e0e0e0 100%); 
+	background:-webkit-gradient(linear,left top,left bottom,from(#ededed),to(#e0e0e0)); 
+	color:#484848; 
+	height:45px; 
+	line-height:45px; 
+	-webkit-border-radius:5px; 
+	border-radius:5px; 
+	text-align:center; 
+	font-size:16px;
+	}

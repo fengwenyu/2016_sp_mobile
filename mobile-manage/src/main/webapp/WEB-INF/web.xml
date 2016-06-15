@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- 配置数据编码Filter -->
+	<filter>
+		<filter-name>CharacterFilter</filter-name>
+		<filter-class>com.shangpin.wireless.filter.CharacterFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 配置Spring的用于初始化ApplicationContext的Listener -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext*.xml</param-value>
+	</context-param>
+
+	<!-- 配置做初始化工作的监听器 	-->
+	<listener>
+		<listener-class>com.shangpin.wireless.listener.InitServletContextListener</listener-class>
+	</listener>
+	
+	<!-- 配置Spring的OpenSessionInViewFilter，以解决懒加载异常的问题
+	<filter>
+		<filter-name>OpenSessionInViewFilterAPI</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+        <init-param>                       
+        	<param-name>sessionFactoryBeanName</param-name>              
+        	<param-value>sessionFactoryAPI</param-value>             
+        </init-param>  
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilterAPI</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	-->
+	<!-- 配置Spring的OpenSessionInViewFilter，以解决懒加载异常的问题
+	<filter>
+		<filter-name>OpenSessionInViewFilterManage</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+        <init-param>                       
+        	<param-name>sessionFactoryBeanName</param-name>              
+        	<param-value>sessionFactoryManage</param-value>             
+        </init-param> 
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilterManage</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+  	-->
+	<!-- 配置Struts2的过滤器 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<error-page>
+	<error-code>404</error-code>
+	<location>/404.jsp</location>
+   </error-page>
+<!--   <error-page>
+	<error-code>500</error-code>
+	<location>/500.jsp</location>
+  </error-page> -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<session-config>
+      <session-timeout>4320</session-timeout>
+	</session-config>
+	
+</web-app>

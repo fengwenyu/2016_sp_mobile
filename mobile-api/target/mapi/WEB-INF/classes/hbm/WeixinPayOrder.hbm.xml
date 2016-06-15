@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.shangpin.wireless.api.domain">
+	<class name="WeixinPayOrder" table="weixinPayOrder">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="tradeMode" type="string">
+			<column name="tradeMode" length="20" />
+		</property>
+		<property name="tradeState" type="string">
+			<column name="tradeState" length="20" />
+		</property>
+		<property name="payInfo" type="string">
+			<column name="payInfo" length="100" />
+		</property>
+		<property name="bankType" type="string">
+			<column name="bankType" length="50" />
+		</property>
+		<property name="bankBillNo" type="string">
+			<column name="bankBillNo" length="100" />
+		</property>
+		<property name="totalFee" type="java.math.BigDecimal">
+			<column name="totalFee" />
+		</property>
+		<property name="feeType" type="string">
+			<column name="feeType" length="20" />
+		</property>
+		<property name="transId" type="string">
+			<column name="transId" length="100" />
+		</property>
+		<property name="timeEnd"  type="timestamp">
+			<column name="timeEnd" />
+		</property>
+		<property name="orderNo" type="string">
+			<column name="orderNo" length="100" />
+		</property>
+		<property name="openId" type="string">
+			<column name="openId" length="100" />
+		</property>
+		<property name="notifyId" type="string">
+			<column name="notifyId" length="150" />
+		</property>
+		<property name="buyerAlias" type="string">
+			<column name="buyerAlias" length="100" />
+		</property>
+		<property name="transportFee" type="java.math.BigDecimal">
+			<column name="transportFee" />
+		</property>
+		<property name="productFee" type="java.math.BigDecimal">
+			<column name="productFee"  />
+		</property>
+		<property name="discount" type="java.math.BigDecimal">
+			<column name="discount"  />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd"
+		default-lazy-init="true">
+					    
+	<!-- 自动扫描与装配bean -->
+	<context:component-scan base-package="com.shangpin.wireless"></context:component-scan>
+	<context:component-scan base-package="com.shangpin.wechat.service"></context:component-scan>
+	
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	
+	<!-- API接口数据库 -->
+	<bean id="dataSourceAPI" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">  
+		<!-- 数据库连接信息 -->
+		<property name="url" value="${api_jdbcUrl}"></property>
+		<property name="driverClassName" value="${api_driverClass}"></property>
+		<property name="username" value="${api_username}"></property>
+		<property name="password" value="${api_password}"></property>
+        <property name="maxActive" value="100"/>
+        <property name="maxWait" value="60000"/>
+        <property name="poolPreparedStatements" value="false"/>
+        <property name="defaultAutoCommit" value="false"/>
+        <property name="maxIdle" value="30" /> 
+	    <property name="minIdle" value="2" />
+	    <property name="removeAbandoned" value="true"/>
+	    <property name="removeAbandonedTimeout" value="120"/>
+	    <property name="logAbandoned" value="true"/>
+	</bean>  
+	<!-- 无线后台数据库 -->
+	<bean id="dataSourceManage" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">  
+		<!-- 数据库连接信息 -->
+		<property name="url" value="${manage_jdbcUrl}"></property>
+		<property name="driverClassName" value="${manage_driverClass}"></property>
+		<property name="username" value="${manage_username}"></property>
+		<property name="password" value="${manage_password}"></property>
+		<!--maxActive: 最大连接数量-->  
+        <property name="maxActive" value="100"/>
+        <!--maxWait: 超时等待时间以毫秒为单位 6000毫秒/1000等于60秒 -->  
+        <property name="maxWait" value="60000"/>
+        <!--开启池的 prepared statement 池功能 -->  
+        <property name="poolPreparedStatements" value="false"/>
+        <!--连接池创建的连接的默认的auto-commit状态 -->  
+        <property name="defaultAutoCommit" value="false"/>
+        <!--maxIdle:最大空闲连接-->  
+        <property name="maxIdle" value="30" /> 
+        <!--minIdle:最小空闲连接-->  
+	    <property name="minIdle" value="2" />
+	    <!--removeAbandoned: 是否自动回收超时连接-->  
+	    <property name="removeAbandoned" value="true"/>
+	    <!--removeAbandonedTimeout: 超时时间(以秒数为单位)-->  
+	    <property name="removeAbandonedTimeout" value="120"/>
+	    <!--标记当Statement或连接被泄露时是否打印程序的stack traces日志 -->  
+	    <property name="logAbandoned" value="true"/>
+	</bean>
+	
+	<!-- <bean id="dataSourceAPI_JNDI" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/wirelessapi" />
+	</bean>
+	<bean id="dataSourceManage_JNDI" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/wirelessmanage" />
+	</bean> -->
+	
+	<!-- SessionFactoryAPI -->
+	<bean id="sessionFactoryAPI" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernateAPI.cfg.xml"></property>
+		<property name="dataSource" ref="dataSourceAPI"/>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.connection.release_mode=after_statement
+				hibernate.dialect=${hibernate.dialect}
+				hibernate.hbm2ddl.auto=${hibernate.hbm2ddl.auto}
+				hibernate.show_sql=${hibernate.show_sql}
+			</value>
+		</property>
+	</bean>
+	<!-- SessionFactoryManage -->
+	<bean id="sessionFactoryManage" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:hibernateManage.cfg.xml"></property>
+		<property name="dataSource" ref="dataSourceManage"/>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.connection.release_mode=after_statement
+				hibernate.dialect=${hibernate.dialect}
+				hibernate.hbm2ddl.auto=${hibernate.hbm2ddl.auto}
+				hibernate.show_sql=${hibernate.show_sql}
+			</value>
+		</property>
+	</bean>
+	
+	<!-- 整合Hibernate
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSourceManage_JNDI" />
+		<property name="hibernateProperties">
+			<value>
+				hibernate.connection.release_mode=after_statement
+				hibernate.dialect=${hibernate.dialect}
+				hibernate.hbm2ddl.auto=${hibernate.hbm2ddl.auto}
+				hibernate.show_sql=${hibernate.show_sql}
+				hibernate.default_schema=${hibernate.default_schema}
+			</value>
+		</property>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>com.shangpin.wireless.domain.AccountStatistics</value>
+				<value>com.shangpin.wireless.domain.AoLaiWapPageView</value>
+				<value>com.shangpin.wireless.domain.Channel</value>
+				<value>com.shangpin.wireless.domain.DeviceInfo</value>
+				<value>com.shangpin.wireless.domain.LogObject</value>
+				<value>com.shangpin.wireless.domain.OperateLog</value>
+				<value>com.shangpin.wireless.domain.OrderStatistics</value>
+				<value>com.shangpin.wireless.domain.PageView</value>
+				<value>com.shangpin.wireless.domain.Privilege</value>
+				<value>com.shangpin.wireless.domain.Product</value>
+				<value>com.shangpin.wireless.domain.Role</value>
+				<value>com.shangpin.wireless.domain.ShangPinWapPageView</value>
+				<value>com.shangpin.wireless.domain.User</value>
+			</list>
+		</property>
+	</bean> -->
+	<!-- 配置声明式事务管理，采用基于AOP的方式 
+	<bean id="transactionManagerAPI" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactoryAPI"></property>
+	</bean>
+	-->
+	<!-- 配置声明式事务管理，采用基于AOP的方式
+	<bean id="transactionManagerManage" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactoryManage"></property>
+	</bean>
+	 -->
+    <!-- sessionFactoryAPI事务通知 
+    <tx:advice id="txAdviceAPI" transaction-manager="transactionManagerAPI">
+        <tx:attributes>
+            <tx:method name="insert*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="update*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="delete*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="save*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="load*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="get*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="find*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="execute*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" />
+        </tx:attributes>
+    </tx:advice>
+    -->
+    <!-- 定义在com.shangpin.wireless.api.service该包或者其子包下的 任意方法
+    <aop:config>
+        <aop:advisor advice-ref="txAdviceAPI" pointcut="execution(* com.shangpin.wireless.api.service..*.*(..))"/>
+    </aop:config>
+    -->
+    <!-- sessionFactoryManage事务通知 
+    <tx:advice id="txAdviceManage" transaction-manager="transactionManagerManage">
+        <tx:attributes>
+            <tx:method name="insert*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="update*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="delete*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="save*" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="load*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="get*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="find*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="execute*" propagation="REQUIRED" isolation="DEFAULT" read-only="true" />
+            <tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" />
+        </tx:attributes>
+    </tx:advice>
+    -->
+ 	<!-- 定义在com.shangpin.wireless.manage.service该包或者其子包下的 任意方法
+    <aop:config>
+        <aop:advisor advice-ref="txAdviceManage" pointcut="execution(* com.shangpin.wireless.manage.service..*.*(..))"/>
+    </aop:config>
+ 	-->
+	<!-- 配置声明式事务管理，采用基于注解的方式 
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	-->
+</beans>
+

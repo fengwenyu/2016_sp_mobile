@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+ body{ background:#fff;}
+.container{ min-width:320px; max-width:640px; margin:0 auto; overflow:hidden; background:#f3f3f3}
+
+.headApp {width: 100%}
+.headApp img { display: block;width: 100%}
+
+.topFix{position:relative; height:44px;}
+.topFix section {position:relative; height:44px; overflow:hidden; min-width:320px; max-width:640px;}
+
+.conbox{
+	width:100%;
+	max-width:640px;
+	margin:0 auto 5px;
+}
+
+.conbox img{
+	display:block;
+	width:100%;
+}
+
+.top_img{
+	width:100%;
+	display:block;
+	margin-bottom:0;
+	
+}
+.padding-top{ position:relative;}
+.padding-top img{ width:auto;}
+.conbox h3{ width:100%;}
+.conbox h1{ margin-top:10px;}
+.conbox .marginTop{ margin-top:0;}
+.conbox .box1{ background:#ffb83d; padding-bottom:10px; overflow:hidden;}
+.conbox .box2{ background:#9bd4d9; padding-bottom:10px; overflow:hidden;}
+.imgList{ margin-top:5px;}
+
+#advice{ position:absolute; top:-44px; display:block;}
+
+.prod_list{ padding:0 8px 0 0;}
+.prod_list li{ float:left; width:50%; margin-top:5px;}
+.prod_list li:nth-child(2n){ float:right; margin-right:-8px;}
+
+.venue_list{ width:100%; padding:0; display:-webkit-box;display:box; display:-webkit-flex;display:flex; }
+.venue_list li{ box-flex:1;-webkit-box-flex:1; flex:1;-webkit-flex:1; box-sizing:border-box; padding-right:2px;margin:5px 0 0 0;}
+.venue_list li:nth-child(2n){ padding:0 1px; }
+.venue_list li:nth-child(3n){ padding:0 0 0 2px;}

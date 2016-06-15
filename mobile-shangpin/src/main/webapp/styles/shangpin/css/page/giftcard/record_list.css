@@ -1,0 +1,191 @@
+body { background: #f2f2f2 }
+
+.topFix{min-width:320px; max-width:640px;position:relative; height:45px;}
+.topBack{width:100%;position:relative; height:44px; line-height:44px; border-bottom:1px solid #323232; background-color:rgba(0,0,0,.8); text-align:center; font-size:18px; color:#fff;}
+.topBack .logo{text-align:left; padding-left:10px;}
+.topBack a.backBtn{position:absolute; top:8px; left:8px; width:28px; height:28px; line-height:28px; background:url(../images/back.png) no-repeat center center; background-size:12px 21px; z-index:100;}
+.topBack a.white_back{background:url(../images/back2.png) no-repeat center center #090909; background-size:10px 14px;}
+.top-title{ display:block;white-space: nowrap;/**/overflow: hidden;text-overflow: ellipsis; margin:0 44px;}
+body .alContent{margin-top:0px;}
+.container {
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto 0;
+	font-size:12px;
+}
+
+.paymet_block { width: 100% }
+.paymet_block p.addr_block { margin-top: 10px; padding: 0 10px; background-color: #fff; color: #555; border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }
+.paymet_block p.addr_block span { display: block; padding: 10px 0; line-height: 20px; border-bottom: 1px solid #d8d8d8; }
+.paymet_block p.addr_block span i { display: block; line-height: 30px; }
+.paymet_block p.addr_block span.addr_edit { border: none; text-align: right; }
+.paymet_block p.addr_block span.addr_edit a { display: inline-block; color: #2d2d2d; height: 20px; padding-left: 20px; background-image: url(../../images/order/edit_icon.png); background-repeat: no-repeat; background-size: 16px; }
+.paymet_block p.addr_block span.addr_edit a.editBtn { background-position: 0 0; }
+.paymet_block p.addr_block span.addr_edit a.deletBtn { background-position: 0 -20px; }
+.paymet_block fieldset { width: 100%; padding-bottom: 10px; }
+.paymet_block fieldset.notBtm { padding-bottom: 0; }
+.paymet_block fieldset legend { color: #2d2d2d; font-size: 14px; padding: 0 15px; height: 39px; line-height: 39px; border-bottom: 1px solid #d8d8d8; display: block; width: 100%; box-sizing: border-box; }
+.paymet_block fieldset h2 { background: #fff; color: #2d2d2d; font-size: 14px; font-weight: normal; padding: 0 15px; height: 39px; line-height: 39px; border-bottom: 1px solid #d8d8d8; display: block; width: 100%; box-sizing: border-box; }
+.paymet_block fieldset legend.price { border-top: 1px solid #d8d8d8; color: #c62026; background: #fff }
+.paymet_block fieldset legend.price em { display: block; float: left; }
+.paymet_block fieldset legend.price span { float: right; }
+.paymet_block fieldset p { border-bottom: 1px solid #d8d8d8; background-color: #fff; height: 39px; line-height: 39px; color: #999; padding: 0 15px; position: relative; }
+.paymet_block fieldset p.selected { height: auto; line-height: 22px; }
+.paymet_block fieldset p.selected a { display: block; line-height: 22px; padding: 8px 0; color: #555 }
+.paymet_block fieldset p.selected a strong { color: #red; font-weight: normal }
+.paymet_block fieldset p.selected a .phone { float: right; }
+.paymet_block fieldset p.selected time { float: right }
+.paymet_block fieldset p span.delivery_mode { display: inline-block; float: right; background: none; margin-right: 20px; line-height: 22px; padding: 0; }
+.paymet_block fieldset p.select a { background: url(../../images/order/arrow_r.png) no-repeat right center; background-size: 7px 12px; color: #555; display: block; line-height: 22px; padding: 8px 0; }
+.paymet_block fieldset p.pay-model-p { color: #888; }
+.paymet_block fieldset p.pay-model-p span { display: inline-block; float: right; background: none; margin-right: 20px; line-height: 22px; padding: 8px 0; }
+.paymet_block fieldset p.pay-model-p a { display: inline-block; line-height: 22px; padding: 8px 0; }
+.paymet_block fieldset p.pay-model-p strong { color: #2d2d2d; font-weight: normal }
+.paymet_block fieldset p label { display: inline-block; margin: 0 10px 0 0; width: 65px; font-size: 12px; color: #555; }
+.paymet_block fieldset p input[type=text], .paymet_block fieldset p input[type=password] { border: 1px solid #fff; background: rgba(0,0,0,0); height: 24px; width: 65%; z-index: 0; font-size: 12px; padding: 0 5px; }
+.paymet_block fieldset p input[type=password].giftCard { border: 1px solid #eee; height: 28px; margin: 5px 0; width: 95%; }
+.paymet_block fieldset p input[type=text].error, .paymet_block fieldset p input[type=password].error { border: 1px solid #f00; }
+.select-invoice a { color: #555 }
+.select-invoice .select-option { display: inline-block; width: 40px; height: 21px; line-height: 21px; font-size: 12px; text-align: right; color: #888; background: url(../../images/order/radio.png) no-repeat 55px -5px; background-size: 21px; padding: 5px 0 5px 55px; }
+.select-invoice .cur { background: url(../../images/order/radio.png) no-repeat 55px -45px; background-size: 21px; }
+/*提交按钮*/
+.payment_fixed { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #f2f2f2; border-top: 1px solid #d8d8d8; }
+.payment_submit { position: relative; margin: 15px; height: 40px; }
+.payment_submit.right_btn { position: absolute; right: 0; bottom: 0; width: 130px; }
+.payment_submit dl { display: -webkit-box; display: -moz-box; display: -o-box; display: box; width: 100%; }
+.payment_submit dt { width: 8px; }
+.payment_submit dd { -webkit-box-flex: 1; -moz-box-flex: 1; -o-box-flex: 1; box-flex: 1; }
+.payment_btn { background-color: #c62026; border: 1px solid #c62026; height: 38px; line-height: 38px; color: #fff; text-align: center; font-size: 18px; display: block; box-sizing: border-box; }
+.payment_btn:hover { background-color: #aa0006; border: 1px solid #aa0006; }
+input.payment_btn { opacity: 0; outline: none; position: absolute; top: 0; left: 0; z-index: 10; width: 100%; margin: 0 auto; }
+input.payment_btn:hover { background-color: #aa0006; border: 1px solid #aa0006; }
+.paymet_block fieldset p.pord_info { height: auto; }
+.paymet_block fieldset p.pord_info a { display: block; padding: 10px 0 5px; }
+.paymet_block fieldset p.pord_info img { float: left; margin: 0 10px; }
+.paymet_block fieldset p.pord_info ins { margin-left: 15px; text-decoration: none; line-height: normal; float: left; }
+.paymet_block fieldset p.pord_info i { color: #2d2d2d; font-size: 12px; line-height: 16px; display: block; width: 190px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-bottom: 5px; }
+.paymet_block fieldset p.pord_info em { display: inline-block; line-height: 16px; height: 16px; color: #888; font-size: 12px; width: 90px; overflow: hidden; white-space: nowrap; }
+.paymet_block fieldset p.invoice { height: auto; line-height: 24px; padding: 10px 15px; display: none }
+.paymet_block fieldset p.invoice a { color: #888; height: auto; }
+.paymet_block fieldset p.invoice em { color: #2d2d2d; }
+.paymet_block fieldset p.coupons i { position: absolute; right: 40px; top: 0; line-height: 39px; }
+.paymet_block fieldset p.coupons i em { color: #ff3b3b; }
+.paymet_block fieldset p.giftCard a { color: #555; display: block; background: url(../../images/order/select_Nbg.png) no-repeat right center; background-size: 21px; }
+.paymet_block fieldset p.giftCard a.cur { background: url(../../images/order/select.png) no-repeat right center; background-size: 21px; }
+.paymet_block fieldset p.giftCard i { color: #ff3b3b; font-size: 12px; padding-left: 20px; }
+/*支付方式*/
+.paymet_block fieldset p.payment-method span { display: block; line-height: normal; padding: 5px 0 5px 55px; background-image: url(../../images/order/bank.png); background-repeat: no-repeat; background-size: 45px; }
+.paymet_block fieldset p.payment-method span a { display: block; font-size: 9px; color: #888; background: url(../../images/order/radio.png) no-repeat right -5px; background-size: 21px; }
+.paymet_block fieldset p.payment-method span a.cur { background: url(../../images/order/radio.png) no-repeat right -45px; background-size: 21px; }
+.paymet_block fieldset p.payment-method span a em { font-size: 12px; color: #555; }
+.paymet_block fieldset p.payment-method span.alipay { background-position: 0 0; }
+.paymet_block fieldset p.payment-method span.unionPay { background-position: 0 -40px; }
+.paymet_block fieldset p.payment-method span.weixinPay { background-position: 0 -160px; }
+.paymet_block fieldset p.payment-method span.cashPay { background-position: 0 -80px; }
+.paymet_block fieldset p.payment-method span.postPay { background-position: 0 -120px; }
+.paymet_block fieldset p.payment-method span.pufaPay { background-position: 0 -201px; }
+.paymet_block fieldset p.payment-method span.weixinPay a, .paymet_block fieldset p span.cashPay a, .paymet_block fieldset p span.postPay a, .paymet_block fieldset p span.pufaPay a { height: 29px; line-height: 29px; color: #555; }
+.paymet_block fieldset p.total { border-top: 1px solid #d8d8d8; height: auto; text-align: right; font-size: 13px; line-height: 20px; margin-top: 10px; padding: 10px 15px; color: #555; }
+.paymet_block fieldset p.total em { display: block; padding-top: 10px; color: #ff3b3b; }
+.paymet_block fieldset p.total i { display: inline-block; width: 60px; text-align: left; }
+.paymet_block .payment_fixed { position: relative; bottom: 0; left: 0; width: 100%; background-color: #f2f2f2; }
+.paymet_block .payment_submit { position: relative; margin: 15px; height: 40px; }
+.paymet_block .payment_submit dl { display: -webkit-box; display: -moz-box; display: -o-box; display: box; width: 100%; }
+.paymet_block .payment_submit dt { width: 8px; }
+.paymet_block .payment_submit dd { -webkit-box-flex: 1; -moz-box-flex: 1; -o-box-flex: 1; box-flex: 1; }
+.paymet_block .payment_btn { background-color: #c62026; border: 1px solid #c62026; height: 38px; line-height: 38px; color: #fff; text-align: center; font-size: 18px; display: block; box-sizing: border-box; }
+.paymet_block .payment_btn:hover { background-color: #aa0006; border: 1px solid #aa0006; color: #fff; }
+.paymet_block input.payment_btn { opacity: 0; outline: none; position: absolute; top: 0; left: 0; z-index: 10; width: 100%; margin: 0 auto; }
+.paymet_block input.payment_btn:hover { background-color: #aa0006; border: 1px solid #aa0006; color: #fff; }
+.paymet_block .contiu_btn { background-color: #fff; border: 1px solid #c62026; color: #c62026; height: 38px; line-height: 38px; text-align: center; font-size: 18px; display: block; box-sizing: border-box; }
+.paymet_block .contiu_btn:hover { background-color: #c62026; border: 1px solid #c62026; color: #fff; }
+.paymet_block .payment_submit_bg { background: #fff; margin: 10px 0 0; border-top: #d8d8d8; padding: 15px }
+.btn-icon { width: 100%; height: 38px; overflow: hidden; }
+.btn-icon a { float: left; display: block; width: 48%; box-sizing: border-box; background-color: #c62026; border: 1px solid #c62026; height: 38px; line-height: 38px; color: #fff; text-align: center; font-size: 14px; }
+.btn-icon a.cancel-btn { margin-right: 4%; }
+.btn-icon a.total_amount { background-color: transparent; border: 0; color: #555555; }
+.btn-icon a.total_amount em { color: #c62026; }
+.other-payment-box { display: none; }
+/*地区选择层*/
+#area_overlay { position: absolute; z-index: 99998; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.4); display: none; }
+#area_layer { width: 100%; height: 200px; position: fixed; bottom: 0; left: 0; z-index: 99999; background-color: #fff; display: none; }
+#area_layer .close_btn { position: absolute; top: 10px; right: 10px; background: url(/images/order/close.png) 0 0 no-repeat; background-size: 15px; text-indent: -3000px; display: block; width: 15px; height: 15px; }
+#area_layer h3 { color: #000; font-size: 16px; font-weight: normal; padding: 0 15px; height: 39px; line-height: 39px; display: block; width: 100%; box-sizing: border-box; background-color: #f2f2f2; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+#area_layer dl { width: 100%; height: 157px; overflow: hidden; overflow-y: auto; }
+#area_layer dl:not(:first-of-type) { display: none; }
+#area_layer dd { border-bottom: 1px solid #d8d8d8; height: 39px; line-height: 39px; color: #999; padding: 0 15px; position: relative; }
+#area_layer dd a { display: block; font-size: 12px; color: #555; background: url(../../images/order/radio.png) no-repeat right 0; background-size: 21px; }
+#area_layer dd a.cur { background: url(../../images/order/radio.png) no-repeat right -40px; background-size: 21px; }
+/*身份证弹框样式start*/
+#overlay { position: fixed; z-index: 998; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0,0.5); display: none; }
+#popup_box { position: fixed; z-index: 999; display: none; background: #fff; min-width: 300px; transform: translate(-50%, -50%); left: 50%; top: 50%; }
+#popup_message { height: auto; padding: 10px; }
+#popup_message p { font-size: 12px; line-height: 180%; text-align: left; color: #888; margin-bottom: 5px; }
+#popup_title { background: #e8e8e8; text-align: left; padding-left: 10px; line-height: 50px; border-radius: 2px; }
+#popup_box .title_closeBtn { width: 25px; height: 25px; line-height: 25px; text-align: center; position: absolute; font-size: 28px; color: #333; border-radius: 0; background: none; top: 12px; right: 10px; }
+#popup_panel { margin-top: 10px; }
+#popup_content button#popup_cancel, #popup_content button#popup_cancel:hover { background: #fff; color: #c62026; }
+#popup_content button#popup_cancel { height: 28px; line-height: 28px; border: 1px solid #c62026; }
+#popup_content button { width: 90px; height: 30px; line-height: 30px; font-size: 14px; text-align: center; border-radius: 0; }
+#popup_content button, #popup_content button:hover { background: #de4747; color: #fff; padding: 0; cursor: pointer; font-weight: normal; }
+.identification-box { border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; height: 36px; line-height: 36px; color: #999; position: relative; text-align: left; }
+.identification-box label { display: inline-block; width: 75px; font-size: 12px; color: #555; }
+.identification-box input[type=text] { border: 1px solid #fff; background: rgba(0,0,0,0); height: 24px; width: 190px; z-index: 0; font-size: 12px; }
+.paymet_block fieldset.order-box { padding-bottom: 0; margin-top: 10px; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; }
+.paymet_block fieldset.order-box .btn-icon { width: 100%; height: auto; padding: 10px 20px; box-sizing: border-box; background: #fff; }
+.paymet_block fieldset.order-box .btn-icon a { float: right; display: inline-block; width: auto; padding: 0 15px; box-sizing: border-box; box-sizing: border-box; background-color: #fff; border: 1px solid #ccc; height: 38px; line-height: 38px; color: #888; text-align: center; font-size: 12px; }
+.paymet_block fieldset.order-box .btn-icon a.cur { margin-left: 10px; border: 1px solid #c62026; color: #c62026; }
+.paymet_block fieldset.order-box .btn-icon a.red { margin-left: 10px; background-color: #c62026; border: 1px solid #c62026; color: #fff; }
+/*礼品卡列表*/
+.gift_cards_list { }
+.card_balance { background: #f8f8f8; padding: 20px 20px 15px; border-top: 1px solid #ccc;position:relative; }
+.card_balance h2 { color: #888; font-weight: normal }
+.card_balance p { color: #c62026; font-size: 20px; margin-top: 5px; }
+.card_balance p strong { font-size: 25px; font-weight: normal }
+.card_balance .recharge-btn{ position:absolute; right:110px; top:25px; padding:0 15px; line-height:30px; font-size:12px; color:#fff; background:#c62026}
+.card_balance  .buy-card-btn{ position:absolute; right:20px; top:25px; padding:0 10px; line-height:30px; font-size:12px; color:#fff; background:#c62026}
+.content_info { padding-bottom: 8px; }
+.anchor { display: block; margin-top: 82px; }
+.menu-nav { width: 100%; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; height: 36px; overflow: hidden; }
+.menu-nav .tab_info { width: 100%; display: table; font-size: 14px; height: 30px; }
+.tab_info li { padding-top: 6px; display: table-cell; height: 24px; line-height: 24px; text-align: center; }
+.tab_info li a { display: inline-block; color: #808080; }
+.tab_info li.curr a { color: #c62026; padding-top: 1px; border-bottom: 1px solid #c62026; }
+.purchase-records-list { padding: 20px; }
+.purchase-records-list li { font-size: 13px; line-height: 24px; }
+.purchase-records-list li p { float: left; color: #888 }
+.purchase-records-list li p strong { color: #2d2d2d; font-weight: normal }
+.purchase-records-list li p strong.red { color: #c62026 }
+.purchase-records-list li span { float: right; color: #888 }
+.purchase-records-list .btn-icon { width: 100%; height: auto; padding: 10px 20px 0; box-sizing: border-box; }
+.purchase-records-list .btn-icon a { float: left; display: block; width: 48%; padding: 0 10px; box-sizing: border-box; box-sizing: border-box; background-color: #fff; border: 1px solid #ccc; height: 38px; line-height: 38px; color: #888; text-align: center; font-size: 12px; }
+.purchase-records-list .btn-icon a.recharge-btn { margin-right: 4%; }
+.line { width: 100%; height: 10px; background: #f6f6f6; border-top: 1px solid #e5e5e5; }
+.recharge-records-list { margin-top: 0px; border-top: 1px solid #edecec; }
+.recharge-records-list li { width: 100%; line-height: 45px; border-bottom: 1px solid #edecec; font-size: 13px; }
+.recharge-records-list li span { display: block; float: left; width: 25%; text-align: center; color: #7d7d7d; padding-left: 5px; box-sizing: border-box; white-space: nowrap; overflow: hidden; }
+.recharge-records-list li.first { background: #f8f8f8; }
+.consumption-records-box { padding: 20px; }
+.consumption-records-box table { width: 100%; border: 1px solid #d4d4d4; font-size: 12px; }
+.consumption-records-box table tr td, .consumption-records-box table tr th { height: 45px; padding: 0 5px; text-align: center; color: #888 }
+.consumption-records-box table tr th { background: #f8f8f8; font-weight: normal }
+
+
+/*取消弹框*/
+.overlay, .modal .modal-ft { display: -webkit-box; display: -webkit-flex; display: flex; }
+.overlay { top: 0; right: 0; bottom: 0; left: 0; z-index: -10; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }
+.overlay.active { z-index: 980; position: fixed; background-color: rgba(0, 0, 0, 0.8); }
+.modal { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.modal { width: 292px; height: 159px; background: url(/images/coupon/pop_bg.png) no-repeat; background-size: cover; margin: 0 10px; overflow: hidden; opacity: 0; -webkit-transform: translate3d(0, 0, 0) scale(0.815); transform: translate3d(0, 0, 0) scale(0.815); -webkit-transition-property: -webkit-transform, opacity; transition-property: transform, opacity; display: none; }
+.modal.modal-in { opacity: 1; -webkit-transform: translate3d(0, 0, 0) scale(1); transform: translate3d(0, 0, 0) scale(1); }
+.modal .modal-hd { text-align: center; line-height: 50px; color: #555; font-size: 17px; }
+.modal .modal-bd { padding: 15px; line-height: 1; color: #888; text-align: center; }
+.modal .modal-bd strong { color: #c62026; font-weight: normal }
+.modal .modal-ft { display: block; text-align: center; line-height: 40px; padding: 0 15px 15px; }
+.modal .modal-ft .btn-modal { display: inline-block; background-color: #fff; text-align: center; line-height: 40px; color: #c62026; padding: 0 25px; margin-right: 15px; border: 1px solid #c62026; }
+.modal .modal-ft a.enter-active { display: inline-block; background-color: #c62026; text-align: center; line-height: 40px; color: #fff; padding: 0 25px; margin-right: 0; border: 1px solid #c62026; }
+.modal .modal-ft a.enter-active:link { color: #fff; }
+
+/**/
+.topBack p{position:absolute; right:15px; top:0px; }
+.topBack p a{color:#fff;}

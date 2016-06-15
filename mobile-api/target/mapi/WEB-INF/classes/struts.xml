@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.action.extension" value=",action,do" />
+	<constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.multipart.maxSize" value="102097152"></constant>
+	<package name="default" namespace="/" extends="struts-default">
+		<!-- 上线管理 -->
+		<action name="onlineManageAction_*" class="onlineManageAction" method="{1}"></action>
+		<!-- 错误日志操作 -->
+		<action name="errorLogAction_*" class="errorLogAction" method="{1}"></action>
+	</package>
+</struts>

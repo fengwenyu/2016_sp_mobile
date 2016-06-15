@@ -1,0 +1,9 @@
+﻿body { width: 100%; background: #fff4eb }
+.wapper1 { width: 100%; min-width: 320px; max-width: 640px; margin: 0 auto; background: url(../../../images/one/bg.jpg) #080507 no-repeat top center; background-size: 100% auto }
+.main { min-height: 420px; position:relative; overflow-x:hidden }
+.main p{ display:block;}
+.main img { max-width: 100% }
+
+/*分享弹层*/
+.share-box{background:rgba(0, 0, 0, 0.85);position: fixed; width:100%; top:0; bottom:0; z-index: 15;display:none; max-width:640px;}
+.share-box a.know-btn { display: block; background: #c62026; margin: 10% 30% 5%; line-height: 40px; text-align: center; font-size: 15px; color: #fff; border-radius:5px; }
